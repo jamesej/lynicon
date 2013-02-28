@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E892F2D8-83F7-408A-8438-D8739A9C5746}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lynicon.Test</RootNamespace>
+    <AssemblyName>Lynicon.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ExtendedUser.cs" />
+    <Compile Include="Models\TestContent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Areas\Lynicon\Content\circle-mask-white.png" />
+    <Content Include="Areas\Lynicon\Content\down-arrow-white-tiny.png" />
+    <Content Include="Areas\Lynicon\Content\down-arrow-white.png" />
+    <Content Include="Areas\Lynicon\Content\L24Main.css" />
+    <Content Include="Areas\Lynicon\Content\left-arrow-white.png" />
+    <Content Include="Areas\Lynicon\Content\right-arrow-white.png" />
+    <Content Include="Areas\Lynicon\Content\up-arrow-white-tiny.png" />
+    <Content Include="Areas\Lynicon\Content\up-arrow-white.png" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\jquery.tinymce-applier.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\jquery.tinymce.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\langs\en.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\license.txt" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advhr\css\advhr.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advhr\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advhr\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advhr\js\rule.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advhr\langs\en_dlg.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advhr\rule.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advimage\css\advimage.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advimage\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advimage\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advimage\image.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advimage\img\sample.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advimage\js\image.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advimage\langs\en_dlg.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advlink\css\advlink.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advlink\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advlink\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advlink\js\advlink.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advlink\langs\en_dlg.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advlink\link.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advlist\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\advlist\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\autoresize\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\autoresize\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\autosave\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\autosave\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\autosave\langs\en.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\bbcode\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\bbcode\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\contextmenu\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\contextmenu\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\directionality\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\directionality\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\emotions.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\img\smiley-cool.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\img\smiley-cry.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\img\smiley-embarassed.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\img\smiley-foot-in-mouth.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\img\smiley-frown.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\img\smiley-innocent.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\img\smiley-kiss.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\img\smiley-laughing.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\img\smiley-money-mouth.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\img\smiley-sealed.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\img\smiley-smile.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\img\smiley-surprised.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\img\smiley-tongue-out.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\img\smiley-undecided.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\img\smiley-wink.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\img\smiley-yell.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\js\emotions.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\emotions\langs\en_dlg.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\example\dialog.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\example\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\example\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\example\img\example.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\example\js\dialog.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\example\langs\en.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\example\langs\en_dlg.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\fullpage\css\fullpage.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\fullpage\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\fullpage\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\fullpage\fullpage.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\fullpage\js\fullpage.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\fullpage\langs\en_dlg.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\fullscreen\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\fullscreen\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\fullscreen\fullscreen.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\iespell\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\iespell\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\inlinepopups\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\inlinepopups\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\alert.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\button.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\buttons.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\confirm.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\corners.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\horizontal.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\vertical.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\window.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\inlinepopups\template.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\insertdatetime\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\insertdatetime\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\layer\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\layer\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\legacyoutput\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\legacyoutput\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\media\css\content.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\media\css\media.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\media\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\media\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\media\img\flash.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\media\img\flv_player.swf" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\media\img\quicktime.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\media\img\realmedia.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\media\img\shockwave.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\media\img\trans.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\media\img\windowsmedia.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\media\js\embed.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\media\js\media.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\media\langs\en_dlg.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\media\media.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\nonbreaking\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\nonbreaking\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\noneditable\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\noneditable\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\pagebreak\css\content.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\pagebreak\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\pagebreak\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\pagebreak\img\pagebreak.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\pagebreak\img\trans.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\paste\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\paste\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\paste\js\pastetext.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\paste\js\pasteword.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\paste\langs\en_dlg.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\paste\pastetext.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\paste\pasteword.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\preview\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\preview\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\preview\example.html" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\preview\jscripts\embed.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\preview\preview.html" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\print\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\print\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\save\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\save\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\searchreplace\css\searchreplace.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\searchreplace\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\searchreplace\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\searchreplace\js\searchreplace.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\searchreplace\langs\en_dlg.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\searchreplace\searchreplace.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\spellchecker\css\content.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\spellchecker\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\spellchecker\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\spellchecker\img\wline.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\style\css\props.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\style\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\style\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\style\js\props.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\style\langs\en_dlg.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\style\props.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\tabfocus\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\tabfocus\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\table\cell.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\table\css\cell.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\table\css\row.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\table\css\table.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\table\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\table\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\table\js\cell.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\table\js\merge_cells.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\table\js\row.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\table\js\table.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\table\langs\en_dlg.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\table\merge_cells.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\table\row.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\table\table.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\template\blank.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\template\css\template.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\template\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\template\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\template\js\template.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\template\langs\en_dlg.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\template\template.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\visualchars\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\visualchars\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\wordcount\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\wordcount\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\xhtmlxtras\abbr.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\xhtmlxtras\acronym.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\xhtmlxtras\attributes.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\xhtmlxtras\cite.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\xhtmlxtras\css\attributes.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\xhtmlxtras\css\popup.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\xhtmlxtras\del.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\xhtmlxtras\editor_plugin.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\xhtmlxtras\editor_plugin_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\xhtmlxtras\ins.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\xhtmlxtras\js\abbr.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\xhtmlxtras\js\acronym.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\xhtmlxtras\js\attributes.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\xhtmlxtras\js\cite.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\xhtmlxtras\js\del.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\xhtmlxtras\js\element_common.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\xhtmlxtras\js\ins.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\plugins\xhtmlxtras\langs\en_dlg.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\about.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\anchor.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\charmap.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\color_picker.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\editor_template.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\editor_template_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\image.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\img\colorpicker.jpg" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\img\icons.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\js\about.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\js\anchor.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\js\charmap.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\js\color_picker.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\js\image.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\js\link.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\js\source_editor.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\langs\en.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\langs\en_dlg.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\link.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\skins\default\content.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\skins\default\dialog.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\skins\default\img\buttons.png" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\skins\default\img\items.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\skins\default\img\menu_arrow.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\skins\default\img\menu_check.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\skins\default\img\progress.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\skins\default\img\tabs.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\skins\default\ui.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\skins\o2k7\content.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\skins\o2k7\dialog.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg.png" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_black.png" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_silver.png" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\skins\o2k7\ui.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\skins\o2k7\ui_black.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\skins\o2k7\ui_silver.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\advanced\source_editor.htm" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\simple\editor_template.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\simple\editor_template_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\simple\img\icons.gif" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\simple\langs\en.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\simple\skins\default\content.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\simple\skins\default\ui.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\simple\skins\o2k7\content.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\simple\skins\o2k7\img\button_bg.png" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\themes\simple\skins\o2k7\ui.css" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\tiny_mce.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\tiny_mce_popup.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\tiny_mce_src.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\editable_selects.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\form_utils.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\mctabs.js" />
+    <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\validate.js" />
+    <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Collection-Paged.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Collection.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Html.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Image.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\ImageLink.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Link.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Object.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Stringx.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\BbText.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Collection-Paged.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Collection.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\DateTime.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Html.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Image.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\ImageLink.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Link.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\MediaFileLink.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Multiline.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Object.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Recaptcha.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\LyniconDual.aspx" />
+    <Content Include="Areas\Lynicon\Views\Shared\LyniconEditor.aspx" />
+    <Content Include="Areas\Lynicon\Views\Shared\LyniconFileManager.aspx" />
+    <Content Include="Areas\Lynicon\Views\Shared\LyniconFileOpen.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\LyniconLogin.aspx" />
+    <Content Include="Areas\Lynicon\Views\Shared\L24CMPropertyItem.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\L24CMStructure.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon\Config\basic.config" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\ve-3E41.tmp" />
+    <Content Include="Areas\Lynicon\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Test\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Lynicon\Lynicon.csproj">
+      <Project>{f9fb7ea1-57d4-49d0-9776-a7a7a8e23475}</Project>
+      <Name>Lynicon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:9920/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,302 @@
+IFRAME
+{
+	border: 0;
+}
+BODY
+{
+	font-family: Arial, Sans-Serif;
+	margin: 0px;
+	padding: 0px;
+}
+.editor-label
+{
+	background-color: #808080;
+	color: #FFFFFF;
+	padding: 3px 2px 3px 6px;
+	font-size: 12px;
+	height: auto;
+	/*+border-radius:14px;*/
+	-moz-border-radius: 14px;
+	-webkit-border-radius: 14px;
+	-khtml-border-radius: 14px;
+	border-radius: 14px;
+}
+.editor-label.parent
+{
+	background-repeat: no-repeat;
+	padding-left: 21px;
+	background-position: 6px 4px;
+}
+.editor-label.child-closed
+{
+	background-image: url(/Areas/L24CM/Content/right-arrow-white.png);
+}
+.editor-label.child-open
+{
+	background-image: url(/Areas/L24CM/Content/down-arrow-white.png);
+}
+#editPanel
+{
+	font-size: 11px;
+}
+#editPanel INPUT[type="text"]
+{
+	font-size: 11px;
+}
+#editPanel .reorder-container
+{
+	padding: 3px;
+	width: 8px;
+	/*+border-radius:8px;*/
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+}
+#editPanel .reorder-container IMG
+{
+	cursor: pointer;
+}
+#editPanel .action-button, #editPanel .add-button
+{
+	font-size: 11px;
+	width: 16px;
+	text-align: center;
+	cursor: pointer;
+	background-image: url(/Areas/L24CM/Content/circle-mask-white.png);
+	background-repeat: no-repeat;
+	height: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+#editPanel #save
+{
+	background-color: #808080;
+	background-image: none;
+	height: 22px;
+	font-size: 18px;
+}
+#editPanel .editor-field
+{
+	margin-bottom: 2px;
+}
+#editPanel .editor-field .editor-label, #editPanel .editor-field .action-button, #editPanel .editor-field .add-button
+{
+	background-color: #3C3763;
+}
+#editPanel .editor-field .editor-field .editor-label, #editPanel .editor-field .editor-field .action-button, #editPanel .editor-field .editor-field .add-button
+{
+	background-color: #3879D9;
+}
+.collection > .editor-field, .collection > .editor-label, .object > .editor-field, .object > .editor-label
+{
+	margin-left: 15px;
+}
+FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .editor-field > .object > .editor-field, .collection > .editor-field > .object > .editor-label
+{
+	margin-left: 0px;
+}
+.editor-label.indent-1, .editor-field.indent-1
+{
+	margin-left: 17px;
+}
+.editor-label.indent-2, .editor-field.indent-2
+{
+	margin-left: 34px;
+}
+#editPanel .action-button:hover, #editPanel .add-button:hover
+{
+	background-color: #000000 !important;
+}
+#editPanel #save
+{
+	width: auto;
+}
+#editPanel .closed
+{
+	display: none;
+}
+#editPanel .editor-field .text-box
+{
+	width: 100%;
+}
+.ui-datepicker
+{
+	font-size: 60%;
+}
+#outer
+{
+	width: 600px;
+	height: 300px;
+	z-index: 0;
+}
+#listContainer, #treeContainer
+{
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.jstreelist-folder-active
+{
+	border: 1px solid #3030FF;
+	background-color: #FF0000 !important;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+#simplemodal-overlay
+{
+	background-color: #000;
+}
+#simplemodal-container
+{
+	padding: 20px;
+	background-color: #E0E0FF;
+	border-radius: 8px;
+	-moz-border-radius: 10px;
+}
+#filename
+{
+	width: 320px;
+}
+#fileDetails
+{
+	float: right;
+}
+.file-image-thumb
+{
+	max-width: 24px;
+	max-height: 24px;
+}
+#editPanel .l24-link-url
+{
+	width: 277px;
+	display: inline-block;
+}
+#editPanel .l24-image-url
+{
+	width: 348px;
+	display: inline-block;
+}
+#editPanel .l24-image-content
+{
+	display: inline-block;
+}
+.l24-file-url, .l24-link-url INPUT
+{
+	width: 225px;
+	margin-left: 24px;
+}
+#editPanel .l24-link-content
+{
+	width: 156px;
+	display: inline-block;
+}
+.l24-link-content INPUT
+{
+	width: 95px;
+}
+#editPanel .l24-image-alt
+{
+	width: 130px;
+	display: inline-block;
+}
+#editPanel .l24-image-alt .text-box
+{
+	width: 99px;
+}
+#editPanel .l24-link-isinternal
+{
+	width: 68px;
+	display: inline-block;
+}
+.l24-file-url
+{
+	margin-right: 5px;
+	margin-left: 1px;
+}
+#structureManager .editor-label
+{
+	height: 22px;
+	margin-bottom: 3px;
+	cursor: pointer;
+}
+#structureManager .template-name
+{
+	float: left;
+	width: 120px;
+	overflow: hidden;
+	font-size: 16px;
+}
+#structureManager .inst
+{
+	font-size: 12px;
+}
+#structureManager .inst-list
+{
+	max-height: 400px;
+	overflow: auto;
+}
+#structureManager .edit-area
+{
+	background-color: #F0F0F0;
+	margin-top: 3px;
+}
+#structureManager .url-pattern
+{
+	font-size: 12px;
+	margin-top: 2px;
+}
+#structureManager .enter-route
+{
+	margin-top: 2px;
+}
+#structureManager .input0
+{
+	border: 1px solid #0000D6;
+}
+#structureManager .input1
+{
+	border: 1px solid #1414FF;
+}
+#structureManager .input2
+{
+	border: 1px solid #00994D;
+}
+#structureManager .input3
+{
+	border: 1px solid #4D9900;
+}
+#structureManager .input4
+{
+	border: 1px solid #999900;
+}
+#structureManager .input5
+{
+	border: 1px solid #D6D600;
+}
+#funcPanel
+{
+	font-size: 10pt;
+	margin-bottom: 2px;
+	margin-top: 2px;
+	background-color: #D2D5D7;
+	padding: 2px;
+}
+#funcPanel A, #funcPanel A:visited
+{
+	color: #000;
+}
+#editPanel .reorder-up IMG
+{
+	margin-top: 3px;
+}
+#editPanel .reorder-down IMG
+{
+	margin-top: 5px;
+}
+#editPanel .first .reorder-up, #editPanel .last .reorder-down
+{
+	display: none;
+}
