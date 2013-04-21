@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Lynicon.Membership;
 using Lynicon.Test.Models;
 
 namespace Lynicon.Test
@@ -15,11 +16,16 @@ namespace Lynicon.Test
     {
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
+            AreaRegistration.RegisterAllAreas(this);
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+        }
+
+        protected void Application_OnPostAuthenticateRequest(object sender, EventArgs e)
+        {
+            LyniconSecurityManager.Current.EnsureLightweightIdentity();
         }
     }
 }

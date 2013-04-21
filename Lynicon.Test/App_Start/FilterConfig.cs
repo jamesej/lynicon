@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Mvc;
+using Lynicon.Attributes;
 
 namespace Lynicon.Test
 {
@@ -8,6 +9,7 @@ namespace Lynicon.Test
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new ProcessHtmlAttribute());
         }
     }
 }

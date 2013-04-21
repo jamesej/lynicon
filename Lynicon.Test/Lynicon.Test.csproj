@@ -105,11 +105,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ItemController.cs" />
+    <Compile Include="Controllers\HeaderController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ExtendedUser.cs" />
+    <Compile Include="Models\GeneralSummary.cs" />
+    <Compile Include="Models\HeaderContent.cs" />
+    <Compile Include="Models\ItemContent.cs" />
     <Compile Include="Models\TestContent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -120,7 +125,7 @@
     <Content Include="Areas\Lynicon\Content\circle-mask-white.png" />
     <Content Include="Areas\Lynicon\Content\down-arrow-white-tiny.png" />
     <Content Include="Areas\Lynicon\Content\down-arrow-white.png" />
-    <Content Include="Areas\Lynicon\Content\L24Main.css" />
+    <Content Include="Areas\Lynicon\Content\LyniconMain.css" />
     <Content Include="Areas\Lynicon\Content\left-arrow-white.png" />
     <Content Include="Areas\Lynicon\Content\right-arrow-white.png" />
     <Content Include="Areas\Lynicon\Content\up-arrow-white-tiny.png" />
@@ -371,6 +376,7 @@
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\form_utils.js" />
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\mctabs.js" />
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\validate.js" />
+    <Content Include="Areas\Lynicon\Views\Shared\LyniconEmptyUrl.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Collection-Paged.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Collection.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Html.ascx" />
@@ -396,7 +402,7 @@
     <Content Include="Areas\Lynicon\Views\Shared\LyniconFileManager.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconFileOpen.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconLogin.aspx" />
-    <Content Include="Areas\Lynicon\Views\Shared\L24CMPropertyItem.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\LyniconPropertyItem.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\L24CMStructure.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -410,6 +416,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -428,6 +435,12 @@
       <Name>Lynicon</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Header\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Item\Index.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -444,7 +457,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>19907</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:9920/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

@@ -21,6 +21,9 @@ BODY
 	-khtml-border-radius: 14px;
 	border-radius: 14px;
 }
+.field-validation-valid {
+	display:none;
+}
 .editor-label.parent
 {
 	background-repeat: no-repeat;
@@ -29,11 +32,11 @@ BODY
 }
 .editor-label.child-closed
 {
-	background-image: url(/Areas/L24CM/Content/right-arrow-white.png);
+	background-image: url(/Areas/Lynicon/Content/right-arrow-white.png);
 }
 .editor-label.child-open
 {
-	background-image: url(/Areas/L24CM/Content/down-arrow-white.png);
+	background-image: url(/Areas/Lynicon/Content/down-arrow-white.png);
 }
 #editPanel
 {
@@ -63,7 +66,7 @@ BODY
 	width: 16px;
 	text-align: center;
 	cursor: pointer;
-	background-image: url(/Areas/L24CM/Content/circle-mask-white.png);
+	background-image: url(/Areas/Lynicon/Content/circle-mask-white.png);
 	background-repeat: no-repeat;
 	height: 16px;
 	font-weight: bold;

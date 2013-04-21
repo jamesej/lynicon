@@ -5,20 +5,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml" style="height: 100%; width: 100%" >
 <head runat="server">
         <title>Editor</title>
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js" type="text/javascript"></script>-->
-    <link href="/Lynicon/Embedded/Content/jquery.jstreelist.css" rel="stylesheet" type="text/css" />
-    <link href="/Lynicon/Embedded/Content/jquery.layout.css" rel="stylesheet" type="text/css" />
-    <link href="/Lynicon/Embedded/Content/jquery.contextMenu.css" rel="stylesheet" type="text/css" />
-    <link href="/Lynicon/Embedded/Content/LyniconMain.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery-ui.js"></script>
-    <script src="/Lynicon/Embedded/Scripts/jquery.tmpl.js" type="text/javascript"></script>
-    <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery.layout.js"></script>
-    <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery.simplemodal.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+    <link href="/Lynicon/Embedded/Content/jquery.jstreelist.css/" rel="stylesheet" type="text/css" />
+    <link href="/Lynicon/Embedded/Content/jquery.layout.css/" rel="stylesheet" type="text/css" />
+    <link href="/Lynicon/Embedded/Content/jquery.contextMenu.css/" rel="stylesheet" type="text/css" />
+    <link href="/Lynicon/Embedded/Content/LyniconMain.css/" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery-ui.js/"></script>
+    <script src="/Lynicon/Embedded/Scripts/jquery.tmpl.js/" type="text/javascript"></script>
+    <script type="text/javascript" src="/Lynicon/Embedded/Scripts/LyniconMain.js/"></script>
+    <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery.layout.js/"></script>
+    <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery.simplemodal.js/"></script>
     <script type="text/javascript" src="/Areas/Lynicon/scripts/tiny_mce/jquery.tinymce-applier.js"></script>
-    <script src="/Lynicon/Embedded/Scripts/fileuploader.js" type="text/javascript"></script>
-    <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery.jstree.js"></script>
-    <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery.jstreelist.js"></script>
-    <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery.contextMenu.js"></script>
+    <script src="/Lynicon/Embedded/Scripts/fileuploader.js/" type="text/javascript"></script>
+    <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery.contextMenu.js/"></script>
+    <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery.jstree.js/"></script>
+    <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery.jstreelist.js/"></script>
+
     <script>
         $(document).ready(function() {
             var firstReload = true;
@@ -29,7 +31,7 @@
                 firstReload = false;
             });
 
-            $('#_L24FileMgrContainer').jstreelist({ rootPath: '<%= ViewData["FileManagerRoot"] %>' });
+            $('#_L24FileMgrContainer').jstreelist({ rootPath: '<%= ViewBag.FileManagerRoot as string %>' });
             //$('#outer').layout();
         });
         // RTE
@@ -67,7 +69,7 @@
             $('#_L24RTEContainer').css({ 'z-index': '1010', position: 'fixed' });
             $('.simplemodal-close').css({
                 'z-index': '1003', position: 'fixed', display: 'block',
-                'background-image': 'url(/lynicon/embedded/Content/Images/close-white.png)',
+                'background-image': 'url(/lynicon/embedded/Content/Images/close-white.png/)',
                 width: '16px', height: '16px'});
             positionTool('#_L24RTEContainer');
             $.modal.getContainer().bind('move.modal', function() { positionTool('#_L24RTEContainer'); });
@@ -101,7 +103,7 @@
 
             $('.simplemodal-close').css({
                 'z-index': '1003', position: 'fixed', display: 'block',
-                'background-image': 'url(/lynicon/embedded/Content/Images/close-white.png)',
+                'background-image': 'url(/lynicon/embedded/Content/Images/close-white.png/)',
                 width: '16px', height: '16px'
             });
             positionTool('#_L24FileMgrContainer');
@@ -119,8 +121,8 @@
 </head>
 <body style="height: 100%; width: 100%">
 <div id='container' style="height: 100%; width: 100%; position:relative;">
-<iframe class="ui-layout-center" src="<%= ViewData["Path"] %>?-mode=view<%= ViewData["AddToQuery"] %>"></iframe>
-<iframe class="ui-layout-east" id="editor" src="<%= ViewData["Path"] %>?-action=edit"></iframe>
+<iframe class="ui-layout-center" src="<%= Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea })%>?lynicon-mode=view<%= ViewBag.OriginalQuery as string %>"></iframe>
+<iframe class="ui-layout-east" id="editor" src="<%= Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea })%>?lynicon-mode=editor"></iframe>
 </div>
 <div id='_L24RTEContainer' style='display:none'><textarea id='_L24RTE'>abcdef</textarea></div>
 <div id='_L24FileMgrContainer' style='display:none'>

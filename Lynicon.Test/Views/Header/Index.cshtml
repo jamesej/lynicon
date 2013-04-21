@@ -1,0 +1,21 @@
+﻿@model Lynicon.Test.Models.HeaderContent
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>@Model.Summary.Title</h1>
+    @Html.DisplayFor(m => m.Summary.Image)
+    <div>
+        @Html.Raw(Model.HeaderBody)
+    </div>
+</body>
+</html>

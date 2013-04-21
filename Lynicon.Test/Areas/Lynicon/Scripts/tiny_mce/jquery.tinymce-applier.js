@@ -2,7 +2,7 @@
 $(document).ready(function () {
 	$('textarea#_L24RTE').tinymce({
 	    // Location of TinyMCE script
-	    script_url: '/Areas/L24CM/scripts/tiny_mce/tiny_mce.js',
+	    script_url: '/Areas/Lynicon/scripts/tiny_mce/tiny_mce.js',
 	
 	    // General options
 	    theme: "advanced",

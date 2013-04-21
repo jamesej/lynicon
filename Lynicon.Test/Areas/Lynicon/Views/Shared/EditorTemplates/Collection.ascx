@@ -16,10 +16,10 @@
             <div id="del-<%= fieldName %>" class="action-button delete indent-<%= ViewData.TemplateInfo.TemplateDepth - 1 %>" style="float: left">x</div>
             <div class="reorder indent-<%= ViewData.TemplateInfo.TemplateDepth - 1 %><%= index == 0 ? " first" : (index == count - 1 ? " last" : "") %>" style="float: left">
                 <div class="reorder-up action-button">
-                    <img alt="up" id="up-<%= fieldName %>" src="/Areas/L24CM/Content/up-arrow-white-tiny.png" />
+                    <img alt="up" id="up-<%= fieldName %>" src="/Areas/Lynicon/Content/up-arrow-white-tiny.png" />
                 </div>
                 <div class="reorder-down action-button">
-                    <img alt="down" id="down-<%= fieldName %>" src="/Areas/L24CM/Content/down-arrow-white-tiny.png" />
+                    <img alt="down" id="down-<%= fieldName %>" src="/Areas/Lynicon/Content/down-arrow-white-tiny.png" />
                 </div>
             </div>
             <div class="editor-field indent-<%= ViewData.TemplateInfo.TemplateDepth %>">
