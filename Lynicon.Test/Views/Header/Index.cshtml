@@ -17,5 +17,8 @@
     <div>
         @Html.Raw(Model.HeaderBody)
     </div>
+    @foreach (var child in Model.ChildItems) {
+        <a href="@child.Url">@child.Title</a>
+    }
 </body>
 </html>

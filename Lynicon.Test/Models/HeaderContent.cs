@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Web.Routing;
+using Lynicon.Attributes;
 using Lynicon.Collation;
 using Lynicon.Models;
 using Lynicon.Utility;
@@ -11,27 +12,26 @@ using Newtonsoft.Json;
 
 namespace Lynicon.Test.Models
 {
+    [RedirectPropertySource("Common")]
     public class HeaderContent : PageContent
     {
         public GeneralSummary Summary { get; set; }
         [UIHint("Html")]
         public string HeaderBody { get; set; }
 
+        public string Common { get; set; }
+
         private List<GeneralSummary> childItems = null;
-        [JsonIgnore]
+        [JsonIgnore, ScaffoldColumn(false)]
         public List<GeneralSummary> ChildItems
         {
             get
             {
                 if (childItems == null)
-                {
-                    childItems = Collator.Instance.Get(typeof(GeneralSummary),
-                        new Dictionary<string, object> { { "Path LIKE '
-                }
+                    childItems = GetPathChildren<GeneralSummary>();
+                return childItems;
             }
         }
-
-        public RouteData RouteData { set; private get; }
 
         public HeaderContent()
         {

@@ -121,8 +121,8 @@
 </head>
 <body style="height: 100%; width: 100%">
 <div id='container' style="height: 100%; width: 100%; position:relative;">
-<iframe class="ui-layout-center" src="<%= Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea })%>?lynicon-mode=view<%= ViewBag.OriginalQuery as string %>"></iframe>
-<iframe class="ui-layout-east" id="editor" src="<%= Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea })%>?lynicon-mode=editor"></iframe>
+<iframe class="ui-layout-center" src="<%= (string)Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea })%>?lynicon-mode=view<%= ViewBag.OriginalQuery as string %>"></iframe>
+<iframe class="ui-layout-east" id="editor" src="<%= (string)Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea })%>?lynicon-mode=editor"></iframe>
 </div>
 <div id='_L24RTEContainer' style='display:none'><textarea id='_L24RTE'>abcdef</textarea></div>
 <div id='_L24FileMgrContainer' style='display:none'>
