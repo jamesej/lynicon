@@ -7,16 +7,13 @@
         <title>Editor</title>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script> -->
     <script src="/Lynicon/Embedded/Scripts/jquery.js/" type="text/javascript"></script>
-    <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery-ui.js/"></script>
     <link href="/Lynicon/Embedded/Content/jquery.jstreelist.css/" rel="stylesheet" type="text/css" />
     <link href="/Lynicon/Embedded/Content/jquery.layout.css/" rel="stylesheet" type="text/css" />
     <link href="/Lynicon/Embedded/Content/jquery.contextMenu.css/" rel="stylesheet" type="text/css" />
-    <link type="text/css" href="/Lynicon/Embedded/Content/jquery-ui.css/" rel="stylesheet" />
-    <link href="/Areas/Lynicon/Content/LyniconMain.css" rel="stylesheet" type="text/css" />
+    <link href="/Lynicon/Embedded/Content/LyniconMain.css/" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery-ui.js/"></script>
     <script src="/Lynicon/Embedded/Scripts/jquery.tmpl.js/" type="text/javascript"></script>
     <script type="text/javascript" src="/Lynicon/Embedded/Scripts/LyniconMain.js/"></script>
-    <script type="text/javascript" src="/Lynicon/Embedded/Scripts/LyniconEditPanel.js/"></script>
     <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery.layout.js/"></script>
     <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery.simplemodal.js/"></script>
     <script type="text/javascript" src="/Areas/Lynicon/scripts/tiny_mce/jquery.tinymce-applier.js"></script>
@@ -136,21 +133,7 @@
 <body style="height: 100%; width: 100%">
 <div id='container' style="height: 100%; width: 100%; position:relative;">
 <iframe class="ui-layout-center" src="<%= (string)Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea })%>?lynicon-mode=view<%= ViewBag.OriginalQuery as string %>"></iframe>
-<div class="ui-layout-east" id="edit">
-    <div id='funcPanel'>
-        <a href="/Lynicon/Login/Logout?returnUrl=<%= Request.Url.AbsolutePath %>" target="_top">Log out</a>
-        <div id="save" class="action-button">SAVE</div>
-    </div>
-    <div id="editPanelContainer">
-        <div id='editPanel'>
-         <% using (Html.BeginForm())
-           { %>
-            <%= Html.EditorForModel() %>
-            <%= Html.Hidden("formState") %>
-        <% } %>
-        </div>
-    </div>
-</div>
+<iframe class="ui-layout-east" id="editor" src="<%= (string)Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea })%>?lynicon-mode=editor"></iframe>
 </div>
 <div id='_L24RTEContainer' style='display:none'><textarea id='_L24RTE'>abcdef</textarea></div>
 <div id='_L24FileMgrContainer' style='display:none'>

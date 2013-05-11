@@ -38,6 +38,13 @@ BODY
 {
 	background-image: url(/Areas/Lynicon/Content/down-arrow-white.png);
 }
+#editPanelContainer {
+	position: absolute;
+	top: 46px;
+	bottom: 0px;
+	overflow: scroll;
+	width: 100%
+}
 #editPanel
 {
 	font-size: 11px;
@@ -60,7 +67,7 @@ BODY
 {
 	cursor: pointer;
 }
-#editPanel .action-button, #editPanel .add-button
+#edit .action-button, #edit .add-button
 {
 	font-size: 11px;
 	width: 16px;
@@ -72,12 +79,13 @@ BODY
 	font-weight: bold;
 	color: #FFFFFF;
 }
-#editPanel #save
+#edit #save
 {
 	background-color: #808080;
 	background-image: none;
 	height: 22px;
 	font-size: 18px;
+	width: auto;
 }
 #editPanel .editor-field
 {
@@ -107,13 +115,9 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 {
 	margin-left: 34px;
 }
-#editPanel .action-button:hover, #editPanel .add-button:hover
+#edit .action-button:hover, #editPanel .add-button:hover
 {
 	background-color: #000000 !important;
-}
-#editPanel #save
-{
-	width: auto;
 }
 #editPanel .closed
 {
