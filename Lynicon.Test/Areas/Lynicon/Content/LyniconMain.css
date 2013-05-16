@@ -40,7 +40,7 @@ BODY
 }
 #editPanelContainer {
 	position: absolute;
-	top: 46px;
+	top: 52px;
 	bottom: 0px;
 	overflow: scroll;
 	width: 100%
@@ -86,6 +86,19 @@ BODY
 	height: 22px;
 	font-size: 18px;
 	width: auto;
+}
+#edit .func-link
+{
+	text-decoration: none;
+	background-color: #3C3763;
+	color: #FFF;
+	padding: 2px;
+	margin-bottom: 2px;
+	display: inline-block;
+}
+#edit .func-link:hover
+{
+	background-color: black;
 }
 #editPanel .editor-field
 {

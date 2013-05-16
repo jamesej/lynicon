@@ -138,7 +138,7 @@
 <iframe class="ui-layout-center" src="<%= (string)Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea })%>?lynicon-mode=view<%= ViewBag.OriginalQuery as string %>"></iframe>
 <div class="ui-layout-east" id="edit">
     <div id='funcPanel'>
-        <a href="/Lynicon/Login/Logout?returnUrl=<%= Request.Url.AbsolutePath %>" target="_top">Log out</a>
+        <a class="func-link" href="/Lynicon/Login/Logout?returnUrl=<%= Request.Url.AbsolutePath %>" target="_top">Log out</a>
         <div id="save" class="action-button">SAVE</div>
     </div>
     <div id="editPanelContainer">
