@@ -376,7 +376,13 @@
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\form_utils.js" />
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\mctabs.js" />
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\validate.js" />
-    <Content Include="Areas\Lynicon\Views\Shared\LyniconDualOld.aspx" />
+    <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\FuncPanel.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\PasswordWithEncrypter.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\String.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\PagingSpec.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\UserList.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\LyniconListDetail.aspx" />
+    <Content Include="Areas\Lynicon\Views\Shared\LyniconUser.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconEmptyUrl.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Collection-Paged.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Collection.ascx" />

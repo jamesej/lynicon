@@ -100,6 +100,20 @@ BODY
 {
 	background-color: black;
 }
+#edit .field-process-button {
+	background-color: #3C3763;
+	color: #FFF;
+	padding: 2px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	display: inline-block;
+	cursor: pointer;
+}
+#edit .field-process-button:hover {
+	background-color: black;
+}
 #editPanel .editor-field
 {
 	margin-bottom: 2px;
@@ -150,6 +164,9 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 	height: 300px;
 	z-index: 0;
 }
+#outer .ui-draggable-dragging span {
+	font-size: 10px;
+}
 #listContainer, #treeContainer
 {
 	-webkit-user-select: none;
@@ -161,7 +178,7 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 .jstreelist-folder-active
 {
 	border: 1px solid #3030FF;
-	background-color: #FF0000 !important;
+	background-color: #98c5f1 !important;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 }
@@ -236,66 +253,7 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 	margin-right: 5px;
 	margin-left: 1px;
 }
-#structureManager .editor-label
-{
-	height: 22px;
-	margin-bottom: 3px;
-	cursor: pointer;
-}
-#structureManager .template-name
-{
-	float: left;
-	width: 120px;
-	overflow: hidden;
-	font-size: 16px;
-}
-#structureManager .inst
-{
-	font-size: 12px;
-}
-#structureManager .inst-list
-{
-	max-height: 400px;
-	overflow: auto;
-}
-#structureManager .edit-area
-{
-	background-color: #F0F0F0;
-	margin-top: 3px;
-}
-#structureManager .url-pattern
-{
-	font-size: 12px;
-	margin-top: 2px;
-}
-#structureManager .enter-route
-{
-	margin-top: 2px;
-}
-#structureManager .input0
-{
-	border: 1px solid #0000D6;
-}
-#structureManager .input1
-{
-	border: 1px solid #1414FF;
-}
-#structureManager .input2
-{
-	border: 1px solid #00994D;
-}
-#structureManager .input3
-{
-	border: 1px solid #4D9900;
-}
-#structureManager .input4
-{
-	border: 1px solid #999900;
-}
-#structureManager .input5
-{
-	border: 1px solid #D6D600;
-}
+
 #funcPanel
 {
 	font-size: 10pt;
@@ -304,9 +262,22 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 	background-color: #D2D5D7;
 	padding: 2px;
 }
+#funcPanel .func-button {
+	display: inline-block;
+	background-color: #3C3763;
+	color: white;
+	padding: 2px;
+	border-radius: 3px;
+	margin: 1px;
+	cursor: pointer;
+}
+#funcPanel .func-button:hover {
+	background-color: black;
+}
 #funcPanel A, #funcPanel A:visited
 {
-	color: #000;
+	color: white;
+	text-decoration:none;
 }
 #editPanel .reorder-up IMG
 {
@@ -319,4 +290,49 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 #editPanel .first .reorder-up, #editPanel .last .reorder-down
 {
 	display: none;
+}
+/* LIST EDITOR */
+table.list-table {
+	border-collapse: collapse;
+	margin: 5px;
+}
+.list-table th, .list-table td {
+	padding: 5px;
+	border-left: 2px solid #D2D5D7;
+}
+.list-table th:first-child, .list-table td:first-child {
+	border-left: none;
+}
+.list-table tr.selected {
+	background-color: #98c5f1
+}
+
+.lynicon-number-pager span {
+	background-color: #8080D0;
+	border-radius: 12px;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	text-align: center;
+}
+.lynicon-number-pager a {
+	color: #FFF;
+	text-decoration: none;
+	font-size: 17px;
+	font-family: Arial,sans-serif;
+	position: relative;
+	top: 2px;
+}
+.lynicon-number-pager .current a {
+	padding-bottom: 5px;
+	border-bottom: 4px solid grey;
+}
+#lynicon-list-add-button {
+	background-color: #808080;
+display: inline-block;
+padding: 2px 4px;
+border-radius: 10px;
+color: #FFF;
+float: left;
+margin-right: 5px;
 }

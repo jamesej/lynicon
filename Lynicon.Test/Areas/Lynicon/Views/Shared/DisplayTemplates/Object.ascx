@@ -2,7 +2,6 @@
 <script runat="server">
     bool ShouldShow(ModelMetadata metadata) {
         return metadata.ShowForDisplay
-            && metadata.ModelType != typeof(System.Data.EntityState)
             //&& !metadata.IsComplexType
             && !ViewData.TemplateInfo.Visited(metadata);
     }

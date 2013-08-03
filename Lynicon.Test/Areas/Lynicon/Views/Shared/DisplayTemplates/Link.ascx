@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<L24CM.Models.Link>" %>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<Lynicon.Models.Link>" %>
 <% if (Model.IsInternal)
    {  %>
    <%= Html.ActionLink(Model.Content, Model.Action, Model.Controller) %>

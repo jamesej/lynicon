@@ -23,7 +23,10 @@
             <% if (!String.IsNullOrEmpty(Html.Label(prop.PropertyName).ToHtmlString())) { %>
                 <div class="editor-label indent-<%= useDepth %>"><%= Html.Label(prop.PropertyName) %></div>
             <% } %>
-            <div class="editor-field indent-<%= useDepth %>"><%= Html.Editor(prop.PropertyName) %> <%= Html.ValidationMessage(prop.PropertyName, "*") %></div>
+            <div class="editor-field indent-<%= useDepth %>">
+                <%= Html.Editor(prop.PropertyName) %>
+                <%= Html.ValidationMessage(prop.PropertyName, "*") %>
+            </div>
         <% } %>
     <% } %>
     </div>  

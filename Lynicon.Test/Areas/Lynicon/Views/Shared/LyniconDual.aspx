@@ -1,5 +1,8 @@
 ﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage" %>
 
+<%
+    ViewBag.BaseUrl = (string)Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea });
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" style="height: 100%; width: 100%" >
@@ -28,7 +31,7 @@
     <script>
         $(document).ready(function() {
             var firstReload = true;
-            $('#container').layout();
+            $('#container').layout({ east: { size: '280', spacing_open: 10, spacing_closed: 14, togglerLength_open: 60 } });
             $('.ui-layout-east').load(function() {
                 if (!firstReload)
                     $('.ui-layout-center')[0].contentDocument.location.reload(true);
@@ -135,12 +138,15 @@
 </head>
 <body style="height: 100%; width: 100%">
 <div id='container' style="height: 100%; width: 100%; position:relative;">
-<iframe class="ui-layout-center" src="<%= (string)Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea })%>?lynicon-mode=view<%= ViewBag.OriginalQuery as string %>"></iframe>
+<iframe class="ui-layout-center" src="<%= ViewBag.BaseUrl as string %>?lynicon-mode=view<%= ViewBag.OriginalQuery as string %>"></iframe>
 <div class="ui-layout-east" id="edit">
+    <!--
     <div id='funcPanel'>
         <a class="func-link" href="/Lynicon/Login/Logout?returnUrl=<%= Request.Url.AbsolutePath %>" target="_top">Log out</a>
         <div id="save" class="action-button">SAVE</div>
     </div>
+    -->
+    <%= Html.DisplayForModel("FuncPanel") %>
     <div id="editPanelContainer">
         <div id='editPanel'>
          <% using (Html.BeginForm())

@@ -1,3 +1,3 @@
-﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<L24CM.Models.Image>" %>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<Lynicon.Models.Image>" %>
 <img src="<%= Model.Url %>" alt="<%= Model.Alt %>" />
 

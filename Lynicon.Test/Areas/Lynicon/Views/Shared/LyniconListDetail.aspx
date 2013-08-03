@@ -1,19 +1,24 @@
 ﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage" %>
 
+<%
+    ViewBag.BaseUrl = (string)Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea });
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" style="height: 100%; width: 100%" >
 <head runat="server">
         <title>Editor</title>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script> -->
-    <script src="/Lynicon/Embedded/Scripts/jquery.js/" type="text/javascript"></script>
+    <script id="jquery" src="/Lynicon/Embedded/Scripts/jquery.js/" type="text/javascript"></script>
     <link href="/Lynicon/Embedded/Content/jquery.jstreelist.css/" rel="stylesheet" type="text/css" />
     <link href="/Lynicon/Embedded/Content/jquery.layout.css/" rel="stylesheet" type="text/css" />
     <link href="/Lynicon/Embedded/Content/jquery.contextMenu.css/" rel="stylesheet" type="text/css" />
-    <link href="/Lynicon/Embedded/Content/LyniconMain.css/" rel="stylesheet" type="text/css" />
+    <link type="text/css" href="/Lynicon/Embedded/Content/jquery-ui.css/" rel="stylesheet" />
+    <link href="/Areas/Lynicon/Content/LyniconMain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery-ui.js/"></script>
     <script src="/Lynicon/Embedded/Scripts/jquery.tmpl.js/" type="text/javascript"></script>
     <script type="text/javascript" src="/Lynicon/Embedded/Scripts/LyniconMain.js/"></script>
+    <script type="text/javascript" src="/Lynicon/Embedded/Scripts/LyniconEditPanel.js/"></script>
     <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery.layout.js/"></script>
     <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery.simplemodal.js/"></script>
     <script type="text/javascript" src="/Areas/Lynicon/scripts/tiny_mce/jquery.tinymce-applier.js"></script>
@@ -23,15 +28,41 @@
     <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery.jstreelist.js/"></script>
 
     <script>
-        $(document).ready(function() {
-            var firstReload = true;
-            $('#container').layout();
-            $('.ui-layout-east').load(function() {
-                if (!firstReload)
-                    $('.ui-layout-center')[0].contentDocument.location.reload(true);
-                firstReload = false;
+        function processField(v) {
+            if (typeof v == "string" && v.substr(0, 6) == "/Date(") {
+                var d = new Date(parseInt(v.substr(6)));
+                return d.toLocaleDateString();
+            } else
+                return v;
+        }
+        function mapForm(func) {
+            $('form').find('input, textarea, select').each(function () {
+                if ($(this).prop('name').substr(0, 5) == 'item.')
+                    func($(this));
             });
-
+        }
+        function loadDetail(idx) {
+            var formNames = '';
+            mapForm(function ($fld) {
+                formNames += $fld.prop('name') + ' ';
+            });
+            $.post("<%= ViewBag.BaseUrl as string %>?lynicon-mode=getValues<%= ViewBag.OriginalQuery as string %>",
+                { formNames: formNames, idx: idx },
+                function (d) {
+                    $('form').find('input, textarea, select').each(function () {
+                        var nm = $(this).prop('name');
+                        if (d.hasOwnProperty(nm))
+                            $(this).val(processField(d[nm]));
+                    });
+                });
+        }
+        function clearForm() {
+            mapForm(function ($fld) { $fld.val(null) });
+        }
+        $(document).ready(function() {
+            $('#container').layout({ east: { size: '280', spacing_open: 10, spacing_closed: 14, togglerLength_open: 60 } });
+            loadDetail(parseInt($('#lynicon_itemIndex').val()));
+            $('.list-table')
             $('#_L24FileMgrContainer').jstreelist({ rootPath: '<%= ViewBag.FileManagerRoot as string %>' });
             //$('#outer').layout();
         });
@@ -132,8 +163,23 @@
 </head>
 <body style="height: 100%; width: 100%">
 <div id='container' style="height: 100%; width: 100%; position:relative;">
-<iframe class="ui-layout-center" src="<%= (string)Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea })%>?lynicon-mode=view<%= ViewBag.OriginalQuery as string %>"></iframe>
-<iframe class="ui-layout-east" id="editor" src="<%= (string)Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea })%>?lynicon-mode=editor"></iframe>
+<div class="ui-layout-center">
+    <%= Html.EditorForModel((string)ViewBag.ListView, new { displayFields = ViewBag.DisplayFields })%>
+</div>
+<div class="ui-layout-east" id="edit">
+    <%= Html.DisplayForModel("FuncPanel") %>
+    <div id="editPanelContainer">
+        <div id='editPanel'>
+        <% var item = ((ICollection)Model).Cast<object>().First();
+           using (Html.BeginForm())
+           { %>
+            <%= Html.EditorFor(m => item)%>
+            <%= Html.Hidden("formState")%>
+            <%= Html.Hidden("lynicon_itemIndex", (int)ViewBag.ItemIndex) %>
+        <% } %>
+        </div>
+    </div>
+</div>
 </div>
 <div id='_L24RTEContainer' style='display:none'><textarea id='_L24RTE'>abcdef</textarea></div>
 <div id='_L24FileMgrContainer' style='display:none'>
