@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<Lynicon.Models.PagingSpec>" %>
+<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<Lynicon.Models.PagingSpec>" %>
 <%
     Uri currentUri = ViewContext.HttpContext.Request.Url;
      %>

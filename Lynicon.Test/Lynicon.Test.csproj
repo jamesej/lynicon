@@ -105,12 +105,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AltItemController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\HeaderController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AltItemContent.cs" />
     <Compile Include="Models\ExtendedUser.cs" />
     <Compile Include="Models\GeneralSummary.cs" />
     <Compile Include="Models\HeaderContent.cs" />
@@ -376,6 +378,9 @@
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\form_utils.js" />
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\mctabs.js" />
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\validate.js" />
+    <Content Include="Areas\Lynicon\Views\Items\Index.aspx" />
+    <Content Include="Areas\Lynicon\Views\Shared\LyniconItems.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\FilterPanel.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\FuncPanel.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\PasswordWithEncrypter.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\String.ascx" />
@@ -447,6 +452,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Item\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AltItem\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

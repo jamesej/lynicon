@@ -327,12 +327,21 @@ table.list-table {
 	padding-bottom: 5px;
 	border-bottom: 4px solid grey;
 }
-#lynicon-list-add-button {
-	background-color: #808080;
-display: inline-block;
+.lynicon-ctl-button {
+	display: inline-block;
 padding: 2px 4px;
 border-radius: 10px;
 color: #FFF;
 float: left;
 margin-right: 5px;
+}
+.lynicon-filter-textbox input {
+	float: left;
+}
+.lynicon-filter-textbox a {
+	background-color: #80a080;
+	cursor:pointer;
+}
+#lynicon-list-add-button {
+background-color: #808080;
 }

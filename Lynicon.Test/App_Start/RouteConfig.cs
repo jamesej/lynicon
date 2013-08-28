@@ -19,11 +19,14 @@ namespace Lynicon.Test
             routes.AddDataRoute<TestContent>("test", "Test/{action}",
                 new { controller = "Test", action = "Index" });
 
-            routes.AddDataRoute<HeaderContent>("header", "Articles/{0}",
+            routes.AddDataRoute<HeaderContent>("header", "Articles/{_0}",
                 new { controller = "Header", action = "Index" });
 
-            routes.AddDataRoute<ItemContent>("item", "Articles/{0}/{1}",
+            routes.AddDataRoute<ItemContent>("item", "Articles/{_0}/{_1}",
                 new { controller = "Item", action = "Index" });
+
+            routes.AddDataRoute<AltItemContent>("altitem", "Articles/{_0}/{_1}",
+                new { controller = "AltItem", action = "Index" });
 
             //routes.MapRoute(
             //    name: "Default",

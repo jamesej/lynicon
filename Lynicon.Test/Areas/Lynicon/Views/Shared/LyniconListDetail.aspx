@@ -46,7 +46,7 @@
             mapForm(function ($fld) {
                 formNames += $fld.prop('name') + ' ';
             });
-            $.post("<%= ViewBag.BaseUrl as string %>?lynicon-mode=getValues<%= ViewBag.OriginalQuery as string %>",
+            $.post("<%= ViewBag.BaseUrl as string %>?$mode=getValues<%= ViewBag.OriginalQuery as string %>",
                 { formNames: formNames, idx: idx },
                 function (d) {
                     $('form').find('input, textarea, select').each(function () {

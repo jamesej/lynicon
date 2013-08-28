@@ -19,8 +19,9 @@
     <% } %>
 </table>
 <% if (ViewBag.CanAdd) { %>
-<div id="lynicon-list-add-button">ADD</div>
+<div id="lynicon-list-add-button" class="lynicon-ctl-button">ADD</div>
 <% } %>
+<%= Html.Partial("FilterPanel", new Dictionary<string, List<string>> { { "Filter", new List<string> { "UserName", "Email" } } }) %>
 <% if (ViewContext.RouteData.DataTokens.ContainsKey("@Paging")) { %>
 <div><%= Html.Partial("PagingSpec", this.ViewContext.RouteData.DataTokens["@Paging"]) %></div>
 <% } %>

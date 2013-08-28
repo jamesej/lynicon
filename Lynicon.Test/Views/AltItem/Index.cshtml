@@ -1,0 +1,11 @@
+﻿@model Lynicon.Test.Models.AltItemContent
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>@Model.Summary.Title</h1>
+
+<p>@Model.LineA</p>
+<p>@Model.LineB</p>
+@Html.DisplayFor(m => m.Link)

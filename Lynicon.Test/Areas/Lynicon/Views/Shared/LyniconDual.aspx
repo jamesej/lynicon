@@ -138,7 +138,7 @@
 </head>
 <body style="height: 100%; width: 100%">
 <div id='container' style="height: 100%; width: 100%; position:relative;">
-<iframe class="ui-layout-center" src="<%= ViewBag.BaseUrl as string %>?lynicon-mode=view<%= ViewBag.OriginalQuery as string %>"></iframe>
+<iframe class="ui-layout-center" src="<%= ViewBag.BaseUrl as string %>?$mode=view<%= ViewBag.OriginalQuery as string %>"></iframe>
 <div class="ui-layout-east" id="edit">
     <!--
     <div id='funcPanel'>
