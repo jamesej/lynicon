@@ -21,6 +21,8 @@ namespace Lynicon.Test
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            DalTrack.Instance.Initialise();
         }
 
         protected void Application_OnPostAuthenticateRequest(object sender, EventArgs e)

@@ -118,6 +118,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AltItemContent.cs" />
+    <Compile Include="Models\DalTrack.cs" />
     <Compile Include="Models\ExtendedUser.cs" />
     <Compile Include="Models\GeneralSummary.cs" />
     <Compile Include="Models\HeaderContent.cs" />

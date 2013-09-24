@@ -39,21 +39,34 @@ namespace Lynicon.Test.Models
 
             var exp = q.Expression;
 
-            var qt = new QueryTranslator<TestA>(items.AsQueryable());
+            var qt = new FacadeTypeQueryable<TestA>(items.AsQueryable());
 
             var res = qt.Where(x => x.B == "xyz").ToList();
 
             var db = new CoreDb("LyniconTest");
 
-            //foreach (var o in db.CompositeSet<User>())
-            //{
-            //    var y = o;
-            //}
+            foreach (var o in db.CompositeSet<ContentItem>())
+            {
+                var y = o;
+            }
 
-            var uq = new QueryTranslator<IUser>(db.CompositeSet<User>());
-            List<IUser> users = uq.Where(u => u.UserName == "jimmy").ToList();
-            users[0].Roles = "XYZ";
-            db.SaveChanges();
+            var qry = db.CompositeSet<User>()
+                .AsFacade<User>()
+                .RestrictFields(new List<string> { "Id" });
+                
+
+            //var uq = db.CompositeSet<User>();
+            //var users = uq.AsFacade<User>()
+            //    .Where(u => u.UserName == "jimmy")
+            //    .AsFacade<ExtendedUser>()
+            //    .Where(u => u.ExtData != null)
+            //    .ToList();
+            //users[0].Roles = "XYZ";
+            //db.SaveChanges();
+
+            var cr = new BasicRepository();
+            var ci = cr.Get<User>(typeof(User), new Guid("040C7CFD-4107-4EF6-AD2C-A9D7779227E1"));
+            ci.Roles = "PDQ";
         }
     }
 }
