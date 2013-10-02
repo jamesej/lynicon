@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Lynicon.Base.Models;
 using Lynicon.Routing;
 using Lynicon.Test.Models;
 using Lynicon.Utility;
@@ -27,6 +28,9 @@ namespace Lynicon.Test
 
             routes.AddDataRoute<AltItemContent>("altitem", "Articles/{_0}/{_1}",
                 new { controller = "AltItem", action = "Index" });
+
+            routes.AddDataRoute<BlogPostContent>("blogpost", "Blog/{_0}/{_1}/{_2}/{_3}",
+                new { controller = "BlogPost", action = "Index" });
 
             //routes.MapRoute(
             //    name: "Default",

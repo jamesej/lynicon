@@ -131,6 +131,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Areas\Lynicon.Base\Views\BlogPost\Index.aspx" />
     <Content Include="Areas\Lynicon\Content\circle-mask-white.png" />
     <Content Include="Areas\Lynicon\Content\down-arrow-white-tiny.png" />
     <Content Include="Areas\Lynicon\Content\down-arrow-white.png" />
@@ -435,6 +436,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Lynicon.Base\Views\Shared\" />
     <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
@@ -453,6 +455,10 @@
       <Project>{f9fb7ea1-57d4-49d0-9776-a7a7a8e23475}</Project>
       <Name>Lynicon</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Lynicon.Base\Lynicon.Base.csproj">
+      <Project>{47a2d927-cf55-4185-8125-9740736299dd}</Project>
+      <Name>Lynicon.Base</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Header\Index.cshtml" />
@@ -462,6 +468,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\AltItem\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon.Base\Views\Web.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
