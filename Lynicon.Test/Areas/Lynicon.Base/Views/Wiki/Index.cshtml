@@ -1,0 +1,17 @@
+﻿@model Lynicon.Base.Models.WikiContent
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>@Model.PageTitle</title>
+    <link href="/Content/Site.less" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1>@Model.Summary.Title</h1>
+    <div id="wiki-body">@Html.Raw(Model.Body)</div>
+</body>
+</html>

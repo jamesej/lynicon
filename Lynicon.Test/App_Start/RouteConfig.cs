@@ -20,6 +20,9 @@ namespace Lynicon.Test
             routes.AddDataRoute<TestContent>("test", "Test/{action}",
                 new { controller = "Test", action = "Index" });
 
+            routes.AddDataRoute<SingleContent>("single", "Single",
+                new { controller = "Single", action = "Index" });
+
             routes.AddDataRoute<HeaderContent>("header", "Articles/{_0}",
                 new { controller = "Header", action = "Index" });
 

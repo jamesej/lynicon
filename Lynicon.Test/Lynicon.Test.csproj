@@ -111,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AltItemController.cs" />
+    <Compile Include="Controllers\SingleController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\HeaderController.cs" />
     <Compile Include="Controllers\TestController.cs" />
@@ -118,6 +119,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AltItemContent.cs" />
+    <Compile Include="Models\SingleContent.cs" />
     <Compile Include="Models\DalTrack.cs" />
     <Compile Include="Models\ExtendedUser.cs" />
     <Compile Include="Models\GeneralSummary.cs" />
@@ -471,6 +473,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Lynicon.Base\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Single\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

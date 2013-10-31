@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web;
 using System.Web.Mvc;
+using Lynicon.Base.Models;
 using Lynicon.Collation;
 using Lynicon.Editors;
 using Lynicon.Extensibility;
@@ -22,15 +23,10 @@ namespace Lynicon.Base
 
         public override void RegisterArea(AreaRegistrationContext context)
         {
-            var x = 1;
-            // Get dynamically generated content
-            //context.MapRoute("lynicondynamic",
-            //    "Lynicon/Dynamic/{action}/{urlTail}",
-            //    new { controller = "Dynamic" });
-            //context.AddDataRoute<User>("lyniconuser",
-            //    "Lynicon/User/{_id}",
-            //    new { controller = "User", action = "Index" }
-            //    );
+
+            context.AddDataRoute<List<Comment>>("lyniconbasecomments",
+                "Lynicon/Comments",
+                new { controller = "Comment", action = "List" });
             
         }
     }

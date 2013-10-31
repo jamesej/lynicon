@@ -10,7 +10,6 @@ namespace Lynicon.Base.Models
 {
     public class BlogPostContent
     {
-        public ListingSummary Summary { get; set; }
         [AddressComponent("_3")]
         public string UrlTitle { get; set; }
         [AddressComponent("_0", ConversionFormat="0000")]
@@ -22,10 +21,5 @@ namespace Lynicon.Base.Models
         public string AuthorName { get; set; }
         [UIHint("Html")]
         public string Body { get; set; }
-
-        public BlogPostContent()
-        {
-            Summary = new ListingSummary();
-        }
     }
 }

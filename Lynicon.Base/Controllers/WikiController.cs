@@ -9,17 +9,12 @@ using Lynicon.Base.Models;
 
 namespace Lynicon.Base.Controllers
 {
-    public class BlogPostController : Controller
+    public class WikiController : Controller
     {
-        public virtual string BlogView
-        {
-            get { return null; }
-        }
-
-        public ActionResult Index(BlogPostContent data)
+        public ActionResult Index(WikiContent data)
         {
             RouteData.DataTokens.Add("area", "Lynicon.Base");
-            return View(BlogView, data);
+            return View(data);
         }
     }
 }

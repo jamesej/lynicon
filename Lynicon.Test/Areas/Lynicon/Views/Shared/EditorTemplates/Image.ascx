@@ -20,4 +20,5 @@
         <%= Html.EditorFor(m => m.Alt) %>
     </div>
 </div>
+<%= Html.Partial("EnsureFileEditor") %>
 

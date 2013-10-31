@@ -1,5 +1,6 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<Lynicon.Models.Link>" %>
 <%@ Import Namespace="Lynicon.Models" %>
+<%@ Import Namespace="Lynicon.Utility" %>
 <% if (Model != null) { %>
     <div class='l24-link'>
         <div class='l24-link-isinternal'>
