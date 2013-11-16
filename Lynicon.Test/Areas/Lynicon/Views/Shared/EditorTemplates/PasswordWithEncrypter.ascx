@@ -2,7 +2,7 @@
 <%@ Import Namespace="Lynicon.Models" %>
 <%@ Import Namespace="Lynicon.Utility" %>
 <%= Html.TextBox("", ViewData.Model, new { @class = "text-box single-line password-with-encryption" + ViewData["classes"]})  %>
-<div class="field-process-button">ENCRYPT</div>
+<div class="field-process-button encrypt-button">ENCRYPT</div>
 <%=
 Html.RegisterScript("passwordEncrypter", @"javascript:
 $(document).ready(function () {

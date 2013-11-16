@@ -33,3 +33,5 @@ C:\Dev\Lynicon.Test\Lynicon.Test\bin\Lucene.Net.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\Lucene.Net.xml
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\Lynicon.Base.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\Lynicon.Base.pdb
+C:\Dev\Lynicon.Test\Lynicon.Test\bin\HtmlAgilityPack.pdb
+C:\Dev\Lynicon.Test\Lynicon.Test\bin\HtmlAgilityPack.xml

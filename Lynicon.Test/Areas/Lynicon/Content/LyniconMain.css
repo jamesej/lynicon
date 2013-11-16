@@ -344,4 +344,76 @@ margin-right: 5px;
 }
 #lynicon-list-add-button {
 background-color: #808080;
+cursor: pointer;
+}
+/* ITEM SELECTOR */
+#lyn-item-selector {
+	overflow-y: scroll;
+}
+
+#lyn-item-selector h2 {
+	font-size: 16px;
+	font-family: Arial, sans-serif;
+	background-color: #888;
+	color: #FFF;
+	border: none;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-radius: 14px;
+}
+
+#lyn-item-selector .new-item {
+	display: inline-block;
+	background-color: #FFF;
+	color: #888;
+	padding: 0px 5px;
+	height: 18px;
+	border-radius: 9px;
+}
+
+#lyn-item-selector .new-item-url-patterns {
+	display: none;
+position: absolute;
+background-color: #000;
+z-index: 99;
+list-style: none;
+padding: 2px;
+top: -2px;
+left: 43px;
+}
+
+#lyn-item-selector .new-item-url-patterns li:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+#lyn-item-selector div {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+}
+
+#lyn-item-selector a.item-selected {
+	background-color: #c4c4ee
+}
+
+.lyn-item-entry .item-link {
+
+}
+.lyn-item-entry .edit-link
+{
+}
+#lyn-item-selector .cmd-link {
+	background-color: #3C3763;
+	color: #fff;
+	padding: 1px 3px;
+	height: 16px;
+	border-radius: 2px;
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	margin-right: 5px;
+}
+#lyn-item-selector .save-url-link {
+	margin-top: 5px;
+	margin-left: 10px;
 }
