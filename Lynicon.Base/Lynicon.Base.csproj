@@ -42,13 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="BaseModule.cs" />
     <Compile Include="Controllers\BlogPostController.cs" />
     <Compile Include="Controllers\WikiController.cs" />
     <Compile Include="LyniconBaseAreaRegistration.cs" />
     <Compile Include="Models\BlogPostContent.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\HierarchySummary.cs" />
+    <Compile Include="Models\UrlTreeNavManager.cs" />
     <Compile Include="Models\WikiContent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

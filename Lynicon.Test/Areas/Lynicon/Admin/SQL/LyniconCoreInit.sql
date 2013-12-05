@@ -61,6 +61,28 @@ INSERT INTO [dbo].[Users]
            ,GETDATE())
 GO
 
+/****** Object:  Table [dbo].[DbChanges]    Script Date: 11/18/2013 11:50:58 ******/
+
+CREATE TABLE [dbo].[DbChanges](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Change] [nvarchar](100) NOT NULL,
+	[WhenChanged] [datetime] NOT NULL,
+ CONSTRAINT [PK_DbChanges] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+INSERT INTO [dbo].[DbChanges]
+           ([Change]
+           ,[WhenChanged])
+     VALUES
+           ('LyniconInit 0.0'
+           ,GETDATE())
+GO
+
 SET ANSI_PADDING OFF
 GO
 

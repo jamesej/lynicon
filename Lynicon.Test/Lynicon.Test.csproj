@@ -134,6 +134,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Areas\Lynicon.Base\Views\BlogPost\Index.aspx" />
+    <Content Include="Areas\Lynicon.Workflow\Admin\SQL\LyniconWorkflowInit.sql" />
+    <Content Include="Areas\Lynicon.Workflow\Views\Shared\WorkflowPanel.ascx" />
+    <Content Include="Areas\Lynicon\Admin\SQL\LyniconCoreInit.sql" />
     <Content Include="Areas\Lynicon\Content\circle-mask-white.png" />
     <Content Include="Areas\Lynicon\Content\down-arrow-white-tiny.png" />
     <Content Include="Areas\Lynicon\Content\down-arrow-white.png" />
@@ -389,6 +392,10 @@
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\mctabs.js" />
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\validate.js" />
     <Content Include="Areas\Lynicon\Views\Items\Index.aspx" />
+    <Content Include="Areas\Lynicon\Views\Shared\NavList.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\CorePanel.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\ObjectList.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Reference.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EnsureFileEditor.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EnsureItemSelector.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\ItemListSummary.ascx" />
@@ -430,6 +437,7 @@
     <Content Include="Areas\Lynicon\Views\Shared\LyniconLogin.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconPropertyItem.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\L24CMStructure.aspx" />
+    <Content Include="Areas\Lynicon\Views\Ui\FunctionReveal.ascx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -464,6 +472,10 @@
     <ProjectReference Include="..\Lynicon.Base\Lynicon.Base.csproj">
       <Project>{47a2d927-cf55-4185-8125-9740736299dd}</Project>
       <Name>Lynicon.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lynicon.Workflow\Lynicon.Workflow.csproj">
+      <Project>{a9face40-83c8-48bc-a208-bbf4b37b889c}</Project>
+      <Name>Lynicon.Workflow</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

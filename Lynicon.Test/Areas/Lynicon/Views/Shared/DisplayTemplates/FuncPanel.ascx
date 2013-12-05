@@ -11,6 +11,7 @@
         <%= btn.Caption %>
     </<%= url == "" ? "div" : "a"%>>
     <% } %>
+    <div id="reveal-button"><img id="reveal-arrow" src="/areas/lynicon/content/down-arrow-white.png" /></div>
     <div id="save" class="action-button">SAVE</div>
 </div>
 <script type="text/javascript">
@@ -20,6 +21,24 @@
             <%= ui.ApplySubstitutions(btn.ClientClickScript, ViewContext, ViewBag) %>
         });
         <% } %>
+        $('#reveal-button').click(function () {
+            if ($('#reveal').length == 0) {
+                $("<div id='reveal'></div>")
+                    .hide()
+                    .insertBefore($('#save'))
+                    .load('/lynicon/ui/functionreveal', function () {
+                        $('#reveal').show('slow');
+                    });
+                $('#reveal-arrow').attr('src', '/areas/lynicon/content/up-arrow-white.png');
+            } else if ($('#reveal').is(':visible')) {
+                $('#reveal').hide('slow');
+                $('#reveal-arrow').attr('src', '/areas/lynicon/content/down-arrow-white.png');
+            } else {
+                $('#reveal').show('slow');
+                $('#reveal-arrow').attr('src', '/areas/lynicon/content/up-arrow-white.png');
+            }
+            
+        });
     });
 </script>
 

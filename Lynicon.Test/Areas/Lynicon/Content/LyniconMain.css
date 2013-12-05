@@ -39,8 +39,7 @@ BODY
 	background-image: url(/Areas/Lynicon/Content/down-arrow-white.png);
 }
 #editPanelContainer {
-	position: absolute;
-	top: 52px;
+	position: relative;
 	bottom: 0px;
 	overflow: scroll;
 	width: 100%
@@ -86,6 +85,7 @@ BODY
 	height: 22px;
 	font-size: 18px;
 	width: auto;
+	clear:both;
 }
 #edit .func-link
 {
@@ -222,7 +222,7 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 }
 .l24-file-url, .l24-link-url INPUT
 {
-	width: 225px;
+	width: 130px;
 	margin-left: 24px;
 }
 #editPanel .l24-link-content
@@ -270,15 +270,38 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 	border-radius: 3px;
 	margin: 1px;
 	cursor: pointer;
+	float:left;
 }
+#funcPanel #reveal-button {
+	float: right;
+	height: 22px;
+	width: 20px;
+	background-color: #3C3763;
+	padding-left: 4px;
+	cursor:pointer;
+}
+#funcPanel #reveal-arrow {
+	height: 16px;
+	width: 16px;
+}
+
 #funcPanel .func-button:hover {
 	background-color: black;
 }
-#funcPanel A, #funcPanel A:visited
+#funcPanel A.func-button, #funcPanel A.func-button:visited
 {
 	color: white;
 	text-decoration:none;
 }
+
+#funcPanel #reveal {
+	clear: both;
+}
+
+#funcPanel .reveal-panel-view {
+	background-color: #E7E7E7;
+}
+
 #editPanel .reorder-up IMG
 {
 	margin-top: 3px;

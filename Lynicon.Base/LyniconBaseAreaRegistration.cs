@@ -23,11 +23,7 @@ namespace Lynicon.Base
 
         public override void RegisterArea(AreaRegistrationContext context)
         {
-
-            context.AddDataRoute<List<Comment>>("lyniconbasecomments",
-                "Lynicon/Comments",
-                new { controller = "Comment", action = "List" });
-            
+            LyniconModuleManager.Instance.RegisterModule(new BaseModule(context, "Core"));
         }
     }
 }
