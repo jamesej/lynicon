@@ -6,8 +6,10 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Lynicon.Extensibility;
+using Lynicon.Map;
 using Lynicon.Membership;
 using Lynicon.Test.Models;
+using Lynicon.Base.Models;
 
 namespace Lynicon.Test
 {
@@ -25,6 +27,7 @@ namespace Lynicon.Test
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
             DalTrack.Instance.Initialise();
+            NavManager.Instance.RegisterNavManager(new UrlTreeNavManager<WikiContent>());
         }
 
         protected void Application_OnPostAuthenticateRequest(object sender, EventArgs e)
