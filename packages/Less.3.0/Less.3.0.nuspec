@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Less</id>
+    <version>3.0</version>
+    <title>Less</title>
+    <authors>Arquitectura Binaria</authors>
+    <owners>Arquitectura Binaria</owners>
+    <projectUrl>http://lessframework.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Less Core services: Config, Log, Data...</description>
+    <summary>A framework with less mass</summary>
+    <releaseNotes />
+    <copyright />
+    <language />
+  </metadata>
+</package>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Lynicon.Collation;
 
 namespace Lynicon.Workflow.Models
 {
@@ -40,7 +41,7 @@ namespace Lynicon.Workflow.Models
             return LayerNames[layer];
         }
 
-        public Layer GetNewUserLayer(WorkflowUser wfUser, string name)
+        public Layer GetNewUserLayer(IWorkflowUser wfUser, string name)
         {
             using (var db = new WorkflowDb())
             {
@@ -53,15 +54,28 @@ namespace Lynicon.Workflow.Models
                 var newLayer = new Layer {
                     IsLive = false, Level = maxLayer.Value + LayerSpacing, Name = name
                 };
+
+                SetUserLayer(wfUser, newLayer.Level);
+
+                var wfUserDummy = new WorkflowUser { Id = wfUser.Id };
+                db.Users.Attach(wfUserDummy);
+                newLayer.Users.Add(wfUserDummy);
+                
                 db.Layers.Add(newLayer);
                 var newLayerTrans = new LayerTransaction {
-                    Layer = newLayer, Date = DateTime.Now, Type = LayerTransaction.Create, User = wfUser
+                    Layer = newLayer, Date = DateTime.Now, Type = LayerTransaction.Create, UserId = wfUser.Id
                 };
                 db.LayerTransactions.Add(newLayerTrans);
                 db.SaveChanges();
 
                 return newLayer;
             }
+        }
+
+        public void SetUserLayer(IWorkflowUser wfUser, int level)
+        {
+            wfUser.CurrentLevel = level;
+            Collator.Instance.Set(wfUser);
         }
 
         public List<Layer> GetUserLayers(Guid userId)

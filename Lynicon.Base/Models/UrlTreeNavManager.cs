@@ -48,7 +48,7 @@ namespace Lynicon.Base.Models
             }
             EventHub.Instance.RegisterEventProcessor("Repository.Set",
                 ehd => { this.ApplyChange(ehd.EventName, ehd.Data); return ehd.Data; },
-                "Caching.Navigation.UrlTree", new List<string>());
+                "Caching.Navigation.UrlTree");
         }
 
         private void ApplyChange(string eventName, object item)
@@ -84,7 +84,7 @@ namespace Lynicon.Base.Models
                     prevSummary.Children.Add(navSumm);
                     urlPos++;
                     // acquire as children any appropriate nav summaries
-                    while (urls[urlPos].StartsWith(navSumm.Url + "/")) // loop over all tree under added nav summ
+                    while (urlPos < urls.Count && urls[urlPos].StartsWith(navSumm.Url + "/")) // loop over all tree under added nav summ
                     {
                         var childSumm = summaryUrls[urls[urlPos]];
                         if (!childSumm.Parent.Url.StartsWith(navSumm.Url + "/")) // don't put indirect children in children list, only direct

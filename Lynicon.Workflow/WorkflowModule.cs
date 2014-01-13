@@ -29,16 +29,23 @@ namespace Lynicon
 
             VersionManager.Instance.RegisterVersionSetter("Workflow", SetVersion);
 
-            EventHub.Instance.RegisterEventProcessor("Repository.Get", ProcessGet, "Workflow", new List<string> { });
+            EventHub.Instance.RegisterEventProcessor("Repository.Get", ProcessGet, "Workflow");
+            EventHub.Instance.RegisterEventProcessor("Repository.Set", ProcessSet, "Workflow");
             
-            LyniconUi.Instance.AddRevealPanelView("~/Areas/Lynicon.Workflow/Views/Shared/WorkflowPanel.ascx", new List<string> { "CorePanel" } );
+            LyniconUi.Instance.RevealPanelViews.Add(
+                new KeyValuePair<string, string>("Workflow", "~/Areas/Lynicon.Workflow/Views/Shared/WorkflowPanel.ascx"),
+                "Core" );
+
+            context.MapRoute("lyniconworkflowmain",
+                "Lynicon/Workflow/{action}",
+                new { controller = "Workflow" });
 
             return true;
         }
 
         public void SetVersion(Dictionary<string, object> version)
         {
-            var wfUser = LyniconSecurityManager.Current.User as WorkflowUser;
+            var wfUser = LyniconSecurityManager.Current.User as IWorkflowUser;
             if (wfUser == null)
                 version["Layer"] = LayerManager.Instance.LiveLayer;
             else
@@ -94,6 +101,22 @@ namespace Lynicon
             }
 
             return ehd.Data;
+        }
+
+        public object ProcessSet(EventHubData ehd)
+        {
+            var d = ehd.Data as ILayered;
+            if (d == null)
+                return ehd.Data;
+
+            var currLayer = (int)VersionManager.Instance.CurrentVersion["Layer"];
+
+            // if we're on a different layer from the one where the current record came from, we create a new record
+            // on the new layer rather than updating the old one
+            if (ehd.EventName == "Repository.Set.Update" && d.Layer != currLayer)
+                d.Id = Guid.Empty;
+
+            return d;
         }
     }
 }

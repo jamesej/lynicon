@@ -7,9 +7,9 @@ using Lynicon.Repositories;
 
 namespace Lynicon.Workflow.Models
 {
-    public class WorkflowContentItem : ContentItem, ILayered
+    public interface IWorkflowContentItem : IContentItem
     {
-        public int Layer { get; set; }
-        public bool IsLive { get; set; }
+        int Layer { get; set; }
+        bool IsLive { get; set; }
     }
 }

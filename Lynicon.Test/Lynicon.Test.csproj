@@ -43,6 +43,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Less">
+      <HintPath>..\packages\Less.3.0\lib\Less.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -440,7 +443,9 @@
     <Content Include="Areas\Lynicon\Views\Shared\L24CMStructure.aspx" />
     <Content Include="Areas\Lynicon\Views\Ui\FunctionReveal.ascx" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -498,7 +503,10 @@
     <Content Include="Areas\Lynicon.Base\Views\Wiki\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Lynicon.Base\Content\Wiki.less" />
+    <Content Include="Areas\Lynicon.Base\Content\Wiki.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Test\ConstraintOrdering.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -24,5 +24,9 @@ namespace Lynicon.Test.Controllers
             return View(data);
         }
 
+        public ActionResult ConstraintOrdering(TestContent data)
+        {
+            return View(data);
+        }
     }
 }

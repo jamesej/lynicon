@@ -24,7 +24,7 @@ namespace Lynicon.Test.Models
             EventHub.Instance.RegisterEventProcessor("",
                 ehd => {
                     Debug.WriteLine(">>Evt. " + ehd.EventName + " on " + ehd.Sender.GetType().FullName); return ehd.Data;
-                }, "daltrack", null);
+                }, "daltrack");
         }
     }
 }

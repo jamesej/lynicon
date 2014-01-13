@@ -50,6 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\WorkflowController.cs" />
+    <Compile Include="Models\ILayered.cs" />
+    <Compile Include="Models\IWorkflowContentItem.cs" />
+    <Compile Include="Models\IWorkflowUser.cs" />
     <Compile Include="Models\LayerTransaction.cs" />
     <Compile Include="Models\Layer.cs" />
     <Compile Include="Models\LayerManager.cs" />
@@ -69,6 +73,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
