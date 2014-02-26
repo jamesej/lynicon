@@ -48,7 +48,7 @@ namespace Lynicon.Base.Models
             }
             EventHub.Instance.RegisterEventProcessor("Repository.Set",
                 ehd => { this.ApplyChange(ehd.EventName, ehd.Data); return ehd.Data; },
-                "Caching.Navigation.UrlTree");
+                "Caching");
         }
 
         private void ApplyChange(string eventName, object item)

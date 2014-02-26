@@ -22,6 +22,8 @@ namespace Lynicon.Base
             regContext.AddDataRoute<List<Comment>>("lyniconbasecomments",
                 "Lynicon/Comments",
                 new { controller = "Comment", action = "List" });
+
+
             return true;
         }
     }

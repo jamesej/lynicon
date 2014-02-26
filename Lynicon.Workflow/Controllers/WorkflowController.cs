@@ -38,5 +38,14 @@ namespace Lynicon.Workflow.Controllers
             LayerManager.Instance.SetUserLayer(wfUser, level);
             return Content("OK");
         }
+
+        [Authorize(Roles = LM.User.EditorRole)]
+        public ActionResult ViewLayers()
+        {
+            RouteData.DataTokens.Add("area", "Lynicon.Workflow");
+            ViewData.Add("ChangePermission", User.IsInRole(Lynicon.Membership.User.AdminRole));
+            var vm = new ViewLayersViewModel();
+            return View(vm);
+        }
     }
 }

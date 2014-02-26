@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Linq2Rest</id>
+    <version>3.3.4.0</version>
+    <title>Linq2Rest</title>
+    <authors>Jacob Reimers</authors>
+    <owners>Jacob Reimers</owners>
+    <licenseUrl>http://www.opensource.org/licenses/MS-PL</licenseUrl>
+    <projectUrl>https://bitbucket.org/jjrdk/linq2rest</projectUrl>
+    <iconUrl>https://bitbucket-assetroot.s3.amazonaws.com/c/photos/2013/Sep/07/linq2rest-logo-4047795347-2_avatar.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Parses OData system query parameters to create a LINQ query that can be used to filter a model set. Also exposes a LINQ provider for web services supporting the OData query parameters. Use extension method Filter (in Linq2Rest namespace) on any IEnumerable source.</description>
+    <summary>Open source OData client and server component.</summary>
+    <releaseNotes>Removed case insensitive text search to improve support for EntityFramework querying.</releaseNotes>
+    <copyright>Jacob Reimers (Reimers.dk)</copyright>
+    <language />
+    <tags>OData LINQ REST</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework="" />
+      <frameworkAssembly assemblyName="Microsoft.CSharp" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Web" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Runtime.Serialization" targetFramework="" />
+    </frameworkAssemblies>
+    <references>
+      <reference file="Linq2Rest.dll" />
+      <reference file="Linq2Rest.xml" />
+    </references>
+  </metadata>
+</package>

@@ -11,6 +11,7 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script> -->
     <script id="jquery" src="/Lynicon/Embedded/Scripts/jquery.js/" type="text/javascript"></script>
     <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery-ui.js/"></script>
+    <link href="/Lynicon/Embedded/Content/chosen.css/" rel="Stylesheet" type="text/css" />
     <link href="/Lynicon/Embedded/Content/jquery.jstreelist.css/" rel="stylesheet" type="text/css" />
     <link href="/Lynicon/Embedded/Content/jquery.layout.css/" rel="stylesheet" type="text/css" />
     <link href="/Lynicon/Embedded/Content/jquery.contextMenu.css/" rel="stylesheet" type="text/css" />
@@ -20,6 +21,7 @@
     <script src="/Lynicon/Embedded/Scripts/jquery.tmpl.js/" type="text/javascript"></script>
     <script type="text/javascript" src="/Lynicon/Embedded/Scripts/LyniconMain.js/"></script>
     <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery.layout.js/"></script>
+    <script type="text/javascript" src="/Lynicon/Embedded/Scripts/chosen.jquery.js/"></script>
     <script type="text/javascript" id="simplemodal-script" src="/Lynicon/Embedded/Scripts/jquery.simplemodal.js/"></script>
     <script type="text/javascript" id="tinymce-script" src="/Areas/Lynicon/scripts/tiny_mce/jquery.tinymce.js"></script>
     <script src="/Lynicon/Embedded/Scripts/fileuploader.js/" type="text/javascript"></script>

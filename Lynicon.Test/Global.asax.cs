@@ -19,12 +19,18 @@ namespace Lynicon.Test
     {
         protected void Application_Start()
         {
+            // Register areas including area-modules
             AreaRegistration.RegisterAllAreas(this);
-            LyniconModuleManager.Instance.Initialise();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            // Initialise caches
+            LyniconModuleManager.Instance.RegisterModule(new SummaryCache(null));
+
+            // We have all the modules, initialise them
+            LyniconModuleManager.Instance.Initialise();
 
             DalTrack.Instance.Initialise();
             NavManager.Instance.RegisterNavManager(new UrlTreeNavManager<WikiContent>());

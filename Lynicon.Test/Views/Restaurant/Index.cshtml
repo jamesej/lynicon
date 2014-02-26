@@ -1,0 +1,22 @@
+﻿@model Lynicon.Test.Models.RestaurantContent
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @Model.Summary.Title
+    </div>
+    <div>
+        @Html.Raw(Model.ChefBiography)
+    </div>
+</body>
+</html>

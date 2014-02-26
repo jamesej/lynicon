@@ -114,6 +114,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AltItemController.cs" />
+    <Compile Include="Controllers\ChefController.cs" />
+    <Compile Include="Controllers\RestaurantController.cs" />
     <Compile Include="Controllers\SingleController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\HeaderController.cs" />
@@ -122,11 +124,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AltItemContent.cs" />
+    <Compile Include="Models\RestaurantContent.cs" />
+    <Compile Include="Models\HeaderContent.cs" />
     <Compile Include="Models\SingleContent.cs" />
     <Compile Include="Models\DalTrack.cs" />
     <Compile Include="Models\ExtendedUser.cs" />
     <Compile Include="Models\GeneralSummary.cs" />
-    <Compile Include="Models\HeaderContent.cs" />
+    <Compile Include="Models\ChefContent.cs" />
     <Compile Include="Models\ItemContent.cs" />
     <Compile Include="Models\LinqTest.cs" />
     <Compile Include="Models\TestContent.cs" />
@@ -395,6 +399,7 @@
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\mctabs.js" />
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\validate.js" />
     <Content Include="Areas\Lynicon\Views\Items\Index.aspx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\ReferenceSelect.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\FullNavList.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\NavList.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\CorePanel.ascx" />
@@ -507,6 +512,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Test\ConstraintOrdering.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Chef\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Restaurant\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Test\VersionEquality.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Test\Layering.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon.Workflow\Views\Workflow\ViewLayers.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

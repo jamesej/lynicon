@@ -20,6 +20,7 @@
 
 <input type="text" id="wf-layer-name" />
 <a id="wf-get-layer" class="func-button">Get Layer</a>
+<a id="wf-view-layers" class="func-button" href="/lynicon/workflow/viewlayers">View Layers</a>
 <script type="text/javascript">
 $('#wf-get-layer').click(function () {
     if (!$('#wf-layer-name').val()) {

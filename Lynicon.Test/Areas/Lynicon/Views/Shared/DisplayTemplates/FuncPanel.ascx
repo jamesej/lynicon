@@ -12,6 +12,17 @@
     </<%= url == "" ? "div" : "a"%>>
     <% } %>
     <div id="reveal-button"><img id="reveal-arrow" src="/areas/lynicon/content/down-arrow-white.png" /></div>
+    <div id="reveal" style="display:none">
+        <% bool isAlt = false; foreach (var viewKvp in ui.RevealPanelViews)
+        {%>
+        <div class="reveal-panel-view <%= isAlt ? "alt" : "" %>">
+           <%= Html.Partial(viewKvp.Value) %>
+           <div style="clear:both"></div>
+        </div>
+       <%
+       isAlt = !isAlt;}
+        %>
+    </div>
     <div id="save" class="action-button">SAVE</div>
 </div>
 <script type="text/javascript">

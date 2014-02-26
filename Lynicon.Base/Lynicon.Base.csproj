@@ -53,6 +53,7 @@
     <Compile Include="Models\BlogPostContent.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\HierarchySummary.cs" />
+    <Compile Include="Models\SummaryCache.cs" />
     <Compile Include="Models\UrlTreeNavManager.cs" />
     <Compile Include="Models\WikiContent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

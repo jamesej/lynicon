@@ -1,18 +1,25 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+<%@ Import Namespace="Lynicon.Models" %>
 <%@ Import Namespace="Lynicon.Map" %>
+<%@ Import Namespace="Lynicon.Collation" %>
 <%@ Import Namespace="System.Text.RegularExpressions" %>
 <%
-    var map = ContentMap.Instance;
     var enumElementReplacer = new Regex("\\{.*\\}");
+    var summaryDict = Collator.Instance.GetList<Summary>()
+        .GroupBy(s => s.Type)
+        .ToDictionary(sg => sg.Key, sg => sg.OrderBy(s => s.Title));
      %>
 <div id='lyn-item-selector' <%= ViewData.ContainsKey("popup") ? "style='display:none'" : "" %>>
     <div id="lyn-item-selector-inner">
-    <% foreach (var typeKvp in map.Cache) { %>
+    <% foreach (var type in ContentTypeHierarchy.AllContentTypes.OrderBy(t => t.Name)) {
+           var patts = ContentMap.Instance.GetUrlPatterns(type);
+           if (!patts.Any())
+               continue;%>
         <h2>
             <% if (ViewData.ContainsKey("UrlPermission") && (bool)ViewData["UrlPermission"]) { %>
                 <span class="new-item">+</span>
                 <ul class="new-item-url-patterns">
-                    <% foreach (string patt in ContentMap.Instance.GetUrlPatterns(typeKvp.Key)) { %>
+                    <% foreach (string patt in patts) { %>
                     <li><%= enumElementReplacer.Replace(patt
                         .Replace("{?}", "<span class='pathel'>___</span>")
                         .Replace("{*}", "<span class='pathelopt'>___</span>")
@@ -24,10 +31,10 @@
                     <% } %>
                 </ul>
             <% } %>
-            <span class="type-name"><%= typeKvp.Key.Name %></span><%= Html.Hidden("typeName", typeKvp.Key.FullName, new { @class = "type-name" })%>
+            <span class="type-name"><%= type.Name.Replace("Content", "") %></span><%= Html.Hidden("typeName", type.FullName, new { @class = "type-name" })%>
         </h2>
         <div class="lyn-type-items">
-            <% foreach (var val in typeKvp.Value.Items) { %>
+            <% foreach (var val in (summaryDict.ContainsKey(type) ? summaryDict[type] : Enumerable.Empty<Summary>())) { %>
             <%= Html.Partial("ItemListSummary", val) %>
             <% } %>
         </div>

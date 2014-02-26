@@ -13,5 +13,6 @@ namespace Lynicon.Workflow.Models
         Guid Identity { get; set; }
         int Layer { get; set; }
         bool IsLive { get; set; }
+        bool IsDeletion { get; set; }
     }
 }

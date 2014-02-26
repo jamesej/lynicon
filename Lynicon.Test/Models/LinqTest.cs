@@ -65,7 +65,7 @@ namespace Lynicon.Test.Models
             //db.SaveChanges();
 
             var cr = new BasicRepository();
-            var ci = cr.Get<User>(typeof(User), new Guid("040C7CFD-4107-4EF6-AD2C-A9D7779227E1"));
+            var ci = cr.Get<User>(typeof(User), new List<object> { new Guid("040C7CFD-4107-4EF6-AD2C-A9D7779227E1") }).FirstOrDefault();
             ci.Roles = "PDQ";
         }
     }

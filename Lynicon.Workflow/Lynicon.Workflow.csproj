@@ -57,6 +57,7 @@
     <Compile Include="Models\LayerTransaction.cs" />
     <Compile Include="Models\Layer.cs" />
     <Compile Include="Models\LayerManager.cs" />
+    <Compile Include="Models\ViewLayersViewModel.cs" />
     <Compile Include="Models\WorkflowDb.cs" />
     <Compile Include="Models\WorkflowUser.cs" />
     <Compile Include="Models\WorkflowContentItem.cs" />

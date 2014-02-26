@@ -9,27 +9,37 @@
         ViewData.TemplateInfo.HtmlFieldPrefix = String.Empty;
         
         int count = (Model as IEnumerable).Cast<object>().Count();
-        
-        foreach (object item in (IEnumerable)Model) {
-            string fieldName = String.Format(System.Globalization.CultureInfo.InvariantCulture, "{0}[{1}]", oldPrefix, index);
-            %>
-            <div id="del-<%= fieldName %>" class="action-button delete indent-<%= ViewData.TemplateInfo.TemplateDepth - 1 %>" style="float: left">x</div>
-            <div class="reorder indent-<%= ViewData.TemplateInfo.TemplateDepth - 1 %><%= index == 0 ? " first" : (index == count - 1 ? " last" : "") %>" style="float: left">
-                <div class="reorder-up action-button">
-                    <img alt="up" id="up-<%= fieldName %>" src="/Areas/Lynicon/Content/up-arrow-white-tiny.png" />
+
+        if (count == 0)
+        {
+            // even for zero count, ensure the markup is built once so that any necessary includes are
+            // put on the page
+            object dummyItem = Activator.CreateInstance(Model.GetType().GetGenericArguments()[0]);
+            Html.EditorFor(m => dummyItem, null, "dummy");
+        }
+        else
+        {
+            foreach (object item in (IEnumerable)Model) {
+                string fieldName = String.Format(System.Globalization.CultureInfo.InvariantCulture, "{0}[{1}]", oldPrefix, index);
+                %>
+                <div id="del-<%= fieldName %>" class="action-button delete indent-<%= ViewData.TemplateInfo.TemplateDepth - 1 %>" style="float: left">x</div>
+                <div class="reorder indent-<%= ViewData.TemplateInfo.TemplateDepth - 1 %><%= index == 0 ? " first" : (index == count - 1 ? " last" : "") %>" style="float: left">
+                    <div class="reorder-up action-button">
+                        <img alt="up" id="up-<%= fieldName %>" src="/Areas/Lynicon/Content/up-arrow-white-tiny.png" />
+                    </div>
+                    <div class="reorder-down action-button">
+                        <img alt="down" id="down-<%= fieldName %>" src="/Areas/Lynicon/Content/down-arrow-white-tiny.png" />
+                    </div>
                 </div>
-                <div class="reorder-down action-button">
-                    <img alt="down" id="down-<%= fieldName %>" src="/Areas/Lynicon/Content/down-arrow-white-tiny.png" />
+                <div class="editor-field indent-<%= ViewData.TemplateInfo.TemplateDepth %>">
+                <%
+                    MvcHtmlString editor = Html.EditorFor(m => item, null, fieldName);
+                    Response.Write(editor);
+                %>
                 </div>
-            </div>
-            <div class="editor-field indent-<%= ViewData.TemplateInfo.TemplateDepth %>">
-            <%
-                MvcHtmlString editor = Html.EditorFor(m => item, null, fieldName);
-                Response.Write(editor);
-            %>
-            </div>
-            <%
-            index++;
+                <%
+                index++;
+            }
         }
         
         ViewData.TemplateInfo.HtmlFieldPrefix = oldPrefix;

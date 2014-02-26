@@ -41,6 +41,12 @@ namespace Lynicon.Test
             routes.AddDataRoute<WikiContent>("wiki", "Wiki/{*_0}",
                 new { controller = "Wiki", action = "Index" });
 
+            routes.AddDataRoute<ChefContent>("chefs", "chefs/{_0}",
+                new { controller = "Chef", action = "Index" });
+
+            routes.AddDataRoute<RestaurantContent>("restaurants", "restaurants/{_0}",
+                new { controller = "Restaurant", action = "Index" });
+
             //routes.MapRoute(
             //    name: "Default",
             //    url: "{controller}/{action}/{id}",
