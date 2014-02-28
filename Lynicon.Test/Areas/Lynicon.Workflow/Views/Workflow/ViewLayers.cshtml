@@ -13,7 +13,17 @@
 </head>
 <body>
     <div>
-        
+        @foreach (var layer in Model.Layers)
+        {
+            <div class="layer-container">
+                <div>
+                @layer.Layer.Name: @layer.Layer.Level
+                </div>
+                <div>
+                    @layer.ChangeCount changes
+                </div>
+            </div>
+        }
     </div>
 </body>
 </html>

@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Lynicon.Collation;
+using Lynicon.Extensibility;
+using Lynicon.Models;
+using Lynicon.Repositories;
+using Lynicon.Utility;
 
 namespace Lynicon.Workflow.Models
 {
@@ -20,11 +24,42 @@ namespace Lynicon.Workflow.Models
 
         public Dictionary<int, string> LayerNames { get; set; }
 
+        public List<Type> LayerContentTypes { get; set; }
+
+        private Dictionary<int, List<Summary>> layerChanges = null;
+        public Dictionary<int, List<Summary>> LayerChanges
+        {
+            get
+            {
+                if (layerChanges == null)
+                {
+                    // Get all the versions, not just the current ones
+                    VersionManager.Instance.Suppressed = true;
+                    layerChanges = new Dictionary<int, List<Summary>>();
+                    Collator.Instance.GetSummaries<Summary, ILayered>(LayerContentTypes, iq => iq.Where(l => l.Layer > LiveLayer))
+                        .Do(s =>
+                            {
+                                int layerN = (int)s.Version["Layer"];
+                                if (layerChanges.ContainsKey(layerN))
+                                    layerChanges[layerN].Add(s);
+                                else
+                                    layerChanges.Add(layerN, new List<Summary> { s });
+                            });
+                    VersionManager.Instance.Suppressed = false;
+                }
+                return layerChanges;
+            }
+        }
+
         public LayerManager()
         {
             var db = new WorkflowDb();
             LiveLayer = db.Layers.FirstOrDefault(l => l.IsLive).Level;
             LayerNames = new Dictionary<int, string>();
+
+            LayerContentTypes = ContentTypeHierarchy.AllContentTypes
+                .Where(t => typeof(ILayered).IsAssignableFrom(Repository.Instance.OutputType(t)))
+                .ToList();
         }
 
         public string GetLayerName(int layer)
@@ -89,5 +124,6 @@ namespace Lynicon.Workflow.Models
                 return layers;
             }
         }
+
     }
 }

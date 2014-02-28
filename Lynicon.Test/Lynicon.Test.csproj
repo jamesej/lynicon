@@ -528,6 +528,9 @@
   <ItemGroup>
     <Content Include="Areas\Lynicon.Workflow\Views\Workflow\ViewLayers.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon.Workflow\Views\Web.config" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
