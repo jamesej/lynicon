@@ -12,5 +12,6 @@ namespace Lynicon.Workflow.Models
         int Layer { get; set; }
         bool IsLive { get; set; }
         bool IsDeletion { get; set; }
+        bool IsUpdate { get; set; }
     }
 }

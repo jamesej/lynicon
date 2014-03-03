@@ -4,7 +4,8 @@ GO
 ALTER TABLE ContentItems ADD
 Layer INT NOT NULL CONSTRAINT ContentItems_Default_Layer DEFAULT 0,
 IsLive BIT NOT NULL CONSTRAINT ContentItems_Default_IsLive DEFAULT 0,
-IsDeletion BIT NOT NULL CONSTRAINT ContentItems_Default_IsDeletion DEFAULT 0
+IsDeletion BIT NOT NULL CONSTRAINT ContentItems_Default_IsDeletion DEFAULT 0,
+IsUpdate BIT NOT NULL CONSTRAINT ContentItems_Default_IsUpdate DEFAULT 0
 GO
 UPDATE ContentItems SET IsLive = 1
 GO

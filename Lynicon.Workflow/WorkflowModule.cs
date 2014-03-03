@@ -119,6 +119,7 @@ namespace Lynicon
             {
                 d = (ILayered)ReflectionX.CopyEntity(d);
                 d.Id = Guid.Empty;
+                d.IsUpdate = true;
                 ehd.EventName = "Repository.Set.Add";
             }
             if (ehd.EventName == "Repository.Set.Delete")

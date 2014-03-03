@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\WorkflowController.cs" />
+    <Compile Include="Models\LayerDetailsViewModel.cs" />
     <Compile Include="Models\ILayered.cs" />
     <Compile Include="Models\IWorkflowContentItem.cs" />
     <Compile Include="Models\IWorkflowUser.cs" />

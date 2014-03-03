@@ -47,5 +47,14 @@ namespace Lynicon.Workflow.Controllers
             var vm = new ViewLayersViewModel();
             return View(vm);
         }
+
+        [Authorize(Roles = LM.User.EditorRole)]
+        public ActionResult LayerDetails(int level)
+        {
+            RouteData.DataTokens["area"] = "Lynicon.Workflow";
+            ViewData.Add("ChangePermission", User.IsInRole(Lynicon.Membership.User.AdminRole));
+            var vm = new LayerDetailsViewModel(level);
+            return PartialView(vm);
+        }
     }
 }

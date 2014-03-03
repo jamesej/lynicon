@@ -125,5 +125,17 @@ namespace Lynicon.Workflow.Models
             }
         }
 
+        public List<WorkflowUser> GetLayerUsers(int level)
+        {
+            using (var db = new WorkflowDb())
+            {
+                var users = db.Layers
+                    .Where(l => l.Level == level)
+                    .SelectMany(l => l.Users)
+                    .ToList();
+                return users;
+            }
+        }
+
     }
 }

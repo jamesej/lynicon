@@ -4,7 +4,7 @@
     <a class="move-link cmd-link" href="/<%= Model.Url %>?$urlget=true" title="Move Url">Mv</a>
     <a class="del-link cmd-link" title="Delete Url">Del</a>
     <% } %>
-    <a class="item-link" href="/<%= Model.Url%>" title="<%= Model.Id %>"><%= string.IsNullOrEmpty(Model.Title) ? "/" + Model.Url : Model.Title %></a>
+    <a class="item-link" href="/<%= Model.Url%>" title="<%= Model.Id %>"><%= Model.DisplayTitle() %></a>
 </div>
 
 

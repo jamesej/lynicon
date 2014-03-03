@@ -31,7 +31,7 @@
                     <% } %>
                 </ul>
             <% } %>
-            <span class="type-name"><%= type.Name.Replace("Content", "") %></span><%= Html.Hidden("typeName", type.FullName, new { @class = "type-name" })%>
+            <span class="type-name"><%= BaseContent.ContentClassDisplayName(type) %></span><%= Html.Hidden("typeName", type.FullName, new { @class = "type-name" })%>
         </h2>
         <div class="lyn-type-items">
             <% foreach (var val in (summaryDict.ContainsKey(type) ? summaryDict[type] : Enumerable.Empty<Summary>())) { %>
