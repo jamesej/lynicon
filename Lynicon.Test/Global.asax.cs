@@ -26,14 +26,7 @@ namespace Lynicon.Test
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            // Initialise caches
-            LyniconModuleManager.Instance.RegisterModule(new SummaryCache(null));
-
-            // We have all the modules, initialise them
-            LyniconModuleManager.Instance.Initialise();
-
-            DalTrack.Instance.Initialise();
-            NavManager.Instance.RegisterNavManager(new UrlTreeNavManager<WikiContent>());
+            LyniconConfig.Initialise();
         }
 
         protected void Application_OnPostAuthenticateRequest(object sender, EventArgs e)

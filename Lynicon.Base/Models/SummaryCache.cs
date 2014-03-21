@@ -20,11 +20,11 @@ namespace Lynicon.Base.Models
         {
             // We can suppress version management as we will be single threaded as we are in global.asax Application_Start
             // We have to suppress it otherwise
-            VersionManager.Instance.Suppressed = true;
+            VersionManager.Instance.Mode = VersioningMode.All;
             var summaries = Repository.Instance
                     .GetSummaries<object, object>(typeof(Summary), ContentTypeHierarchy.AllContentTypes, iq => iq)
                     .ToList();
-            VersionManager.Instance.Suppressed = false;
+            VersionManager.Instance.Mode = VersioningMode.Current;
 
             // Now we want version management back to build the ItemVersionedId for the summaries
             Cache = summaries.ToDictionary(sc => new ItemVersionedId(sc), sc => sc,
@@ -57,6 +57,8 @@ namespace Lynicon.Base.Models
             switch (ehd.EventName)
             {
                 case "Repository.Get.Summaries":
+                case "Repository.Get.Summaries.Ids":
+                case "Repository.Get.Count":
                     var d = ehd.Data as IQueryEventData<IQueryable>;
                     if (d != null)
                     {

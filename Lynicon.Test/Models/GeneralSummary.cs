@@ -9,7 +9,6 @@ namespace Lynicon.Test.Models
     public class GeneralSummary : Summary
     {
         public Image Image { get; set; }
-        public string Title { get; set; }
 
         public GeneralSummary()
         {

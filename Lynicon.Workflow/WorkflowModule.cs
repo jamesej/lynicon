@@ -13,11 +13,14 @@ using Lynicon.Editors;
 using Lynicon.Linq;
 using Lynicon.Workflow.Models;
 using Lynicon.Utility;
+using Lynicon.Models;
 
 namespace Lynicon
 {
     public class WorkflowModule : Module
     {
+        public const string VersionKey = "Layer";
+
         public WorkflowModule(AreaRegistrationContext context, params string[] dependentOn)
             : base("Workflow", context, dependentOn)
         {
@@ -28,7 +31,7 @@ namespace Lynicon
             if (!VerifyDbState("LyniconWorkflow 0.0"))
                 return false;
 
-            VersionManager.Instance.RegisterVersion("Workflow", SetCurrentVersion, GetItemVersion, SetItemVersion);
+            VersionManager.Instance.RegisterVersion(VersionKey, false, SetCurrentVersion, GetItemVersion, SetItemVersion, TestVersioningMode);
 
             EventHub.Instance.RegisterEventProcessor("Repository.Get", ProcessGet, "Workflow",
                 new OrderConstraint("Workflow", "Caching"));
@@ -46,23 +49,66 @@ namespace Lynicon
             return true;
         }
 
-        public void SetCurrentVersion(ItemVersion version)
+        public void SetCurrentVersion(VersioningMode mode, ItemVersion version)
         {
             var wfUser = LyniconSecurityManager.Current.User as IWorkflowUser;
-            if (wfUser == null)
-                version["Layer"] = LayerManager.Instance.LiveLayer;
+            if (wfUser == null || mode == VersioningMode.Public)
+                version[VersionKey] = LayerManager.Instance.LiveLayer;
             else
-                version["Layer"] = wfUser.CurrentLevel;
+                version[VersionKey] = wfUser.CurrentLevel;
         }
         public void GetItemVersion(object o, ItemVersion version)
         {
             if (o is ILayered)
-                version["Layer"] = (o as ILayered).Layer;
+                version[VersionKey] = (o as ILayered).Layer;
         }
         public void SetItemVersion(ItemVersion version, object o)
         {
-            if (o is ILayered && version.ContainsKey("Layer"))
-                ((ILayered)o).Layer = (int)version["Layer"];
+            if (o is ILayered && version.ContainsKey(VersionKey))
+                ((ILayered)o).Layer = (int)version[VersionKey];
+        }
+        public bool TestVersioningMode(object container, VersioningMode mode)
+        {
+            if (!(container is ILayered))
+                return true;
+
+            int testLevel = 0;
+            switch (mode)
+            {
+                case VersioningMode.Public:
+                    testLevel = LayerManager.Instance.LiveLayer;
+                    break;
+                case VersioningMode.Current:
+                    if (VersionManager.Instance.CurrentVersion.ContainsKey(VersionKey))
+                        testLevel = (int)VersionManager.Instance.CurrentVersion[VersionKey];
+                    else
+                        testLevel = LayerManager.Instance.LiveLayer;
+                    break;
+                case VersioningMode.Specific:
+                    if (VersionManager.Instance.SpecificVersion.ContainsKey(VersionKey))
+                        testLevel = (int)VersionManager.Instance.SpecificVersion[VersionKey];
+                    else
+                        testLevel = LayerManager.Instance.LiveLayer;
+                    break;
+                default:
+                    return true;
+            }
+
+            // Will the ILayered be shown at the testLevel?
+            var layered = ((ILayered)container);
+            if (layered.Layer > testLevel) // too high
+                return false;
+            if (layered.Layer == testLevel) // must be as its on that level
+                return true;
+            var ivid = new ItemVersionedId(container);
+            ivid.Version[VersionKey] = testLevel;
+
+            // Find the current ILayered at testLevel
+            var summ = Collator.Instance.GetSummaries<Summary>(new List<Type> { Collator.GetContentType(container) }, new List<object> { ivid })
+                .FirstOrDefault();
+            if (summ == null) // currently no ILayered below test level, so new one will become the only one and be shown
+                return true;
+            return ((int)summ.Version[VersionKey] <= layered.Layer); // is the tested ILayered equal or above the one found
         }
 
         public object ProcessGet(EventHubData ehd)
@@ -70,6 +116,7 @@ namespace Lynicon
             int currLayer;
             switch (ehd.EventName)
             {
+                case "Repository.Get.Items":
                 case "Repository.Get.Items.Ids":
                 case "Repository.Get.Items.Paths":
                 case "Repository.Get.Summaries.Ids":
@@ -81,10 +128,10 @@ namespace Lynicon
                         var version = VersionManager.Instance.CurrentVersion;
 
                         // No layer version registered, or versioning suppressed
-                        if (!version.ContainsKey("Layer"))
+                        if (!version.ContainsKey(VersionKey))
                             return d2;
 
-                        currLayer = (int)version["Layer"];
+                        currLayer = version[VersionKey] is long ? (int)(long) version[VersionKey] : (int)version[VersionKey];
                         d2.Source = d2.Source.AsFacade<ILayered>()
                             .GroupBy(wci => wci.Identity)
                             .Select(wcig => wcig.Where(wci => wci.Layer <= currLayer)
@@ -108,10 +155,10 @@ namespace Lynicon
             var version = VersionManager.Instance.CurrentVersion;
 
             // No layer version registered, or versioning suppressed
-            if (!version.ContainsKey("Layer"))
+            if (!version.ContainsKey(VersionKey))
                 return d;
 
-            var currLayer = (int)version["Layer"];
+            var currLayer = (int)version[VersionKey];
 
             // if we're on a different layer from the one where the current record came from, we create a new record
             // on the new layer rather than updating the old one

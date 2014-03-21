@@ -34,18 +34,18 @@ namespace Lynicon.Workflow.Models
                 if (layerChanges == null)
                 {
                     // Get all the versions, not just the current ones
-                    VersionManager.Instance.Suppressed = true;
+                    VersionManager.Instance.Mode = VersioningMode.All;
                     layerChanges = new Dictionary<int, List<Summary>>();
                     Collator.Instance.GetSummaries<Summary, ILayered>(LayerContentTypes, iq => iq.Where(l => l.Layer > LiveLayer))
                         .Do(s =>
                             {
-                                int layerN = (int)s.Version["Layer"];
+                                int layerN = (int)s.Version[WorkflowModule.VersionKey];
                                 if (layerChanges.ContainsKey(layerN))
                                     layerChanges[layerN].Add(s);
                                 else
                                     layerChanges.Add(layerN, new List<Summary> { s });
                             });
-                    VersionManager.Instance.Suppressed = false;
+                    VersionManager.Instance.Mode = VersioningMode.Current;
                 }
                 return layerChanges;
             }
@@ -58,7 +58,7 @@ namespace Lynicon.Workflow.Models
             LayerNames = new Dictionary<int, string>();
 
             LayerContentTypes = ContentTypeHierarchy.AllContentTypes
-                .Where(t => typeof(ILayered).IsAssignableFrom(Repository.Instance.OutputType(t)))
+                .Where(t => typeof(ILayered).IsAssignableFrom(Repository.Instance.ContainerType(t)))
                 .ToList();
         }
 
@@ -135,6 +135,11 @@ namespace Lynicon.Workflow.Models
                     .ToList();
                 return users;
             }
+        }
+
+        public void SetLiveLayer(int level)
+        {
+            this.LiveLayer = level;
         }
 
     }

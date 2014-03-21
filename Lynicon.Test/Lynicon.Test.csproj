@@ -113,6 +113,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\LyniconConfig.cs" />
     <Compile Include="Controllers\AltItemController.cs" />
     <Compile Include="Controllers\ChefController.cs" />
     <Compile Include="Controllers\RestaurantController.cs" />
@@ -533,6 +534,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Lynicon.Workflow\Views\Workflow\LayerDetails.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Test\SearchTest.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

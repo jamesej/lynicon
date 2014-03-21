@@ -16,7 +16,7 @@ namespace Lynicon.Test.Models
     public class HeaderContent : PageContent
     {
         public GeneralSummary Summary { get; set; }
-        [UIHint("Html")]
+        [UIHint("Html"), Index(IndexAttribute.Mode.Agglomerate)]
         public string HeaderBody { get; set; }
 
         public string Common { get; set; }
