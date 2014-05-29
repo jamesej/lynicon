@@ -13,6 +13,109 @@ input, textarea {
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
+
+#opener {
+	background-color: #000;
+	opacity: 0.5;
+	margin: 0;
+	padding: 2px 0px 1px 0px;
+	border: 0;
+	position: fixed;
+	bottom: 0px;
+}
+
+#opener img {
+	cursor: pointer;
+}
+
+.edit-0 #view {
+	width: 100%;
+}
+.edit-20 #view {
+	width: 80%;
+}
+.edit-40 #view {
+	width: 60%;
+}
+.edit-60 #view {
+	width: 40%;
+}
+.edit-80 #view {
+	width: 20%;
+}
+.edit-100 #view {
+	width: 0%;
+}
+
+.edit-0 #edit {
+	width: 0%;
+	border: none;
+	padding: 0;
+}
+
+/*
+.parent-unit.level-0 {
+	width: 20%;
+}
+*/
+
+.edit-20 #edit {
+	width: 20%;
+}
+.edit-20 .parent-unit.level-0 {
+	width: 100%;
+}
+.edit-40 #edit {
+	width: 40%;
+}
+.edit-40 .parent-unit.level-0 {
+	width: 50%;
+}
+.edit-60 #edit {
+	width: 60%;
+}
+.edit-60 .parent-unit.level-0 {
+	width: 33.3333%;
+}
+.edit-80 #edit {
+	width: 80%;
+}
+.edit-80 .parent-unit.level-0 {
+	width: 25%;
+}
+.edit-100 #edit {
+	width: 100%;
+}
+.edit-100 .parent-unit.level-0 {
+	width: 20%;
+}
+
+#opener {
+	right: 0%;
+}
+.edit-0 #opener-in {
+	visibility: hidden;
+}
+.edit-100 #opener-out {
+	visibility: hidden;
+}
+
+
+#edit {
+	float: right;
+	border-left: 4px solid #999;
+	box-sizing: border-box;
+	padding-left: 4px;
+	background-color: #E5E4F6;
+	min-height: 100%;
+	overflow: hidden;
+}
+#view {
+	float:left;
+	height: 100%;
+	position: fixed;
+}
+
 .editor-label
 {
 	background-color: #808080;
@@ -46,8 +149,6 @@ input, textarea {
 #editPanelContainer {
 	position: relative;
 	bottom: 0px;
-	overflow: scroll;
-	width: 100%
 }
 #editPanel
 {
@@ -86,12 +187,11 @@ input, textarea {
 }
 #edit #save
 {
-	background-color: #808080;
 	background-image: none;
 	height: 22px;
 	font-size: 18px;
-	width: auto;
-	clear:both;
+	width: 100px;
+	float:right;
 }
 #edit .func-link
 {
@@ -267,28 +367,33 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 #funcPanel
 {
 	font-size: 10pt;
-	margin-bottom: 2px;
-	margin-top: 2px;
-	background-color: #D2D5D7;
-	padding: 2px;
+	background-color: rgba(0, 0, 0, 0.6);
+	right:0px;
+	left:0px;
+	position: fixed;
+	bottom: 0px;
+}
+#funcPanel #lyn-logo {
+	float:left;
+	margin: 0px 10px 0px 5px;
 }
 #funcPanel .func-button {
 	display: inline-block;
-	background-color: #3C3763;
-	color: white;
-	padding: 2px;
-	border-radius: 3px;
-	margin: 1px;
+	background-color: rgba(0, 0, 0, 0.4);
+	color: #FFF;
+	padding: 1px 4px;
+	margin: 2px;
 	cursor: pointer;
-	float:left;
+	float: left;
 }
 #funcPanel #reveal-button {
 	float: right;
 	height: 22px;
 	width: 20px;
-	background-color: #3C3763;
+	background-color: rgba(0, 0, 0, 0.4);
 	padding-left: 4px;
-	cursor:pointer;
+	cursor: pointer;
+	margin-right: 30px;
 }
 #funcPanel #reveal-arrow {
 	height: 16px;
@@ -306,10 +411,15 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 
 #funcPanel #reveal {
 	clear: both;
+	width: 100%;
 }
 
 #funcPanel .reveal-panel-view {
-	background-color: #E7E7E7;
+	float:left;
+}
+
+#funcPanel .reveal-panel-view div {
+	float: left;
 }
 
 #editPanel .reorder-up IMG

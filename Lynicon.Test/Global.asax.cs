@@ -33,5 +33,17 @@ namespace Lynicon.Test
         {
             LyniconSecurityManager.Current.EnsureLightweightIdentity();
         }
+
+        protected void Application_BeginRequest(Object sender, EventArgs e)
+        {
+            var x = HttpContext.Current;
+            var y = HttpContext.Current.ApplicationInstance;
+        }
+
+        protected void Application_EndRequest(Object sender, EventArgs e)
+        {
+            var x = HttpContext.Current;
+            var y = HttpContext.Current.ApplicationInstance;
+        }
     }
 }

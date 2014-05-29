@@ -1,0 +1,25 @@
+﻿@model Lynicon.Base.Models.WikiContent
+@using Lynicon.Map;
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>@Model.PageTitle</title>
+    <link href="/Areas/Lynicon.Base/Content/Wiki.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/Site.less" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="wiki-nav">
+        <ul>
+        @foreach (var child in NavManager.Instance.GetChildren(Guid.Empty)) {
+            Html.RenderPartial("~/Areas/Lynicon/Views/Shared/FullNavList.ascx", child);
+        }
+        </ul>
+    </div>
+    <div id="wiki-body">
+        <h1>@Model.Summary.Title</h1>
+        @Html.Raw(Model.Body)
+    </div>
+</body>
+</html>

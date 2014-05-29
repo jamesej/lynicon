@@ -48,12 +48,18 @@
   <ItemGroup>
     <Compile Include="BaseModule.cs" />
     <Compile Include="Controllers\BlogPostController.cs" />
+    <Compile Include="Controllers\PublishController.cs" />
     <Compile Include="Controllers\WikiController.cs" />
     <Compile Include="LyniconBaseAreaRegistration.cs" />
+    <Compile Include="Models\Audit.cs" />
     <Compile Include="Models\BlogPostContent.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\HierarchySummary.cs" />
-    <Compile Include="Models\SummaryCache.cs" />
+    <Compile Include="Models\IPublishable.cs" />
+    <Compile Include="Models\PublishingContentItem.cs" />
+    <Compile Include="Modules\Auditing.cs" />
+    <Compile Include="Modules\Publishing.cs" />
+    <Compile Include="Modules\SummaryCache.cs" />
     <Compile Include="Models\UrlTreeNavManager.cs" />
     <Compile Include="Models\WikiContent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

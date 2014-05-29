@@ -36,7 +36,7 @@ namespace Lynicon.Workflow.Models
                     // Get all the versions, not just the current ones
                     VersionManager.Instance.Mode = VersioningMode.All;
                     layerChanges = new Dictionary<int, List<Summary>>();
-                    Collator.Instance.GetSummaries<Summary, ILayered>(LayerContentTypes, iq => iq.Where(l => l.Layer > LiveLayer))
+                    Collator.Instance.Get<Summary, ILayered>(LayerContentTypes, iq => iq.Where(l => l.Layer > LiveLayer))
                         .Do(s =>
                             {
                                 int layerN = (int)s.Version[WorkflowModule.VersionKey];

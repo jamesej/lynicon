@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Lynicon.Models;
 
 namespace Lynicon.Test.Models
 {
@@ -10,10 +11,11 @@ namespace Lynicon.Test.Models
         public GeneralSummary Summary { get; set; }
         public string Line1 { get; set; }
         public string Line2 { get; set; }
+        public List<Multiline> Things { get; set; }
 
         public ItemContent()
         {
-            Summary = new GeneralSummary();
+            BaseContent.InitialiseProperties(this);
         }
     }
 }

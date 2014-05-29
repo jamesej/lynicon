@@ -11,16 +11,15 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script> -->
     <script id="jquery" src="/Lynicon/Embedded/Scripts/jquery.js/" type="text/javascript"></script>
     <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery-ui.js/"></script>
+    <script type="text/javascript" src="/Lynicon/Embedded/Scripts/masonry.js/"></script>
     <link href="/Lynicon/Embedded/Content/chosen.css/" rel="Stylesheet" type="text/css" />
     <link href="/Lynicon/Embedded/Content/jquery.jstreelist.css/" rel="stylesheet" type="text/css" />
-    <link href="/Lynicon/Embedded/Content/jquery.layout.css/" rel="stylesheet" type="text/css" />
     <link href="/Lynicon/Embedded/Content/jquery.contextMenu.css/" rel="stylesheet" type="text/css" />
     <link type="text/css" href="/Lynicon/Embedded/Content/jquery-ui.css/" rel="stylesheet" />
     <link href="/Areas/Lynicon/Content/LyniconMain.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery-ui.js/"></script>
     <script src="/Lynicon/Embedded/Scripts/jquery.tmpl.js/" type="text/javascript"></script>
     <script type="text/javascript" src="/Lynicon/Embedded/Scripts/LyniconMain.js/"></script>
-    <script type="text/javascript" src="/Lynicon/Embedded/Scripts/jquery.layout.js/"></script>
     <script type="text/javascript" src="/Lynicon/Embedded/Scripts/chosen.jquery.js/"></script>
     <script type="text/javascript" id="simplemodal-script" src="/Lynicon/Embedded/Scripts/jquery.simplemodal.js/"></script>
     <script type="text/javascript" id="tinymce-script" src="/Areas/Lynicon/scripts/tiny_mce/jquery.tinymce.js"></script>
@@ -33,10 +32,9 @@
     <script>
         $(document).ready(function() {
             var firstReload = true;
-            $('#container').layout({ east: { size: '280', spacing_open: 10, spacing_closed: 14, togglerLength_open: 60 } });
-            $('.ui-layout-east').load(function() {
+            $('#edit').load(function() {
                 if (!firstReload)
-                    $('.ui-layout-center')[0].contentDocument.location.reload(true);
+                    $('#view')[0].contentDocument.location.reload(true);
                 firstReload = false;
             });
         });
@@ -51,9 +49,8 @@
 </head>
 <body style="height: 100%; width: 100%">
 <div id='container' style="height: 100%; width: 100%; position:relative;">
-    <iframe class="ui-layout-center" src="<%= ViewBag.BaseUrl as string %>?$mode=view<%= ViewBag.OriginalQuery as string %>"></iframe>
-    <div class="ui-layout-east" id="edit">
-        <%= Html.DisplayForModel("FuncPanel") %>
+    <iframe id="view" src="<%= ViewBag.BaseUrl as string %>?$mode=view<%= ViewBag.OriginalQuery as string %>"></iframe>
+    <div id="edit">
         <div id="editPanelContainer">
             <div id='editPanel'>
              <% using (Html.BeginForm())
@@ -63,6 +60,12 @@
             <% } %>
             </div>
         </div>
+        <%= Html.DisplayForModel("FuncPanel") %>
+        <div id="opener">
+            <img id="opener-out" src="/Areas/Lynicon/Content/left-arrow-white.png" />
+            <img id="opener-in" src="/Areas/Lynicon/Content/right-arrow-white.png" />
+        </div>
+        <div style="clear:both; height: 44px;"></div>
     </div>
 </div>
 </body>

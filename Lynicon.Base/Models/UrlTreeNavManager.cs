@@ -20,7 +20,7 @@ namespace Lynicon.Base.Models
         public UrlTreeNavManager()
         {
             string dataType = typeof(T).FullName;
-            var summaries = Collator.Instance.GetSummaries<Summary, ContentItem>(
+            var summaries = Collator.Instance.Get<Summary, ContentItem>(
                         new List<Type> { typeof(T) },
                         iq => iq.Where(ci => ci.DataType == dataType)
                     ).ToDictionary(s => s.Url, s => s);

@@ -28,7 +28,7 @@ namespace Lynicon.Test.Models
             get
             {
                 if (childItems == null)
-                    childItems = GetPathChildren<GeneralSummary>();
+                    childItems = GetPathChildren<GeneralSummary>().ToList();
                 return childItems;
             }
         }

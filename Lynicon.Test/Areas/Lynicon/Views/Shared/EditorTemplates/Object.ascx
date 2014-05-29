@@ -7,17 +7,18 @@
     }
 </script>
 <%
-    if (ViewData.TemplateInfo.TemplateDepth > 3) { %>
+    if (ViewData.TemplateInfo.TemplateDepth > 5) { %>
     <% if (Model == null) { %>
         <%= ViewData.ModelMetadata.NullDisplayText %>
     <% } else { %>
         <%= ViewData.ModelMetadata.SimpleDisplayText %>
     <% } %>
-<% } else { %>
-    <div class='object'>
-    <% foreach (var prop in ViewData.ModelMetadata.Properties.Where(pm => ShouldShow(pm))) {
-           int useDepth = ViewData.TemplateInfo.TemplateDepth + ((ViewData["addDepth"] as int?) ?? 0) - 1;
-           if (prop.HideSurroundingHtml) { %>
+<% } else {
+    int useDepth = ViewData.TemplateInfo.TemplateDepth + ((ViewData["addDepth"] as int?) ?? 0) - 1;%>
+    <div class='object level-<%= useDepth %>'>
+    <% foreach (var prop in ViewData.ModelMetadata.Properties.Where(pm => ShouldShow(pm))) { %>
+        <div class="editor-unit level-<%= useDepth %>">
+        <% if (prop.HideSurroundingHtml) { %>
             <div class="editor-field indent-<%= useDepth %>"><%= Html.Editor(prop.PropertyName) %></div>
         <% } else { %>
             <% if (!String.IsNullOrEmpty(Html.Label(prop.PropertyName).ToHtmlString())) { %>
@@ -28,6 +29,7 @@
                 <%= Html.ValidationMessage(prop.PropertyName, "*") %>
             </div>
         <% } %>
+        </div>
     <% } %>
     </div>  
 <% } %>

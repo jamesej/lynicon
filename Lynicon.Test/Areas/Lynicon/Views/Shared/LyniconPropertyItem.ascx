@@ -1,5 +1,6 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 <div id="container">
-<%= Html.Editor(ViewData["propertyPath"] as string) %>
+<% object list = ViewData["list"]; %>
+<%= Html.EditorFor(m => list, null, ViewData["propertyPath"] as string) %>
 </div>
 

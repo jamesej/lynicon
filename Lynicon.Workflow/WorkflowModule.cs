@@ -24,6 +24,7 @@ namespace Lynicon
         public WorkflowModule(AreaRegistrationContext context, params string[] dependentOn)
             : base("Workflow", context, dependentOn)
         {
+            Collator.RegisterExtensionType(typeof(WorkflowUser));
         }
 
         public override bool Initialise(AreaRegistrationContext context)
@@ -36,7 +37,7 @@ namespace Lynicon
             EventHub.Instance.RegisterEventProcessor("Repository.Get", ProcessGet, "Workflow",
                 new OrderConstraint("Workflow", "Caching"));
             EventHub.Instance.RegisterEventProcessor("Repository.Set", ProcessSet, "Workflow",
-                new OrderConstraint("Workflow", ConstraintType.ItemsAfter, "Caching"));
+                new OrderConstraint("Workflow", ConstraintType.ItemsAfter, "Caching", "Auditing"));
             
             LyniconUi.Instance.RevealPanelViews.Add(
                 new KeyValuePair<string, string>("Workflow", "~/Areas/Lynicon.Workflow/Views/Shared/WorkflowPanel.ascx"),
@@ -104,7 +105,7 @@ namespace Lynicon
             ivid.Version[VersionKey] = testLevel;
 
             // Find the current ILayered at testLevel
-            var summ = Collator.Instance.GetSummaries<Summary>(new List<Type> { Collator.GetContentType(container) }, new List<object> { ivid })
+            var summ = Collator.Instance.Get<Summary>(new List<ItemId> { ivid })
                 .FirstOrDefault();
             if (summ == null) // currently no ILayered below test level, so new one will become the only one and be shown
                 return true;

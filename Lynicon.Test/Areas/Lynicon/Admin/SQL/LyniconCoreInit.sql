@@ -18,6 +18,7 @@ CREATE TABLE [dbo].[ContentItems](
 	[Path] [nvarchar](250) NULL,
 	[Locale] [varchar](10) NULL,
 	[Summary] [nvarchar](3000) NULL,
+	[References] [VARCHAR] (4000) NULL,
 	[Content] [nvarchar](max) NULL,
  CONSTRAINT [PK_ContentItems] PRIMARY KEY CLUSTERED 
 (

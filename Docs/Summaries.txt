@@ -1,0 +1,9 @@
+Its an almost inevitable feature of any web site that each page will contain links to various other pages.  Very often in a CMS controlled site, you will want the links to point to a set of pages selected by some criteria, and the number of pages in that set can change.  Sometimes that set will include pages made with different templates (in MVC terms, different models and views).
+
+Unlike many other CMSs, Lynicon directly supports this through the summary system.  Every content item has an associated object of type Summary or one of its subtypes.  Summary contains fields for URL, title, type and unique identifier, i.e. the minimum necessary information to build a link to the content item.
+
+You can add to this information by declaring a class which inherits from Summary and associating that with your content type.  Lynicon supplies a class called ListingSummary which includes a thumbnail image.  It is recommended that any information about a content item that might be needed when viewing a page not associated with that item is put into a subtype of Summary.
+
+The reason for this is that the summary system is used to enhance performance in the Data API by only fetching the necessary fields to build a the summary object when that is all the client is requesting.
+
+Another useful aspect of the summary system is that it allows different content items to 

@@ -50,10 +50,17 @@ namespace Lynicon.Test.Models
                 var y = o;
             }
 
+            //var qry = db.CompositeSet<User>()
+            //    .AsFacade<User>()
+            //    .RestrictFields(new List<string> { "Id" });
+
             var qry = db.CompositeSet<User>()
                 .AsFacade<User>()
-                .RestrictFields(new List<string> { "Id" });
-                
+                .Where(u => u.Email == null)
+                .AsFacade<IUser>()
+                .Where(iu => iu.Roles.Contains("A"));
+
+            var fae = new FieldAccessExtractor().ExtractFields(qry);
 
             //var uq = db.CompositeSet<User>();
             //var users = uq.AsFacade<User>()
@@ -65,7 +72,7 @@ namespace Lynicon.Test.Models
             //db.SaveChanges();
 
             var cr = new BasicRepository();
-            var ci = cr.Get<User>(typeof(User), new List<object> { new Guid("040C7CFD-4107-4EF6-AD2C-A9D7779227E1") }).FirstOrDefault();
+            var ci = Repository.Instance.Get<User>(typeof(User), new Guid("040C7CFD-4107-4EF6-AD2C-A9D7779227E1"));
             ci.Roles = "PDQ";
         }
     }

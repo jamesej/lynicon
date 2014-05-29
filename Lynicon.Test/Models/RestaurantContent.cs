@@ -42,7 +42,7 @@ namespace Lynicon.Test.Models
             get
             {
                 if (chefFull == null)
-                    chefFull = Collator.Instance.GetReferenced<ChefContent>(new List<Reference> { Chef }).FirstOrDefault().Value;
+                    chefFull = Collator.Instance.Get<ChefContent>(Chef.ItemId);
                 return chefFull.Biography;
             }
         }

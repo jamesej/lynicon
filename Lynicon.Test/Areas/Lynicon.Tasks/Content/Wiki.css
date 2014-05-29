@@ -1,0 +1,22 @@
+﻿#wiki-nav {
+    width: 150px;
+    float: left;
+	background-color: #DDD;
+margin-right: 10px;
+}
+
+#wiki-nav ul {
+    list-style: none;
+	-webkit-padding-start: 10px;
+}
+
+#wiki-nav a {
+	text-decoration: none;
+	color: #000;
+}
+#wiki-nav a:hover {
+	text-decoration: underline;
+}
+#wiki-nav a:visited {
+	color: #000;
+}

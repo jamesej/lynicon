@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Lynicon.Base.Models;
+using Lynicon.Base.Modules;
 using Lynicon.Collation;
 using Lynicon.Editors;
 using Lynicon.Extensibility;
@@ -21,6 +22,10 @@ namespace Lynicon.Test
 
             // Initialise caches
             LyniconModuleManager.Instance.RegisterModule(new SummaryCache(null));
+            LyniconModuleManager.Instance.RegisterModule(new Auditing(null));
+            LyniconModuleManager.Instance.RegisterModule(new Publishing(null));
+
+            Collator.RegisterExtensionType(typeof(ExtendedUser));
 
             Collator.Instance.BuildRepository();
             LyniconModuleManager.Instance.Initialise();

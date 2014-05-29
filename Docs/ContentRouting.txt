@@ -1,0 +1,5 @@
+Lynicon Routing
+
+The basic requirements of content management are to persist arbitrary structured data associated with a group of urls, allow that data to be edited through a UI, and to provide that data to be inserted into a page template.
+
+This is done in a clean light-touch way in Lynicon by simply extending the Route class.  Lynicon provides a generic DataRoute class, which when used, manages retrieval of an arbitrarily (within certain specifications) typed data item and provision of it to the controller's action method via model binding.

@@ -14,6 +14,7 @@ namespace Lynicon.Test.Controllers
 
         public ActionResult Index(ItemContent data)
         {
+            var a = ControllerContext.HttpContext;
             return View(data);
         }
 

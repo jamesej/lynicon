@@ -1,5 +1,6 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 <%@ Import Namespace="System.Linq" %>
+<%@ Import Namespace="Lynicon.Utility" %>
 <div id="<%= ViewData.TemplateInfo.HtmlFieldPrefix %>" class="collection <%= ViewData["formState"] == null || (ViewData["formState"] as string).Contains(ViewData.TemplateInfo.HtmlFieldPrefix) ? "" : "closed" %>">
 <%
     if (Model != null) {
@@ -14,7 +15,7 @@
         {
             // even for zero count, ensure the markup is built once so that any necessary includes are
             // put on the page
-            object dummyItem = Activator.CreateInstance(Model.GetType().GetGenericArguments()[0]);
+            object dummyItem = ReflectionX.NewOrDefault(Model.GetType().GetGenericArguments()[0]);
             Html.EditorFor(m => dummyItem, null, "dummy");
         }
         else

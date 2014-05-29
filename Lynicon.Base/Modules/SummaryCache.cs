@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,15 +7,16 @@ using System.Threading.Tasks;
 using System.Web.Mvc;
 using Lynicon.Collation;
 using Lynicon.Extensibility;
+using Lynicon.Linq;
 using Lynicon.Models;
 using Lynicon.Repositories;
 using Lynicon.Utility;
 
-namespace Lynicon.Base.Models
+namespace Lynicon.Base.Modules
 {
     public class SummaryCache : Module
     {
-        public Dictionary<ItemVersionedId, object> Cache { get; private set; }
+        public Dictionary<Type, ConcurrentDictionary<ItemVersionedId, object>> Cache { get; private set; }
 
         public override bool Initialise(AreaRegistrationContext regContext)
         {
@@ -22,13 +24,13 @@ namespace Lynicon.Base.Models
             // We have to suppress it otherwise
             VersionManager.Instance.Mode = VersioningMode.All;
             var summaries = Repository.Instance
-                    .GetSummaries<object, object>(typeof(Summary), ContentTypeHierarchy.AllContentTypes, iq => iq)
+                    .Get<object>(typeof(Summary), ContentTypeHierarchy.AllContentTypes, iq => iq)
                     .ToList();
             VersionManager.Instance.Mode = VersioningMode.Current;
 
             // Now we want version management back to build the ItemVersionedId for the summaries
-            Cache = summaries.ToDictionary(sc => new ItemVersionedId(sc), sc => sc,
-                        sc => { throw new Exception("Duplicate versioned id of database item: " + new ItemVersionedId(sc).ToString()); });
+            Cache = new Dictionary<Type, ConcurrentDictionary<ItemVersionedId, object>>();
+            summaries.Do(sc => Cache[sc.GetType().UnproxiedType()].TryAdd(new ItemVersionedId(sc), sc));
             
 
             EventHub.Instance.RegisterEventProcessor("Repository.Get",
@@ -56,6 +58,8 @@ namespace Lynicon.Base.Models
         {
             switch (ehd.EventName)
             {
+                // the cache can only be used for queries if we can ensure that all the fields referred to in the
+                    // query exist in the summarised container
                 case "Repository.Get.Summaries":
                 case "Repository.Get.Summaries.Ids":
                 case "Repository.Get.Count":
@@ -67,7 +71,20 @@ namespace Lynicon.Base.Models
                         // (itemTypeRequired).  We have to build another IQueryable<T> from the IEnumerable<object>
                         // which is the cache because AsFacade (applied later) relies on getting the original element type from the
                         // base IQueryable
-                        d.Source = LinqX.OfTypeRuntime(Cache.Values, itemTypeRequired).AsQueryable();
+                        var newSource = Cache[itemTypeRequired.UnproxiedType()].AsQueryable();
+
+                        if (!ehd.EventName.EndsWith(".Ids"))
+                        {
+                            // where we have a query in the request, we have to ensure the query doesn't access any
+                            // fields which are not stored in the container objects in the cache on account of their
+                            // only retaining the necessary data to create a summary
+                            var fieldNames = d.QueryBody(newSource).ExtractFields();
+                            var summaryFieldNames = Collator.Instance.ContainerSummaryFields(itemTypeRequired);
+                            if (!fieldNames.All(fn => summaryFieldNames.Contains(fn)))
+                                return d;
+                        }
+
+                        d.Source = newSource;
                         return d;
                     }
                     break;
@@ -79,10 +96,14 @@ namespace Lynicon.Base.Models
         public object ProcessSet(EventHubData ehd)
         {
             var ivid = new ItemVersionedId(ehd.Data);
+            Type containerType = ehd.Data.GetType().UnproxiedType();
             if (ehd.EventName == "Repository.Set.Delete")
-                Cache.Remove(ivid);
+            {
+                object removed;
+                Cache[containerType].TryRemove(ivid, out removed);
+            }
             else
-                Cache[ivid] = Collator.Instance.Summarise(ehd.Data);
+                Cache[containerType][ivid] = Collator.Instance.Summarise(ehd.Data);
 
             return ehd.Data;
         }

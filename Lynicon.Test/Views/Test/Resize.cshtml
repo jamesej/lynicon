@@ -1,0 +1,64 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html style='width: 100%; height: 100%'>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script id="jquery" src="/Lynicon/Embedded/Scripts/jquery.js/" type="text/javascript"></script>
+    <script type="text/javascript" src="/Scripts/jquery.hopscotch.js"></script>
+    <title>Resize</title>
+    <style>
+        .clearfix:after, .hs-container:after {
+          content: " ";
+          /* Older browser do not support empty content */
+          visibility: hidden;
+          display: block;
+          height: 0;
+          clear: both; }
+  
+        .hs-container > * {
+          width: 100%;
+          box-sizing: border-box;
+          display: block;
+          padding: 0 0.5em 1em 0.5em;
+          position: relative; }
+
+        .hs-col-container {
+            float:left;
+            padding: 0px;
+        }
+
+        .hs-row-container {
+            padding: 0px;
+        }
+  
+        .hs-outer-container {
+          box-sizing: border-box;
+          width: 100%;
+          padding: 0 1.5em 0 1.5em;
+        } 
+    </style>
+</head>
+<body style="width: 100%; height: 100%">
+    <div id="test" style="width: 50%; background-color: peachpuff; position: relative;">
+        <div data-grid-location="1;2,2" style="width: 100%; min-height: 200px; background-color: aliceblue">
+            Curabitur vitae massa at nunc vehicula posuere et sit amet nunc. Sed mauris dui, laoreet sed quam nec, tincidunt elementum tortor. Aliquam posuere ligula eget massa suscipit vehicula. Nullam semper facilisis nibh eu hendrerit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam eros sapien, elementum accumsan porttitor eget, accumsan eget nisi. 
+        </div>
+        <div data-grid-location="2;2,1:2,1" style="width: 100%; min-height: 200px; background-color: darkblue">
+            Maecenas luctus pharetra aliquet. Nulla adipiscing ut ligula placerat ullamcorper. Aliquam vestibulum sodales turpis et lobortis. Quisque mi lorem, eleifend in quam nec, porta adipiscing enim. In nec nibh congue, volutpat est a, ornare quam. In sit amet fermentum lorem. 
+        </div>
+        <div data-grid-location="4;2,1:2,2" style="width: 100%; min-height: 100px; background-color: fuchsia">
+            Praesent sit amet pharetra urna. Curabitur a ultricies ante, ac consequat nisi. Sed molestie augue eu metus malesuada aliquam. Fusce lacinia accumsan odio at faucibus. Integer pharetra arcu a nunc pulvinar, at vestibulum ipsum hendrerit. Cras tristique orci consectetur, cursus sapien eu, auctor neque. Mauris ultrices, ligula sit amet dapibus dignissim, mi velit euismod nisi, elementum vehicula mauris libero eget arcu.
+        </div>
+        <div data-grid-location="3;1" style="width: 100%; min-height: 200px; background-color: chartreuse">
+            Nullam placerat orci suscipit eros aliquet, id laoreet metus mollis. Curabitur vitae vulputate odio. Mauris luctus libero ante, sollicitudin dapibus ipsum consectetur sed. Mauris nec auctor lectus, non elementum ipsum. Mauris tincidunt tincidunt auctor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla sed mi hendrerit, aliquet mauris quis, bibendum mauris. Donec velit tortor, varius ut luctus vitae, malesuada eget purus. Quisque id magna et ante placerat placerat. Donec sagittis nisl dui, vel tempus massa dapibus eu. Phasellus semper porttitor rutrum. Nullam vehicula, eros at molestie malesuada, magna purus vulputate ante, et volutpat sem quam nec leo. Morbi sit amet mauris non ante iaculis malesuada. Vivamus vehicula, elit in volutpat molestie, lacus urna vestibulum tellus, vel elementum augue orci ultrices lectus. Nunc ultricies felis sit amet erat elementum, eu adipiscing augue molestie. Etiam accumsan pulvinar mauris a interdum.
+        </div>
+    </div>
+    <script>
+        $('#test').hopscotchResize([400]);
+    </script>
+</body>
+</html>

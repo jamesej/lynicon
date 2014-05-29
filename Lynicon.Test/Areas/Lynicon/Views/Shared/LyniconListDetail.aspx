@@ -63,7 +63,7 @@
             mapForm(function ($fld) { $fld.val(null) });
         }
         $(document).ready(function() {
-            $('#container').layout({ east: { size: '280', spacing_open: 10, spacing_closed: 14, togglerLength_open: 60 } });
+            //$('#container').layout({ east: { size: '280', spacing_open: 10, spacing_closed: 14, togglerLength_open: 60 } });
             loadDetail(parseInt($('#lynicon_itemIndex').val()));
         });
         
@@ -78,7 +78,7 @@
 </head>
 <body style="height: 100%; width: 100%">
 <div id='container' style="height: 100%; width: 100%; position:relative;">
-<div class="ui-layout-center">
+<div id="view">
     <%= Html.EditorForModel((string)ViewBag.ListView, new { displayFields = ViewBag.DisplayFields })%>
 
     <% if (ViewBag.CanAdd) { %>
@@ -102,8 +102,7 @@
         });
     </script>
 </div>
-<div class="ui-layout-east" id="edit">
-    <%= Html.DisplayForModel("FuncPanel") %>
+<div id="edit">
     <div id="editPanelContainer">
         <div id='editPanel'>
         <% var item = ((ICollection)Model).Cast<object>().FirstOrDefault();
@@ -119,6 +118,12 @@
             <%= Html.Hidden("lynicon_itemIndex", (int)ViewBag.ItemIndex) %>
         <% } %>
         </div>
+        <%= Html.DisplayForModel("FuncPanel") %>
+        <div id="opener">
+            <img id="opener-out" src="/Areas/Lynicon/Content/left-arrow-white.png" />
+            <img id="opener-in" src="/Areas/Lynicon/Content/right-arrow-white.png" />
+        </div>
+        <div style="clear:both; height: 44px;"></div>
     </div>
 </div>
 </div>

@@ -1,0 +1,28 @@
+﻿@model Lynicon.Site.Models.HomeContent
+
+@{
+    Layout = "~/Views/Shared/Site.cshtml";
+    ViewBag.Title = @Model.PageTitle;
+}
+
+<div id="upper">
+    <div class="logo">Lynicon<span class="sublogo">CMS/DMS</span></div>
+    <div class="version">@Model.Version</div>
+    <div style="clear:both"></div>
+</div>
+<div class="bar" style="background-image:url(@Model.BarImage.Url);"></div>
+<div id="lower">
+    <div id="col0" class="home-col">
+        <h2>@Model.HeadingCol0</h2>
+        @Html.Raw(Model.TextCol0)
+    </div>
+    <div id="col1" class="home-col">
+        <h2>@Model.HeadingCol1</h2>
+        @Html.Raw(Model.TextCol1)
+    </div>
+    <div id="col2" class="home-col">
+        @foreach (var link in Model.RHLinks) {
+            <a class="rh-link" href="@link.Url">@Html.Raw(link.Content)</a>
+        }
+    </div>
+</div>

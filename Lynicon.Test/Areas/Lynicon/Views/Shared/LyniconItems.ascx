@@ -5,7 +5,8 @@
 <%@ Import Namespace="System.Text.RegularExpressions" %>
 <%
     var enumElementReplacer = new Regex("\\{.*\\}");
-    var summaryDict = Collator.Instance.GetList<Summary>()
+    var summaries = Collator.Instance.Get<Summary, object>(iq => iq).ToList();
+    var summaryDict = summaries
         .GroupBy(s => s.Type)
         .ToDictionary(sg => sg.Key, sg => sg.OrderBy(s => s.Title));
      %>

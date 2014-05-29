@@ -141,6 +141,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Areas\Lynicon.Base\Admin\SQL\PublishingInit.sql" />
+    <Content Include="Areas\Lynicon.Tasks\Admin\SQL\TasksInit.sql" />
+    <Content Include="Areas\Lynicon.Tasks\Content\Wiki.css" />
+    <Content Include="Areas\Lynicon.Tasks\Views\BlogPost\Index.aspx" />
+    <Content Include="Areas\Lynicon.Base\Admin\SQL\AuditingInit.sql" />
     <Content Include="Areas\Lynicon.Base\Views\BlogPost\Index.aspx" />
     <Content Include="Areas\Lynicon.Workflow\Admin\SQL\LyniconWorkflowInit.sql" />
     <Content Include="Areas\Lynicon.Workflow\Views\Shared\WorkflowPanel.ascx" />
@@ -400,10 +405,11 @@
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\mctabs.js" />
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\validate.js" />
     <Content Include="Areas\Lynicon\Views\Items\Index.aspx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EnsureMediaLibrary.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\Copy of LyniconDual.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\ReferenceSelect.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\FullNavList.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\NavList.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\CorePanel.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\ObjectList.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Reference.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EnsureFileEditor.ascx" />
@@ -449,6 +455,7 @@
     <Content Include="Areas\Lynicon\Views\Shared\L24CMStructure.aspx" />
     <Content Include="Areas\Lynicon\Views\Ui\FunctionReveal.ascx" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery.hopscotch.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -463,6 +470,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Lynicon.Base\Views\Shared\" />
+    <Folder Include="Areas\Lynicon.Tasks\Views\Shared\" />
     <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
@@ -484,10 +492,6 @@
     <ProjectReference Include="..\Lynicon.Base\Lynicon.Base.csproj">
       <Project>{47a2d927-cf55-4185-8125-9740736299dd}</Project>
       <Name>Lynicon.Base</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Lynicon.Workflow\Lynicon.Workflow.csproj">
-      <Project>{a9face40-83c8-48bc-a208-bbf4b37b889c}</Project>
-      <Name>Lynicon.Workflow</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -537,6 +541,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Test\SearchTest.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Test\Resize.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon.Tasks\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon.Tasks\Views\Wiki\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

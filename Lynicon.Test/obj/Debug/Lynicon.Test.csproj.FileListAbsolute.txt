@@ -35,11 +35,8 @@ C:\Dev\Lynicon.Test\Lynicon.Test\bin\Lynicon.Base.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\Lynicon.Base.pdb
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\HtmlAgilityPack.pdb
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\HtmlAgilityPack.xml
-C:\Dev\Lynicon.Test\Lynicon.Test\bin\Lynicon.Workflow.dll
-C:\Dev\Lynicon.Test\Lynicon.Test\bin\Lynicon.Workflow.pdb
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\Less.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\Less.pdb
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\Linq2Rest.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\Linq2Rest.xml
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\log4net.dll
-C:\Dev\Lynicon.Test\Lynicon.Test\bin\log4net.xml
