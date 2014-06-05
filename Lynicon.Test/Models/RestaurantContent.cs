@@ -25,9 +25,16 @@ namespace Lynicon.Test.Models
         }
     }
 
+    [SummaryType(typeof(RestaurantSummary))]
     public class RestaurantContent : PageContent
     {
-        public RestaurantSummary Summary { get; set; }
+        [Summary]
+        public Image MainImage { get; set; }
+        [Summary]
+        public string Intro { get; set; }
+        [Summary]
+        public string Title { get; set; }
+
         [UIHint("Html")]
         public string Description { get; set; }
         [UIHint("ReferenceSelect")]

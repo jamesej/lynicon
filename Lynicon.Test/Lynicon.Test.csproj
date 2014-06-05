@@ -142,6 +142,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Areas\Lynicon.Base\Admin\SQL\PublishingInit.sql" />
+    <Content Include="Areas\Lynicon.Base\Views\Shared\PublishingPanel.ascx" />
     <Content Include="Areas\Lynicon.Tasks\Admin\SQL\TasksInit.sql" />
     <Content Include="Areas\Lynicon.Tasks\Content\Wiki.css" />
     <Content Include="Areas\Lynicon.Tasks\Views\BlogPost\Index.aspx" />
@@ -469,7 +470,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Lynicon.Base\Views\Shared\" />
     <Folder Include="Areas\Lynicon.Tasks\Views\Shared\" />
     <Folder Include="Uploads\" />
   </ItemGroup>
@@ -483,16 +483,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Test\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Lynicon\Lynicon.csproj">
-      <Project>{f9fb7ea1-57d4-49d0-9776-a7a7a8e23475}</Project>
-      <Name>Lynicon</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Lynicon.Base\Lynicon.Base.csproj">
-      <Project>{47a2d927-cf55-4185-8125-9740736299dd}</Project>
-      <Name>Lynicon.Base</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Header\Index.cshtml" />
@@ -550,6 +540,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Lynicon.Tasks\Views\Wiki\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Lynicon\Lynicon.Base\Lynicon.Base.csproj">
+      <Project>{47a2d927-cf55-4185-8125-9740736299dd}</Project>
+      <Name>Lynicon.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lynicon\Lynicon.Core\Lynicon.csproj">
+      <Project>{f9fb7ea1-57d4-49d0-9776-a7a7a8e23475}</Project>
+      <Name>Lynicon</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

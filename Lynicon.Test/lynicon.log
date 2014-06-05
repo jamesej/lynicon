@@ -89,3 +89,91 @@ System.Collections.Generic.KeyNotFoundException: The given key was not present i
    at Lynicon.Extensibility.LyniconModuleManager.Initialise() in c:\Dev\Lynicon\Extensibility\LyniconModuleManager.cs:line 67
 2014-05-29 10:20:52,574 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Auditing.Basic blocked, initialiser returned false
 2014-05-29 10:20:52,586 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Versioning.Publishing blocked, initialiser returned false
+2014-05-30 09:19:14,173 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Core blocked, initialiser returned false
+2014-05-30 09:19:14,203 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Base blocked, initialiser returned false
+2014-05-30 09:19:15,084 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full blocked, initialisation exception
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at Lynicon.Base.Modules.SummaryCache.<Initialise>b__1(Object sc) in c:\Dev\Lynicon.Test\Lynicon.Base\Modules\SummaryCache.cs:line 35
+   at Lynicon.Utility.LinqX.Do[T](IEnumerable`1 source, Action`1 action) in c:\Dev\Lynicon\Utility\LinqX.cs:line 252
+   at Lynicon.Base.Modules.SummaryCache.Initialise(AreaRegistrationContext regContext) in c:\Dev\Lynicon.Test\Lynicon.Base\Modules\SummaryCache.cs:line 35
+   at Lynicon.Extensibility.LyniconModuleManager.Initialise() in c:\Dev\Lynicon\Extensibility\LyniconModuleManager.cs:line 67
+2014-05-30 09:19:15,115 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Auditing.Basic blocked, initialiser returned false
+2014-05-30 09:19:15,129 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Versioning.Publishing blocked, initialiser returned false
+2014-06-02 16:08:24,174 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Core blocked, initialiser returned false
+2014-06-02 16:08:24,220 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Base blocked, initialiser returned false
+2014-06-02 16:08:25,269 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full blocked, initialisation exception
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at Lynicon.Base.Modules.SummaryCache.<Initialise>b__1(Object sc) in c:\Dev\Lynicon.Test\Lynicon.Base\Modules\SummaryCache.cs:line 35
+   at Lynicon.Utility.LinqX.Do[T](IEnumerable`1 source, Action`1 action) in c:\Dev\Lynicon\Utility\LinqX.cs:line 252
+   at Lynicon.Base.Modules.SummaryCache.Initialise(AreaRegistrationContext regContext) in c:\Dev\Lynicon.Test\Lynicon.Base\Modules\SummaryCache.cs:line 35
+   at Lynicon.Extensibility.LyniconModuleManager.Initialise() in c:\Dev\Lynicon\Extensibility\LyniconModuleManager.cs:line 67
+2014-06-02 16:08:25,287 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Auditing.Basic blocked, initialiser returned false
+2014-06-02 16:08:25,302 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Versioning.Publishing blocked, initialiser returned false
+2014-06-05 10:59:05,596 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Core blocked, initialiser returned false
+2014-06-05 10:59:05,624 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Base blocked, initialiser returned false
+2014-06-05 10:59:06,923 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full blocked, initialisation exception
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at Lynicon.Base.Modules.SummaryCache.<Initialise>b__1(Object sc) in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 35
+   at Lynicon.Utility.LinqX.Do[T](IEnumerable`1 source, Action`1 action) in c:\Dev\Lynicon\Lynicon.Core\Utility\LinqX.cs:line 252
+   at Lynicon.Base.Modules.SummaryCache.Initialise(AreaRegistrationContext regContext) in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 35
+   at Lynicon.Extensibility.LyniconModuleManager.Initialise() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 67
+2014-06-05 10:59:06,983 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Auditing.Basic blocked, initialiser returned false
+2014-06-05 10:59:07,000 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Versioning.Publishing blocked, initialiser returned false
+2014-06-05 11:14:40,160 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Core blocked, initialiser returned false
+2014-06-05 11:14:40,192 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Base blocked, initialiser returned false
+2014-06-05 11:14:40,978 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full blocked, initialisation exception
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at Lynicon.Base.Modules.SummaryCache.<Initialise>b__1(Object sc) in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 35
+   at Lynicon.Utility.LinqX.Do[T](IEnumerable`1 source, Action`1 action) in c:\Dev\Lynicon\Lynicon.Core\Utility\LinqX.cs:line 252
+   at Lynicon.Base.Modules.SummaryCache.Initialise(AreaRegistrationContext regContext) in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 35
+   at Lynicon.Extensibility.LyniconModuleManager.Initialise() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 67
+2014-06-05 11:14:41,002 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Auditing.Basic blocked, initialiser returned false
+2014-06-05 11:14:41,035 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Versioning.Publishing blocked, initialiser returned false
+2014-06-05 11:37:28,644 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Core blocked, initialiser returned false
+2014-06-05 11:37:28,673 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Base blocked, initialiser returned false
+2014-06-05 11:37:29,692 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full blocked, initialisation exception
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at Lynicon.Base.Modules.SummaryCache.<Initialise>b__1(Object sc) in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 35
+   at Lynicon.Utility.LinqX.Do[T](IEnumerable`1 source, Action`1 action) in c:\Dev\Lynicon\Lynicon.Core\Utility\LinqX.cs:line 252
+   at Lynicon.Base.Modules.SummaryCache.Initialise(AreaRegistrationContext regContext) in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 35
+   at Lynicon.Extensibility.LyniconModuleManager.Initialise() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 67
+2014-06-05 11:37:29,729 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Auditing.Basic blocked, initialiser returned false
+2014-06-05 11:37:29,745 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Versioning.Publishing blocked, initialiser returned false
+2014-06-05 11:45:14,494 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Core blocked, initialiser returned false
+2014-06-05 11:45:14,541 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Base blocked, initialiser returned false
+2014-06-05 11:45:15,854 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full blocked, initialisation exception
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at Lynicon.Base.Modules.SummaryCache.<Initialise>b__1(Object sc) in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 35
+   at Lynicon.Utility.LinqX.Do[T](IEnumerable`1 source, Action`1 action) in c:\Dev\Lynicon\Lynicon.Core\Utility\LinqX.cs:line 252
+   at Lynicon.Base.Modules.SummaryCache.Initialise(AreaRegistrationContext regContext) in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 35
+   at Lynicon.Extensibility.LyniconModuleManager.Initialise() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 67
+2014-06-05 11:45:15,881 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Auditing.Basic blocked, initialiser returned false
+2014-06-05 11:45:15,909 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Versioning.Publishing blocked, initialiser returned false
+2014-06-05 11:48:27,940 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Core blocked, initialiser returned false
+2014-06-05 11:48:27,968 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Base blocked, initialiser returned false
+2014-06-05 11:48:28,692 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full blocked, initialisation exception
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at Lynicon.Base.Modules.SummaryCache.<Initialise>b__1(Object sc) in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 35
+   at Lynicon.Utility.LinqX.Do[T](IEnumerable`1 source, Action`1 action) in c:\Dev\Lynicon\Lynicon.Core\Utility\LinqX.cs:line 252
+   at Lynicon.Base.Modules.SummaryCache.Initialise(AreaRegistrationContext regContext) in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 35
+   at Lynicon.Extensibility.LyniconModuleManager.Initialise() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 67
+2014-06-05 11:48:28,710 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Auditing.Basic blocked, initialiser returned false
+2014-06-05 11:48:28,726 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Versioning.Publishing blocked, initialiser returned false
+2014-06-05 12:09:56,588 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Core blocked, initialiser returned false
+2014-06-05 12:09:56,617 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Base blocked, initialiser returned false
+2014-06-05 12:09:57,523 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full blocked, initialisation exception
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at Lynicon.Base.Modules.SummaryCache.<Initialise>b__1(Object sc) in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 35
+   at Lynicon.Utility.LinqX.Do[T](IEnumerable`1 source, Action`1 action) in c:\Dev\Lynicon\Lynicon.Core\Utility\LinqX.cs:line 252
+   at Lynicon.Base.Modules.SummaryCache.Initialise(AreaRegistrationContext regContext) in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 35
+   at Lynicon.Extensibility.LyniconModuleManager.Initialise() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 67
+2014-06-05 12:09:57,538 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Auditing.Basic blocked, initialiser returned false
+2014-06-05 12:09:57,554 [26] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Versioning.Publishing blocked, initialiser returned false
