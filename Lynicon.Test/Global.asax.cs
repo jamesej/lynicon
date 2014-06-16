@@ -19,13 +19,13 @@ namespace Lynicon.Test
     {
         protected void Application_Start()
         {
-            // Register areas including area-modules
+            LyniconConfig.RegisterModules();
+            // Register areas
             AreaRegistration.RegisterAllAreas(this);
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-
             LyniconConfig.Initialise();
         }
 

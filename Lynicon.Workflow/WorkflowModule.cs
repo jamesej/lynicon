@@ -21,13 +21,20 @@ namespace Lynicon
     {
         public const string VersionKey = "Layer";
 
-        public WorkflowModule(AreaRegistrationContext context, params string[] dependentOn)
-            : base("Workflow", context, dependentOn)
+        public WorkflowModule(params string[] dependentOn)
+            : base("Workflow", dependentOn)
         {
             Collator.RegisterExtensionType(typeof(WorkflowUser));
         }
 
-        public override bool Initialise(AreaRegistrationContext context)
+        public override void RegisterRoutes(AreaRegistrationContext regContext)
+        {
+            regContext.MapRoute("lyniconworkflowmain",
+                "Lynicon/Workflow/{action}",
+                new { controller = "Workflow" });
+        }
+
+        public override bool Initialise()
         {
             if (!VerifyDbState("LyniconWorkflow 0.0"))
                 return false;
@@ -42,10 +49,6 @@ namespace Lynicon
             LyniconUi.Instance.RevealPanelViews.Add(
                 new KeyValuePair<string, string>("Workflow", "~/Areas/Lynicon.Workflow/Views/Shared/WorkflowPanel.ascx"),
                 "Core" );
-
-            context.MapRoute("lyniconworkflowmain",
-                "Lynicon/Workflow/{action}",
-                new { controller = "Workflow" });
 
             return true;
         }

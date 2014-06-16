@@ -36,7 +36,13 @@
         </h2>
         <div class="lyn-type-items">
             <% foreach (var val in (summaryDict.ContainsKey(type) ? summaryDict[type] : Enumerable.Empty<Summary>())) { %>
-            <%= Html.Partial("ItemListSummary", val) %>
+            <div class="lyn-item-entry">
+                <% if (ViewData.ContainsKey("UrlPermission") && (bool)ViewData["UrlPermission"]) { %>
+                <a class="move-link cmd-link" href="/<%= val.Url %>?$urlget=true" title="Move Url">Mv</a>
+                <a class="del-link cmd-link" title="Delete Url">Del</a>
+                <% } %>
+                <a class="item-link" href="/<%= val.Url%>" title="<%= val.Id %>"><%= val.DisplayTitle() %></a>
+            </div>
             <% } %>
         </div>
     <% } %>

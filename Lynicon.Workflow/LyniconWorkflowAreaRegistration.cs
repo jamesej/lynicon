@@ -22,9 +22,7 @@ namespace Lynicon.Workflow
 
         public override void RegisterArea(AreaRegistrationContext context)
         {
-            var wfm = new WorkflowModule(context, "Base");
-            wfm.MustPrecede.Add("Caching");
-            LyniconModuleManager.Instance.RegisterModule(wfm);
+            LyniconModuleManager.Instance.EnsureRoutes<WorkflowModule>(context);
         }
     }
 }

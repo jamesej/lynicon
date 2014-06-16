@@ -55,7 +55,7 @@
             <div id='editPanel'>
              <% using (Html.BeginForm())
                { %>
-                <%= Html.EditorForModel() %>
+                <%= Html.EditorForModel("EditorObject") %>
                 <%= Html.Hidden("formState") %>
             <% } %>
             </div>

@@ -47,14 +47,22 @@
       <HintPath>..\packages\Less.3.0\lib\Less.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.22.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.22.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.22\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -75,9 +83,6 @@
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
-    </Reference>
-    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.WebRequest">
     </Reference>
@@ -145,9 +150,9 @@
     <Content Include="Areas\Lynicon.Base\Views\Shared\PublishingPanel.ascx" />
     <Content Include="Areas\Lynicon.Tasks\Admin\SQL\TasksInit.sql" />
     <Content Include="Areas\Lynicon.Tasks\Content\Wiki.css" />
-    <Content Include="Areas\Lynicon.Tasks\Views\BlogPost\Index.aspx" />
     <Content Include="Areas\Lynicon.Base\Admin\SQL\AuditingInit.sql" />
     <Content Include="Areas\Lynicon.Base\Views\BlogPost\Index.aspx" />
+    <Content Include="Areas\Lynicon.Tasks\Views\Shared\TaskSelector.ascx" />
     <Content Include="Areas\Lynicon.Workflow\Admin\SQL\LyniconWorkflowInit.sql" />
     <Content Include="Areas\Lynicon.Workflow\Views\Shared\WorkflowPanel.ascx" />
     <Content Include="Areas\Lynicon\Admin\SQL\LyniconCoreInit.sql" />
@@ -406,6 +411,7 @@
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\mctabs.js" />
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\validate.js" />
     <Content Include="Areas\Lynicon\Views\Items\Index.aspx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\EditorObject.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EnsureMediaLibrary.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\Copy of LyniconDual.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\ReferenceSelect.ascx" />
@@ -470,11 +476,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Lynicon.Tasks\Views\Shared\" />
     <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Lynicon\Config\basic.config" />
@@ -539,9 +546,6 @@
     <Content Include="Areas\Lynicon.Tasks\Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Lynicon.Tasks\Views\Wiki\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\Lynicon\Lynicon.Base\Lynicon.Base.csproj">
       <Project>{47a2d927-cf55-4185-8125-9740736299dd}</Project>
       <Name>Lynicon.Base</Name>
@@ -549,6 +553,10 @@
     <ProjectReference Include="..\..\Lynicon\Lynicon.Core\Lynicon.csproj">
       <Project>{f9fb7ea1-57d4-49d0-9776-a7a7a8e23475}</Project>
       <Name>Lynicon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lynicon.Tasks\Lynicon.Tasks.csproj">
+      <Project>{07156843-d89f-46d9-9eff-44a25d0d535c}</Project>
+      <Name>Lynicon.Tasks</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -579,6 +587,11 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

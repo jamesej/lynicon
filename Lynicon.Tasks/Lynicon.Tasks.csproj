@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\ItemTask.cs" />
+    <Compile Include="Models\TaskFlow.cs" />
     <Compile Include="Models\TaskSpec.cs" />
     <Compile Include="TasksModule.cs" />
     <Compile Include="LyniconTasksAreaRegistration.cs" />

@@ -22,11 +22,18 @@
     <% foreach (var btn in ui.CurrentFuncPanelButtons) {
            if (!btn.ShouldShow(Model))
                continue;
+           if (btn.ViewName == null)
+           {
            string url = ui.ApplySubstitutions(btn.Url, ViewContext, ViewBag); %>
     <<%= url == "" ? "div" : "a href=\"" + url + "\"" %> id="<%= btn.Id %>" class="func-button" <%= string.IsNullOrEmpty(btn.Float) ? "" : "style='float:" + btn.Float + "'"  %>>
         <%= btn.Caption %>
     </<%= url == "" ? "div" : "a"%>>
-    <% } %>
+    <%     }
+           else
+           {
+               Html.RenderPartial(btn.ViewName);
+           }
+       } %>
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
