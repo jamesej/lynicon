@@ -6,6 +6,7 @@ using Lynicon.Membership;
 
 namespace Lynicon.Test.Models
 {
+    [Serializable]
     public class ExtendedUser : User
     {
         public string ExtData { get; set; }

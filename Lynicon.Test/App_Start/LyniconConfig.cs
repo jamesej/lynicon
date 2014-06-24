@@ -44,6 +44,10 @@ namespace Lynicon.Test
             SearchManager.Instance.Initialise(new List<Type> { typeof(HeaderContent) });
         }
 
+        public static void Shutdown()
+        {
+            LyniconModuleManager.Instance.Shutdown();
+        }
         public static void BuildTaskflows()
         {
             var testFlow = new TaskFlow();
@@ -70,7 +74,7 @@ namespace Lynicon.Test
             testFlow.TaskSpecs.Add("Edit", testEdit);
             testFlow.TaskSpecs.Add("Publish", testPublish);
 
-            LyniconModuleManager.Instance.GetModule<TasksModule>().RegisterTaskFlow(testFlow);
+            TaskManager.Instance.RegisterTaskFlow(testFlow);
         }
     }
 }

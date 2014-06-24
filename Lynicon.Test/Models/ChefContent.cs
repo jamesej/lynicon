@@ -12,6 +12,7 @@ using Newtonsoft.Json;
 
 namespace Lynicon.Test.Models
 {
+    [Serializable]
     public class ChefSummary : Summary
     {
         public string FirstName { get; set; }

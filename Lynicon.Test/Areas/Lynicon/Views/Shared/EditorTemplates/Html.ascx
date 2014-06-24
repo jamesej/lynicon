@@ -10,6 +10,7 @@
 <% } %>
 <%= Html.Hidden("", ViewData.TemplateInfo.FormattedModelValue) %>
 <%= Html.RegisterHtmlBlock("lyn_rte", "<div id='_L24RTEContainer' style='display:none'><textarea id='_L24RTE'>abcdef</textarea></div>") %>
+<%= Html.RegisterScript("tiny_mce_script", "/Areas/Lynicon/scripts/tiny_mce/jquery.tinymce.js", new List<string> { "jquery" }) %>
 <%= Html.RegisterScript("lyn_rte_script", @"javascript:$(document).ready(function () {
 	$('textarea#_L24RTE').tinymce({
 	    // Location of TinyMCE script
@@ -80,4 +81,4 @@ function showHtml(contents, updateHtml) {
     $.modal.getContainer().bind('move.modal', function() { positionTool('#_L24RTEContainer'); });
             
     $('textarea#_L24RTE').html(contents);
-}", new List<string> { "tinymce-script" })%>
+}", new List<string> { "tiny_mce_script" })%>

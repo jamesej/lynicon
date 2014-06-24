@@ -12,7 +12,7 @@ namespace Lynicon.Tasks.Models
         [Key]
         public Guid Id { get; set; }
         public Guid ItemIdentity { get; set; }
-        public Guid TaskSpecId { get; set; }
+        public string TaskName { get; set; }
         public DateTime CreatedDate { get; set; }
         public Guid CreatedBy { get; set; }
         public DateTime? CompletedDate { get; set; }

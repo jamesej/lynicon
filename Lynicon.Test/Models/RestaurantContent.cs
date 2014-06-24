@@ -13,6 +13,7 @@ using Newtonsoft.Json;
 
 namespace Lynicon.Test.Models
 {
+    [Serializable]
     public class RestaurantSummary : Summary
     {
         public Image MainImage { get; set; }

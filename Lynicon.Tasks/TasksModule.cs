@@ -16,7 +16,6 @@ namespace Lynicon.Base
 {
     public class TasksModule : Module
     {
-        public Dictionary<Type, TaskFlow> TaskFlows { get; set; }
         public TasksModule(params string[] dependentOn)
             : base("Tasks", dependentOn)
         {
@@ -26,7 +25,7 @@ namespace Lynicon.Base
                 return;
             }
 
-            TaskFlows = new Dictionary<Type, TaskFlow>();
+            TaskManager.Instance.Initialise();
 
             Collator.Instance.SetupType(typeof(ItemTask), new BasicCollator(), new BasicRepository());
         }
@@ -37,15 +36,6 @@ namespace Lynicon.Base
             LyniconUi.Instance.FuncPanelButtons.Add(taskSelector);
 
             return true;
-        }
-
-        public void RegisterTaskFlow(TaskFlow taskFlow)
-        {
-            foreach (Type contentType in ContentTypeHierarchy.AllContentTypes)
-            {
-                if (!TaskFlows.ContainsKey(contentType) && taskFlow.AppliesToType(contentType))
-                    TaskFlows.Add(contentType, taskFlow);
-            }
         }
     }
 }

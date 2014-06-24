@@ -5,10 +5,13 @@
     <%= Html.HiddenFor(m => m.Id, new { @class = "lyn-reference-id" })%>
     <%= Html.HiddenFor(m => m.DataType, new { @class = "lyn-reference-datatype" }) %>
     <%
-        var type = Model.GetType();
-        string refType = type.IsGenericType ? type.GetGenericArguments()[0].FullName : null;
+       if (Model != null)
+       {
+            var type = Model.GetType();
+            string refType = type.IsGenericType ? type.GetGenericArguments()[0].FullName : null;
          %>
-    <%= Html.HiddenFor(m => refType, new { @class = "lyn-reference-typearg" }) %>
+        <%= Html.HiddenFor(m => refType, new { @class = "lyn-reference-typearg" }) %>
+    <% } %>
 </div>
 <%= Html.Partial("EnsureItemSelector") %>
 

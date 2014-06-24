@@ -1,7 +1,8 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 <%@ Import Namespace="Lynicon.Utility" %>
 <% ViewData.Add("popup", true); %>
-<%= Html.RegisterHtmlBlock("lyn_itemselector", Html.Partial("LyniconItems", ViewData)) %>
+<% if (!Html.HtmlBlockIsRegistered("lyn_itemselector"))
+       Html.RegisterHtmlBlock("lyn_itemselector", Html.Partial("LyniconItems", ViewData)); %>
 <%= Html.RegisterScript("lyn_itemselector_script",
 @"javascript:function getItem(current, updateItem) {
     var $sel = $('#lyn-item-selector').css('display', 'block');

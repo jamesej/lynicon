@@ -5,10 +5,10 @@
 <%@ Import Namespace="System.Text.RegularExpressions" %>
 <%
     var enumElementReplacer = new Regex("\\{.*\\}");
-    var summaries = Collator.Instance.Get<Summary, object>(iq => iq).ToList();
-    var summaryDict = summaries
-        .GroupBy(s => s.Type)
-        .ToDictionary(sg => sg.Key, sg => sg.OrderBy(s => s.Title));
+    //var summaries = Collator.Instance.Get<Summary, object>(iq => iq).ToList();
+    //var summaryDict = summaries
+    //    .GroupBy(s => s.Type)
+    //    .ToDictionary(sg => sg.Key, sg => sg.OrderBy(s => s.Title));
      %>
 <div id='lyn-item-selector' <%= ViewData.ContainsKey("popup") ? "style='display:none'" : "" %>>
     <div id="lyn-item-selector-inner">
@@ -35,15 +35,7 @@
             <span class="type-name"><%= BaseContent.ContentClassDisplayName(type) %></span><%= Html.Hidden("typeName", type.FullName, new { @class = "type-name" })%>
         </h2>
         <div class="lyn-type-items">
-            <% foreach (var val in (summaryDict.ContainsKey(type) ? summaryDict[type] : Enumerable.Empty<Summary>())) { %>
-            <div class="lyn-item-entry">
-                <% if (ViewData.ContainsKey("UrlPermission") && (bool)ViewData["UrlPermission"]) { %>
-                <a class="move-link cmd-link" href="/<%= val.Url %>?$urlget=true" title="Move Url">Mv</a>
-                <a class="del-link cmd-link" title="Delete Url">Del</a>
-                <% } %>
-                <a class="item-link" href="/<%= val.Url%>" title="<%= val.Id %>"><%= val.DisplayTitle() %></a>
-            </div>
-            <% } %>
+
         </div>
     <% } %>
         <input type="hidden" id="lyn-item-selected" />
@@ -116,8 +108,24 @@
             return url;
     }
 
-    $('#lyn-item-selector-inner').accordion({ heightStyle: 'content' });
-    $('#lyn-item-selector').on('click', 'a.move-link', function (ev) {
+
+
+    $('#lyn-item-selector-inner').accordion({
+        heightStyle: 'content',
+        beforeActivate: function (ev, ui) {
+            if (ui.newPanel && ui.newPanel.length) {
+                var $panel = ui.newPanel;
+                $panel.load('/lynicon/items/getpage?$top=15&$orderby=Title&datatype='
+                    + ui.newHeader.find('input.type-name').val());
+            }
+        }
+    });
+
+    $('#lyn-item-selector').on('click', 'a.paging-link', function (ev) {
+        var $panel = $(this).closest('.lyn-type-items');
+        $panel.load($(this).prop('href'));
+        ev.preventDefault();
+    }).on('click', 'a.move-link', function (ev) {
         ev.preventDefault();
         var $mover = $(this);
         $.get($mover.prop('href'), function (patt) {

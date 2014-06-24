@@ -21,7 +21,7 @@
         <%= Html.EditorFor(m => m.Alt) %>
     </div>
 </div>
-<%= Html.Partial("EnsureMediaLibrary") %>
+<%= Html.Partial("EnsureFileEditor") %>
 <%= Html.RegisterScript("lyn_image_control", @"javascript:$(document).ready(function() {
     $('body').on('click', '.lyn-image', function (ev) {
             if ($(ev.target).is('.lyn-image-load, input'))
