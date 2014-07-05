@@ -7,7 +7,7 @@
     <% foreach (int p in Model.PageRange(6)) { %>
         <span class="<%= Model.Page == p ? "current" : "" %>">
             <a class="paging-link" href="<%= Model.GetUrl(currentUri, p) %>">
-                <%= Model.IsSpacerPage(6, p) ? "..." : (p + 1).ToString() %>
+                <%= Model.IsEndPage(6, p) ? (p > 0 ? "&gt;" : "&lt;") : (Model.IsSpacerPage(6, p) ? "..." : (p + 1).ToString()) %>
             </a>
         </span>
     <% } %>

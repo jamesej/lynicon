@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 <%@ Import Namespace="System.Linq" %>
 <%@ Import Namespace="Lynicon.Utility" %>
-<div id="<%= ViewData.TemplateInfo.HtmlFieldPrefix %>" class="collection <%= ViewData["formState"] == null || (ViewData["formState"] as string).Contains(ViewData.TemplateInfo.HtmlFieldPrefix) ? "" : "closed" %>">
+<div id="<%= ViewData.TemplateInfo.HtmlFieldPrefix %>" class="collection closed">
 <%
     if (Model != null) {
         string oldPrefix = ViewData.TemplateInfo.HtmlFieldPrefix;

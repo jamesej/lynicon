@@ -46,3 +46,4 @@ C:\Dev\Lynicon.Test\Lynicon.Test\obj\Debug\Lynicon.Test.csproj.App.config
 C:\Dev\Lynicon.Test\Lynicon.Test\obj\Debug\Lynicon.Test.csprojResolveAssemblyReference.cache
 C:\Dev\Lynicon.Test\Lynicon.Test\obj\Debug\Lynicon.Test.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\obj\Debug\Lynicon.Test.pdb
+C:\Dev\Lynicon.Test\Lynicon.Test\bin\log4net.xml

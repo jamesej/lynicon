@@ -412,25 +412,22 @@
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\validate.js" />
     <Content Include="Areas\Lynicon\Views\Items\Index.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\EditorObject.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Switchable.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Video.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EnsureMediaLibrary.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\Copy of LyniconDual.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\ReferenceSelect.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\FullNavList.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\ItemPage.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\NavList.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\ObjectList.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Reference.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EnsureFileEditor.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EnsureItemSelector.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\ItemListSummary.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconGARegister.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconItems.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\FilterPanel.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\FuncPanel.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\PasswordWithEncrypter.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\String.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\PagingSpec.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\UserList.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\LyniconListDetail.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconUser.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconEmptyUrl.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Collection-Paged.ascx" />
@@ -441,7 +438,6 @@
     <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Link.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Object.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Stringx.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\BbText.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Collection-Paged.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Collection.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\DateTime.ascx" />
@@ -450,16 +446,13 @@
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\ImageLink.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Link.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\MediaFileLink.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Multiline.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Object.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Recaptcha.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\LyniconDual.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconEditor.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconFileManager.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconFileOpen.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconLogin.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconPropertyItem.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\L24CMStructure.aspx" />
     <Content Include="Areas\Lynicon\Views\Ui\FunctionReveal.ascx" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery.hopscotch.js" />
@@ -558,6 +551,27 @@
       <Project>{07156843-d89f-46d9-9eff-44a25d0d535c}</Project>
       <Name>Lynicon.Tasks</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon\Views\ListEditor\LyniconListChooser.cshtml" />
+    <Content Include="Areas\Lynicon\Views\ListEditor\LyniconListDetail.cshtml" />
+    <Content Include="Areas\Lynicon\Views\ListEditor\LyniconListEditor.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon\Views\Shared\EditorLayout.cshtml" />
+    <Content Include="Areas\Lynicon\Views\Shared\FilterPanel.cshtml" />
+    <Content Include="Areas\Lynicon\Views\Shared\LyniconDual.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\String.cshtml" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\UserList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Multiline.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\BbText.cshtml" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Decimal.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,28 +1,30 @@
-﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<Lynicon.Models.Image>" %>
-<%@ Import Namespace="Lynicon.Utility" %>
+﻿@model Lynicon.Models.ImageLink
+@using Lynicon.Utility;
+@{ bool showImg = (!string.IsNullOrEmpty(Model.Url)); }
 <div class="lyn-image">
-    <div class="lyn-image-content">
-        <% if (string.IsNullOrEmpty(Model.Url))
-            { %>
-        no image
-        <% }
-            else
-            { %>
+    <div class="lyn-image-content"  @(showImg ? "" : "style='display:none'")>
+        @if (!showImg) {
+        <span>no image</span>
+        } else {
         <img class='file-image-thumb' src="<%= Model.Url %>" />
-        <% } %>
+        }
     </div>
-    <div class="lyn-image-url" style="display:none">
+    <div class="lyn-image-url" @(showImg ? "style='display:none'" : "")>
         <span>Url</span>
-        <input type="text" class="lyn-file-url" name="<%= ViewData.TemplateInfo.HtmlFieldPrefix %>.Url" value="<%= Model.Url %>" />
+        <input type="text" class="lyn-file-url" name="@(ViewData.TemplateInfo.HtmlFieldPrefix).Url" value="@Model.Url" />
     </div>
-    <div class='lyn-image-alt' style="display:none">
+    <div class='lyn-image-alt' @(showImg ? "style='display:none'" : "")>
         <button class='lyn-image-load'>Find File</button>
         <span>Alt</span>
-        <%= Html.EditorFor(m => m.Alt) %>
+        @Html.EditorFor(m => m.Alt)
+    </div>
+    <div class='lyn-link-url'>
+        <span>Link Url</span>
+        <input type="text" name="@(ViewData.TemplateInfo.HtmlFieldPrefix).LinkUrl" value="@Model.Url" />
     </div>
 </div>
-<%= Html.Partial("EnsureFileEditor") %>
-<%= Html.RegisterScript("lyn_image_control", @"javascript:$(document).ready(function() {
+@Html.Partial("EnsureMediaLibrary")
+@Html.RegisterScript("lyn_image_control", @"javascript:$(document).ready(function() {
     $('body').on('click', '.lyn-image', function (ev) {
             if ($(ev.target).is('.lyn-image-load, input'))
                 return;
@@ -59,5 +61,4 @@
         });
     });
 ", new List<string> { "jquery" })
-%>
 

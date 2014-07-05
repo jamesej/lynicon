@@ -1,22 +1,31 @@
-﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>>>" %>
-<%@ Import Namespace="Lynicon.Utility" %>
-<%
+﻿@model System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<string>>
+
+@using Lynicon.Utility
+
+@{
     Uri currentUri = ViewContext.HttpContext.Request.Url;
-     %>
-<% foreach (var filter in Model) { %>
-<div class="lynicon-filter-textbox">
+}
+@foreach (var filter in Model) {
+<div class="lynicon-filter-textbox clearfix">
     <input type="text" />
-    <a class="lynicon-ctl-button"><%= filter.Key %></a>
+    <a class="lynicon-ctl-button">@filter.Key</a>
     <a class="<%= filter.Key %> filter-clear lynicon-ctl-button">Clear</a>
 </div>
-<% } %>
-<%= Html.RegisterScript("lynicon-filter-textbox", @"javascript:
+}
+@{
+    Html.RegisterScript("lynicon-filter-textbox", @"javascript:
     var filterFields = {" + Model.Select(kvp => "'" + kvp.Key + "': ['" + kvp.Value.Join("','") + "']").Join(",") + @"};
+    function navigate($button, url) {
+        location.href = url;
+    }
+    function thisUrl() {
+        return location.href;
+    }
     $(document).ready(function () {
         $('.lynicon-filter-textbox a').click(function (ev) {
             ev.preventDefault();
             if ($(this).hasClass('filter-clear')) {
-                location.href = ensureKeyValue(location.href, '$filter', null);
+                navigate($(this), ensureKeyValue(thisUrl(), '$filter', null));
                 return false;
             }
             var val = $(this).closest('.lynicon-filter-textbox').find('input').val();
@@ -24,11 +33,11 @@
                 var fields = filterFields[$(this).text()];
                 var filt = '';
                 for (var i = 0; i < fields.length; i++) {
-                    filt += (filt ? ' or ' : '') + ""'"" + val + ""' substringof "" + fields[i];
+                    filt += (filt ? ' or ' : '') + ""substringof('"" + val + ""',"" + fields[i] + "")"";
                 }
-                location.href = ensureKeyValue(location.href, '$filter', filt);
+                navigate($(this), ensureKeyValue(ensureKeyValue(thisUrl(), '$filter', filt), '$skip', 0));
             }
             return false;
         });
-    });", new List<string> { "jquery" }) %>
-
+    });", new List<string> { "jquery" });
+}

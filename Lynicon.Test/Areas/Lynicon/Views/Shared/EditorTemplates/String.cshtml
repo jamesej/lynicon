@@ -1,0 +1,6 @@
+﻿@model object
+
+<span class="text-display">@(Model == null || Model.ToString() == "" ? "---" : Model)</span>
+@Html.TextBox("", Model, ViewData.ModelMetadata.IsReadOnly ?
+(object)new { @class = "text-box single-line " + ViewData["classes"], @readonly = true } :
+(object)new { @class = "text-box single-line " + ViewData["classes"] })

@@ -14,6 +14,10 @@ input, textarea {
 	-webkit-border-radius: 5px;
 }
 
+.clearfix {
+	overflow: auto;
+}
+
 #opener {
 	background-color: #000;
 	opacity: 0.5;
@@ -103,10 +107,10 @@ input, textarea {
 
 #edit {
 	float: right;
-	border-left: 4px solid #999;
+	border-left: 4px solid #747474;
 	box-sizing: border-box;
 	padding-left: 4px;
-	background-color: #E5E4F6;
+	background-color: #fff;
 	min-height: 100%;
 	overflow: hidden;
 }
@@ -118,16 +122,16 @@ input, textarea {
 
 .editor-label
 {
-	background-color: #808080;
+	background-color: #8abcbc;
 	color: #FFFFFF;
 	padding: 3px 2px 3px 6px;
-	font-size: 12px;
+	font-size: 13px;
 	height: auto;
-	/*+border-radius:14px;*/
 	-moz-border-radius: 14px;
-	-webkit-border-radius: 14px;
+	/* -webkit-border-radius: 14px; */
 	-khtml-border-radius: 14px;
-	border-radius: 14px;
+	/* border-radius: 14px; */
+	font-weight: bold;
 }
 .field-validation-valid {
 	display:none;
@@ -152,12 +156,20 @@ input, textarea {
 }
 #editPanel
 {
-	font-size: 11px;
+	font-size: 13px;
 	position: relative;
 }
 #editPanel INPUT[type="text"]
 {
 	font-size: 11px;
+}
+#editPanel .text-box
+{
+	display: none;
+}
+#editPanel .text-display
+{
+	cursor: pointer;
 }
 #editPanel .reorder-container
 {
@@ -226,7 +238,8 @@ input, textarea {
 }
 #editPanel .editor-field .editor-label, #editPanel .editor-field .action-button, #editPanel .editor-field .add-button
 {
-	background-color: #3C3763;
+	background-color: transparent;
+	color: #254e4e;
 }
 #editPanel .editor-field .editor-field .editor-label, #editPanel .editor-field .editor-field .action-button, #editPanel .editor-field .editor-field .add-button
 {
@@ -309,24 +322,39 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 }
 .file-image-thumb
 {
-	max-width: 24px;
-	max-height: 24px;
+	max-height: 45px;
+	cursor: pointer;
 }
 #editPanel .l24-link-url
 {
 	width: 277px;
 	display: inline-block;
 }
-#editPanel .l24-image-url
+#editPanel .lyn-image
 {
-	width: 348px;
-	display: inline-block;
+	cursor: pointer;
+}
+#editPanel .lyn-image input
+{
+	cursor: auto;
+}
+#editPanel .lyn-image-load {
+	cursor: pointer;
+}
+#editPanel .lyn-image-url
+{
+	padding-left: 30px;
+	box-sizing: border-box;
+}
+#editPanel .lyn-image-url span
+{
+	margin-left: -28px;
 }
 #editPanel .l24-image-content
 {
 	display: inline-block;
 }
-.l24-file-url, .l24-link-url INPUT
+.l24-link-url INPUT
 {
 	width: 130px;
 	margin-left: 24px;
@@ -340,24 +368,23 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 {
 	width: 95px;
 }
-#editPanel .l24-image-alt
+#editPanel .lyn-image-alt
 {
-	width: 130px;
-	display: inline-block;
+	padding-left: 100px;
+	box-sizing: border-box;
 }
-#editPanel .l24-image-alt .text-box
+#editPanel .lyn-image-load
 {
-	width: 99px;
+	margin-left: -100px;
 }
 #editPanel .l24-link-isinternal
 {
 	width: 68px;
 	display: inline-block;
 }
-.l24-file-url
+#editPanel .lyn-file-url
 {
-	margin-right: 5px;
-	margin-left: 1px;
+	width: 100%;
 }
 #editPanel select.lyn-reference-id {
 	margin-top:3px;
@@ -559,4 +586,14 @@ left: 43px;
 #lyn-item-selector .save-url-link {
 	margin-top: 5px;
 	margin-left: 10px;
+}
+
+.lynicon-number-pager
+{
+	margin: 0px 0px 12px 8px;
+}
+
+.lyn-type-items .lynicon-number-pager
+{
+	margin-top: 10px;
 }

@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "~/Areas/Lynicon/Views/Shared/EditorLayout.cshtml";
+    ViewBag.BaseUrl = (string)Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea });
+}
+
+<div id='container' style="height: 100%; width: 100%; position:relative;">
+    <iframe id="view" src="@(ViewBag.BaseUrl as string)?$mode=view@(ViewBag.OriginalQuery as string)"></iframe>
+    <div id="edit">
+        <div id="editPanelContainer">
+            <div id='editPanel'>
+                @using (Html.BeginForm())
+                {
+                    @Html.EditorForModel("EditorObject")
+                    @Html.Hidden("formState")
+                }
+            </div>
+        </div>
+        @Html.DisplayForModel("FuncPanel")
+        <div id="opener">
+            <img id="opener-out" src="/Areas/Lynicon/Content/left-arrow-white.png" />
+            <img id="opener-in" src="/Areas/Lynicon/Content/right-arrow-white.png" />
+        </div>
+        <div style="clear:both; height: 44px;"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    $('#edit').on('click', '.text-display', function (ev) {
+        $(this).css('display', 'none');
+        $(this).siblings('input.text-box').css('display', 'inline-block');
+        ev.stopPropagation();
+    });
+</script>
+

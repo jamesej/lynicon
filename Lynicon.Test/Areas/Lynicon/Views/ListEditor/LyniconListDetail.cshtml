@@ -1,0 +1,101 @@
+﻿@using System.Collections
+
+@{
+    Layout = "~/Areas/Lynicon/Views/Shared/EditorLayout.cshtml";
+    ViewBag.Title = "Editor";
+    ViewBag.BaseUrl = (string)Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea });
+}
+
+<div id='container' style="height: 100%; width: 100%; position:relative;">
+    <div id="view">
+        @Html.EditorForModel((string)ViewContext.RouteData.Values["listView"], new { displayFields = ViewBag.DisplayFields })
+
+        @if (ViewBag.CanAdd) {
+        <div id="lynicon-list-add-button" class="lynicon-ctl-button">ADD</div>
+        }
+        @if (ViewContext.RouteData.DataTokens.ContainsKey("@Paging")) {
+        <div>@Html.Partial("PagingSpec", this.ViewContext.RouteData.DataTokens["@Paging"])</div>
+        }
+    </div>
+    <div id="edit">
+        <div id="editPanelContainer">
+            <div id='editPanel'>
+                @{
+                    var item = ((ICollection)Model).Cast<object>().FirstOrDefault();
+                    if (item == null)
+                    {
+                        item = Activator.CreateInstance(Model.GetType().GetGenericArguments()[0]);
+                        ViewBag.ItemIndex = -1;
+                    }
+                }
+                @using (Html.BeginForm())
+                {
+                    @Html.EditorFor(m => item, "EditorObject")
+                    @Html.Hidden("formState")
+                    @Html.Hidden("lynicon_itemIndex", (int)ViewBag.ItemIndex)
+                }
+            </div>
+            @Html.DisplayForModel("FuncPanel")
+            <div id="opener">
+                <img id="opener-out" src="/Areas/Lynicon/Content/left-arrow-white.png" />
+                <img id="opener-in" src="/Areas/Lynicon/Content/right-arrow-white.png" />
+            </div>
+            <div style="clear:both; height: 44px;"></div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+<script type="text/javascript">
+    function processField(v) {
+        if (typeof v == "string" && v.substr(0, 6) == "/Date(") {
+            var d = new Date(parseInt(v.substr(6)));
+            return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+        } else
+            return v;
+    }
+    function mapForm(func) {
+        $('form').find('input, textarea, select').each(function () {
+            if ($(this).prop('name').substr(0, 5) == 'item.')
+                func($(this));
+        });
+    }
+    function loadDetail(idx) {
+        var formNames = '';
+        mapForm(function ($fld) {
+            formNames += $fld.prop('name') + ' ';
+        });
+        $.post("@(ViewBag.BaseUrl as string)?$mode=getValues@(ViewBag.OriginalQuery as string)",
+            { formNames: formNames, idx: idx },
+            function (d) {
+                $('form').find('input, textarea, select').each(function () {
+                    var nm = $(this).prop('name');
+                    if (d.hasOwnProperty(nm))
+                        $(this).val(processField(d[nm]));
+                });
+            });
+    }
+    function clearForm() {
+        mapForm(function ($fld) { $fld.val(null) });
+    }
+
+    $('.list-table').on('click', 'tr', function () {
+        var idx = $(this).prop('id').after('-');
+        loadDetail(parseInt(idx));
+        $('#lynicon_itemIndex').val(idx);
+        $(this).closest('.list-table').find('.selected').removeClass('selected');
+        $(this).addClass('selected');
+    });
+    $('#lynicon-list-add-button').on('click', function () {
+        $('#lynicon_itemIndex').val('-1');
+        loadDetail(-1);
+        $('.list-table').find('.selected').removeClass('selected');
+    });
+
+    $(document).ready(function() {
+        //$('#container').layout({ east: { size: '280', spacing_open: 10, spacing_closed: 14, togglerLength_open: 60 } });
+        loadDetail(parseInt($('#lynicon_itemIndex').val()));
+    });
+</script>
+}

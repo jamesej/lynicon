@@ -112,6 +112,8 @@
 
     $('#lyn-item-selector-inner').accordion({
         heightStyle: 'content',
+        collapsible: true,
+        active: false,
         beforeActivate: function (ev, ui) {
             if (ui.newPanel && ui.newPanel.length) {
                 var $panel = ui.newPanel;
