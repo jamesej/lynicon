@@ -57,11 +57,12 @@ input, textarea {
 	padding: 0;
 }
 
-/*
+
 .parent-unit.level-0 {
-	width: 20%;
+	padding:4px;
+	box-sizing:border-box;
 }
-*/
+
 
 .edit-20 #edit {
 	width: 20%;
@@ -123,9 +124,9 @@ input, textarea {
 .editor-label
 {
 	background-color: #8abcbc;
-	color: #FFFFFF;
-	padding: 3px 2px 3px 6px;
-	font-size: 13px;
+color: #FFFFFF;
+padding: 4px 2px 6px 0px;
+font-size: 14px;
 	height: auto;
 	-moz-border-radius: 14px;
 	/* -webkit-border-radius: 14px; */
@@ -145,10 +146,12 @@ input, textarea {
 .editor-label.child-closed
 {
 	background-image: url(/Areas/Lynicon/Content/right-arrow-white.png);
+	background-position-y: 8px;
 }
 .editor-label.child-open
 {
 	background-image: url(/Areas/Lynicon/Content/down-arrow-white.png);
+	background-position-y: 8px;
 }
 #editPanelContainer {
 	position: relative;
@@ -158,6 +161,12 @@ input, textarea {
 {
 	font-size: 13px;
 	position: relative;
+	color:#3a7777;
+}
+
+#editPanel .editor-field.indent-0 {
+	background-color: #cbdfdf;
+	padding-bottom:10px;
 }
 #editPanel INPUT[type="text"]
 {
@@ -171,31 +180,40 @@ input, textarea {
 {
 	cursor: pointer;
 }
-#editPanel .reorder-container
+#editPanel .collection-item-bar
 {
+	overflow:auto;
 	padding: 3px;
-	width: 8px;
-	/*+border-radius:8px;*/
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	-khtml-border-radius: 8px;
-	border-radius: 8px;
 }
-#editPanel .reorder-container IMG
+#editPanel .collection-item-bar .reorder,  #editPanel .collection-item-bar .delete
 {
-	cursor: pointer;
+	float: right
 }
-#edit .action-button, #edit .add-button
+#edit .action-button
 {
-	font-size: 11px;
-	width: 16px;
+	font-size: 1.25em;
+	width: 18px;
 	text-align: center;
 	cursor: pointer;
-	background-image: url(/Areas/Lynicon/Content/circle-mask-white.png);
-	background-repeat: no-repeat;
-	height: 16px;
+	height: 18px;
+	color: #5ca39f;
+}
+#edit .add-button
+{
+	position: absolute;
+	top: -28px;
+	right: 7px;
+	color: #fff;
+	font-size: 24px;
+	cursor: pointer;
+	width: 24px;
+	height: 28px;
+	text-align: center;
 	font-weight: bold;
-	color: #FFFFFF;
+}
+#edit .add-button:hover
+{
+	color: #ddd;
 }
 #edit #save
 {
@@ -235,13 +253,14 @@ input, textarea {
 #editPanel .editor-field
 {
 	margin-bottom: 2px;
+	position: relative;
 }
-#editPanel .editor-field .editor-label, #editPanel .editor-field .action-button, #editPanel .editor-field .add-button
+#editPanel .editor-field .editor-label
 {
 	background-color: transparent;
 	color: #254e4e;
 }
-#editPanel .editor-field .editor-field .editor-label, #editPanel .editor-field .editor-field .action-button, #editPanel .editor-field .editor-field .add-button
+#editPanel .editor-field .editor-field .editor-label
 {
 	background-color: #3879D9;
 }
@@ -261,7 +280,7 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 {
 	margin-left: 34px;
 }
-#edit .action-button:hover, #editPanel .add-button:hover
+#edit .action-button:hover
 {
 	background-color: #000000 !important;
 }

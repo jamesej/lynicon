@@ -47,3 +47,5 @@ C:\Dev\Lynicon.Test\Lynicon.Test\obj\Debug\Lynicon.Test.csprojResolveAssemblyRef
 C:\Dev\Lynicon.Test\Lynicon.Test\obj\Debug\Lynicon.Test.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\obj\Debug\Lynicon.Test.pdb
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\log4net.xml
+C:\Dev\Lynicon.Test\Lynicon.Test\bin\EntityFramework.SqlServer.dll
+C:\Dev\Lynicon.Test\Lynicon.Test\bin\EntityFramework.SqlServer.xml
