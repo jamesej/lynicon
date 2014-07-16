@@ -32,6 +32,7 @@ namespace Lynicon.Test.Models
         public string TwitterTitle { get; set; }
         public string TwitterHandle { get; set; }
         public string TwitterWeblink { get; set; }
+        public List<string> ListString { get; set; }
     }
 
     public class ChefContent : PageContent
@@ -43,6 +44,9 @@ namespace Lynicon.Test.Models
         public string Awards { get; set; }
         [UIHint("Html")]
         public string Interviews { get; set; }
+
+        public List<string> ListString { get; set; }
+        public List<TwitterDetails> ListDetails { get; set; }
 
         public TwitterDetails Twitter { get; set; }
 

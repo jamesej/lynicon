@@ -1,0 +1,5 @@
+﻿@model Lynicon.Relations.Reference
+<div class="lyn-reference lyn-reference-select">
+    @Html.DropDownListFor(m => m.SerializedValue, Model.GetSelectList(), null, new { @class = "lyn-reference-id chosen-select" })
+</div>
+

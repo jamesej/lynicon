@@ -10,8 +10,6 @@ BODY
 }
 input, textarea {
 	border: 1px solid #A0A0A0;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
 }
 
 .clearfix {
@@ -407,7 +405,7 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 }
 #editPanel select.lyn-reference-id {
 	margin-top:3px;
-	width: 200px;
+	width: 230px;
 }
 
 #funcPanel
