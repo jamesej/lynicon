@@ -1,0 +1,43 @@
+﻿@using Lynicon.Utility
+@using System.Linq
+@using System.Collections
+@{
+    Func<ModelMetadata, bool> ShouldShow = (ModelMetadata metadata) =>
+    {
+        return metadata.ShowForEdit
+            //&& !metadata.IsComplexType
+            && !ViewData.TemplateInfo.Visited(metadata);
+    };
+}
+@if (ViewData.TemplateInfo.TemplateDepth > 5) {
+    if (Model == null) {
+        @ViewData.ModelMetadata.NullDisplayText
+    } else {
+        @ViewData.ModelMetadata.SimpleDisplayText
+    }
+} else {
+    int useDepth = ViewData.TemplateInfo.TemplateDepth + ((ViewData["addDepth"] as int?) ?? 0) - 1;
+    int oldInd = (ViewData["indent"] as int?) ?? 0;
+    int collDepth = (ViewData["collectionDepth"] as int?) ?? -100;
+    bool isInCollection = collDepth == ViewData.TemplateInfo.TemplateDepth - 1;
+    int ind = oldInd + (isInCollection ? 0 : 1);
+    ViewData["indent"] = ind;
+<div class='object level-@useDepth'>
+    @foreach (var prop in ViewData.ModelMetadata.Properties.Where(pm => ShouldShow(pm))) {
+    <div class="editor-unit level-@useDepth">
+        @if (prop.HideSurroundingHtml) {
+        <div class="editor-field indent-@ind">@Html.Editor(prop.PropertyName)</div>
+        } else {
+        if (!String.IsNullOrEmpty(Html.Label(prop.PropertyName).ToHtmlString())) {
+        <div class="editor-label indent-@ind">@Html.Label(prop.PropertyName)</div>
+        }
+        <div class="editor-field indent-@ind">
+            @Html.Editor(prop.PropertyName)
+            @Html.ValidationMessage(prop.PropertyName, "*")
+        </div>
+        }
+    </div>
+    }
+</div>
+ViewData["indent"] = oldInd;
+}

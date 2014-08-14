@@ -15,11 +15,7 @@
                 }
             </div>
         </div>
-        @Html.DisplayForModel("FuncPanel")
-        <div id="opener">
-            <img id="opener-out" src="/Areas/Lynicon/Content/left-arrow-white.png" />
-            <img id="opener-in" src="/Areas/Lynicon/Content/right-arrow-white.png" />
-        </div>
+        @Html.DisplayForModel("FuncPanel", new { Sections = "Record,Opener" })
         <div style="clear:both; height: 44px;"></div>
     </div>
 </div>

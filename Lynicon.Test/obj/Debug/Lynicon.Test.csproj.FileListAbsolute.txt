@@ -41,7 +41,6 @@ C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.WebPages.xml
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.WebPages.Deployment.xml
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.WebPages.Razor.xml
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\Lucene.Net.xml
-C:\Dev\Lynicon.Test\Lynicon.Test\bin\Linq2Rest.xml
 C:\Dev\Lynicon.Test\Lynicon.Test\obj\Debug\Lynicon.Test.csproj.App.config
 C:\Dev\Lynicon.Test\Lynicon.Test\obj\Debug\Lynicon.Test.csprojResolveAssemblyReference.cache
 C:\Dev\Lynicon.Test\Lynicon.Test\obj\Debug\Lynicon.Test.dll
@@ -49,3 +48,8 @@ C:\Dev\Lynicon.Test\Lynicon.Test\obj\Debug\Lynicon.Test.pdb
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\log4net.xml
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\EntityFramework.SqlServer.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\EntityFramework.SqlServer.xml
+C:\Dev\Lynicon.Test\Lynicon.Test\bin\Antlr3.Runtime.dll
+C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.Optimization.dll
+C:\Dev\Lynicon.Test\Lynicon.Test\bin\WebGrease.dll
+C:\Dev\Lynicon.Test\Lynicon.Test\bin\Antlr3.Runtime.pdb
+C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.Optimization.xml

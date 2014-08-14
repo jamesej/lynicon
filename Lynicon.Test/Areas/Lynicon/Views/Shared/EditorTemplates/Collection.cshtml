@@ -3,6 +3,11 @@
 @using Lynicon.Utility
 <div id="@ViewData.TemplateInfo.HtmlFieldPrefix" class="collection closed">
 @{
+    int oldInd = (ViewData["indent"] as int?) ?? 0;
+    int ind = oldInd + 1;
+    int oldCollDepth = (ViewData["collectionDepth"] as int?) ?? -1;
+    ViewData["collectionDepth"] = ViewData.TemplateInfo.TemplateDepth;
+    
     if (Model != null)
     {
         string oldPrefix = ViewData.TemplateInfo.HtmlFieldPrefix;
@@ -10,6 +15,7 @@
 
         ViewData.TemplateInfo.HtmlFieldPrefix = String.Empty;
 
+        ViewData["indent"] = ind;
         int count = (Model as IEnumerable).Cast<object>().Count();
 
         if (count == 0)
@@ -27,7 +33,7 @@
 
                 <div class="collection-item-bar">
                     <div id="del-@fieldName" class="action-button delete indent-@(ViewData.TemplateInfo.TemplateDepth - 1)"><i class="fa fa-times-circle"></i></div>
-                    <div class="reorder indent-@(ViewData.TemplateInfo.TemplateDepth - 1)@(index == 0 ? " first" : (index == count - 1 ? " last": "" ))">
+                    <div class="reorder indent-@ind @(index == 0 ? " first" : (index == count - 1 ? " last": "" ))">
                         <div class="reorder-up action-button">
                             <i id="up-@fieldName" class="fa fa-caret-up" />
                         </div>
@@ -36,7 +42,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="editor-field indent-@ViewData.TemplateInfo.TemplateDepth">
+                <div class="editor-field indent-@ind">
                     @Html.EditorFor(m => item, null, fieldName)
                 </div>
 
@@ -44,10 +50,12 @@
             }
         }
 
+        ViewData["indent"] = oldInd;
         ViewData.TemplateInfo.HtmlFieldPrefix = oldPrefix;
+        ViewData["collectionDepth"] = oldCollDepth;
     }
 
 }
 </div>
 
-<div id="add-@ViewData.TemplateInfo.HtmlFieldPrefix" class="add-button indent-@(ViewData.TemplateInfo.TemplateDepth - 1) depth-@ViewData.TemplateInfo.TemplateDepth">+</div>
+<div id="add-@ViewData.TemplateInfo.HtmlFieldPrefix" class="add-button indent-@ind depth-@ViewData.TemplateInfo.TemplateDepth">+</div>

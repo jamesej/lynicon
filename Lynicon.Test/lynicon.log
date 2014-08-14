@@ -990,3 +990,188 @@ System.Runtime.Serialization.SerializationException: Type 'Lynicon.Base.Models.H
 2014-07-18 11:57:48,042 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Auditing.Basic blocked, initialiser returned false
 2014-07-18 11:57:48,049 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Versioning.Publishing blocked, initialiser returned false
 2014-07-18 11:57:48,050 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Tasks blocked, initialiser returned false
+2014-08-05 17:41:02,310 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Core blocked, initialiser returned false
+2014-08-05 17:41:02,422 [1] ERROR Lynicon.Base.Modules.SummaryCache - System.Runtime.Serialization.SerializationException: Binary stream '99' does not contain a valid BinaryHeader. Possible causes are invalid stream or object version change between serialization and deserialization.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Base.Modules.SummaryCache.Initialise() in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 64
+2014-08-05 17:41:04,372 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full blocked, initialiser returned false
+2014-08-05 17:41:04,373 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Auditing.Basic blocked, initialiser returned false
+2014-08-05 17:41:04,379 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Versioning.Publishing blocked, initialiser returned false
+2014-08-05 17:41:04,380 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Tasks blocked, initialiser returned false
+2014-08-05 17:42:00,386 [5] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'Lynicon.Base.Models.HierarchySummary' in Assembly 'Lynicon.Base, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.SummaryCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 124
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 114
+2014-08-05 17:42:13,073 [12] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Core blocked, initialiser returned false
+2014-08-05 17:42:13,179 [12] ERROR Lynicon.Base.Modules.SummaryCache - System.Runtime.Serialization.SerializationException: Binary stream '0' does not contain a valid BinaryHeader. Possible causes are invalid stream or object version change between serialization and deserialization.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Base.Modules.SummaryCache.Initialise() in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 64
+2014-08-05 17:42:15,123 [12] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full blocked, initialiser returned false
+2014-08-05 17:42:15,124 [12] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Auditing.Basic blocked, initialiser returned false
+2014-08-05 17:42:15,133 [12] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Versioning.Publishing blocked, initialiser returned false
+2014-08-05 17:42:15,134 [12] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Tasks blocked, initialiser returned false
+2014-08-05 17:43:52,776 [8] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'Lynicon.Base.Models.HierarchySummary' in Assembly 'Lynicon.Base, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.SummaryCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 124
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 114
+2014-08-05 17:44:06,133 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Core blocked, initialiser returned false
+2014-08-05 17:44:06,262 [1] ERROR Lynicon.Base.Modules.SummaryCache - System.Runtime.Serialization.SerializationException: Binary stream '0' does not contain a valid BinaryHeader. Possible causes are invalid stream or object version change between serialization and deserialization.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Base.Modules.SummaryCache.Initialise() in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 64
+2014-08-05 17:44:08,025 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full blocked, initialiser returned false
+2014-08-05 17:44:08,025 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Auditing.Basic blocked, initialiser returned false
+2014-08-05 17:44:08,033 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Versioning.Publishing blocked, initialiser returned false
+2014-08-05 17:44:08,034 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Tasks blocked, initialiser returned false
+2014-08-05 17:44:59,290 [9] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'Lynicon.Base.Models.HierarchySummary' in Assembly 'Lynicon.Base, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.SummaryCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 124
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 114
+2014-08-05 17:45:37,107 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Core blocked, initialiser returned false
+2014-08-05 17:45:37,207 [1] ERROR Lynicon.Base.Modules.SummaryCache - System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.ReadObjectNull(BinaryHeaderEnum binaryHeaderEnum)
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Base.Modules.SummaryCache.Initialise() in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 64
+2014-08-05 17:45:38,651 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full blocked, initialiser returned false
+2014-08-05 17:45:38,652 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Auditing.Basic blocked, initialiser returned false
+2014-08-05 17:45:38,658 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Versioning.Publishing blocked, initialiser returned false
+2014-08-05 17:45:38,658 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Tasks blocked, initialiser returned false
+2014-08-05 17:45:39,505 [11] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'Lynicon.Base.Models.HierarchySummary' in Assembly 'Lynicon.Base, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.SummaryCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 124
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 114
+2014-08-05 17:45:57,205 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Core blocked, initialiser returned false
+2014-08-05 17:45:57,312 [1] ERROR Lynicon.Base.Modules.SummaryCache - System.Runtime.Serialization.SerializationException: Binary stream '0' does not contain a valid BinaryHeader. Possible causes are invalid stream or object version change between serialization and deserialization.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Base.Modules.SummaryCache.Initialise() in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 64
+2014-08-05 17:45:59,357 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full blocked, initialiser returned false
+2014-08-05 17:45:59,357 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Auditing.Basic blocked, initialiser returned false
+2014-08-05 17:45:59,366 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Versioning.Publishing blocked, initialiser returned false
+2014-08-05 17:45:59,367 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Tasks blocked, initialiser returned false
+2014-08-05 17:47:55,811 [13] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'Lynicon.Base.Models.HierarchySummary' in Assembly 'Lynicon.Base, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.SummaryCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 124
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 114
+2014-08-05 17:49:00,736 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Core blocked, initialiser returned false
+2014-08-05 17:49:00,812 [1] ERROR Lynicon.Base.Modules.SummaryCache - System.Runtime.Serialization.SerializationException: Binary stream '110' does not contain a valid BinaryHeader. Possible causes are invalid stream or object version change between serialization and deserialization.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Base.Modules.SummaryCache.Initialise() in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 64
+2014-08-05 17:49:02,130 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full blocked, initialiser returned false
+2014-08-05 17:49:02,131 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Auditing.Basic blocked, initialiser returned false
+2014-08-05 17:49:02,138 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Versioning.Publishing blocked, initialiser returned false
+2014-08-05 17:49:02,138 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Tasks blocked, initialiser returned false
+2014-08-05 17:51:16,322 [5] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'Lynicon.Base.Models.HierarchySummary' in Assembly 'Lynicon.Base, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.SummaryCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 124
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 114
+2014-08-05 17:51:44,496 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Core blocked, initialiser returned false
+2014-08-05 17:51:44,612 [1] ERROR Lynicon.Base.Modules.SummaryCache - System.Runtime.Serialization.SerializationException: Binary stream '111' does not contain a valid BinaryHeader. Possible causes are invalid stream or object version change between serialization and deserialization.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Base.Modules.SummaryCache.Initialise() in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 64
+2014-08-05 17:51:46,148 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full blocked, initialiser returned false
+2014-08-05 17:51:46,149 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Auditing.Basic blocked, initialiser returned false
+2014-08-05 17:51:46,155 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Versioning.Publishing blocked, initialiser returned false
+2014-08-05 17:51:46,156 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Tasks blocked, initialiser returned false
+2014-08-05 17:58:20,222 [9] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'Lynicon.Base.Models.HierarchySummary' in Assembly 'Lynicon.Base, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.SummaryCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 124
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 114
+2014-08-05 17:58:45,857 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Core blocked, initialiser returned false
+2014-08-05 17:58:45,989 [1] ERROR Lynicon.Base.Modules.SummaryCache - System.Runtime.Serialization.SerializationException: Binary stream '99' does not contain a valid BinaryHeader. Possible causes are invalid stream or object version change between serialization and deserialization.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Base.Modules.SummaryCache.Initialise() in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 64
+2014-08-05 17:58:47,311 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full blocked, initialiser returned false
+2014-08-05 17:58:47,311 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Auditing.Basic blocked, initialiser returned false
+2014-08-05 17:58:47,327 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Versioning.Publishing blocked, initialiser returned false
+2014-08-05 17:58:47,327 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Tasks blocked, initialiser returned false
+2014-08-06 09:20:56,307 [10] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Summaries.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'Lynicon.Base.Models.HierarchySummary' in Assembly 'Lynicon.Base, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.SummaryCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\SummaryCache.cs:line 124
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 114

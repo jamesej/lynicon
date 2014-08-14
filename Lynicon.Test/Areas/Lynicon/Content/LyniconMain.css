@@ -17,17 +17,25 @@ input, textarea {
 }
 
 #opener {
-	background-color: #000;
-	opacity: 0.5;
+	background-color: #747474;
 	margin: 0;
-	padding: 2px 0px 1px 0px;
+	padding: 2px 8px 1px 8px;
 	border: 0;
-	position: fixed;
-	bottom: 0px;
+	color:#fff;
+	font-size:1.77em;
+	float:right;
 }
 
 #opener img {
 	cursor: pointer;
+}
+
+#opener-out {
+	margin-right:2px;
+}
+
+#opener i:hover {
+	color: #909090
 }
 
 .edit-0 #view {
@@ -162,6 +170,10 @@ font-size: 14px;
 	color:#3a7777;
 }
 
+#editPanel a
+{
+	color: #4f4f4f;
+}
 #editPanel .editor-field.indent-0 {
 	background-color: #cbdfdf;
 	padding-bottom:10px;
@@ -185,7 +197,11 @@ font-size: 14px;
 }
 #editPanel .collection-item-bar .reorder,  #editPanel .collection-item-bar .delete
 {
-	float: right
+	float: right;
+}
+#editPanel .reorder .action-button
+{
+	float: right;
 }
 #edit .action-button
 {
@@ -195,6 +211,10 @@ font-size: 14px;
 	cursor: pointer;
 	height: 18px;
 	color: #5ca39f;
+}
+#edit .action-button:hover
+{
+	color: #777 !important;
 }
 #edit .add-button
 {
@@ -212,14 +232,6 @@ font-size: 14px;
 #edit .add-button:hover
 {
 	color: #ddd;
-}
-#edit #save
-{
-	background-image: none;
-	height: 22px;
-	font-size: 18px;
-	width: 100px;
-	float:right;
 }
 #edit .func-link
 {
@@ -258,13 +270,9 @@ font-size: 14px;
 	background-color: transparent;
 	color: #254e4e;
 }
-#editPanel .editor-field .editor-field .editor-label
-{
-	background-color: #3879D9;
-}
 .collection > .editor-field, .collection > .editor-label, .object > .editor-field, .object > .editor-label
 {
-	margin-left: 15px;
+	margin-left: 10px;
 }
 FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .editor-field > .object > .editor-field, .collection > .editor-field > .object > .editor-label
 {
@@ -272,15 +280,11 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 }
 .editor-label.indent-1, .editor-field.indent-1
 {
-	margin-left: 17px;
+	margin-left: 10px;
 }
 .editor-label.indent-2, .editor-field.indent-2
 {
-	margin-left: 34px;
-}
-#edit .action-button:hover
-{
-	background-color: #000000 !important;
+	margin-left: 10px;
 }
 #editPanel .closed
 {
@@ -288,7 +292,7 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 }
 #editPanel .editor-field .text-box
 {
-	width: 100%;
+	width: 95%;
 }
 .ui-datepicker
 {
@@ -339,8 +343,13 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 }
 .file-image-thumb
 {
-	max-height: 45px;
 	cursor: pointer;
+	width: 110px;
+	height: 56px;
+	border: solid 2px #fff;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
 }
 #editPanel .l24-link-url
 {
@@ -360,16 +369,44 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 }
 #editPanel .lyn-image-url
 {
-	padding-left: 30px;
 	box-sizing: border-box;
 }
 #editPanel .lyn-image-url span
 {
-	margin-left: -28px;
+	width: 235px;
+	height: 18px;
+	overflow: hidden;
+	display: block;
+	text-overflow: ellipsis;
 }
-#editPanel .l24-image-content
+#editPanel .lyn-image-alt
 {
-	display: inline-block;
+	box-sizing: border-box;
+	overflow:auto;
+}
+#editPanel .lyn-image-alt span.text-display
+{
+	width: 168px;
+	height: 18px;
+	overflow: hidden;
+	display: block;
+	text-overflow: ellipsis;
+	margin-top: 4px;
+	padding-left: 3px;
+}
+#editPanel .lyn-image-alt span.editor-label
+{
+	float:left;
+}
+#editPanel .lyn-image-alt input.text-box
+{
+	width: 168px;
+	margin-top: 4px;
+	margin-left: 3px;
+}
+#editPanel .lyn-image-load
+{
+	float: left;
 }
 .l24-link-url INPUT
 {
@@ -385,15 +422,7 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 {
 	width: 95px;
 }
-#editPanel .lyn-image-alt
-{
-	padding-left: 100px;
-	box-sizing: border-box;
-}
-#editPanel .lyn-image-load
-{
-	margin-left: -100px;
-}
+
 #editPanel .l24-link-isinternal
 {
 	width: 68px;
@@ -408,36 +437,42 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 	width: 230px;
 }
 
-#funcPanel
-{
+#funcPanel {
 	font-size: 10pt;
-	background-color: rgba(0, 0, 0, 0.6);
-	right:0px;
-	left:0px;
+	background-color: #747474;
+	right: 0px;
+	left: 0px;
 	position: fixed;
 	bottom: 0px;
+	border: solid 1px #4f4f4f;
 }
 #funcPanel #lyn-logo {
 	float:left;
-	margin: 0px 10px 0px 5px;
+	margin: 6px 10px 2px 8px;
+}
+#funcPanel .sep {
+	float: left;
+	margin: 1px 5px 0px 6px;
+	color: #a5a5a5;
+	font-size: 21px;
+	font-weight: bold;
 }
 #funcPanel .func-button {
 	display: inline-block;
-	background-color: rgba(0, 0, 0, 0.4);
 	color: #FFF;
 	padding: 1px 4px;
-	margin: 2px;
+	margin: 5px 2px 2px 2px;
 	cursor: pointer;
 	float: left;
+	font-size: 16px;
+	font-weight: bold;
 }
 #funcPanel #reveal-button {
 	float: right;
 	height: 22px;
 	width: 20px;
-	background-color: rgba(0, 0, 0, 0.4);
 	padding-left: 4px;
 	cursor: pointer;
-	margin-right: 30px;
 }
 #funcPanel #reveal-arrow {
 	height: 16px;
@@ -445,11 +480,11 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 }
 
 #funcPanel .func-button:hover {
-	background-color: black;
+	color: #bababa;
 }
+
 #funcPanel A.func-button, #funcPanel A.func-button:visited
 {
-	color: white;
 	text-decoration:none;
 }
 
@@ -464,6 +499,15 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 
 #funcPanel .reveal-panel-view div {
 	float: left;
+}
+
+#funcPanel .Record {
+	float: right;
+	padding: 6px 15px 6px 15px;
+	margin: 0px;
+	border-left: solid 1px #4f4f4f;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 #editPanel .reorder-up IMG
@@ -613,4 +657,56 @@ left: 43px;
 .lyn-type-items .lynicon-number-pager
 {
 	margin-top: 10px;
+}
+
+/* Alternate Chosen select styling */
+
+/* dark color overrides */
+ 
+#editPanel .chosen-container .chosen-results li {
+  color: #3a7777;   
+}
+#editPanel .chosen-container .chosen-drop, .chosen-container-single .chosen-single {
+  background-color: #e2f5f5;
+  color: #3a7777;
+  line-height: 20px;
+}
+/* Some IE 7-9 fun with this next one - filter likes to override background */
+#editPanel .chosen-container-single .chosen-single {
+  background-color: #e2f5f5;
+  background-image: none;
+  background: #e2f5f5 none top left no-repeat;
+  filter: none;
+  border: none;
+  display: block;
+  height: 21px;
+}
+#editPanel .chosen-container .chosen-drop {
+  border: 1px solid #121212;    
+}
+#editPanel .chosen-container-single .chosen-single div {
+  background-image: -webkit-gradient(linear, left bottom, left top, 
+    color-stop(0, #fff), color-stop(0.6, #e2f5f5));
+  background-image: -webkit-linear-gradient(center bottom, #fff 0%, #e2f5f5 60%);
+  background-image: -moz-linear-gradient(center bottom, #fff 0%, #e2f5f5 60%);
+  background-image: -o-linear-gradient(bottom, #fff 0%, #e2f5f5 60%);
+  background-image: -ms-linear-gradient(top, #fff 0%,#e2f5f5 60%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', 
+    endColorstr='#e2f5f5',GradientType=0 );
+  background-image: linear-gradient(top, #fff 0%,#e2f5f5 60%);
+  border-left: 1px solid #8abcbc;
+  padding-left: 6px;
+}
+#editPanel .chosen-container-active .chosen-single-with-drop {
+  box-shadow: none; 
+}
+#editPanel .chosen-container .chosen-results .highlighted {
+  background: #e2f5f5;
+  color: #3a7777;
+}
+#editPanel .chosen-container .chosen-results .no-results {
+  background: #e2f5f5;
+}
+#editPanel .chosen-container .chosen-results li em {
+  background: none;
 }

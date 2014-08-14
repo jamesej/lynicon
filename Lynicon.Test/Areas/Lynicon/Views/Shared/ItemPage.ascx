@@ -9,7 +9,7 @@
     <a class="move-link cmd-link" href="/<%= summ.Url %>?$urlget=true" title="Move Url">Mv</a>
     <a class="del-link cmd-link" title="Delete Url">Del</a>
     <% } %>
-    <a class="item-link" href="/<%= summ.Url%>" title="<%= summ.Id %>"><%= summ.DisplayTitle() %></a>
+    <a class="item-link" href="/<%= summ.Url%>" target="_blank" title="<%= summ.Id %>"><%= summ.DisplayTitle() %></a>
 </div>
 <% } %>
 <% if (ViewContext.RouteData.DataTokens.ContainsKey("@Paging")) { %>

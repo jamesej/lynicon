@@ -2,20 +2,19 @@
 @using Lynicon.Utility;
 @{ bool showImg = (!string.IsNullOrEmpty(Model.Url)); }
 <div class="lyn-image">
-    <div class="lyn-image-content"  @(showImg ? "" : "style='display:none'")>
+    <div class="lyn-image-content" style="@(showImg ? "" : "display:none")">
         @if (!showImg) {
         <span>no image</span>
         } else {
-        <img class='file-image-thumb' src="<%= Model.Url %>" />
+        <div class='file-image-thumb' style="background-image:url(@Model.Url)" />
         }
     </div>
-    <div class="lyn-image-url" @(showImg ? "style='display:none'" : "")>
-        <span>Url</span>
-        <input type="text" class="lyn-file-url" name="@(ViewData.TemplateInfo.HtmlFieldPrefix).Url" value="@Model.Url" />
+    <div class="lyn-image-url" style="@(showImg ? "display:none" : "")">
+        @Html.EditorFor(m => m.Url)
     </div>
-    <div class='lyn-image-alt' @(showImg ? "style='display:none'" : "")>
-        <button class='lyn-image-load'>Find File</button>
-        <span>Alt</span>
+    <div class='lyn-image-alt' style="@(showImg ? "display:none" : "")">
+        <button class='lyn-image-load'>Find</button>
+        <span class="editor-label">Alt</span>
         @Html.EditorFor(m => m.Alt)
     </div>
 </div>
