@@ -4,53 +4,35 @@
 @using System.Text.RegularExpressions
 @{
     var enumElementReplacer = new Regex("\\{.*\\}");
-    bool canAdd = ViewData.ContainsKey("UrlPermission") && (bool)ViewData["UrlPermission"];
 }
-<div id='lyn-item-selector' class="edit-100" style="@(ViewData.ContainsKey("popup") ? "display:none" : "")">
-    <div id="edit">
-        <div id="editPanelContainer">
-            <div id="editPanel">
-                <div class="object level-0">
-                @foreach (var type in ContentTypeHierarchy.AllContentTypes.OrderBy(t => t.Name))
-                {
-                    var patts = ContentMap.Instance.GetUrlPatterns(type);
-                    if (!patts.Any()) { continue; }
-                    <div class="editor-unit parent-unit level-0">
-                        <div class="editor-label indent-0 parent child-closed">
-                            <label>@BaseContent.ContentClassDisplayName(type)</label>
-                            @Html.Hidden(type.FullName + "-name", type.FullName, new { @class = "type-name" })
-                        </div>
-                        <div class="editor-field indent-0">
-                            @if (canAdd)
-                            {
-                            <ul class="new-item-url-patterns">
-                                @foreach (string patt in patts)
-                                {
-                                <li>
-                                    @Html.Raw(enumElementReplacer.Replace(patt
-                                        .Replace("{?}", "<span class='pathel'>___</span>")
-                                        .Replace("{*}", "<span class='pathelopt'>___</span>")
-                                        .Replace("{/}", "<span class='subpath'>___</span>"),
-                                        "<span class='pathelenum'>___</span>"))
-                                    <input type="hidden" class="url-pattern" value="@patt" />
-                                </li>
-                                }
-                            </ul>
-                            }
-                            <div class="object level-1 closed">
+<div id='lyn-item-selector' style="@(ViewData.ContainsKey("popup") ? "display:none" : "")">
+    <div id="lyn-item-selector-inner">
+    @foreach (var type in ContentTypeHierarchy.AllContentTypes.OrderBy(t => t.Name)) {
+        var patts = ContentMap.Instance.GetUrlPatterns(type);
+        if (!patts.Any()) { continue; }
+    <h2>
+        @if (ViewData.ContainsKey("UrlPermission") && (bool)ViewData["UrlPermission"]) {
+        <span class="new-item">+</span>
+        <ul class="new-item-url-patterns">
+            @foreach (string patt in patts) {
+            <li>
+                @enumElementReplacer.Replace(patt
+                .Replace("{?}", "<span class='pathel'>___</span>")
+                .Replace("{*}", "<span class='pathelopt'>___</span>")
+                .Replace("{/}", "<span class='subpath'>___</span>"),
+                "<span class='pathelenum'>___</span>")
+                <input type="hidden" class="url-pattern" value="@patt" />
+            </li>
+            }
+        </ul>
+        }
+        <span class="type-name">@BaseContent.ContentClassDisplayName(type)</span>
+        @Html.Hidden("typeName", type.FullName, new { @class = "type-name" })
+    </h2>
+    <div class="lyn-type-items">
 
-                            </div>
-                            @if (canAdd) {
-                            <span class="add-button new-item">+</span>
-                            }
-                        </div>
-                    </div>
-                }
-                </div>
-            </div>
-        </div>
     </div>
-
+    }
     <input type="hidden" id="lyn-item-selected" />
     </div>
     <div style="clear:both"></div>
@@ -62,24 +44,24 @@
 <script type="text/javascript">
 var $shownDD = null;
 var $newEntry = null;
-function addNew($cont, pattern) {
+function addNew($ul, pattern) {
     if ($newEntry) {
         $newEntry.hide('fast', function () {
             $newEntry.remove();
             $newEntry = null;
-            addNew($cont, pattern);
+            addNew($ul, pattern);
         });
         return;
     }
-    var addHtml = urlEntryHtml(pattern, 'add-link', '<i class="fa fa-file"></i>', 'add-url-link');
+    var addHtml = urlEntryHtml(pattern, 'add-link', 'Add', 'add-url-link');
     $newEntry = $(addHtml).hide();
-    $cont.prepend($newEntry);
-    $newEntry.show('fast', notifyLayout);
+    $ul.closest('h2').append($newEntry);
+    $newEntry.show('fast');
 }
 
 function urlEntryHtml(pattern, mainClass, action, actionClass) {
-    var addHtml = "<div class='" + mainClass + "'><div class='pattern'><span>" + pattern +
-    "</span></div><a class='cancel-link cmd-link'><i class='fa fa-times'></i></a><a class='" + actionClass + " cmd-link'>" + action + "</a></div>";
+    var addHtml = "<div class='" + mainClass + "'><span>" + pattern +
+    "</span><a class='" + actionClass + " cmd-link'>" + action + "</a><a class='cancel-link cmd-link'>Cancel</a></div>";
     var addHtmlSplit = addHtml.split('{');
     if (addHtmlSplit.length > 1) {
         for (var i = 1; i < addHtmlSplit.length; i++) {
@@ -125,12 +107,24 @@ function readUrlEntry($container) {
         return url;
 }
 
-$('#lyn-item-selector').on('shown', '.object.level-1', function (ev) {
-    var typeName = $(this).closest('.editor-unit').find('.type-name').val();
-    $(this).load('/lynicon/items/getpage?$top=10&$orderby=Title&datatype=' + typeName, notifyLayout);
-}).on('click', 'a.paging-link', function (ev) {
-    var $panel = $(this).closest('.object.level-1');
-    $panel.load($(this).prop('href'), notifyLayout);
+
+
+$('#lyn-item-selector-inner').accordion({
+    heightStyle: 'content',
+    collapsible: true,
+    active: false,
+    beforeActivate: function (ev, ui) {
+        if (ui.newPanel && ui.newPanel.length) {
+            var $panel = ui.newPanel;
+            $panel.load('/lynicon/items/getpage?$top=15&$orderby=Title&datatype='
+                + ui.newHeader.find('input.type-name').val());
+        }
+    }
+});
+
+$('#lyn-item-selector').on('click', 'a.paging-link', function (ev) {
+    var $panel = $(this).closest('.lyn-type-items');
+    $panel.load($(this).prop('href'));
     ev.preventDefault();
 }).on('click', 'a.move-link', function (ev) {
     ev.preventDefault();
@@ -143,17 +137,15 @@ $('#lyn-item-selector').on('shown', '.object.level-1', function (ev) {
         var $cont = $mover.closest('.lyn-item-entry');
         var $item = $cont.find('.item-link');
         var edHtml = urlEntryHtml(patt, 'edit-link', 'Save', 'save-url-link');
-        var $ed = $(edHtml).hide();
-        $item.after($ed);
-        $ed.show('fast');
+        $item.after($(edHtml));
         $mover.hide();
         $item.closest('.lyn-item-entry').find('.edit-link input:first').focus();
     });
 }).on('click', 'a.save-url-link', function (ev) {
     ev.preventDefault();
     var $entry = $(this).closest('.lyn-item-entry');
-    var $pattern = $entry.find('.pattern');
-    var url = readUrlEntry($pattern);
+    var $editLink = $entry.find('.edit-link');
+    var url = readUrlEntry($editLink);
     if (url == null)
         return;
     var id = $entry.find('.item-link').prop('title');
@@ -172,16 +164,12 @@ $('#lyn-item-selector').on('shown', '.object.level-1', function (ev) {
 }).on('click', '.edit-link a.cancel-link', function (ev) {
     ev.preventDefault();
     var $entry = $(this).closest('.lyn-item-entry');
-    $entry.find('.edit-link').hide(300, function () {
-        $(this).closest('.lyn-item-entry').find('.reveal-funcs').hide();
-        $(this).remove();
-    });
+    $entry.find('.edit-link').remove();
     $entry.find('.move-link').show();
 }).on('click', '.add-link a.cancel-link', function (ev) {
     $newEntry.hide('fast', function () {
         $newEntry.remove();
         $newEntry = null;
-        notifyLayout();
     });
 }).on('click', 'a.del-link', function (ev) {
     ev.preventDefault();
@@ -196,38 +184,29 @@ $('#lyn-item-selector').on('shown', '.object.level-1', function (ev) {
         }
     });
 }).on('click', '.new-item', function (ev) {
-    var $ul = $(this).closest('.editor-unit').find('.new-item-url-patterns');
+    var $ul = $(this).closest('h2').find('ul');
     if ($ul.find('li').length > 1) {
         if ($shownDD) $shownDD.hide();
         $shownDD = $ul.show();
         ev.stopPropagation();
     } else {
-        addNew($(this).closest('.editor-field'), $ul.find('li input').val());
+        addNew($(this).closest('h2'), $ul.find('li input').val());
     }
 }).on('click', '.new-item-url-patterns li', function (ev) {
-    addNew($(this).closest('.editor-unit'), $(this).find('input').val());
+    addNew($(this).closest('h2'), $(this).find('input').val());
 }).on('click', '.add-url-link', function (ev) {
-    var $pattern = $(this).closest('.add-link').find('.pattern');
-    var url = readUrlEntry($pattern);
+    var $addLink = $(this).closest('.add-link');
+    var url = readUrlEntry($addLink);
     if (url == null)
         return;
     $newEntry.hide('fast', function () {
         $newEntry.remove();
         $newEntry = null;
-        notifyLayout();
     });
     window.open("/" + url);
-}).on('mouseenter', '.lyn-item-entry', function () {
-    $(this).find('.reveal-funcs').show();
-}).on('mouseleave', '.lyn-item-entry', function () {
-    $(this).find('.reveal-funcs').hide();
 });
 
-/*
 $('body').click(function () {
     if ($shownDD) $shownDD.hide();
 });
-*/
-
-$('#editPanel .object.level-0').masonry();
 </script>

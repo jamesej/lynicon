@@ -1,0 +1,111 @@
+﻿@model Lynicon.Relations.Models.RelationList
+@using Lynicon.Models
+@using Lynicon.Utility
+@using Lynicon.Relations.Models
+
+@{
+    Html.RegisterLocalStyles("relation-list", @"
+.relation-list-select-container { width: 70%; float: left; }
+.relation-list-select { width: 100%; }
+.relation-list-controls { padding: 10px 0px 0px 6px; }
+.relation-list-controls .ticker { float: left; }
+.relation-list-controls .text-display { display: block; float: left; margin: 2px 2px 0px 3px; }
+.relation-list-controls .ticker input.text-box { width: 25px; float: left; margin: 0px 2px 0px 3px; }
+.relation-list-controls .ticker-buttons { float: left; }
+.relation-list-controls .ticker-up { margin-top: -4px; height: 15px; }
+.relation-list-controls .relation-add { float: left; margin: 1px 0px 0px 2px; font-size: 1.6em; }
+.relation-table { width: 100%; padding: 7px 3px 0px 5px; }
+    ");
+}
+
+<div id="relationList" class="object closed">
+    <div id="relationListControls" class="relation-list-controls">
+        <div id="relationListSelectContainer" class="relation-list-select-container">
+            <select id="relationListSelect" class="relation-list-select"></select>
+        </div>
+        @{ decimal initStrength = 1.0m; }
+        @Html.EditorFor(m => initStrength, "Ticker", "InitStrength", new { Increment = 0.1m, Precision = 2 })
+        <div class="relation-add action-button">
+            <i id="relationAddRelation" class="fa fa-plus-circle" />
+        </div>
+    </div>
+    <table id="relationTable" class="relation-table">
+        @{ int index = 0; }
+        @foreach (var rel in Model ?? new RelationList())
+        {
+        <tr>
+            <td>
+                @BaseContent.ContentClassDisplayName(rel.Item.Type)
+                @Html.HiddenFor(m => m[index].Item.SerializedValue)
+            </td>
+            <td><a href="/@rel.Item.Summary.Url">@rel.Item.Summary.Title</a></td>
+            <td>
+                @rel.Strength.ToString("0.00")
+                @Html.HiddenFor(m => m[index].Strength)
+            </td>
+            <td><i class="fa fa-times-circle action-button delete"></i></td>
+        </tr>
+            index++;
+        }
+    </table>
+</div>
+@* This template is assumed to appear only once per page *@
+<script type="text/javascript">
+    function sortColText(tr, sortCols) {
+        var txt = "";
+        $.each(sortCols, function (i, v) {
+            txt += $(tr).find('td').eq(v).text().trim();
+        });
+        return txt;
+    }
+    function orderTable($table, sortCols) {
+        var $rows = $('tbody > tr', $table);
+        $rows.sort(function (a, b) {
+            var ka = sortColText(a, sortCols);
+            var kb = sortColText(b, sortCols);
+            return ka > kb ? 1 : 0;
+        });
+        $rows.each(function (i, r) {
+            $table.append(r);
+        });
+    }
+    $('#relationList').bind("shown", function () {
+        if ($('#relationListSelect').has('option').length == 0) {
+            $('#relationListSelect').load('/lynicon/relations/getselectoptions', { typeName: '@ViewData.ModelMetadata.ContainerType.FullName' },  function () {
+                $('#relationListSelect').chosen();
+            });
+        }
+        orderTable($('#relationTable'), [0, 1]);
+    });
+    $('#relationTable').on('click', '.delete', function () {
+        var $tr = $(this).closest('tr');
+        var nameParts = $tr.find('input:first').prop('name').split('[');
+        var idx = parseInt(nameParts[nameParts.length - 1]);
+        $tr.remove();
+        reindex($('#relationTable'), -1, true, idx);
+    })
+    $('#relationListControls .relation-add').click(function () {
+        var newIdx = $('#relationTable tr').length;
+        var txt = $('#relationListSelect_chosen .chosen-single > span').text();
+        var cat = txt.split('(')[1].replace(')', '');
+        var title = txt.split(' (')[0];
+        var itemId = $('#relationListSelect').val();
+        var nameBase = '@(ViewData.TemplateInfo.HtmlFieldPrefix)[' + newIdx + ']';
+        var strength = parseFloat($('#Relations_InitStrength').val()).toFixed(2);
+        if (isNaN(strength) || strength <= 0 || strength > 1) {
+            alert('Please enter a valid number between 0 and 1');
+            return;
+        }
+        $('#relationTable').append('<tr><td>'
+            + cat + '<input name="'
+            + nameBase + '.Item.SerializedValue" type="hidden" value="'
+            + itemId + '"></td><td>'
+            + title + '</td><td>'
+            + strength + '<input name="'
+            + nameBase + '.Strength" type="hidden" value="'
+            + strength + '"></td><td><i class="fa fa-times-circle action-button delete"></i></td></tr>');
+        orderTable($('#relationTable'), [0, 1]);
+        notifyLayout();
+        notifyChanged();
+    });
+</script>

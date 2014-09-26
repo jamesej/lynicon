@@ -9,6 +9,8 @@ using Lynicon.Collation;
 using Lynicon.Editors;
 using Lynicon.Extensibility;
 using Lynicon.Map;
+using Lynicon.Membership;
+using Lynicon.Modules;
 using Lynicon.Repositories;
 using Lynicon.Search;
 using Lynicon.Tasks.Models;
@@ -21,6 +23,7 @@ namespace Lynicon.Test
         public static void RegisterModules()
         {
             LyniconModuleManager.Instance.RegisterModule(new CoreModule());
+            LyniconModuleManager.Instance.RegisterModule(new UrlListModule(t => t != typeof(User)));
 
             LyniconModuleManager.Instance.RegisterModule(new SummaryCache());
             LyniconModuleManager.Instance.RegisterModule(new Auditing());
@@ -29,12 +32,18 @@ namespace Lynicon.Test
 
             LyniconModuleManager.Instance.ValidateModules();
         }
-        public static void Initialise()
+
+        public static void InitialiseDataApi()
         {
-            // Set up data types here
             Collator.RegisterExtensionType(typeof(ExtendedUser));
 
             Collator.Instance.BuildRepository();
+        }
+
+        public static void Initialise()
+        {
+            // Set up data types here
+
             LyniconModuleManager.Instance.Initialise();
 
             BuildTaskflows();

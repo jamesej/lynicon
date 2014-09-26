@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Lynicon.Base.Models;
+using Lynicon.Extensibility;
 using Lynicon.Routing;
 using Lynicon.Test.Models;
 using Lynicon.Utility;
@@ -17,11 +18,13 @@ namespace Lynicon.Test
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.AddUrlListRoute("Listed");
+
             routes.AddDataRoute<TestContent>("test", "Test/{action}",
                 new { controller = "Test", action = "Index" });
 
             routes.AddDataRoute<SingleContent>("single", "Single",
-                new { controller = "Single", action = "Index" });
+                new { controller = "Single", action = "Index", vsn = new DynamicRouteValue(() => VersionManager.Instance.CurrentVersion.ToString()) });
 
             routes.AddDataRoute<HeaderContent>("header", "Articles/{_0}",
                 new { controller = "Header", action = "Index", _0 = "Main" });

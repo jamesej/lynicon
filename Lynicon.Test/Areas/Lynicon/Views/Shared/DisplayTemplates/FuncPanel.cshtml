@@ -1,4 +1,6 @@
-﻿@using Lynicon.Extensibility
+﻿@model object
+@using Lynicon.Extensibility
+@using Lynicon.Collation
 @{
     LyniconUi ui = LyniconUi.Instance;
     string sections = (string)ViewData["Sections"] ?? "";
@@ -25,9 +27,18 @@
         <i id="opener-in" class="fa fa-caret-right"></i>
     </div>
     }
-    @foreach (var btn in ui.CurrentFuncPanelButtons)
+    @{
+        var vers = Model == null ? null : VersionManager.Instance.GetVersion(Collator.Instance.GetContainer(Model));
+    }
+    @if (vers != null && vers.Count > 0)
     {
-        if (!btn.ShouldShow(Model) || (btn.Section != "Global" && !sections.Contains(btn.Section)))
+        <div id="version-unit">
+            @Html.Raw(VersionManager.Instance.DisplayVersion(vers))
+        </div>
+    }
+    @foreach (var btn in ui.FuncPanelButtons)
+    {
+        if (!btn.DisplayPermission.Permitted(Model) || (btn.Section != "Global" && !sections.Contains(btn.Section)))
         {
             continue;
         }
@@ -51,7 +62,7 @@
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
-        @foreach (var btn in ui.FuncPanelButtons.Where(fpb => !string.IsNullOrEmpty(fpb.ClientClickScript))) {
+        @foreach (var btn in ui.FuncPanelButtons.Where(fpb => !string.IsNullOrEmpty(fpb.ClientClickScript) && fpb.DisplayPermission.Permitted(Model))) {
         @:$('#@btn.Id').click(function () {
             @Html.Raw(ui.ApplySubstitutions(btn.ClientClickScript, ViewContext, ViewBag))
         @:});

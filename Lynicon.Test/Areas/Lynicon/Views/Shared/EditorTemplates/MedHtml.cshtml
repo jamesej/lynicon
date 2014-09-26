@@ -1,0 +1,34 @@
+﻿@model object
+@using Lynicon.Models
+@using Lynicon.Utility
+@Html.TextArea("",
+    ViewData.TemplateInfo.FormattedModelValue.ToString(),
+    ViewData["rows"] != null ? (int)ViewData["rows"] : 4,
+    0,
+    new { @class = "lyn-jquery-te te-med " + ViewData["classes"] })
+<div class="lyn-html-popout"><i class="fa fa-expand"></i></div>
+@Html.RegisterCss("/Lynicon/Embedded/Content/jquery-te.css/")
+@Html.RegisterScript("jquery-te", "/Lynicon/Embedded/Scripts/jquery-te.js/", new List<string> { "jquery" })
+@Html.RegisterScript("jquery-te-fixformat", @"javascript:
+$(document).ready(function () {
+    $('#editPanel form').submit(function () {
+        $('#editPanel .lyn-jquery-te').each(function () {
+            if (!$(this).val) return;
+            var parts = $(this).val().split('<p>');
+            if (parts[0].trim().length && parts[0].trim().substr(0,1) != '<')
+                parts[0] = '<p>' + parts[0] + '</p>';
+            for (var i=1; i<parts.length; i++) {
+                var subparts = parts[i].split('</p>');
+                if (subparts.length < 2)
+                    parts[i] += '</p>';
+                else if (subparts[1].trim().length && subparts[1].trim().substr(0,1) != '<') {
+                    parts[i] = subparts.join('</p><p>') + '</p>';
+                }
+            }
+            var paraFixed = parts.join('<p>');
+            var spanFixed = paraFixed.replace(/<span[^>]*>/gi, '').replace(/<\/span>/gi, '');
+            $(this).val(spanFixed);
+        });
+    });
+});", new List<string> { "jquery-te"})
+

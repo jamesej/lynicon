@@ -26,7 +26,7 @@
             $(this).find('.lyn-image-content, .lyn-image-url, .lyn-image-alt').toggle();
         }).on('click', '.lyn-image-load, .lyn-media-load', function () {
             var $this = $(this);
-            var $fname = $this.closest('.lyn-image').find('input.lyn-file-url');
+            var $fname = $this.closest('.lyn-image').find('.lyn-image-url input');
             top.getFile($fname.val(), function (fname) {
                 var files = fname.split(',');
                 if ($this.hasClass('lyn-image-load')) {

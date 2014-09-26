@@ -2,15 +2,27 @@
 <%@ Import Namespace="Lynicon.Utility" %>
 <%@ Import Namespace="Lynicon.Attributes" %>
 <%@ Import Namespace="Lynicon.Extensibility" %>
+<%@ Import Namespace="System.Reflection" %>
 <script runat="server">
     bool ShouldShow(ModelMetadata metadata) {
+        bool shouldShowType = true;
+        PropertyInfo pi = metadata.ModelType.GetProperty("ShouldShow", BindingFlags.Public | BindingFlags.Static);
+        if (pi != null)
+            shouldShowType = (bool)pi.GetValue(null);
+
         return metadata.ShowForEdit
             //&& !metadata.IsComplexType
-            && !ViewData.TemplateInfo.Visited(metadata);
+            && !ViewData.TemplateInfo.Visited(metadata)
+            && shouldShowType;
     }
 </script>
 
 <div class='object level-0'>
+<% if (!ViewData.ModelState.IsValid) { %> 
+<div id="error-panel">
+    <%= Html.ValidationSummary(false) %>
+</div>
+<% } %>
 <%
     var dispProps = ViewData.ModelMetadata.Properties
         .Where(pm => ShouldShow(pm))
@@ -104,7 +116,7 @@
         <div class="editor-label indent-0 parent child-closed"><%= Html.Label(editorPanel.Title) %></div>
         <div class="editor-field indent-0">
             <div class="object level-1">
-            <%= Html.Partial(editorPanel.ViewName) %>
+            <%= Html.Partial(editorPanel.ViewName, Model) %>
             </div>
         </div>
     </div>

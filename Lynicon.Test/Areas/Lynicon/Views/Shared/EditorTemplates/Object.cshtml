@@ -1,12 +1,19 @@
 ﻿@using Lynicon.Utility
 @using System.Linq
 @using System.Collections
+@using System.Reflection
 @{
     Func<ModelMetadata, bool> ShouldShow = (ModelMetadata metadata) =>
     {
+        bool shouldShowType = true;
+        PropertyInfo pi = metadata.ModelType.GetProperty("ShouldShow", BindingFlags.Public | BindingFlags.Static);
+        if (pi != null)
+            shouldShowType = (bool)pi.GetValue(null);
+        
         return metadata.ShowForEdit
             //&& !metadata.IsComplexType
-            && !ViewData.TemplateInfo.Visited(metadata);
+            && !ViewData.TemplateInfo.Visited(metadata)
+            && shouldShowType;
     };
 }
 @if (ViewData.TemplateInfo.TemplateDepth > 5) {

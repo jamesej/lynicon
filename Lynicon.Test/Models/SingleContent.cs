@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Lynicon.Models;
 
 namespace Lynicon.Test.Models
 {
-    public class SingleContent
+    public class SingleContent : BaseContent
     {
         public GeneralSummary Summary { get; set; }
         public string Line1 { get; set; }

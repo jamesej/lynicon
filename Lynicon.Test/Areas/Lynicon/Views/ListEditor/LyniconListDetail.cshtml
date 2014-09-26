@@ -7,15 +7,19 @@
 }
 
 <div id='container' style="height: 100%; width: 100%; position:relative;">
-    <div id="view">
-        @Html.EditorForModel((string)ViewContext.RouteData.Values["listView"], new { displayFields = ViewBag.DisplayFields })
+    <div id="view-container">
+        <div id="view">
+            @Html.EditorForModel((string)ViewContext.RouteData.Values["listView"], new { displayFields = ViewBag.DisplayFields })
 
-        @if (ViewBag.CanAdd) {
-        <div id="lynicon-list-add-button" class="lynicon-ctl-button">ADD</div>
-        }
-        @if (ViewContext.RouteData.DataTokens.ContainsKey("@Paging")) {
-        <div>@Html.Partial("PagingSpec", this.ViewContext.RouteData.DataTokens["@Paging"])</div>
-        }
+            @if (ViewBag.CanAdd)
+            {
+                <div id="lynicon-list-add-button" class="lynicon-ctl-button">ADD</div>
+            }
+            @if (ViewContext.RouteData.DataTokens.ContainsKey("@Paging"))
+            {
+                <div>@Html.Partial("PagingSpec", this.ViewContext.RouteData.DataTokens["@Paging"])</div>
+            }
+        </div>
     </div>
     <div id="edit">
         <div id="editPanelContainer">
@@ -35,11 +39,7 @@
                     @Html.Hidden("lynicon_itemIndex", (int)ViewBag.ItemIndex)
                 }
             </div>
-            @Html.DisplayForModel("FuncPanel")
-            <div id="opener">
-                <img id="opener-out" src="/Areas/Lynicon/Content/left-arrow-white.png" />
-                <img id="opener-in" src="/Areas/Lynicon/Content/right-arrow-white.png" />
-            </div>
+            @Html.DisplayForModel("FuncPanel", new { Sections = "Record,Opener" })
             <div style="clear:both; height: 44px;"></div>
         </div>
     </div>
@@ -71,8 +71,11 @@
             function (d) {
                 $('form').find('input, textarea, select').each(function () {
                     var nm = $(this).prop('name');
-                    if (d.hasOwnProperty(nm))
-                        $(this).val(processField(d[nm]));
+                    if (d.hasOwnProperty(nm)) {
+                        var v = processField(d[nm]);
+                        $(this).val(v);
+                        $(this).prev('.text-display').text(v || '---');
+                    }
                 });
             });
     }

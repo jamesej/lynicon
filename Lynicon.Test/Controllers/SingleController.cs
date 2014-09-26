@@ -14,6 +14,7 @@ namespace Lynicon.Test.Controllers
 
         public ActionResult Index(SingleContent data)
         {
+            var rd = RouteData;
             return View(data);
         }
 

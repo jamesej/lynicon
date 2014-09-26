@@ -121,10 +121,15 @@ input, textarea {
 	min-height: 100%;
 	overflow: hidden;
 }
-#view {
-	float:left;
-	height: 100%;
+#view-container
+{
 	position: fixed;
+	top: 0px;
+	bottom: 34px;
+	width: 100%;
+}
+#view {
+	height: 100%;
 }
 
 .editor-label
@@ -168,6 +173,7 @@ font-size: 14px;
 	font-size: 13px;
 	position: relative;
 	color:#3a7777;
+	padding-bottom: 50px;
 }
 
 #editPanel a
@@ -219,8 +225,8 @@ font-size: 14px;
 #edit .add-button
 {
 	position: absolute;
-	top: -28px;
-	right: 7px;
+	top: -29px;
+	right: 6px;
 	color: #fff;
 	font-size: 24px;
 	cursor: pointer;
@@ -270,6 +276,13 @@ font-size: 14px;
 	background-color: transparent;
 	color: #254e4e;
 }
+#editPanel .editor-field .editor-label.parent {
+	background-color: #A1D0D0;
+	color: #fff;
+}
+#editPanel .editor-field .editor-field .action-button {
+color: #87C1C1;
+}
 .collection > .editor-field, .collection > .editor-label, .object > .editor-field, .object > .editor-label
 {
 	margin-left: 10px;
@@ -297,6 +310,11 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 .ui-datepicker
 {
 	font-size: 60%;
+}
+.ui-datepicker-header
+{
+	background-color: #8abcbc;
+	border-color: #fff;
 }
 #outer
 {
@@ -359,6 +377,7 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 #editPanel .lyn-image
 {
 	cursor: pointer;
+	padding-left: 15px;
 }
 #editPanel .lyn-image input
 {
@@ -386,7 +405,7 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 }
 #editPanel .lyn-image-alt span.text-display
 {
-	width: 168px;
+	width: 140px;
 	height: 18px;
 	overflow: hidden;
 	display: block;
@@ -400,7 +419,7 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 }
 #editPanel .lyn-image-alt input.text-box
 {
-	width: 168px;
+	width: 140px;
 	margin-top: 4px;
 	margin-left: 3px;
 }
@@ -435,6 +454,23 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 #editPanel select.lyn-reference-id {
 	margin-top:3px;
 	width: 230px;
+}
+#editPanel .jqte {
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+	margin: 10px 8px 10px 0px;
+	border: none;
+	height: auto !important;
+}
+#editPanel .jqte_editor {
+	max-height: 150px;
+}
+#editPanel .lyn-html-popout {
+	cursor: pointer;
+	display: inline-block;
+}
+#editPanel .lyn-html-popout:hover {
+	color: #aaa;
 }
 
 #funcPanel {
@@ -522,6 +558,12 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 {
 	display: none;
 }
+#editPanel .collection-item-heading.editor-label {
+padding: 0;
+display: inline-block;
+margin-left: 16px;
+}
+
 /* LIST EDITOR */
 table.list-table {
 	border-collapse: collapse;
@@ -578,9 +620,6 @@ background-color: #808080;
 cursor: pointer;
 }
 /* ITEM SELECTOR */
-#lyn-item-selector {
-	overflow-y: scroll;
-}
 
 #lyn-item-selector h2 {
 	font-size: 16px;
@@ -593,6 +632,7 @@ cursor: pointer;
 	border-radius: 14px;
 }
 
+/*
 #lyn-item-selector .new-item {
 	display: inline-block;
 	background-color: #FFF;
@@ -601,6 +641,7 @@ cursor: pointer;
 	height: 18px;
 	border-radius: 9px;
 }
+	*/
 
 #lyn-item-selector .new-item-url-patterns {
 	display: none;
@@ -620,33 +661,57 @@ left: 43px;
 
 #lyn-item-selector div {
 	font-family: Arial, sans-serif;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 #lyn-item-selector a.item-selected {
 	background-color: #c4c4ee
 }
 
-.lyn-item-entry .item-link {
-
-}
-.lyn-item-entry .edit-link
-{
-}
 #lyn-item-selector .cmd-link {
-	background-color: #3C3763;
+color: #fff;
+padding: 1px 5px;
+height: 16px;
+border-radius: 9px;
+text-decoration: none;
+cursor: pointer;
+display: inline-block;
+margin-right: 5px;
+background-color: #8abcbc;
+}
+#lyn-item-selector .cmd-link:hover {
+	color: #ddd;
+}
+#lyn-item-selector #edit .add-button
+{
+	position: absolute;
+	top: -33px;
+	right: 6px;
 	color: #fff;
-	padding: 1px 3px;
-	height: 16px;
-	border-radius: 2px;
-	text-decoration: none;
+	font-size: 24px;
 	cursor: pointer;
-	display: inline-block;
-	margin-right: 5px;
+	width: 24px;
+	height: 28px;
+	text-align: center;
+	font-weight: bold;
+}
+#lyn-item-selector .add-link .cmd-link,
+#lyn-item-selector .edit-link .cmd-link {
+margin-top: 5px;
+float: right;
+margin-right: 12px;
+margin-left: 0px;
+padding: 0px;
 }
 #lyn-item-selector .save-url-link {
 	margin-top: 5px;
 	margin-left: 10px;
+}
+
+#lyn-item-selector .pattern {
+float: left;
+margin: 3px 5px 3px 9px;
+font-weight: bold;
 }
 
 .lynicon-number-pager
@@ -710,3 +775,184 @@ left: 43px;
 #editPanel .chosen-container .chosen-results li em {
   background: none;
 }
+
+/* Items page specific */
+
+#lyn-item-selector .object.level-0
+{
+	padding-bottom: 40px;
+}
+
+#lyn-item-selector .editor-label {
+padding: 7px 0px 7px 24px;
+font-size: 16px;
+}
+
+#lyn-item-selector .editor-label.child-closed,
+#lyn-item-selector .editor-label.child-open {
+background-position-y: 10px;
+}
+
+
+#lyn-item-selector #editPanel .editor-field.indent-0 {
+padding-bottom: 0px;
+}
+
+.lyn-item-entry {
+padding: 10px;
+border-top: 1px solid #fff;
+color: #254e4e;
+font-weight: bold;
+overflow:auto;
+}
+
+
+.lyn-item-entry .item-link {
+	text-decoration: none;
+}
+.lyn-item-entry .edit-link
+{
+	margin-top: 10px;
+}
+
+.lyn-item-entry .reveal-funcs {
+	display: none;
+	float:right;
+}
+
+.lyn-item-paging-container{
+	text-align: center;
+	background-color: #8abcbc;
+	border-top: 1px solid #fff;
+}
+
+.lyn-item-paging-container .lynicon-number-pager{
+	display: inline-block;
+	margin: 5px 0px;
+}
+
+.lyn-item-paging-container .lynicon-number-pager span {
+background-color: transparent;
+}
+
+.lyn-item-paging-container .lynicon-number-pager a {
+color: #fff !important;
+}
+
+.lyn-item-paging-container .lynicon-number-pager a:hover {
+	color: #ddd !important;
+}
+
+.lyn-item-paging-container .lynicon-number-pager .current a {
+font-weight:bold;
+border-bottom:none;
+padding:0;
+}
+
+#lyn-item-selector .search {
+position: absolute;
+top: 13px;
+right: 15px;
+cursor:pointer;
+}
+
+#lyn-item-selector .search:hover {
+color: #ddd;
+}
+
+#lyn-item-selector .add-link,
+#lyn-item-selector .edit-link {
+	background-color: #8abcbc;
+	border-top: 1px solid #fff;
+	color: #fff;
+	overflow: auto;
+	padding: 3px 0px;
+}
+
+
+#lyn-item-selector .pattern input {
+border-radius: 12px;
+width: 90px;
+padding: 1px 7px;
+}
+
+.lyn-item-filter-bar{
+	background-color: #8abcbc;
+	border-top: 1px solid #fff;
+}
+
+.lyn-item-filter-bar .lynicon-filter-textbox input {
+border-radius: 14px;
+margin: 6px 6px 6px 10px;
+height: 22px;
+width: 176px;
+padding: 0px 8px;
+}
+
+.lyn-item-filter-bar .lynicon-filter-textbox a {
+background-color: transparent;
+margin: 9px 12px 0px 0px;
+padding: 0;
+float: right;
+}
+
+.lyn-item-filter-bar i.fa {
+color: #fff;
+}
+
+/* LOGIN */
+
+#lyn-login {
+	background-color: #f6f6f6;
+	height: 100%;
+	width: 100%;
+}
+
+#lyn-login-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 300px;
+	width: 200px;
+	margin-top: -150px;
+	margin-left: -100px;
+	text-align: center;
+}
+
+#lyn-login-box form {
+background-color: #cbdfdf;
+overflow: auto;
+}
+
+#lyn-login input {
+border: none;
+text-align: center;
+border-radius: 10px;
+margin-top: 10px;
+height: 19px;
+}
+
+#lyn-login #lyn-logo {
+padding-left: 50%;
+margin-left: -33px;
+}
+
+#lyn-login #login-button {
+background-color: #5ca39f;
+margin-top: 10px;
+padding: 3px;
+color: #fff;
+width: 145px;
+margin: 10px auto 12px auto;
+border-radius: 12px;
+font-size: 15px;
+cursor: pointer;
+}
+
+#lyn-login .editor-label {
+background-color: #5ca39f;
+font-size: 19px;
+}
+
+
+

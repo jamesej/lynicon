@@ -32,7 +32,7 @@ namespace Lynicon.Base
 
         public override bool Initialise()
         {
-            var taskSelector = new FuncPanelButton { ViewName = "~/Areas/Lynicon.Tasks/Views/Shared/TaskSelector.ascx", RequiredRoles = "E", Section = "Record" };
+            var taskSelector = new FuncPanelButton { ViewName = "~/Areas/Lynicon.Tasks/Views/Shared/TaskSelector.ascx", DisplayPermission = new ContentPermission("E"), Section = "Record" };
             LyniconUi.Instance.FuncPanelButtons.Add(taskSelector);
 
             return true;
