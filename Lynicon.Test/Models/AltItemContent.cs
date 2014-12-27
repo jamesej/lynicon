@@ -6,6 +6,7 @@ using Lynicon.Models;
 
 namespace Lynicon.Test.Models
 {
+    [Serializable]
     public class AltItemContent
     {
         public GeneralSummary Summary { get; set; }

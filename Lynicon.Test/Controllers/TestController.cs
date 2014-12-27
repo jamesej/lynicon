@@ -20,6 +20,12 @@ using Lynicon.Utility;
 
 namespace Lynicon.Test.Controllers
 {
+    public class StringInputOutput
+    {
+        public string Input { get; set; }
+        public string Output { get; set; }
+    }
+
     public class TestController : Controller
     {
         //
@@ -201,5 +207,19 @@ namespace Lynicon.Test.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public ActionResult HtmlNorm()
+        {
+            return View("HtmlNorm", new StringInputOutput());
+        }
+
+        [HttpPost, ValidateInput(false)]
+        public ActionResult HtmlNorm(StringInputOutput sio)
+        {
+            sio.Output = HtmlX.MinimalHtml(sio.Input, true);
+            return View("HtmlNorm", sio);
+        }
+
     }
 }

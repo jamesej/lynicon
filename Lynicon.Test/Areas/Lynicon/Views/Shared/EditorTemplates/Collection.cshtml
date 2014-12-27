@@ -2,8 +2,17 @@
 @using System.Collections
 @using Lynicon.Utility
 @using Lynicon.Models
-<div id="@ViewData.TemplateInfo.HtmlFieldPrefix" class="collection closed">
 @{
+    int useDepth = ViewData.TemplateInfo.TemplateDepth + ((ViewData["addDepth"] as int?) ?? 0) - 1;
+    string closed = "closed";
+    if ((ViewData["HeaderRendered" + (useDepth - 1)] as bool?) ?? false)
+    {
+        closed = "";
+    }     
+}
+<div id="@ViewData.TemplateInfo.HtmlFieldPrefix" class="collection @closed">
+@{
+    
     int oldInd = (ViewData["indent"] as int?) ?? 0;
     int ind = oldInd + 1;
     int oldCollDepth = (ViewData["collectionDepth"] as int?) ?? -1;
@@ -16,7 +25,7 @@
 
     ViewData["indent"] = ind;
     int count = Model == null ? 0 : (Model as IEnumerable).Cast<object>().Count();
-    Type itemType = (Model == null ? ViewData.ModelMetadata.ModelType : Model.GetType()).GetGenericArguments()[0];
+    Type itemType = ReflectionX.ElementType(Model == null ? ViewData.ModelMetadata.ModelType : Model.GetType());
     string itemHeading = BaseContent.ContentClassDisplayName(itemType);
     string propName = ViewData.ModelMetadata.PropertyName ?? (string)ViewData["propertyPath"];
     if (propName != null && propName.EndsWith("s"))
@@ -40,9 +49,14 @@
         foreach (object item in (IEnumerable)Model)
         {
             string fieldName = String.Format(System.Globalization.CultureInfo.InvariantCulture, "{0}[{1}]", oldPrefix, index);
+            string heading = itemHeading;
+            if (item is Switchable)
+            {
+                heading = ((Switchable)item).SelectedProperty.ExpandCamelCase();
+            }
 
             <div class="collection-item-bar editor-label parent child-closed">
-                <span class="collection-item-heading editor-label indent-@ind">@itemHeading <span class="index">@(index + 1)</span></span>
+                <span class="collection-item-heading editor-label indent-@ind">@heading <span class="index">@(index + 1)</span></span>
                 <div id="del-@fieldName" class="action-button delete indent-@ind"><i class="fa fa-times-circle"></i></div>
                 <div class="reorder indent-@ind @(index == 0 ? " first" : (index == count - 1 ? " last": "" ))">
                     <div class="reorder-up action-button">

@@ -1,0 +1,25 @@
+﻿@model StringInputOutput
+@using Lynicon.Test.Controllers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HtmlNorm</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <textarea name="Input" style="width:400px;height:200px;">@Html.Raw(Model.Input)</textarea>
+            <textarea id="processed" name="Output" style="width:400px;height:200px;">@Html.Raw(Model.Output)</textarea>
+            <input type="submit" />
+        }
+
+    </div>
+</body>
+</html>

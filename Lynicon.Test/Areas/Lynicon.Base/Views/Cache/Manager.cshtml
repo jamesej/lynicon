@@ -1,0 +1,15 @@
+﻿@model Lynicon.Extensibility.CacheAdminViewModel
+@using Lynicon.Utility
+
+<div class="module-section">
+    @Model.ItemCount() items cached
+    @if (Model.MemoryBytes.HasValue)
+    {
+        <text>, @Model.MemoryBytes.Value bytes</text>
+    }
+</div>
+<div class="module-section">
+    <div class="module-button" data-url="@Url.Action(Model.ReloadAction, Model.ManagerController)">
+        Reload
+    </div>
+</div>

@@ -1,9 +1,14 @@
 ﻿@model object
 @using Lynicon.Extensibility
 @using Lynicon.Collation
+@using Lynicon.Utility
 @{
     LyniconUi ui = LyniconUi.Instance;
     string sections = (string)ViewData["Sections"] ?? "";
+}
+@if (ui.ShowProblemAlert)
+{
+    Html.RegisterLocalStyles("problem-alert", "#fpbAdmin { background-color: red }");
 }
 <div id='funcPanel'>
     <div id="reveal" style="display:none">
@@ -50,7 +55,7 @@
         if (btn.ViewName == null)
         {
             string url = ui.ApplySubstitutions(btn.Url, ViewContext, ViewBag);
-            <a href="@url" id="@btn.Id" class="func-button @btn.Section" style="@(string.IsNullOrEmpty(btn.BackgroundColor) ? "" : "background-color: " + btn.BackgroundColor + ";")">
+            <a href="@(string.IsNullOrEmpty(url) ? "javascript:void(0)" : url)" id="@btn.Id" class="func-button @btn.Section" style="@(string.IsNullOrEmpty(btn.BackgroundColor) ? "" : "background-color: " + btn.BackgroundColor + ";")">
             @btn.Caption
             </a>
         }
@@ -63,7 +68,8 @@
 <script type="text/javascript">
     $(document).ready(function () {
         @foreach (var btn in ui.FuncPanelButtons.Where(fpb => !string.IsNullOrEmpty(fpb.ClientClickScript) && fpb.DisplayPermission.Permitted(Model))) {
-        @:$('#@btn.Id').click(function () {
+        @:$('#@btn.Id').click(function (ev) {
+            @:ev.preventDefault();
             @Html.Raw(ui.ApplySubstitutions(btn.ClientClickScript, ViewContext, ViewBag))
         @:});
         }

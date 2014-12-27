@@ -9,12 +9,8 @@ C:\Dev\Lynicon.Test\Lynicon.Test\bin\Lynicon.Tasks.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\Microsoft.Web.Infrastructure.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\Newtonsoft.Json.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Net.Http.Extensions.dll
-C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Net.Http.Formatting.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Net.Http.Primitives.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.Helpers.dll
-C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.Http.dll
-C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.Http.WebHost.dll
-C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.Mvc.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.Razor.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.WebPages.Deployment.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.WebPages.dll
@@ -30,12 +26,8 @@ C:\Dev\Lynicon.Test\Lynicon.Test\bin\EntityFramework.xml
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\Less.pdb
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\Newtonsoft.Json.xml
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Net.Http.Extensions.xml
-C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Net.Http.Formatting.xml
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Net.Http.Primitives.xml
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.Helpers.xml
-C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.Http.xml
-C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.Http.WebHost.xml
-C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.Mvc.xml
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.Razor.xml
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.WebPages.xml
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.WebPages.Deployment.xml
@@ -45,7 +37,6 @@ C:\Dev\Lynicon.Test\Lynicon.Test\obj\Debug\Lynicon.Test.csproj.App.config
 C:\Dev\Lynicon.Test\Lynicon.Test\obj\Debug\Lynicon.Test.csprojResolveAssemblyReference.cache
 C:\Dev\Lynicon.Test\Lynicon.Test\obj\Debug\Lynicon.Test.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\obj\Debug\Lynicon.Test.pdb
-C:\Dev\Lynicon.Test\Lynicon.Test\bin\log4net.xml
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\EntityFramework.SqlServer.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\EntityFramework.SqlServer.xml
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\Antlr3.Runtime.dll
@@ -53,3 +44,5 @@ C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.Optimization.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\WebGrease.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\Antlr3.Runtime.pdb
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.Optimization.xml
+C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.Mvc.dll
+C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.Mvc.xml

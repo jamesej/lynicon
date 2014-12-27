@@ -78,7 +78,7 @@
     $('#setModifierList').bind("shown", function () {
         if ($('#setModifierListSelect').has('option').length == 0) {
             $('#setModifierListSelect').load('/lynicon/relations/getselectoptions', function () {
-                $('#setModifierListSelect').chosen();
+                $('#setModifierListSelect').chosen({ search_contains: true });
             });
         }
     });

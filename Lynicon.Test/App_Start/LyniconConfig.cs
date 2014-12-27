@@ -22,11 +22,18 @@ namespace Lynicon.Test
     {
         public static void RegisterModules()
         {
-            LyniconModuleManager.Instance.RegisterModule(new CoreModule());
-            LyniconModuleManager.Instance.RegisterModule(new UrlListModule(t => t != typeof(User)));
+            LyniconModuleManager.Instance.SkipDbStateCheck = true;
 
-            LyniconModuleManager.Instance.RegisterModule(new SummaryCache());
-            LyniconModuleManager.Instance.RegisterModule(new Auditing());
+            var fullCache = new FullCache();
+            Repository.Instance.EFProxyCreationEnabled = false;
+            //Repository.Instance.ReadWriteDisabled = true;
+            fullCache.PersistToFile = true;
+
+            LyniconModuleManager.Instance.RegisterModule(new CoreModule());
+            LyniconModuleManager.Instance.RegisterModule(new ContentSchemaModule());
+            LyniconModuleManager.Instance.RegisterModule(new UrlListModule(t => t != typeof(User)));
+            LyniconModuleManager.Instance.RegisterModule(fullCache);
+            //LyniconModuleManager.Instance.RegisterModule(new Auditing());
             LyniconModuleManager.Instance.RegisterModule(new Publishing());
             LyniconModuleManager.Instance.RegisterModule(new TasksModule());
 
@@ -49,7 +56,6 @@ namespace Lynicon.Test
             BuildTaskflows();
 
             DalTrack.Instance.Initialise();
-            NavManager.Instance.RegisterNavManager(new UrlTreeNavManager<WikiContent>());
             SearchManager.Instance.Initialise(new List<Type> { typeof(HeaderContent) });
         }
 

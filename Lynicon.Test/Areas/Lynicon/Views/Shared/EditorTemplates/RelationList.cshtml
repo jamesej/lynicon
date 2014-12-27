@@ -38,7 +38,16 @@
                 @BaseContent.ContentClassDisplayName(rel.Item.Type)
                 @Html.HiddenFor(m => m[index].Item.SerializedValue)
             </td>
-            <td><a href="/@rel.Item.Summary.Url">@rel.Item.Summary.Title</a></td>
+            <td>
+                @if (rel.Item.Summary == null)
+                {
+                    <span>Error: missing</span>
+                }
+                else
+                {
+                    <a href="/@rel.Item.Summary.Url">@rel.Item.Summary.Title</a>
+                }
+            </td>
             <td>
                 @rel.Strength.ToString("0.00")
                 @Html.HiddenFor(m => m[index].Strength)
@@ -54,7 +63,7 @@
     function sortColText(tr, sortCols) {
         var txt = "";
         $.each(sortCols, function (i, v) {
-            txt += $(tr).find('td').eq(v).text().trim();
+            txt += $(tr).children('td').eq(v).text().trim();
         });
         return txt;
     }
@@ -63,16 +72,16 @@
         $rows.sort(function (a, b) {
             var ka = sortColText(a, sortCols);
             var kb = sortColText(b, sortCols);
-            return ka > kb ? 1 : 0;
+            return ka > kb ? 1 : (ka < kb ? -1 : 0);
         });
         $rows.each(function (i, r) {
-            $table.append(r);
+            $table.children('tbody').append(r);
         });
     }
     $('#relationList').bind("shown", function () {
         if ($('#relationListSelect').has('option').length == 0) {
             $('#relationListSelect').load('/lynicon/relations/getselectoptions', { typeName: '@ViewData.ModelMetadata.ContainerType.FullName' },  function () {
-                $('#relationListSelect').chosen();
+                $('#relationListSelect').chosen({ search_contains: true });
             });
         }
         orderTable($('#relationTable'), [0, 1]);
@@ -82,8 +91,9 @@
         var nameParts = $tr.find('input:first').prop('name').split('[');
         var idx = parseInt(nameParts[nameParts.length - 1]);
         $tr.remove();
-        reindex($('#relationTable'), -1, true, idx);
-    })
+        var prefix = '@(ViewData.TemplateInfo.HtmlFieldPrefix)';
+        reindex($('#relationTable'), prefix, -1, true, idx);
+    });
     $('#relationListControls .relation-add').click(function () {
         var newIdx = $('#relationTable tr').length;
         var txt = $('#relationListSelect_chosen .chosen-single > span').text();
@@ -92,6 +102,10 @@
         var itemId = $('#relationListSelect').val();
         var nameBase = '@(ViewData.TemplateInfo.HtmlFieldPrefix)[' + newIdx + ']';
         var strength = parseFloat($('#Relations_InitStrength').val()).toFixed(2);
+        if ($('#relationTable tbody').find('input[value="' + itemId + '"]').length) {
+            alert('This relation already exists, please choose another');
+            return;
+        }
         if (isNaN(strength) || strength <= 0 || strength > 1) {
             alert('Please enter a valid number between 0 and 1');
             return;

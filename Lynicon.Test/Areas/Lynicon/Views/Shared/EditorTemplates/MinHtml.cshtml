@@ -1,11 +1,9 @@
 ﻿@model object
 @using Lynicon.Models
 @using Lynicon.Utility
-@Html.TextArea("",
-    ViewData.TemplateInfo.FormattedModelValue.ToString(),
-    ViewData["rows"] != null ? (int)ViewData["rows"] : 4,
-    0,
-    new { @class = "lyn-jquery-te te-min" + ViewData["classes"] })
+<textarea class="lyn-jquery-te te-min extends @ViewData["classes"]" name="@ViewData.TemplateInfo.HtmlFieldPrefix">
+    @(Model == null ? "" : Model.ToString())
+</textarea>
 <div class="lyn-html-popout"><i class="fa fa-expand"></i></div>
 @Html.RegisterCss("/Lynicon/Embedded/Content/jquery-te.css/")
 @Html.RegisterScript("jquery-te", "/Lynicon/Embedded/Scripts/jquery-te.js/", new List<string> { "jquery" })

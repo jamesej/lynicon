@@ -78,30 +78,30 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.Helpers.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="System.Web.Mvc, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.0\lib\net45\System.Web.Mvc.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Optimization">
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.0\lib\net45\System.Web.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
@@ -428,10 +428,12 @@
     <Content Include="Areas\Lynicon\Views\Items\Index.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\FuncPanelOld.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\DateTimeOld.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\EditorObject.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\EditorObjectOld.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\ImageOld.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\LinkOld.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\MultilineOld.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\ObjectListOld.ascx" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\PasswordWithEncrypterOld.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\ReferenceOld.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\SwitchableOld.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Video.ascx" />
@@ -439,11 +441,9 @@
     <Content Include="Areas\Lynicon\Views\Shared\FullNavList.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\ItemPageOld.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\NavList.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\ObjectList.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EnsureFileEditor.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EnsureItemSelector.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconGARegister.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\PasswordWithEncrypter.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconUser.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconEmptyUrl.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Collection-Paged.ascx" />
@@ -454,8 +454,6 @@
     <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Link.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Object.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\DisplayTemplates\Stringx.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Collection-Paged.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Html.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\MediaFileLink.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Recaptcha.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconEditor.aspx" />
@@ -464,8 +462,25 @@
     <Content Include="Areas\Lynicon\Views\Shared\LyniconPropertyItem.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\PagingSpecOld.ascx" />
     <Content Include="Areas\Lynicon\Views\Ui\FunctionReveal.ascx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Lynicon.Base\Views\Cache\Manager.cshtml" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\AlternativeUrl.cshtml" />
+    <Content Include="Areas\Lynicon\Views\Shared\EnsureFileEditor.cshtml" />
+    <Content Include="Areas\Lynicon\Views\Shared\EnsureItemSelector.cshtml" />
+    <Content Include="Areas\Lynicon\Views\Shared\EnsureMediaLibrary.cshtml" />
+    <Content Include="Areas\Lynicon\Views\Shared\LyniconEmptyUrl.cshtml" />
+    <Content Include="Areas\Lynicon\Views\Shared\LyniconPropertyItem.cshtml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery.hopscotch.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -476,6 +491,8 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Test\HtmlNorm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -624,6 +641,44 @@
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Link.cshtml" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\MedHtml.cshtml" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Reference.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon\Views\Items\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon\Views\Admin\Transfer.cshtml" />
+    <Content Include="Areas\Lynicon\Views\Admin\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\EditorObject.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Html.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\ObjectList.cshtml" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\PasswordWithEncrypter.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon\Views\Shared\UniversalAnalytics.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon\Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon\Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Lynicon\Views\Shared\TitleFilter.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

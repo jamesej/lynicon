@@ -12,7 +12,7 @@ using Newtonsoft.Json;
 
 namespace Lynicon.Test.Models
 {
-    [RedirectPropertySource("Common")]
+    [Serializable, RedirectPropertySource("Common")]
     public class HeaderContent : PageContent
     {
         public GeneralSummary Summary { get; set; }

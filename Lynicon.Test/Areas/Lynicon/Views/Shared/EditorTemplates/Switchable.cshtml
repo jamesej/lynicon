@@ -1,28 +1,62 @@
 ﻿@model Lynicon.Models.Switchable
 @using Lynicon.Models
 @using Lynicon.Utility
+@using Lynicon.Attributes
 
 @{
     int useDepth = ViewData.TemplateInfo.TemplateDepth + ((ViewData["addDepth"] as int?) ?? 0) - 1;
-    var props = ViewData.ModelMetadata.Properties.Where(pm => pm.PropertyName != "SelectedProperty");
+    var props = ViewData.ModelMetadata.Properties.Where(pm => pm.PropertyName != "SelectedProperty" && pm.ShowForEdit).ToList();
 }
 <div class='object level-@useDepth'>
-    @foreach (var prop in props)
+    @if (props.All(p => p.AdditionalValues.ContainsKey(SwitchableIconAttribute.Markup)))
     {
-        @Html.RadioButtonFor(m => m.SelectedProperty, prop.PropertyName, new { @class = "lyn-switchable-radio" })
-        <span>@prop.PropertyName</span>
+        <div class="switchable-icons-block">
+            @foreach (var prop in props)
+            {
+                string markup = (string)prop.AdditionalValues[SwitchableIconAttribute.Markup];
+                if (prop.PropertyName == Model.SelectedProperty)
+                {
+                    markup = markup.Replace("class='switchable-icon'", "class='switchable-icon selected'");
+                }
+                @Html.Raw(markup)
+            }
+            @Html.HiddenFor(m => m.SelectedProperty)
+            <div style="clear:both"></div>
+        </div>
     }
+    else
+    {
+        foreach (var prop in props)
+        {
+            @Html.RadioButtonFor(m => m.SelectedProperty, prop.PropertyName, new { @class = "lyn-switchable-radio" })
+            <span>@prop.PropertyName</span>
+        }
+    }
+    @{ ViewData["HeaderRendered" + useDepth] = true; }
     @foreach (var prop in props) {
         <div class="editor-unit level-@useDepth prop-@prop.PropertyName" style="@(prop.PropertyName == Model.SelectedProperty ? "" : "display:none")">
             <div class="editor-field indent-@useDepth">@Html.Editor(prop.PropertyName)</div>
         </div>
     }
+    @{ ViewData["HeaderRendered" + useDepth] = false; }
 </div>
 @Html.RegisterScript("switchable-script", @"javascript:
 $(document).ready(function () {
     $('body').on('change', '.lyn-switchable-radio', function () {
         var $this = $(this);
         $this.siblings('.editor-unit').hide().filter('.prop-' + $this.val()).show();
+        var $hdg = $this.closest('.editor-field').prev('.collection-item-bar').find('.collection-item-heading');
+        if ($hdg.length && $hdg[0].firstChild)
+            $hdg[0].firstChild.data = $this.next('span').text() + ' ';
+        notifyLayout();
+    }).on('click', '.switchable-icon', function () {
+        var $this = $(this);
+        $this.addClass('selected').siblings('.switchable-icon').removeClass('selected');
+        $this.closest('.switchable-icons-block').siblings('.editor-unit').hide().filter('.prop-' + $this.data('property-name')).show();
+        $this.siblings('input').val($this.data('property-name'));
+        var $hdg = $this.closest('.editor-field').prev('.collection-item-bar').find('.collection-item-heading');
+        if ($hdg.length && $hdg[0].firstChild)
+            $hdg[0].firstChild.data = $this.prop('title') + ' ';
         notifyLayout();
     });
 });", new List<string> { "jquery" })

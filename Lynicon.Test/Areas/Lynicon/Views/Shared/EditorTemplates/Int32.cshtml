@@ -8,7 +8,7 @@
     }
 }
 
-<span class="text-display">@(string.IsNullOrEmpty(modelValue) ? "---" : modelValue)</span>
+<span class="text-display number-display">@(string.IsNullOrEmpty(modelValue) ? "---" : modelValue)</span>
 @Html.TextBox("", modelValue, ViewData.ModelMetadata.IsReadOnly ?
-(object)new { @class = "text-box single-line " + ViewData["classes"], @readonly = true } :
-(object)new { @class = "text-box single-line " + ViewData["classes"] })
+(object)new { @class = "text-box number-box single-line " + ViewData["classes"], @readonly = true } :
+(object)new { @class = "text-box number-box single-line " + ViewData["classes"] })

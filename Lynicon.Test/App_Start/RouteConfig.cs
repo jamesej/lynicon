@@ -41,8 +41,8 @@ namespace Lynicon.Test
             routes.AddDataRoute<BlogPostContent>("blogpost", "Blog/{_0}/{_1}/{_2}/{_3}",
                 new { controller = "BlogPost", action = "Index" });
 
-            routes.AddDataRoute<WikiContent>("wiki", "Wiki/{*_0}",
-                new { controller = "Wiki", action = "Index" });
+            //routes.AddDataRoute<WikiContent>("wiki", "Wiki/{*_0}",
+            //    new { controller = "Wiki", action = "Index" });
 
             routes.AddDataRoute<ChefContent>("chefs", "chefs/{_0}",
                 new { controller = "Chef", action = "Index" });

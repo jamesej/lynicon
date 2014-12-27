@@ -1,5 +1,42 @@
 ﻿@model Lynicon.Relations.Reference
+@using Lynicon.Utility;
+@*
+    ReferenceSelect can have very large option lists, therefore it stores the data for the list in a single js variable for all selects with the same list, and demand-loads it
+    (code to demand load is in LyniconMasonryBoxes.js in notifyVisible)
+*@
+@{ Guid id = Guid.NewGuid(); }
 <div class="lyn-reference lyn-reference-select">
-    @Html.DropDownListFor(m => m.SerializedValue, Model.GetSelectList(), null, new { @class = "lyn-reference-id chosen-select" })
+    @Html.DropDownListFor(m => m.SerializedValue,
+        new SelectListItem[] { new SelectListItem { Value = Model.SerializedValue, Text = "Initial", Selected = true } },
+        null, new { @class = "lyn-reference-id chosen-select post-load-select" })
+    <input type="hidden" id="@id" class="select-list-id" value="@Model.SelectListId()" />
 </div>
+@if (!Html.ScriptIsRegistered(Model.SelectListId()))
+{
+    Html.RegisterScript(Model.SelectListId(), @"javascript:
+    if (!window.hasOwnProperty('lynSelectLists'))
+        window.lynSelectLists = {};
+    lynSelectLists." + Model.SelectListId()
+            + " = ["
+            + Model.GetSelectList()
+            .Select(sli => "{value:\"" + sli.Value + "\",text:\"" + sli.Text.Replace("\"", "\\\"") + "\"}" )
+            .Join(",")
+            + @"];
+    
+    function loadRefSelect($refSel) {
+        var $listId = $refSel.siblings('input.select-list-id');
+        if ($listId.length) {
+            var current = $refSel.val();
+            var selList = lynSelectLists[$listId.val()];
+            $refSel.empty();
+            var html = '';
+            for (var i = 0; i < selList.length; i++) {
+                html += '<option value=""' + selList[i].value + '""' + (selList[i].value == current ? ' selected' : '') + '>' + selList[i].text + '</option>';
+            }
+            $refSel.html(html);
+        }
+    }",
+    new List<string> { "jquery" });
+}
+
 

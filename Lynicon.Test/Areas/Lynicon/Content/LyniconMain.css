@@ -82,11 +82,17 @@ input, textarea {
 .edit-40 .parent-unit.level-0 {
 	width: 50%;
 }
+.edit-40 .parent-unit.level-0.wide {
+	width: 100%;
+}
 .edit-60 #edit {
 	width: 60%;
 }
 .edit-60 .parent-unit.level-0 {
 	width: 33.3333%;
+}
+.edit-60 .parent-unit.level-0.wide {
+	width: 66.6666%;
 }
 .edit-80 #edit {
 	width: 80%;
@@ -94,11 +100,26 @@ input, textarea {
 .edit-80 .parent-unit.level-0 {
 	width: 25%;
 }
+.edit-80 .parent-unit.level-0.wide {
+	width: 50%;
+}
 .edit-100 #edit {
 	width: 100%;
 }
 .edit-100 .parent-unit.level-0 {
 	width: 20%;
+}
+.edit-100 .parent-unit.level-0.wide {
+	width: 40%;
+}
+
+.wide .editor-unit.level-1 {
+	width: 50%;
+	float: left;
+}
+.wide .editor-unit.level-1.extends {
+	width: 100%;
+	float: left;
 }
 
 #opener {
@@ -157,12 +178,12 @@ font-size: 14px;
 .editor-label.child-closed
 {
 	background-image: url(/Areas/Lynicon/Content/right-arrow-white.png);
-	background-position-y: 8px;
+	background-position-y: 6px;
 }
 .editor-label.child-open
 {
 	background-image: url(/Areas/Lynicon/Content/down-arrow-white.png);
-	background-position-y: 8px;
+	background-position-y: 6px;
 }
 #editPanelContainer {
 	position: relative;
@@ -183,6 +204,11 @@ font-size: 14px;
 #editPanel .editor-field.indent-0 {
 	background-color: #cbdfdf;
 	padding-bottom:10px;
+}
+#editPanel .editor-field.indent-0:after {
+	content: "";
+    display: table;
+    clear: both;
 }
 #editPanel INPUT[type="text"]
 {
@@ -222,7 +248,7 @@ font-size: 14px;
 {
 	color: #777 !important;
 }
-#edit .add-button
+#edit .add-button, #edit .add-button-style
 {
 	position: absolute;
 	top: -29px;
@@ -235,7 +261,7 @@ font-size: 14px;
 	text-align: center;
 	font-weight: bold;
 }
-#edit .add-button:hover
+#edit .add-button:hover, #edit .add-button-style:hover
 {
 	color: #ddd;
 }
@@ -385,6 +411,14 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 }
 #editPanel .lyn-image-load {
 	cursor: pointer;
+	text-transform: capitalize;
+	padding: 2px;
+	background-color: #8abcbc;
+	color: #fff;
+	margin: 3px 4px 0 0;
+}
+#editPanel .lyn-image-load:hover {
+	color: #aaa;
 }
 #editPanel .lyn-image-url
 {
@@ -393,7 +427,7 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 #editPanel .lyn-image-url span
 {
 	width: 235px;
-	height: 18px;
+	height: 17px;
 	overflow: hidden;
 	display: block;
 	text-overflow: ellipsis;
@@ -405,13 +439,18 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 }
 #editPanel .lyn-image-alt span.text-display
 {
-	width: 140px;
+	width: 55px;
 	height: 18px;
 	overflow: hidden;
-	display: block;
+	display: inline-block;
 	text-overflow: ellipsis;
 	margin-top: 4px;
 	padding-left: 3px;
+	float:left;
+}
+#editPanel .lyn-image-alt span.number-display
+{
+	width: 25px;
 }
 #editPanel .lyn-image-alt span.editor-label
 {
@@ -419,9 +458,14 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 }
 #editPanel .lyn-image-alt input.text-box
 {
-	width: 140px;
+	width: 55px;
 	margin-top: 4px;
 	margin-left: 3px;
+	float:left;
+}
+#editPanel .lyn-image-alt input.number-box
+{
+	width: 25px;
 }
 #editPanel .lyn-image-load
 {
@@ -473,6 +517,44 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 	color: #aaa;
 }
 
+#editPanel .switchable-icon {
+	height: 22px;
+	width: 22px;
+	float:left;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+#editPanel .switchable-icon:hover, #editPanel .switchable-icon.selected {
+	background-color: #fff;
+	border: 1px solid #444;
+	margin-left:3px;
+	margin-top:3px;
+}
+
+
+#editPanel .reorder-up IMG
+{
+	margin-top: 3px;
+}
+#editPanel .reorder-down IMG
+{
+	margin-top: 5px;
+}
+#editPanel .first .reorder-up, #editPanel .last .reorder-down
+{
+	display: none;
+}
+#editPanel .collection-item-heading.editor-label {
+padding: 0;
+display: inline-block;
+margin-left: 16px;
+}
+#editPanel .moving .reorder-up, #editPanel .moving .reorder-down {
+	color: rgb(144, 0, 0);
+}
+
+/* FUNC PANEL */
+
 #funcPanel {
 	font-size: 10pt;
 	background-color: #747474;
@@ -493,7 +575,7 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 	font-size: 21px;
 	font-weight: bold;
 }
-#funcPanel .func-button {
+#edit .func-button, #funcPanel .func-button {
 	display: inline-block;
 	color: #FFF;
 	padding: 1px 4px;
@@ -515,7 +597,7 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 	width: 16px;
 }
 
-#funcPanel .func-button:hover {
+#edit .func-button:hover, #funcPanel .func-button:hover {
 	color: #bababa;
 }
 
@@ -544,24 +626,6 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 	border-left: solid 1px #4f4f4f;
 	font-weight: bold;
 	text-transform: uppercase;
-}
-
-#editPanel .reorder-up IMG
-{
-	margin-top: 3px;
-}
-#editPanel .reorder-down IMG
-{
-	margin-top: 5px;
-}
-#editPanel .first .reorder-up, #editPanel .last .reorder-down
-{
-	display: none;
-}
-#editPanel .collection-item-heading.editor-label {
-padding: 0;
-display: inline-block;
-margin-left: 16px;
 }
 
 /* LIST EDITOR */
@@ -774,6 +838,14 @@ font-weight: bold;
 }
 #editPanel .chosen-container .chosen-results li em {
   background: none;
+}
+
+/* Jquery UI overrides */
+
+.ui-widget-header {
+	background: #8abcbc;
+	border-radius: 0;
+	border: none;
 }
 
 /* Items page specific */

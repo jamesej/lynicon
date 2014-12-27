@@ -14,8 +14,21 @@
                 {
                     @Html.EditorForModel("EditorObject")
                     @Html.Hidden("formState")
+                    if (ViewBag.UpdatedCheck != null && (long)ViewBag.UpdatedCheck != long.MaxValue)
+                    {
+                        <input type="hidden" id="updatedCheck" name="updatedCheck" value="@((long)ViewBag.UpdatedCheck)" />
+                    }
                 }
             </div>
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div id="error-panel">
+                    @Html.ValidationSummary(false)
+                </div>
+                <script type="text/javascript">
+                    $('#error-panel').dialog({ modal: true, title: "Errors" });
+                </script>
+            }
         </div>
         @Html.DisplayForModel("FuncPanel", new { Sections = "Record,Opener" })
         <div style="clear:both; height: 44px;"></div>

@@ -19,6 +19,10 @@
     <script type="text/javascript" src="/Areas/Lynicon/Scripts/LyniconMasonryBoxes.js"></script>
     <script type="text/javascript" src="/Lynicon/Embedded/Scripts/LyniconEditPanel.js/"></script>
     @RenderSection("Head", required: false)
+    <script type="text/javascript">
+        var userIsAdmin = @(User.IsInRole("A") ? "true" : "false");
+        var userIsPower = @(User.IsInRole("P") ? "true" : "false");
+    </script>
 </head>
 <body style="height: 100%; width: 100%">
     @RenderBody()

@@ -14,11 +14,26 @@ using Newtonsoft.Json;
 namespace Lynicon.Test.Models
 {
     [Serializable]
+    public class Block : Switchable
+    {
+        public Image Image { get; set; }
+
+        [UIHint("MinHtml")]
+        public string Text { get; set; }
+
+        public Block()
+        {
+            Image = new Image();
+        }
+    }
+
+    [Serializable]
     public class RestaurantSummary : Summary
     {
         public Image MainImage { get; set; }
         [UIHint("Multiline")]
         public string Intro { get; set; }
+        public string Description { get; set; }
 
         public RestaurantSummary()
         {
@@ -26,7 +41,7 @@ namespace Lynicon.Test.Models
         }
     }
 
-    [SummaryType(typeof(RestaurantSummary))]
+    [Serializable, SummaryType(typeof(RestaurantSummary))]
     public class RestaurantContent : PageContent
     {
         [Summary]
@@ -36,10 +51,13 @@ namespace Lynicon.Test.Models
         [Summary]
         public string Title { get; set; }
 
-        [UIHint("Html")]
+        [Summary, UIHint("Html")]
         public string Description { get; set; }
         [UIHint("ReferenceSelect")]
         public Reference<ChefContent> Chef { get; set; }
+
+        public List<Block> Body { get; set; }
+
         public List<Reference> Tags { get; set; }
 
         private ChefContent chefFull = null;

@@ -7,6 +7,7 @@ using Lynicon.Models;
 
 namespace Lynicon.Test.Models
 {
+    [Serializable]
     public class TestSub
     {
         public List<string> Colln { get; set; }
@@ -16,6 +17,7 @@ namespace Lynicon.Test.Models
         }
     }
 
+    [Serializable]
     public class TestContent : PageContent
     {
         public string Title { get; set; }
@@ -26,12 +28,15 @@ namespace Lynicon.Test.Models
         [UIHint("Html")]
         public string Body { get; set; }
 
+        public string[] Array { get; set; }
+
         public TestContent()
         {
             Sub = new TestSub();
             TestText = new BbText();
             Strings = new List<string>();
             Img = new Image();
+            Array = new string[0];
         }
     }
 }

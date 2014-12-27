@@ -27,6 +27,7 @@ namespace Lynicon.Test.Models
         }
     }
 
+    [Serializable]
     public class TwitterDetails
     {
         public string TwitterTitle { get; set; }
@@ -35,6 +36,7 @@ namespace Lynicon.Test.Models
         public List<string> ListString { get; set; }
     }
 
+    [Serializable]
     public class ChefContent : PageContent
     {
         public ChefSummary Summary { get; set; }

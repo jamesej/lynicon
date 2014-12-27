@@ -6,6 +6,7 @@ using Lynicon.Models;
 
 namespace Lynicon.Test.Models
 {
+    [Serializable]
     public class ItemContent
     {
         public GeneralSummary Summary { get; set; }
