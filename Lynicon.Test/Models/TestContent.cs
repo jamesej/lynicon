@@ -37,6 +37,7 @@ namespace Lynicon.Test.Models
             Strings = new List<string>();
             Img = new Image();
             Array = new string[0];
+            this.AlternateUrls = new AlternateUrlList();
         }
     }
 }

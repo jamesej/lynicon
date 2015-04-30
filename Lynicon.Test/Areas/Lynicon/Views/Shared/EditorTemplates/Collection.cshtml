@@ -1,5 +1,6 @@
 ﻿@using System.Linq
 @using System.Collections
+@using Lynicon.Attributes
 @using Lynicon.Utility
 @using Lynicon.Models
 @{
@@ -35,14 +36,17 @@
             propName = propName.LastAfter(".");
         }
         itemHeading = propName.EndsWith("ies") ? propName.UpToLast("ies") + "y" : propName.UpToLast("s");
+        itemHeading = itemHeading.ExpandCamelCase();
     }
+    var additionalValues = (Dictionary<string, object>)(ViewData["CollectionAdditionalValues"] ?? ViewData.ModelMetadata.AdditionalValues);
+    string template = (string)(additionalValues.ContainsKey(ItemTemplateAttribute.Key) ? additionalValues[ItemTemplateAttribute.Key] : null);
 
     if (count == 0)
     {
         // even for zero count, ensure the markup is built once so that any necessary includes are
         // put on the page
         object dummyItem = ReflectionX.NewOrDefault(itemType);
-        Html.EditorFor(m => dummyItem, null, "dummy");
+        Html.EditorFor(m => dummyItem, template, "dummy");
     }
     else
     {
@@ -50,13 +54,23 @@
         {
             string fieldName = String.Format(System.Globalization.CultureInfo.InvariantCulture, "{0}[{1}]", oldPrefix, index);
             string heading = itemHeading;
+            string title = ReflectionX.TryGetTitle(item);
             if (item is Switchable)
             {
                 heading = ((Switchable)item).SelectedProperty.ExpandCamelCase();
             }
 
             <div class="collection-item-bar editor-label parent child-closed">
-                <span class="collection-item-heading editor-label indent-@ind">@heading <span class="index">@(index + 1)</span></span>
+                <span class="collection-item-heading editor-label indent-@ind">
+                    @if (string.IsNullOrEmpty(title))
+                    {
+                        @heading <span class="index">@(index + 1)</span>
+                    }
+                    else
+                    {
+                        @(heading)<text>:</text> @title
+                    }
+                </span>
                 <div id="del-@fieldName" class="action-button delete indent-@ind"><i class="fa fa-times-circle"></i></div>
                 <div class="reorder indent-@ind @(index == 0 ? " first" : (index == count - 1 ? " last": "" ))">
                     <div class="reorder-up action-button">
@@ -68,17 +82,19 @@
                 </div>
             </div>
             <div class="editor-field indent-@ind">
-                @Html.EditorFor(m => item, null, fieldName)
+                @Html.EditorFor(m => item, template, fieldName, new { CollectionAdditionalValues = additionalValues })
             </div>
 
-            index++;
+                    index++;
         }
     }
 
     ViewData["indent"] = oldInd;
     ViewData.TemplateInfo.HtmlFieldPrefix = oldPrefix;
     ViewData["collectionDepth"] = oldCollDepth;
+
+    <div id="add2-@ViewData.TemplateInfo.HtmlFieldPrefix" class="add-button add-button-bottom indent-@ind depth-@ViewData.TemplateInfo.TemplateDepth">+</div>
 }
 </div>
 
-<div id="add-@ViewData.TemplateInfo.HtmlFieldPrefix" class="add-button indent-@ind depth-@ViewData.TemplateInfo.TemplateDepth">+</div>
+<div id="add-@ViewData.TemplateInfo.HtmlFieldPrefix" class="add-button add-button-top indent-@ind depth-@ViewData.TemplateInfo.TemplateDepth">+</div>

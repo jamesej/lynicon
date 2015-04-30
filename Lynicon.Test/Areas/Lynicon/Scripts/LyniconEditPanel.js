@@ -198,6 +198,7 @@ function notifyChanged() {
                 $this.next().remove();
                 $this.remove();
                 setFirstLast($coll);
+                notifyLayout();
             } else if ($this.hasClass('reorder-up')) {
                 var prefix = $this.prop('id').after('-');
                 var $this = $this.closest('.collection-item-bar');

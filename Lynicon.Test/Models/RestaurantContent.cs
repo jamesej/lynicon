@@ -56,6 +56,8 @@ namespace Lynicon.Test.Models
         [UIHint("ReferenceSelect")]
         public Reference<ChefContent> Chef { get; set; }
 
+        public MinHtml SomeInfo { get; set; }
+
         public List<Block> Body { get; set; }
 
         public List<Reference> Tags { get; set; }

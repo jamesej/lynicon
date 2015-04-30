@@ -7,8 +7,9 @@
         .module, .change-problem { background-color: #3a7777; color: white; padding: 3px; border-bottom: 1px solid white; overflow: auto; }
         .title { float: left; }
         .module-section { float: left; margin-left: 10px; font-style: italic; }
-        .module-button { font-weight: bold; font-style: normal; cursor: pointer; }
-        .module-button:hover { color: #bababa; }
+        .module-button, .button { font-weight: bold; font-style: normal; cursor: pointer; border: 1px solid white; padding: 0px 3px; float:left; margin-left: 10px; }
+        .module-button:hover, .button:hover { color: #bababa; }
+        .button { display: inline-block; }
     </style>
 }
     <h2>Modules</h2>
@@ -32,9 +33,14 @@
         }
     </div>
     <script type="text/javascript">
-        $('#module-list').on('click', 'module-button', function () {
-            $.post($(this).data('url'), function (resp) {
+        $('#module-list').on('click', '.module-button', function () {
+            var $this = $(this);
+            var oldText = $this.text();
+            $this.text('working...').css('font-style', 'italic');
+            $.post($this.data('url'), function (resp) {
                 alert(resp);
+            }).always(function () {
+                $this.text(oldText).css('font-style', '');
             });
         });
     </script>
@@ -48,7 +54,7 @@
                 @cp.PropertyName
                 @if (cp.IsDataProblem)
                 {
-                    <div data-cp-id="@cp.Id" class="resolved-button">Mark as Resolved</div>
+                    <div data-cp-id="@cp.Id" class="resolved-button button">Mark as Resolved</div>
                 }
             </div>
         }
@@ -62,20 +68,28 @@
             });
         });
     </script>
+    <h2>Field Transferer</h2>
     <div>
-        <form action="/lynicon/admin/rename" method="post">
-            <label for="dataType">DataType</label>
-            <input id="dataType" type="text" name="dataType" />
-            <label for="path">Path</label>
-            <input id="path" type="text" name="path" />
-            <label for="pathInSummary">In Summary</label>
-            <input id="pathInSummary" type="checkbox" name="pathInSummary" value="true" />
-            <input name="pathInSummary" type="hidden" value="false" />
-            <label for="newPath">New Path</label>
-            <input id="newPath" type="text" name="newPath" />
-            <label for="newPathInSummary">In Summary</label>
-            <input id="newPathInSummary" type="checkbox" name="newPathInSummary" value="true" />
-            <input name="newPathInSummary" type="hidden" value="false" />
+        <form action="/lynicon/admin/rename" method="post" target="_blank">
+            <fieldset name="Field From">
+                <h3>Field From</h3>
+                <label for="dataType">DataType</label>
+                <input id="dataType" type="text" name="dataType" />
+                <label for="path">Path</label>
+                <input id="path" type="text" name="path" />
+                <label for="pathInSummary">In Summary</label>
+                <input id="pathInSummary" type="checkbox" name="pathInSummary" value="true" />
+                <input name="pathInSummary" type="hidden" value="false" />
+            </fieldset>
+            <fieldset name="Field To">
+                <h3>Field To</h3>
+                <label for="newPath">New Path</label>
+                <input id="newPath" type="text" name="newPath" />
+                <label for="newPathInSummary">In Summary</label>
+                <input id="newPathInSummary" type="checkbox" name="newPathInSummary" value="true" />
+                <input name="newPathInSummary" type="hidden" value="false" />
+            </fieldset>
+            <label for="isDelete">Delete Data</label>
             <input id="isDelete" type="checkbox" name="isDelete" value="true" />
             <input name="isDelete" type="hidden" value="false" />
             <button type="submit">Rename/Delete Path</button>

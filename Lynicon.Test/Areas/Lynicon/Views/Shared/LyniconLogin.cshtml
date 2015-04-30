@@ -23,7 +23,7 @@
                 @Html.TextBoxFor(m => m.UserName, new { placeholder = "User Name" })
             </div>
             <div class="editor-field">
-                @Html.PasswordFor(m => m.Password, new { placeholder = "Password" })
+                @Html.PasswordFor(m => m.Password, new { placeholder = "Password", onkeyup = "if (event.keyCode == 13) { document.getElementsByTagName('form')[0].submit(); }" })
             </div>
             <div id="login-button" onclick="document.getElementsByTagName('form')[0].submit()">LOG IN</div>
         }

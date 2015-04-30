@@ -2,6 +2,7 @@
 
 @using Lynicon.Utility
 @using Lynicon.Attributes
+@using Lynicon.Collation
 @using Lynicon.Extensibility
 @using System.Reflection
 
@@ -19,6 +20,10 @@
             && shouldShowType;
     };
 }
+
+<script type="text/javascript">
+    @LyniconUi.Instance.GetVariableSetScript(Model);
+</script>
 
 <div class='object level-0'>
     @{
@@ -74,10 +79,10 @@
                         @foreach (var prop in blockProperties) {
                         <div class="editor-unit level-1">
                             @if (prop.HideSurroundingHtml) {
-                                <div class="editor-field indent-1">@Html.Editor(prop.PropertyName)</div>
+                                <div class="editor-field indent-1">@Html.Editor(prop.PropertyName.ExpandCamelCase())</div>
                             } else {
                                 if (!String.IsNullOrEmpty(Html.Label(prop.PropertyName).ToHtmlString())) {
-                                    <div class="editor-label indent-1">@Html.Label(prop.PropertyName)</div>
+                                    <div class="editor-label indent-1">@Html.Label(prop.PropertyName.ExpandCamelCase())</div>
                                 }
                                 <div class="editor-field indent-1">
                                     @Html.Editor(prop.PropertyName)
@@ -95,10 +100,10 @@
 
             <div class="editor-unit level-0">
                 @if (blockSingleProp.HideSurroundingHtml) {
-                    <div class="editor-field indent-0">@Html.Editor(blockSingleProp.PropertyName)</div>
+                    <div class="editor-field indent-0">@Html.Editor(blockSingleProp.PropertyName.ExpandCamelCase())</div>
                 } else {
                     if (!String.IsNullOrEmpty(Html.Label(blockSingleProp.PropertyName).ToHtmlString())) {
-                    <div class="editor-label indent-0">@Html.Label(blockSingleProp.PropertyName)</div>
+                    <div class="editor-label indent-0">@Html.Label(blockSingleProp.PropertyName.ExpandCamelCase())</div>
                     }
                     <div class="editor-field indent-0">
                         @Html.Editor(blockSingleProp.PropertyName)
@@ -119,4 +124,18 @@
             </div>
         }
     }
-</div>  
+</div>
+
+@foreach (var script in LyniconUi.Instance.EditorScripts)
+{
+    if (script.Value.StartsWith("javascript:"))
+    {
+        <script type="text/javascript">
+            @Html.Raw(script.Value.After("javascript:"))
+        </script>
+    }
+    else
+    {
+        <script type="text/javascript" src="@script.Value"></script>
+    }
+}

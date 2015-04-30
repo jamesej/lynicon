@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using Lynicon.Base;
 using Lynicon.Base.Models;
 using Lynicon.Base.Modules;
 using Lynicon.Collation;
 using Lynicon.Editors;
 using Lynicon.Extensibility;
+using Lynicon.Extensions;
 using Lynicon.Map;
 using Lynicon.Membership;
 using Lynicon.Modules;
@@ -27,7 +29,7 @@ namespace Lynicon.Test
             var fullCache = new FullCache();
             Repository.Instance.EFProxyCreationEnabled = false;
             //Repository.Instance.ReadWriteDisabled = true;
-            fullCache.PersistToFile = true;
+            fullCache.PersistToFile = false;
 
             LyniconModuleManager.Instance.RegisterModule(new CoreModule());
             LyniconModuleManager.Instance.RegisterModule(new ContentSchemaModule());
@@ -36,6 +38,11 @@ namespace Lynicon.Test
             //LyniconModuleManager.Instance.RegisterModule(new Auditing());
             LyniconModuleManager.Instance.RegisterModule(new Publishing());
             LyniconModuleManager.Instance.RegisterModule(new TasksModule());
+            LyniconModuleManager.Instance.RegisterModule(new SoftDelete());
+
+            var searchModule = new SearchModule(t => t == typeof(HeaderContent));
+            searchModule.DontRebuild = true;
+            LyniconModuleManager.Instance.RegisterModule(searchModule);
 
             LyniconModuleManager.Instance.ValidateModules();
         }
@@ -52,11 +59,11 @@ namespace Lynicon.Test
             // Set up data types here
 
             LyniconModuleManager.Instance.Initialise();
+            ViewEngines.Engines.Insert(0, new DynamicViewEngine());
 
             BuildTaskflows();
 
             DalTrack.Instance.Initialise();
-            SearchManager.Instance.Initialise(new List<Type> { typeof(HeaderContent) });
         }
 
         public static void Shutdown()

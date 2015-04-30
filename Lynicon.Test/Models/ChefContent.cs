@@ -34,6 +34,11 @@ namespace Lynicon.Test.Models
         public string TwitterHandle { get; set; }
         public string TwitterWeblink { get; set; }
         public List<string> ListString { get; set; }
+
+        public TwitterDetails()
+        {
+            ListString = new List<string>();
+        }
     }
 
     [Serializable]
@@ -44,7 +49,7 @@ namespace Lynicon.Test.Models
         public string Biography { get; set; }
         [UIHint("Html")]
         public string Awards { get; set; }
-        [UIHint("Html")]
+        [UIHint("MinHtml")]
         public string Interviews { get; set; }
 
         public List<string> ListString { get; set; }

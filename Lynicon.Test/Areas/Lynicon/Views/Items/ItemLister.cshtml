@@ -1,0 +1,45 @@
+﻿@model ItemListerViewModel
+@using Lynicon.Utility
+@using Lynicon.Models
+@using Lynicon.Extensibility
+
+@Html.RegisterScript("ko", "/Areas/Lynicon/Scripts/knockout-3.2.0.js", new List<string> { "jquery" })
+@Html.RegisterLocalStyles("item-lister", @"
+#class-filter { width: 300px; }
+")
+@{
+    var filters = LyniconUi.Instance.Filters;
+}
+<form id="filter-section" action="/Lynicon/Items/FilterItems?$top=10">
+    @Html.DropDownList("classFilter", Model.ContentClasses, new { @class = "chosen-select", multiple = "multiple" })
+    @Html.EditorFor(m => m.Filters, "Filters")
+    <button id="show-results">SHOW</button>
+</form>
+<div id="results-section">
+    
+</div>
+
+
+<script type="text/javascript">
+    //$.ajax({ traditional: true });
+    $('#filter-section').find(".chosen-select").chosen({ search_contains: true });
+    $('#show-results').click(function (ev) {
+        ev.preventDefault();
+        var data = $('#filter-section').serialize();
+        $.post($('#filter-section').prop('action'), data, function (d) {
+            $('#results-section').html(d);
+        });
+    });
+
+    // paging overrides
+    function navigate(url) {
+        var data = $('#filter-section').serialize();
+        $('#results-section').load(url, data, function () {
+            var top = url.replace(/.*(\$top=.*?)(&.*)?$/, '$1');
+            var skip = url.replace(/.*(\$skip=.*?)(&.*)?$/, '$1');
+            skip = (skip == url) ? '' : '&' + skip;
+            var newUrl = url.split('?')[0] + '?' + top + skip;
+            $('#filter-section').prop('action', newUrl);
+        });
+    }
+</script>

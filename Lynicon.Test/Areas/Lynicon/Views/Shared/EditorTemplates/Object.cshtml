@@ -33,10 +33,10 @@
     @foreach (var prop in ViewData.ModelMetadata.Properties.Where(pm => ShouldShow(pm))) {
     <div class="editor-unit level-@useDepth">
         @if (prop.HideSurroundingHtml) {
-        <div class="editor-field indent-@ind">@Html.Editor(prop.PropertyName)</div>
+        <div class="editor-field indent-@ind">@Html.Editor(prop.PropertyName.ExpandCamelCase())</div>
         } else {
         if (!String.IsNullOrEmpty(Html.Label(prop.PropertyName).ToHtmlString())) {
-        <div class="editor-label indent-@ind">@Html.Label(prop.PropertyName)</div>
+        <div class="editor-label indent-@ind">@Html.Label(prop.PropertyName.ExpandCamelCase())</div>
         }
         <div class="editor-field indent-@ind">
             @Html.Editor(prop.PropertyName)

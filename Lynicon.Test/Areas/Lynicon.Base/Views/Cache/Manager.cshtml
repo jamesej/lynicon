@@ -9,7 +9,13 @@
     }
 </div>
 <div class="module-section">
-    <div class="module-button" data-url="@Url.Action(Model.ReloadAction, Model.ManagerController)">
+    <div class="module-button" data-url="@Model.ReloadUrl">
         Reload
     </div>
+    @if (!string.IsNullOrEmpty(Model.WriteToFileUrl))
+    {
+        <div class="module-button" data-url="@Model.WriteToFileUrl">
+            Write To File
+        </div>
+    }
 </div>

@@ -141,6 +141,7 @@ input, textarea {
 	background-color: #fff;
 	min-height: 100%;
 	overflow: hidden;
+	position:relative;
 }
 #view-container
 {
@@ -160,10 +161,6 @@ color: #FFFFFF;
 padding: 4px 2px 6px 0px;
 font-size: 14px;
 	height: auto;
-	-moz-border-radius: 14px;
-	/* -webkit-border-radius: 14px; */
-	-khtml-border-radius: 14px;
-	/* border-radius: 14px; */
 	font-weight: bold;
 }
 .field-validation-valid {
@@ -174,6 +171,12 @@ font-size: 14px;
 	background-repeat: no-repeat;
 	padding-left: 21px;
 	background-position: 6px 4px;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .editor-label.child-closed
 {
@@ -203,7 +206,6 @@ font-size: 14px;
 }
 #editPanel .editor-field.indent-0 {
 	background-color: #cbdfdf;
-	padding-bottom:10px;
 }
 #editPanel .editor-field.indent-0:after {
 	content: "";
@@ -221,6 +223,10 @@ font-size: 14px;
 #editPanel .text-display
 {
 	cursor: pointer;
+}
+#editPanel .lyn-text-area
+{
+	width: 95%;
 }
 #editPanel .collection-item-bar
 {
@@ -250,18 +256,28 @@ font-size: 14px;
 }
 #edit .add-button, #edit .add-button-style
 {
-	position: absolute;
-	top: -29px;
-	right: 6px;
 	color: #fff;
 	font-size: 24px;
 	cursor: pointer;
+	font-weight: bold;
+	text-align: center;
+}
+#edit .add-button-top
+{
+	position: absolute;
+	top: -29px;
+	right: 6px;
 	width: 24px;
 	height: 28px;
-	text-align: center;
-	font-weight: bold;
 }
-#edit .add-button:hover, #edit .add-button-style:hover
+#edit .add-button-bottom
+{
+	border-top: 1px solid #cbdfdf;
+	background-color: #8abcbc;
+	height: 23px;
+	line-height: 21px;
+}
+#edit .add-button:hover
 {
 	color: #ddd;
 }
@@ -302,7 +318,8 @@ font-size: 14px;
 	background-color: transparent;
 	color: #254e4e;
 }
-#editPanel .editor-field .editor-label.parent {
+#editPanel .editor-field .editor-label.parent,
+#editPanel .editor-field .editor-field .add-button-bottom {
 	background-color: #A1D0D0;
 	color: #fff;
 }
@@ -395,6 +412,12 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 	background-position: 50% 50%;
 	background-size: cover;
 }
+video.thumb-vid
+{
+	cursor: pointer;
+	width: 75%;
+	border: solid 2px #fff;
+}
 #editPanel .l24-link-url
 {
 	width: 277px;
@@ -409,7 +432,7 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 {
 	cursor: auto;
 }
-#editPanel .lyn-image-load {
+#editPanel .lyn-image-load, #editPanel .lyn-video-load {
 	cursor: pointer;
 	text-transform: capitalize;
 	padding: 2px;
@@ -417,14 +440,14 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 	color: #fff;
 	margin: 3px 4px 0 0;
 }
-#editPanel .lyn-image-load:hover {
+#editPanel .lyn-image-load:hover, #editPanel .lyn-video-load:hover {
 	color: #aaa;
 }
-#editPanel .lyn-image-url
+#editPanel .lyn-image-url, #editPanel .lyn-video-url
 {
 	box-sizing: border-box;
 }
-#editPanel .lyn-image-url span
+#editPanel .lyn-image-url span, #editPanel .lyn-video-url span
 {
 	width: 235px;
 	height: 17px;
@@ -439,7 +462,7 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 }
 #editPanel .lyn-image-alt span.text-display
 {
-	width: 55px;
+	width: 165px;
 	height: 18px;
 	overflow: hidden;
 	display: inline-block;
@@ -458,7 +481,7 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 }
 #editPanel .lyn-image-alt input.text-box
 {
-	width: 55px;
+	width: 165px;
 	margin-top: 4px;
 	margin-left: 3px;
 	float:left;
@@ -467,7 +490,7 @@ FORM > .object > .editor-field, FORM > .object > .editor-label, .collection > .e
 {
 	width: 25px;
 }
-#editPanel .lyn-image-load
+#editPanel .lyn-image-load, #editPanel .lyn-video-load
 {
 	float: left;
 }
@@ -628,6 +651,22 @@ margin-left: 16px;
 	text-transform: uppercase;
 }
 
+#funcPanel #version-unit {
+	float: right;
+	margin: 0 7px;
+}
+
+#funcPanel .lyn-version-display {
+	font-size: 16px;
+	font-weight: bold;
+	color: #505050;
+	background-color: #CAD0D6;
+	padding: 8px 7px 6px 7px;
+	border-radius: 12px;
+	float: right;
+	margin-right: 1px;
+}
+
 /* LIST EDITOR */
 table.list-table {
 	border-collapse: collapse;
@@ -644,7 +683,7 @@ table.list-table {
 	background-color: #98c5f1
 }
 
-.lynicon-number-pager span {
+.lynicon-number-pager > span {
 	background-color: #8080D0;
 	border-radius: 12px;
 	display: inline-block;
@@ -838,6 +877,12 @@ font-weight: bold;
 }
 #editPanel .chosen-container .chosen-results li em {
   background: none;
+}
+
+.spinner {
+  float: right;
+  margin-right: 10px;
+  margin-top: 3px;
 }
 
 /* Jquery UI overrides */

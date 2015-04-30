@@ -21,6 +21,7 @@
 
 @foreach (var summ in Model)
 {
+    @*This markup also exists in ItemPage.cshtml for efficiency*@
 <div class="lyn-item-entry">
     @if (ViewData.ContainsKey("UrlPermission") && (bool)ViewData["UrlPermission"])
     {
@@ -39,7 +40,7 @@
 @Html.RegisterScript("override-filter-action", @"javascript:
             function navigate($button, url) {
             var $panel = $button.closest('.object.level-1');
-            $panel.load(url);
+            $panel.load(url, notifyLayout);
             }
             function thisUrl() {
             return """ + currentUri.OriginalString + @"""

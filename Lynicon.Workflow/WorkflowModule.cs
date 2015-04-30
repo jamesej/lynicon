@@ -40,7 +40,7 @@ namespace Lynicon
                 return false;
 
             VersionManager.Instance.RegisterVersion(VersionKey, false,
-                SetCurrentVersion, GetItemVersion, SetItemVersion, TestVersioningMode, DisplayItemVersion);
+                SetCurrentVersion, GetItemVersion, SetItemVersion, TestVersioningMode, DisplayItemVersion, null, null);
 
             EventHub.Instance.RegisterEventProcessor("Repository.Get", ProcessGet, "Workflow",
                 new OrderConstraint("Workflow", "Caching"));
@@ -73,9 +73,14 @@ namespace Lynicon
                 ((ILayered)o).Layer = (int)version[VersionKey];
         }
 
-        public string DisplayItemVersion(ItemVersion version)
+        public VersionDisplay DisplayItemVersion(ItemVersion version)
         {
-            return "Layer " + version[VersionKey].ToString();
+            return new VersionDisplay
+            {
+                Text = "Layer " + version[VersionKey].ToString(),
+                CssClass = "workflow-version-display",
+                Title = "Layer of current item"
+            };
         }
         public bool TestVersioningMode(object container, VersioningMode mode)
         {

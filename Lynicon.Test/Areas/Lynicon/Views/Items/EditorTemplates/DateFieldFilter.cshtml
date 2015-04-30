@@ -1,0 +1,8 @@
+﻿@model Lynicon.Extensions.DateFieldFilter
+<div class="field-filter">
+    <label>@Model.Name</label>
+    @Html.TextBoxFor(m => m.To, "yyyy-MM-dd", new { @class = "text-box lyn-datetime" })
+    @Html.TextBoxFor(m => m.From, "yyyy-MM-dd", new { @class = "text-box lyn-datetime" })
+    @Html.HiddenFor(m => m.ModelType)
+</div>
+

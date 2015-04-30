@@ -1,0 +1,30 @@
+﻿@model List<Tuple<object, Summary>>
+@using System.Reflection
+@using Lynicon.Utility
+@using Lynicon.Models
+
+@{
+    var showPropsCont = (List<PropertyInfo>)ViewData["ShowPropsCont"];
+    var showPropsSumm = (List<PropertyInfo>)ViewData["ShowPropsSumm"];
+}
+<table>
+    @foreach (var summ in Model)
+    {
+        <tr>
+            <td>@summ.Item2.Title</td>
+            @foreach (var prop in showPropsCont)
+            {
+                if (prop.DeclaringType.IsAssignableFrom(summ.GetType()))
+                {
+                    <td>@prop.GetValue(summ.Item2)</td>
+                }
+                else
+                {
+                    <td></td>
+                }
+
+            }
+        </tr>
+    }
+</table>
+@Html.ListPager("navigate")

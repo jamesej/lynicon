@@ -1,5 +1,5 @@
 ﻿@using System.Collections
-
+@using Lynicon.Utility
 @{
     Layout = "~/Areas/Lynicon/Views/Shared/EditorLayout.cshtml";
     ViewBag.Title = "Editor";
@@ -66,14 +66,21 @@
         mapForm(function ($fld) {
             formNames += $fld.prop('name') + ' ';
         });
-        $.post("@(ViewBag.BaseUrl as string)?$mode=getValues@(ViewBag.OriginalQuery as string)",
+        $.post("@(ViewBag.BaseUrl as string)?$mode=getValues@(Html.Raw(ViewBag.OriginalQuery as string))",
             { formNames: formNames, idx: idx },
             function (d) {
                 $('form').find('input, textarea, select').each(function () {
                     var nm = $(this).prop('name');
+                    var tp = $(this).attr('type');
                     if (d.hasOwnProperty(nm)) {
+                        // detect fall-through to hidden, val=true standard form checkbox
+                        var isChk = ($('form').find('input[name="' + nm + '"]').length > 1);
                         var v = processField(d[nm]);
-                        $(this).val(v);
+                        if (tp == "checkbox") {
+                            $(this).prop('checked', v);
+                        } else if (tp != "hidden" || !isChk) {
+                            $(this).val(v);
+                        }
                         $(this).prev('.text-display').text(v || '---');
                     }
                 });

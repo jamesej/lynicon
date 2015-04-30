@@ -190,7 +190,7 @@ namespace Lynicon.Test.Controllers
         {
             SearchSpec spec = new SearchSpec { GeneralSearch = search };
             int tot;
-            var res = SearchManager.Instance.Search<HeaderContent>(spec, 0, 100, out tot);
+            var res = SearchManager.Instance.Search(spec, 0, 100, out tot);
             var x = Repository.Instance.Get<ContentItem>(typeof(HeaderContent), new Guid("DF1DF172-9BD6-4139-B86C-0EBA01EB6A58"));
             var summs = Collator.Instance.Get<Summary>(res.Select(sr => (ItemId)sr.VersionedId));
 
@@ -199,7 +199,7 @@ namespace Lynicon.Test.Controllers
 
         public ActionResult UpdateSearchIndex()
         {
-            SearchManager.Instance.BuildIndex();
+            //SearchManager.Instance.BuildIndex(;
             return Content("OK");
         }
 

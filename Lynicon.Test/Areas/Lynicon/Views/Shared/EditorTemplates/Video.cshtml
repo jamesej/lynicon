@@ -1,0 +1,33 @@
+﻿@model Lynicon.Models.Video
+@using Lynicon.Utility;
+@using Lynicon.Attributes;
+@if (Model != null)
+{
+    bool showVid = (Model != null && !string.IsNullOrEmpty(Model.Url));
+
+    <div class="lyn-video">
+        <div class="lyn-video-content" style="@(showVid ? "" : "display:none")">
+            @if (!showVid)
+            {
+                <span>no video</span>
+            }
+            else
+            {
+                <video class='thumb-vid' src="@Model.Url" poster="@Model.Poster.Url" controls/>
+            }
+        </div>
+        <div class="lyn-video-url" style="@(showVid ? "display:none" : "")">
+            @Html.EditorFor(m => m.Url)
+        </div>
+        <div class='lyn-video-poster' style="@(showVid ? "display:none" : "")">
+            <span class="editor-label">Poster</span>
+            @Html.EditorFor(m => m.Poster)
+            <div class='lyn-video-load'>Find</div>
+            <div style="clear:both"></div>
+        </div>
+        
+    </div>
+}
+@Html.Partial("EnsureMediaLibrary")
+@Html.RegisterScript("lyn_vid_control", @"/Areas/Lynicon/Scripts/LyniconVideoEditor.js", new List<string> { "jquery" })
+

@@ -22,7 +22,7 @@ namespace Lynicon.Workflow
 
         public override void RegisterArea(AreaRegistrationContext context)
         {
-            LyniconModuleManager.Instance.EnsureRoutes<WorkflowModule>(context);
+            LyniconModuleManager.Instance.EnsureRoutes(context, "Lynicon.Workflow");
         }
     }
 }

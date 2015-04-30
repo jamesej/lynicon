@@ -16,7 +16,7 @@ namespace Lynicon.Test.Models
     public class HeaderContent : PageContent
     {
         public GeneralSummary Summary { get; set; }
-        [UIHint("Html"), Index(IndexAttribute.Mode.Agglomerate)]
+        [UIHint("MinHtml"), Index(IndexAttribute.Mode.Agglomerate)]
         public string HeaderBody { get; set; }
 
         public string Common { get; set; }
@@ -36,6 +36,7 @@ namespace Lynicon.Test.Models
         public HeaderContent()
         {
             Summary = new GeneralSummary();
+            this.AlternateUrls = new AlternateUrlList();
         }
     }
 }

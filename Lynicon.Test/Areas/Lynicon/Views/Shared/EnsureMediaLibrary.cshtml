@@ -2,11 +2,14 @@
 
 @Html.RegisterScript("lyn_fileeditor_script",
         @"javascript:var lynFileEditors = [];
-function getFile(current, updateFile) {
-    var url = 'http://media.greatbritishchefs.com/library?selectTarget=any';
-    if (current) {
+function getFile(current, info, updateFile) {
+    var targ = info || 'any';
+    var url = 'http://media.greatbritishchefs.com/library?selectTarget=' + targ + '&requiredForGUID=" + (String)ViewBag.Id
+        + @"&requiredForURL=' + document.URL;
+    if (current && current.indexOf('core.windows.net') >= 0) {
         var filename = current.replace(/.*\/(.*?)\..*/, '$1');
-        url = 'http://media.greatbritishchefs.com/media/' + filename + '?selectTarget=any';
+        if (filename.indexOf('/') < 0 && filename.indexOf('?') < 0 && filename != 'www')
+            url = 'http://media.greatbritishchefs.com/media/' + filename + '?selectTarget=' + targ;
     }
     var mediaWin = window.open(url, 'mediaLib', 'width=800,height=600,scrollbars=yes');
     lynFileEditors.push({ win: mediaWin, updateFile: updateFile });
@@ -17,8 +20,11 @@ $(window).on('message', function (ev) {
             if (ev.originalEvent.data == 'closed') {
                 lynFileEditors.splice(i, 1);
             } else {
-                lynFileEditors[i].updateFile(ev.originalEvent.data);
+                var msg = lynFileEditors[i].updateFile(ev.originalEvent.data);
+                if (msg) {
+                    alert(msg);
+                }
             }
         }
 });
-", new List<string>{ "jquery" })
+", new List<string> { "jquery" })

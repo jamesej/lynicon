@@ -1,0 +1,21 @@
+﻿@model List<ListFilter>
+@using Lynicon.Extensibility
+@using Lynicon.Utility
+
+<div id="@ViewData.TemplateInfo.HtmlFieldPrefix" class="filters">
+    @{
+        string oldPrefix = ViewData.TemplateInfo.HtmlFieldPrefix;
+        int index = 0;
+        ViewData.TemplateInfo.HtmlFieldPrefix = String.Empty;
+    }
+    @foreach (var filter in Model)
+    {
+        string fieldName = String.Format("filters[{0}]", index);
+        string templateName = filter.GetType().Name.UpTo("`");
+        @Html.EditorFor(m => filter, templateName, fieldName)
+    }
+    @{
+        ViewData.TemplateInfo.HtmlFieldPrefix = oldPrefix;
+    }
+</div>
+

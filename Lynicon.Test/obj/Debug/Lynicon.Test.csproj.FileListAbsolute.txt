@@ -46,3 +46,7 @@ C:\Dev\Lynicon.Test\Lynicon.Test\bin\Antlr3.Runtime.pdb
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.Optimization.xml
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.Mvc.dll
 C:\Dev\Lynicon.Test\Lynicon.Test\bin\System.Web.Mvc.xml
+C:\Dev\Lynicon.Test\Lynicon.Test\bin\log4net.xml
+C:\Dev\Lynicon.Test\Lynicon.Test\bin\HtmlAgilityPack.pdb
+C:\Dev\Lynicon.Test\Lynicon.Test\bin\HtmlAgilityPack.xml
+C:\Dev\Lynicon.Test\Lynicon.Test\bin\Linq2Rest.xml

@@ -5996,3 +5996,1431 @@ Path 'AlternateUrls.Canonical', line 5, position 17.
 2014-12-27 17:10:47,994 [1] INFO Lynicon.Extensibility.Cache - END Loading dump
 2014-12-27 17:10:47,996 [1] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
 2014-12-27 17:10:48,167 [1] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2014-12-28 14:43:17,272 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 14:43:17,324 [1] INFO Lynicon.Extensibility.Cache - END Loading dump
+2014-12-28 14:43:17,330 [1] INFO Lynicon.Modules.UrlListModule - START Loading Listed Urls
+2014-12-28 14:43:24,173 [1] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.HeaderContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 7, position 17.
+2014-12-28 14:43:24,338 [1] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.SingleContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 5, position 17.
+2014-12-28 14:43:24,346 [1] INFO Lynicon.Modules.UrlListModule - END Loading Listed Urls
+2014-12-28 14:43:24,348 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 14:43:24,397 [1] INFO Lynicon.Extensibility.Cache - END Loading dump
+2014-12-28 14:43:24,401 [1] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2014-12-28 14:43:24,756 [1] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2014-12-28 15:28:00,046 [27] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 15:28:00,087 [27] INFO Lynicon.Extensibility.Cache - END Loading dump
+2014-12-28 15:28:00,089 [27] INFO Lynicon.Modules.UrlListModule - START Loading Listed Urls
+2014-12-28 15:28:09,022 [27] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.HeaderContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 7, position 17.
+2014-12-28 15:28:09,124 [27] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.SingleContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 5, position 17.
+2014-12-28 15:28:09,128 [27] INFO Lynicon.Modules.UrlListModule - END Loading Listed Urls
+2014-12-28 15:28:09,129 [27] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 15:28:09,168 [27] INFO Lynicon.Extensibility.Cache - END Loading dump
+2014-12-28 15:28:09,170 [27] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2014-12-28 15:28:09,346 [27] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2014-12-28 15:56:36,418 [34] ERROR Lynicon.Extensibility.LyniconModuleManager - Module UrlList failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 66
+   at Lynicon.Modules.UrlListModule.Dump() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 199
+   at Lynicon.Modules.UrlListModule.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 204
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 15:56:36,465 [34] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Content.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Type objectType, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.FullCache.Dump() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 132
+   at Lynicon.Base.Modules.FullCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 164
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 15:56:51,250 [31] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 15:56:51,346 [31] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: End of Stream encountered before parsing was completed.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 15:56:51,354 [31] INFO Lynicon.Modules.UrlListModule - START Loading Listed Urls
+2014-12-28 15:56:55,867 [31] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.HeaderContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 7, position 17.
+2014-12-28 15:56:55,923 [31] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.SingleContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 5, position 17.
+2014-12-28 15:56:55,927 [31] INFO Lynicon.Modules.UrlListModule - END Loading Listed Urls
+2014-12-28 15:56:55,927 [31] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 15:56:55,979 [31] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: End of Stream encountered before parsing was completed.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 15:56:55,979 [31] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2014-12-28 15:56:56,219 [31] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2014-12-28 21:35:01,776 [83] ERROR Lynicon.Extensibility.LyniconModuleManager - Module UrlList failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 66
+   at Lynicon.Modules.UrlListModule.Dump() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 225
+   at Lynicon.Modules.UrlListModule.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 230
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 21:35:01,854 [83] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Content.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Type objectType, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.FullCache.Dump() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 132
+   at Lynicon.Base.Modules.FullCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 164
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 21:35:24,255 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 21:35:24,484 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: End of Stream encountered before parsing was completed.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 21:35:24,498 [1] INFO Lynicon.Modules.UrlListModule - START Loading Listed Urls
+2014-12-28 21:35:33,220 [1] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.HeaderContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 7, position 17.
+2014-12-28 21:35:33,300 [1] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.SingleContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 5, position 17.
+2014-12-28 21:35:33,308 [1] INFO Lynicon.Modules.UrlListModule - END Loading Listed Urls
+2014-12-28 21:35:33,308 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 21:35:33,348 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: Binary stream '100' does not contain a valid BinaryHeader. Possible causes are invalid stream or object version change between serialization and deserialization.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 21:35:33,348 [1] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2014-12-28 21:35:33,580 [1] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2014-12-28 21:47:50,193 [8] ERROR Lynicon.Extensibility.LyniconModuleManager - Module UrlList failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 66
+   at Lynicon.Modules.UrlListModule.Dump() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 225
+   at Lynicon.Modules.UrlListModule.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 230
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 21:47:50,240 [8] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Content.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Type objectType, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.FullCache.Dump() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 132
+   at Lynicon.Base.Modules.FullCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 164
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 21:48:12,102 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 21:48:12,226 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: End of Stream encountered before parsing was completed.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 21:48:12,240 [1] INFO Lynicon.Modules.UrlListModule - START Loading Listed Urls
+2014-12-28 21:48:19,912 [1] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.HeaderContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 7, position 17.
+2014-12-28 21:48:19,980 [1] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.SingleContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 5, position 17.
+2014-12-28 21:48:19,984 [1] INFO Lynicon.Modules.UrlListModule - END Loading Listed Urls
+2014-12-28 21:48:19,988 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 21:48:20,052 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: End of Stream encountered before parsing was completed.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 21:48:20,052 [1] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2014-12-28 21:48:20,220 [1] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2014-12-28 21:53:04,254 [85] ERROR Lynicon.Extensibility.LyniconModuleManager - Module UrlList failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 66
+   at Lynicon.Modules.UrlListModule.Dump() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 232
+   at Lynicon.Modules.UrlListModule.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 237
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 21:53:04,285 [85] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Content.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Type objectType, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.FullCache.Dump() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 132
+   at Lynicon.Base.Modules.FullCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 164
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 21:53:20,125 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 21:53:20,229 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: End of Stream encountered before parsing was completed.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 21:53:20,237 [1] INFO Lynicon.Modules.UrlListModule - START Loading Listed Urls
+2014-12-28 21:53:26,288 [1] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.HeaderContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 7, position 17.
+2014-12-28 21:53:26,344 [1] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.SingleContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 5, position 17.
+2014-12-28 21:53:26,344 [1] INFO Lynicon.Modules.UrlListModule - END Loading Listed Urls
+2014-12-28 21:53:26,348 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 21:53:26,384 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: Binary stream '100' does not contain a valid BinaryHeader. Possible causes are invalid stream or object version change between serialization and deserialization.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 21:53:26,388 [1] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2014-12-28 21:53:26,552 [1] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2014-12-28 21:56:25,901 [79] ERROR Lynicon.Extensibility.LyniconModuleManager - Module UrlList failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 66
+   at Lynicon.Modules.UrlListModule.Dump() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 232
+   at Lynicon.Modules.UrlListModule.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 237
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 21:56:26,025 [79] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Content.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Type objectType, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.FullCache.Dump() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 132
+   at Lynicon.Base.Modules.FullCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 164
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 21:56:42,429 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 21:56:42,514 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: End of Stream encountered before parsing was completed.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 21:56:42,534 [1] INFO Lynicon.Modules.UrlListModule - START Loading Listed Urls
+2014-12-28 21:56:47,390 [1] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.HeaderContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 7, position 17.
+2014-12-28 21:56:47,442 [1] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.SingleContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 5, position 17.
+2014-12-28 21:56:47,446 [1] INFO Lynicon.Modules.UrlListModule - END Loading Listed Urls
+2014-12-28 21:56:47,450 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 21:56:47,486 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: Binary stream '50' does not contain a valid BinaryHeader. Possible causes are invalid stream or object version change between serialization and deserialization.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 21:56:47,486 [1] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2014-12-28 21:56:47,658 [1] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2014-12-28 22:04:09,204 [9] ERROR Lynicon.Extensibility.LyniconModuleManager - Module UrlList failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 66
+   at Lynicon.Modules.UrlListModule.Dump() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 232
+   at Lynicon.Modules.UrlListModule.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 237
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 22:04:09,251 [9] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Content.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Type objectType, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.FullCache.Dump() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 132
+   at Lynicon.Base.Modules.FullCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 164
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 22:05:06,315 [1] INFO Lynicon.Modules.UrlListModule - START Loading Listed Urls
+2014-12-28 22:05:56,640 [1] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.HeaderContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 7, position 17.
+2014-12-28 22:05:56,704 [1] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.SingleContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 5, position 17.
+2014-12-28 22:05:56,708 [1] INFO Lynicon.Modules.UrlListModule - END Loading Listed Urls
+2014-12-28 22:05:56,708 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 22:05:56,772 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: Binary stream '100' does not contain a valid BinaryHeader. Possible causes are invalid stream or object version change between serialization and deserialization.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 22:05:56,784 [1] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2014-12-28 22:05:56,972 [1] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2014-12-28 22:08:01,836 [9] ERROR Lynicon.Extensibility.LyniconModuleManager - Module UrlList failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 66
+   at Lynicon.Modules.UrlListModule.Dump() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 246
+   at Lynicon.Modules.UrlListModule.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 251
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 22:08:01,871 [9] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Content.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Type objectType, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.FullCache.Dump() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 132
+   at Lynicon.Base.Modules.FullCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 164
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 22:08:17,681 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 22:08:17,777 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: End of Stream encountered before parsing was completed.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 22:08:17,785 [1] INFO Lynicon.Modules.UrlListModule - START Loading Listed Urls
+2014-12-28 22:08:26,434 [1] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.HeaderContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 7, position 17.
+2014-12-28 22:08:26,652 [1] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-28 22:08:26,694 [1] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-28 22:08:26,700 [1] INFO Lynicon.Modules.UrlListModule - END Loading Listed Urls
+2014-12-28 22:08:26,702 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 22:08:26,811 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: Binary stream '46' does not contain a valid BinaryHeader. Possible causes are invalid stream or object version change between serialization and deserialization.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 22:08:26,815 [1] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2014-12-28 22:08:27,291 [1] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2014-12-28 22:16:01,256 [17] ERROR Lynicon.Extensibility.LyniconModuleManager - Module UrlList failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 66
+   at Lynicon.Modules.UrlListModule.Dump() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 246
+   at Lynicon.Modules.UrlListModule.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 251
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 22:16:01,287 [17] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Content.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Type objectType, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.FullCache.Dump() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 132
+   at Lynicon.Base.Modules.FullCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 164
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 22:16:13,113 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 22:16:13,197 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: End of Stream encountered before parsing was completed.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 22:16:13,209 [1] INFO Lynicon.Modules.UrlListModule - START Loading Listed Urls
+2014-12-28 22:17:10,738 [1] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.HeaderContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 7, position 17.
+2014-12-28 22:17:10,802 [1] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-28 22:17:10,830 [1] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-28 22:17:10,834 [1] INFO Lynicon.Modules.UrlListModule - END Loading Listed Urls
+2014-12-28 22:17:10,834 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 22:17:10,874 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: Binary stream '100' does not contain a valid BinaryHeader. Possible causes are invalid stream or object version change between serialization and deserialization.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 22:17:10,878 [1] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2014-12-28 22:17:11,074 [1] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2014-12-28 22:23:06,047 [10] ERROR Lynicon.Extensibility.LyniconModuleManager - Module UrlList failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 66
+   at Lynicon.Modules.UrlListModule.Dump() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 246
+   at Lynicon.Modules.UrlListModule.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 251
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 22:23:06,079 [10] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Content.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Type objectType, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.FullCache.Dump() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 132
+   at Lynicon.Base.Modules.FullCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 164
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 22:23:19,259 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 22:23:19,346 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: End of Stream encountered before parsing was completed.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 22:23:19,354 [1] INFO Lynicon.Modules.UrlListModule - START Loading Listed Urls
+2014-12-28 22:23:23,710 [1] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.HeaderContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 7, position 17.
+2014-12-28 22:23:23,766 [1] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-28 22:23:23,786 [1] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-28 22:23:23,790 [1] INFO Lynicon.Modules.UrlListModule - END Loading Listed Urls
+2014-12-28 22:23:23,790 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 22:23:23,830 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: Binary stream '73' does not contain a valid BinaryHeader. Possible causes are invalid stream or object version change between serialization and deserialization.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 22:23:23,830 [1] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2014-12-28 22:23:24,018 [1] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2014-12-28 22:25:17,318 [9] ERROR Lynicon.Extensibility.LyniconModuleManager - Module UrlList failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 66
+   at Lynicon.Modules.UrlListModule.Dump() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 246
+   at Lynicon.Modules.UrlListModule.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 251
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 22:25:17,349 [9] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Content.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Type objectType, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.FullCache.Dump() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 132
+   at Lynicon.Base.Modules.FullCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 164
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 22:25:30,347 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 22:25:30,435 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: End of Stream encountered before parsing was completed.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 22:25:30,447 [1] INFO Lynicon.Modules.UrlListModule - START Loading Listed Urls
+2014-12-28 22:25:35,196 [1] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.HeaderContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 7, position 17.
+2014-12-28 22:25:35,256 [1] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-28 22:25:35,276 [1] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-28 22:25:35,276 [1] INFO Lynicon.Modules.UrlListModule - END Loading Listed Urls
+2014-12-28 22:25:35,280 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 22:25:35,328 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: End of Stream encountered before parsing was completed.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 22:25:35,332 [1] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2014-12-28 22:25:35,552 [1] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2014-12-28 22:26:33,269 [5] ERROR Lynicon.Extensibility.LyniconModuleManager - Module UrlList failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 66
+   at Lynicon.Modules.UrlListModule.Dump() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 246
+   at Lynicon.Modules.UrlListModule.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 251
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 22:26:33,300 [5] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Content.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Type objectType, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.FullCache.Dump() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 132
+   at Lynicon.Base.Modules.FullCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 164
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-28 22:26:46,273 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 22:26:46,377 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: End of Stream encountered before parsing was completed.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 22:26:46,385 [1] INFO Lynicon.Modules.UrlListModule - START Loading Listed Urls
+2014-12-28 22:26:50,837 [1] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.HeaderContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 7, position 17.
+2014-12-28 22:26:50,885 [1] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-28 22:26:50,905 [1] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-28 22:26:50,909 [1] INFO Lynicon.Modules.UrlListModule - END Loading Listed Urls
+2014-12-28 22:26:50,913 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-28 22:26:50,965 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: End of Stream encountered before parsing was completed.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-28 22:26:50,965 [1] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2014-12-28 22:26:51,137 [1] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2014-12-29 14:15:04,697 [54] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.HeaderContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 7, position 17.
+2014-12-29 14:24:50,682 [7] ERROR Lynicon.Extensibility.LyniconModuleManager - Module UrlList failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 66
+   at Lynicon.Modules.UrlListModule.Dump() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 246
+   at Lynicon.Modules.UrlListModule.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 251
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-29 14:24:50,744 [7] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Content.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Type objectType, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.FullCache.Dump() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 132
+   at Lynicon.Base.Modules.FullCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 164
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-29 14:25:05,181 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-29 14:25:05,281 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: End of Stream encountered before parsing was completed.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-29 14:25:05,293 [1] INFO Lynicon.Modules.UrlListModule - START Loading Listed Urls
+2014-12-29 14:25:09,682 [1] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.HeaderContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 7, position 17.
+2014-12-29 14:25:09,746 [1] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-29 14:25:09,762 [1] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-29 14:25:09,762 [1] INFO Lynicon.Modules.UrlListModule - END Loading Listed Urls
+2014-12-29 14:25:09,766 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-29 14:25:09,814 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: End of Stream encountered before parsing was completed.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 45
+2014-12-29 14:25:09,814 [1] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2014-12-29 14:25:09,982 [1] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2014-12-29 14:27:30,138 [56] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.HeaderContent: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'Lynicon.Models.AlternateUrlList' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'AlternateUrls.Canonical', line 7, position 17.
+2014-12-30 13:16:53,240 [51] ERROR Lynicon.Extensibility.LyniconModuleManager - Module UrlList failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 66
+   at Lynicon.Modules.UrlListModule.Dump() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 246
+   at Lynicon.Modules.UrlListModule.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 251
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-30 13:16:53,354 [51] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Content.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Type objectType, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.FullCache.Dump() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 132
+   at Lynicon.Base.Modules.FullCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 164
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-30 13:27:17,072 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-30 13:27:17,240 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: End of Stream encountered before parsing was completed.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 57
+2014-12-30 13:27:17,252 [1] INFO Lynicon.Modules.UrlListModule - START Loading Listed Urls
+2014-12-30 13:27:25,703 [1] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-30 13:27:25,719 [1] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-30 13:27:25,723 [1] INFO Lynicon.Modules.UrlListModule - END Loading Listed Urls
+2014-12-30 13:27:25,727 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-30 13:27:25,767 [1] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: Binary stream '97' does not contain a valid BinaryHeader. Possible causes are invalid stream or object version change between serialization and deserialization.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 57
+2014-12-30 13:27:25,771 [1] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2014-12-30 13:27:25,999 [1] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2014-12-30 13:47:10,992 [134] ERROR Lynicon.Extensibility.LyniconModuleManager - Module UrlList failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Object obj, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, ObjectWriter objectWriter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 78
+   at Lynicon.Modules.UrlListModule.Dump() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 246
+   at Lynicon.Modules.UrlListModule.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 251
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-30 13:47:11,055 [134] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Content.Full failed shutdown: 
+System.Runtime.Serialization.SerializationException: Type 'System.Web.Routing.RouteData' in Assembly 'System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' is not marked as serializable.
+   at System.Runtime.Serialization.FormatterServices.InternalGetSerializableMembers(RuntimeType type)
+   at System.Runtime.Serialization.FormatterServices.GetSerializableMembers(Type type, StreamingContext context)
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitMemberInfo()
+   at System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo.InitSerialize(Type objectType, ISurrogateSelector surrogateSelector, StreamingContext context, SerObjectInfoInit serObjectInfoInit, IFormatterConverter converter, SerializationBinder binder)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Write(WriteObjectInfo objectInfo, NameInfo memberNameInfo, NameInfo typeNameInfo)
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.FullCache.Dump() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 132
+   at Lynicon.Base.Modules.FullCache.Shutdown() in c:\Dev\Lynicon\Lynicon.Base\Modules\FullCache.cs:line 164
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 134
+2014-12-30 13:47:27,804 [133] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-30 13:47:27,880 [133] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: Binary stream '100' does not contain a valid BinaryHeader. Possible causes are invalid stream or object version change between serialization and deserialization.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 57
+2014-12-30 13:47:27,888 [133] INFO Lynicon.Modules.UrlListModule - START Loading Listed Urls
+2014-12-30 13:47:33,229 [133] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-30 13:47:33,245 [133] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-30 13:47:33,253 [133] INFO Lynicon.Modules.UrlListModule - END Loading Listed Urls
+2014-12-30 13:47:33,253 [133] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-30 13:47:33,305 [133] ERROR Lynicon.Extensibility.Cache - System.Runtime.Serialization.SerializationException: End of Stream encountered before parsing was completed.
+   at System.Runtime.Serialization.Formatters.Binary.__BinaryParser.Run()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 57
+2014-12-30 13:47:33,309 [133] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2014-12-30 13:47:33,493 [133] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2014-12-30 19:51:05,229 [133] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-30 19:51:05,310 [133] INFO Lynicon.Extensibility.Cache - END Loading dump
+2014-12-30 19:51:05,312 [133] INFO Lynicon.Modules.UrlListModule - START Loading Listed Urls
+2014-12-30 19:51:12,453 [133] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-30 19:51:12,486 [133] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-30 19:51:12,491 [133] INFO Lynicon.Modules.UrlListModule - END Loading Listed Urls
+2014-12-30 19:51:12,493 [133] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-30 19:51:12,582 [133] INFO Lynicon.Extensibility.Cache - END Loading dump
+2014-12-30 19:51:12,584 [133] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2014-12-30 19:51:13,014 [133] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2014-12-31 12:45:08,985 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-31 12:45:09,031 [1] INFO Lynicon.Extensibility.Cache - END Loading dump
+2014-12-31 12:45:09,033 [1] INFO Lynicon.Modules.UrlListModule - START Loading Listed Urls
+2014-12-31 12:45:18,174 [1] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-31 12:45:18,228 [1] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-31 12:45:18,232 [1] INFO Lynicon.Modules.UrlListModule - END Loading Listed Urls
+2014-12-31 12:45:18,235 [1] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-31 12:45:18,281 [1] INFO Lynicon.Extensibility.Cache - END Loading dump
+2014-12-31 12:45:18,282 [1] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2014-12-31 12:45:18,545 [1] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2014-12-31 13:48:47,618 [96] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-31 13:48:47,732 [96] INFO Lynicon.Extensibility.Cache - END Loading dump
+2014-12-31 13:48:47,734 [96] INFO Lynicon.Modules.UrlListModule - START Loading Listed Urls
+2014-12-31 13:48:53,941 [96] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-31 13:48:54,035 [96] ERROR Lynicon.Modules.UrlListCache - Update of url list cache failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Modules.UrlListCache.SetUrls(Object container, Boolean remove, Boolean add) in c:\Dev\Lynicon\Lynicon.Core\Modules\UrlListModule.cs:line 67
+2014-12-31 13:48:54,039 [96] INFO Lynicon.Modules.UrlListModule - END Loading Listed Urls
+2014-12-31 13:48:54,043 [96] INFO Lynicon.Extensibility.Cache - START Loading dump
+2014-12-31 13:48:54,116 [96] INFO Lynicon.Extensibility.Cache - END Loading dump
+2014-12-31 13:48:54,119 [96] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2014-12-31 13:48:54,985 [96] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2015-02-27 10:19:14,483 [6] ERROR Lynicon.Extensibility.LyniconModuleManager - Module UrlList failed shutdown: 
+System.ArgumentNullException: Object Graph cannot be null.
+Parameter name: graph
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache)
+   at Lynicon.Modules.UrlListModule.Dump()
+   at Lynicon.Modules.UrlListModule.Shutdown()
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown()
+2015-02-27 10:19:14,546 [6] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Caching.Content.Full failed shutdown: 
+System.ArgumentNullException: Object Graph cannot be null.
+Parameter name: graph
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Base.Modules.FullCache.Dump()
+   at Lynicon.Base.Modules.FullCache.Shutdown()
+   at Lynicon.Extensibility.LyniconModuleManager.Shutdown()
+2015-03-01 10:48:27,941 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-01 10:48:27,984 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-01 10:48:27,986 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-01 10:48:28,095 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-03-04 08:53:15,439 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-04 08:53:15,482 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-04 08:53:15,484 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-04 08:53:15,527 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-03-04 12:52:52,036 [33] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-04 12:52:52,069 [33] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-04 12:52:52,071 [33] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-04 12:52:52,111 [33] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-03-04 12:56:09,466 [24] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-04 12:56:09,498 [24] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-04 12:56:09,500 [24] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-04 12:56:09,538 [24] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-03-04 12:58:28,553 [33] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-04 12:58:28,588 [33] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-04 12:58:28,590 [33] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-04 12:58:28,631 [33] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-03-05 08:54:10,304 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-05 08:54:10,342 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-05 08:54:10,344 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-05 08:54:10,392 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-03-05 09:21:16,187 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-05 09:21:16,222 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-05 09:21:16,224 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-05 09:21:16,263 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-03-05 09:35:12,560 [19] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2015-03-05 09:35:12,588 [19] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2015-03-05 09:59:34,102 [5] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-05 09:59:34,148 [5] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-05 09:59:34,150 [5] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-05 09:59:34,162 [5] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-03-05 10:05:36,955 [17] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2015-03-05 10:05:36,966 [17] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2015-03-05 10:07:56,925 [5] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-05 10:07:56,960 [5] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-05 10:07:56,962 [5] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-05 10:07:56,972 [5] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-03-05 10:32:24,981 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-05 10:32:25,015 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-05 10:32:31,742 [1] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2015-03-05 10:33:30,326 [1] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2015-03-05 10:46:13,180 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-05 10:46:13,196 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-05 10:46:16,659 [1] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2015-03-05 10:49:31,383 [1] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2015-03-06 09:20:49,825 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-06 09:20:49,880 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-06 09:20:49,888 [1] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2015-03-06 09:20:59,763 [1] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2015-03-10 09:10:02,613 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-10 09:10:02,657 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-10 09:10:02,665 [1] INFO Lynicon.Base.Modules.FullCache - START Load FullCache
+2015-03-10 09:10:08,138 [1] INFO Lynicon.Base.Modules.FullCache - END Load FullCache
+2015-03-10 09:19:10,781 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-10 09:19:10,818 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-10 09:19:10,822 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-10 09:19:10,866 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-03-10 09:24:16,916 [21] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-10 09:24:16,954 [21] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-10 09:24:16,958 [21] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-10 09:24:17,004 [21] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-03-10 10:06:28,334 [21] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-10 10:06:28,395 [21] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-10 10:06:28,401 [21] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-10 10:06:28,475 [21] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-03-11 10:32:53,439 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-11 10:32:53,485 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-11 10:32:53,490 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-11 10:32:53,539 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-03-11 10:38:52,661 [10] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-11 10:38:52,698 [10] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-11 10:38:52,702 [10] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-11 10:38:52,744 [10] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-03-24 09:45:37,663 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-24 09:45:37,726 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-24 09:45:37,733 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-24 09:45:37,804 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-03-30 10:05:05,072 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-30 10:05:05,193 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-30 10:05:05,201 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-30 10:05:05,308 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-03-31 09:48:00,698 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-31 09:48:00,767 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-31 09:48:00,780 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-31 09:48:00,850 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-03-31 09:48:28,311 [6] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.GeneralSummary: Error getting value from 'ItemId' on 'Lynicon.Test.Models.GeneralSummary'.
+2015-03-31 09:48:28,403 [6] DEBUG Lynicon.Repositories.ContentItem - Deserialisation error Lynicon.Test.Models.GeneralSummary: Error getting value from 'ItemId' on 'Lynicon.Test.Models.GeneralSummary'.
+2015-03-31 09:51:24,135 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-31 09:51:24,182 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-31 09:51:24,186 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-31 09:51:24,235 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-03-31 09:53:13,981 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-31 09:53:14,037 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-31 09:53:14,042 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-31 09:53:14,089 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-03-31 10:18:32,337 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-03-31 10:18:32,389 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-03-31 10:18:32,394 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-03-31 10:18:32,445 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-02 09:07:45,845 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-02 09:07:45,887 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-02 09:07:45,893 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-02 09:07:45,947 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-02 09:12:23,324 [10] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-02 09:12:23,370 [10] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-02 09:12:23,374 [10] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-02 09:12:23,443 [10] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-02 09:22:18,937 [10] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-02 09:22:18,987 [10] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-02 09:22:18,997 [10] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-02 09:22:19,067 [10] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-09 08:37:09,642 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-09 08:37:09,718 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-09 08:37:09,727 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-09 08:37:09,825 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-09 08:45:01,956 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-09 08:45:02,006 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-09 08:45:05,829 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-09 08:45:05,991 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-09 08:58:21,189 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-09 08:58:21,246 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-09 08:58:21,251 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-09 08:58:21,352 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-09 09:10:05,648 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-09 09:10:05,685 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-09 09:10:05,727 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-09 09:10:05,823 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-10 09:21:39,443 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-10 09:21:39,564 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-10 09:21:39,617 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-10 09:21:39,763 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-10 09:24:48,326 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-10 09:24:48,361 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-10 09:24:48,365 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-10 09:24:48,418 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-11 13:09:24,191 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-11 13:09:24,238 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-11 13:09:24,248 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-11 13:09:24,320 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-11 13:49:03,151 [17] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-11 13:49:03,196 [17] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-11 13:49:03,201 [17] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-11 13:49:03,261 [17] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-11 16:46:21,614 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-11 16:46:21,651 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-11 16:46:21,660 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-11 16:46:21,726 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-11 16:50:47,021 [15] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-11 16:50:47,115 [15] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-11 16:50:47,121 [15] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-11 16:50:47,182 [15] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-11 17:11:18,055 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-11 17:11:18,103 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-11 17:11:18,109 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-11 17:11:18,172 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-11 20:28:20,087 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-11 20:28:20,131 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-11 20:28:20,135 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-11 20:28:20,203 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-11 20:30:54,379 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-11 20:30:54,415 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-11 20:30:54,419 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-11 20:30:54,475 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-12 12:10:48,436 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-12 12:10:48,472 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-12 12:10:48,478 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-12 12:10:48,534 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-12 13:55:09,178 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-12 13:55:09,213 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-12 13:55:09,217 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-12 13:55:09,272 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-12 19:55:18,616 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-12 19:55:18,670 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-12 19:55:18,675 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-12 19:55:18,749 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-12 20:42:18,740 [27] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-12 20:42:18,777 [27] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-12 20:42:18,781 [27] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-12 20:42:18,845 [27] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-12 20:50:11,305 [11] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-12 20:50:11,341 [11] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-12 20:50:11,345 [11] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-12 20:50:11,401 [11] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-12 20:54:20,331 [11] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-12 20:54:20,372 [11] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-12 20:54:20,377 [11] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-12 20:54:20,438 [11] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-17 08:22:01,182 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-17 08:22:01,245 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-17 08:22:01,251 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-17 08:22:01,335 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-17 10:40:37,725 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-17 10:40:37,760 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-17 10:40:37,764 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-17 10:40:37,820 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-17 10:50:03,731 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-17 10:50:03,827 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-17 10:50:03,840 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-17 10:50:03,924 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-17 12:22:06,617 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-17 12:22:06,660 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-17 12:22:06,665 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-17 12:22:06,725 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-17 12:22:06,739 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-17 12:22:11,886 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-18 18:25:18,875 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-18 18:25:18,932 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-18 18:25:18,938 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-18 18:25:19,021 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-18 18:25:19,039 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-18 18:25:23,582 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-19 13:02:16,149 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-19 13:02:16,228 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-19 13:02:16,235 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-19 13:02:16,333 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-19 13:02:16,356 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-19 13:02:24,665 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-19 13:05:34,543 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-19 13:05:34,587 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-19 13:05:34,592 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-19 13:05:34,654 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-19 13:05:34,671 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-19 13:05:41,733 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-19 13:11:30,619 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-19 13:11:30,661 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-19 13:11:30,665 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-19 13:11:30,734 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-19 13:11:30,751 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-19 13:11:37,881 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-19 17:24:06,862 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-19 17:24:06,903 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-19 17:24:06,908 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-19 17:24:07,001 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-19 17:24:07,022 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-19 17:24:12,598 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-19 17:40:41,005 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-19 17:40:41,058 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-19 17:40:41,066 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-19 17:40:41,160 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-19 17:40:41,179 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-19 17:40:47,150 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-19 17:45:51,400 [8] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-19 17:45:51,445 [8] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-19 17:45:51,449 [8] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-19 17:45:51,517 [8] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-19 17:45:51,532 [8] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-19 17:45:59,151 [8] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-19 17:56:45,079 [8] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-19 17:56:45,142 [8] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-19 17:56:45,149 [8] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-19 17:56:45,226 [8] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-19 17:56:45,243 [8] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-19 17:56:51,028 [8] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-19 18:01:03,849 [8] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-19 18:01:03,901 [8] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-19 18:01:03,907 [8] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-19 18:01:03,992 [8] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-19 18:01:04,011 [8] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-19 18:01:15,034 [8] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-19 18:04:56,347 [8] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-19 18:04:56,400 [8] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-19 18:04:56,411 [8] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-19 18:04:56,602 [8] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-19 18:04:56,621 [8] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-19 18:05:02,299 [8] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-20 08:40:37,206 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-20 08:40:37,308 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-20 08:40:37,319 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-20 08:40:37,463 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-20 08:40:37,481 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-20 08:40:56,629 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-20 16:52:25,528 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-20 16:52:25,593 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-20 16:52:25,602 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-20 16:52:25,703 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-20 16:52:25,718 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-20 16:52:36,442 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-20 16:56:08,731 [17] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-20 16:56:08,790 [17] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-20 16:56:08,794 [17] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-20 16:56:08,900 [17] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-20 16:56:08,919 [17] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-20 16:56:18,979 [17] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-20 17:01:44,077 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-20 17:01:44,283 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-20 17:01:44,297 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-20 17:01:44,523 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-20 17:01:44,547 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-20 17:01:53,874 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-20 17:15:33,737 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-20 17:15:33,791 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-20 17:15:33,799 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-20 17:15:33,893 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-20 17:15:33,914 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-20 17:15:50,989 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-22 09:27:29,805 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-22 09:27:29,861 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-22 09:27:29,867 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-22 09:27:29,961 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-22 09:27:29,978 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-22 09:27:40,362 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-23 09:25:32,285 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-23 09:25:32,551 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-23 09:25:32,617 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-23 09:25:33,065 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-23 09:25:33,141 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-23 09:25:47,239 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-23 09:34:45,247 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-23 09:34:45,291 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-23 09:34:45,295 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-23 09:34:45,377 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-23 09:34:45,396 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-23 09:34:52,834 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-23 09:39:35,755 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-23 09:39:35,798 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-23 09:39:35,806 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-23 09:39:35,881 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-23 09:39:35,898 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-23 09:39:40,740 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-23 09:44:24,500 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-23 09:44:24,548 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-23 09:44:24,552 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-23 09:44:24,626 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-23 09:44:24,641 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-23 09:44:32,016 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-23 09:47:20,814 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-23 09:47:20,866 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-23 09:47:20,870 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-23 09:47:20,941 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-23 09:47:20,963 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-23 09:47:26,926 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-24 09:21:47,151 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-24 09:21:47,214 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-24 09:21:47,224 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-24 09:21:47,383 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-24 09:21:47,400 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-24 09:21:58,843 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-24 11:06:23,538 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-24 11:06:23,625 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-24 11:06:23,631 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-24 11:06:23,753 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-24 11:06:23,772 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-24 11:06:41,543 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-24 11:16:37,901 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-24 11:16:37,971 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-24 11:16:37,980 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-24 11:16:38,121 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-24 11:16:38,147 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-24 11:16:51,933 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-24 11:30:34,106 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-24 11:30:34,230 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-24 11:30:34,248 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-24 11:30:34,370 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-24 11:30:34,401 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-24 11:30:51,830 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-24 11:32:17,751 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-24 11:32:17,848 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-24 11:32:17,853 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-24 11:32:18,015 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-24 11:32:18,044 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-24 11:32:18,307 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-24 11:43:30,745 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-24 11:43:30,806 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-24 11:43:30,814 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-24 11:43:30,916 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-24 11:43:30,958 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-24 11:43:31,495 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-24 11:50:47,479 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-24 11:50:47,564 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-24 11:50:47,575 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-24 11:50:47,837 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-24 11:50:47,858 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-24 11:50:48,320 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-24 11:54:15,448 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-24 11:54:15,573 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-24 11:54:15,577 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-24 11:54:15,706 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-24 11:54:15,726 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-24 11:54:16,014 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-24 12:01:28,949 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-24 12:01:29,016 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-24 12:01:29,024 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-24 12:01:29,160 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-24 12:01:29,184 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-24 12:01:29,730 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 12:16:37,604 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 12:16:37,655 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 12:16:37,660 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 12:16:37,773 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 12:16:37,853 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 12:16:38,055 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 12:24:57,444 [20] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 12:24:57,493 [20] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 12:24:57,500 [20] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 12:24:57,599 [20] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 12:24:57,619 [20] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 12:24:57,832 [20] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 12:36:09,631 [20] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 12:36:09,683 [20] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 12:36:09,690 [20] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 12:36:09,783 [20] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 12:36:09,810 [20] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 12:36:10,103 [20] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 12:51:24,512 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 12:51:24,575 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 12:51:24,580 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 12:51:24,699 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 12:51:24,765 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 12:51:25,427 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 13:03:50,761 [67] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 13:03:50,861 [67] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 13:03:50,879 [67] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 13:03:51,019 [67] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 13:03:51,043 [67] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 13:03:51,808 [67] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 13:08:34,231 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 13:08:34,378 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 13:08:34,383 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 13:08:34,506 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 13:08:34,542 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 13:08:34,815 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 16:01:23,690 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 16:01:23,760 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 16:01:23,772 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 16:01:23,859 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 16:01:23,880 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 16:01:24,238 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 16:08:11,683 [20] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 16:08:11,744 [20] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 16:08:11,760 [20] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 16:08:11,860 [20] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 16:08:11,885 [20] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 16:08:12,175 [20] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 16:14:52,135 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 16:14:52,230 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 16:14:52,240 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 16:14:52,461 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 16:14:52,529 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 16:14:54,255 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 16:21:20,530 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 16:21:20,597 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 16:21:20,605 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 16:21:20,706 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 16:21:20,736 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 16:21:20,961 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 16:26:25,244 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 16:26:25,339 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 16:26:25,344 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 16:26:25,459 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 16:26:25,483 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 16:26:25,760 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 16:30:27,584 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 16:30:27,640 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 16:30:27,649 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 16:30:27,729 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 16:30:27,757 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 16:30:27,996 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 16:38:19,423 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 16:38:19,495 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 16:38:19,501 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 16:38:19,691 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 16:38:19,713 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 16:38:20,978 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 16:48:08,942 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 16:48:09,000 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 16:48:09,008 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 16:48:09,103 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 16:48:09,127 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 16:48:09,435 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 17:41:53,496 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 17:41:53,619 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 17:41:53,625 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 17:41:53,878 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 17:41:53,942 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 17:41:54,280 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 17:52:54,218 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Core blocked, initialisation exception
+System.TypeInitializationException: The type initializer for 'Lynicon.Extensibility.LyniconUi' threw an exception. ---> System.NotImplementedException: Cannot have FieldFilter for property type Lynicon.Models.Summary
+   at Lynicon.Extensions.FieldFilter.Create(FieldFilterAttribute filterAttr, PropertyInfo propInfo) in c:\Dev\Lynicon\Lynicon.Core\Extensions\FieldFilter.cs:line 27
+   at Lynicon.Extensibility.LyniconUi.BuildFilters(EventHubData ehd) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconUi.cs:line 93
+   at Lynicon.Extensibility.LyniconUi..ctor() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconUi.cs:line 77
+   at Lynicon.Extensibility.LyniconUi..cctor() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconUi.cs:line 25
+   --- End of inner exception stack trace ---
+   at Lynicon.Extensibility.LyniconUi.get_Instance()
+   at Lynicon.Modules.CoreModule.Initialise() in c:\Dev\Lynicon\Lynicon.Core\Modules\CoreModule.cs:line 62
+   at Lynicon.Extensibility.LyniconModuleManager.Initialise() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 102
+2015-04-25 17:52:54,978 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 17:52:55,000 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 17:52:55,005 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 17:52:55,084 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 17:52:55,095 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Versioning.Publishing blocked, initialisation exception
+System.TypeInitializationException: The type initializer for 'Lynicon.Extensibility.LyniconUi' threw an exception. ---> System.NotImplementedException: Cannot have FieldFilter for property type Lynicon.Models.Summary
+   at Lynicon.Extensions.FieldFilter.Create(FieldFilterAttribute filterAttr, PropertyInfo propInfo) in c:\Dev\Lynicon\Lynicon.Core\Extensions\FieldFilter.cs:line 27
+   at Lynicon.Extensibility.LyniconUi.BuildFilters(EventHubData ehd) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconUi.cs:line 93
+   at Lynicon.Extensibility.LyniconUi..ctor() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconUi.cs:line 77
+   at Lynicon.Extensibility.LyniconUi..cctor() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconUi.cs:line 25
+   --- End of inner exception stack trace ---
+   at Lynicon.Extensibility.LyniconUi.get_Instance()
+   at Lynicon.Base.Modules.Publishing.Initialise() in c:\Dev\Lynicon\Lynicon.Base\Modules\Publishing.cs:line 56
+   at Lynicon.Extensibility.LyniconModuleManager.Initialise() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 102
+2015-04-25 17:52:55,105 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module Tasks blocked, initialisation exception
+System.TypeInitializationException: The type initializer for 'Lynicon.Extensibility.LyniconUi' threw an exception. ---> System.NotImplementedException: Cannot have FieldFilter for property type Lynicon.Models.Summary
+   at Lynicon.Extensions.FieldFilter.Create(FieldFilterAttribute filterAttr, PropertyInfo propInfo) in c:\Dev\Lynicon\Lynicon.Core\Extensions\FieldFilter.cs:line 27
+   at Lynicon.Extensibility.LyniconUi.BuildFilters(EventHubData ehd) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconUi.cs:line 93
+   at Lynicon.Extensibility.LyniconUi..ctor() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconUi.cs:line 77
+   at Lynicon.Extensibility.LyniconUi..cctor() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconUi.cs:line 25
+   --- End of inner exception stack trace ---
+   at Lynicon.Extensibility.LyniconUi.get_Instance()
+   at Lynicon.Base.TasksModule.Initialise() in c:\Dev\Lynicon.Test\Lynicon.Tasks\TasksModule.cs:line 36
+   at Lynicon.Extensibility.LyniconModuleManager.Initialise() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 102
+2015-04-25 17:52:55,112 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module SoftDelete blocked, initialisation exception
+System.TypeInitializationException: The type initializer for 'Lynicon.Extensibility.LyniconUi' threw an exception. ---> System.NotImplementedException: Cannot have FieldFilter for property type Lynicon.Models.Summary
+   at Lynicon.Extensions.FieldFilter.Create(FieldFilterAttribute filterAttr, PropertyInfo propInfo) in c:\Dev\Lynicon\Lynicon.Core\Extensions\FieldFilter.cs:line 27
+   at Lynicon.Extensibility.LyniconUi.BuildFilters(EventHubData ehd) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconUi.cs:line 93
+   at Lynicon.Extensibility.LyniconUi..ctor() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconUi.cs:line 77
+   at Lynicon.Extensibility.LyniconUi..cctor() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconUi.cs:line 25
+   --- End of inner exception stack trace ---
+   at Lynicon.Extensibility.LyniconUi.get_Instance()
+   at Lynicon.Base.Modules.SoftDelete.Initialise() in c:\Dev\Lynicon\Lynicon.Base\Modules\SoftDelete.cs:line 50
+   at Lynicon.Extensibility.LyniconModuleManager.Initialise() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 102
+2015-04-25 17:52:55,119 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 17:52:55,467 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 17:54:07,848 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 17:54:07,910 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 17:54:07,916 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 17:54:08,012 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 17:54:08,053 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 17:54:08,406 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 17:57:37,987 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 17:57:38,038 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 17:57:38,046 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 17:57:38,398 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 17:57:38,441 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 17:57:39,070 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 18:33:25,733 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 18:33:25,804 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 18:33:25,822 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 18:33:26,103 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 18:33:26,156 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 18:33:26,843 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-25 22:37:21,991 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-25 22:37:22,045 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-25 22:37:22,052 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-25 22:37:22,124 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-25 22:37:22,141 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-25 22:37:22,369 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-28 09:05:54,007 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-28 09:05:54,439 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-28 09:05:54,515 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-28 09:05:55,356 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-28 09:05:55,675 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-28 09:05:56,412 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-28 09:17:22,087 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-28 09:17:22,129 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-28 09:17:22,134 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-28 09:17:22,240 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-28 09:17:22,255 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-28 09:17:22,420 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-28 09:20:03,242 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-28 09:20:03,284 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-28 09:20:03,289 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-28 09:20:03,361 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-28 09:20:03,381 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-28 09:20:03,530 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-28 09:44:04,399 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-28 09:44:04,513 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-28 09:44:04,518 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-28 09:44:04,716 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-28 09:44:04,772 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-28 09:44:05,184 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-29 08:35:24,589 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-29 08:35:24,651 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-29 08:35:24,656 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-29 08:35:24,756 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-29 08:35:24,797 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-29 08:35:25,131 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-29 08:51:39,396 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-29 08:51:39,449 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-29 08:51:39,453 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-29 08:51:39,525 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-29 08:51:39,550 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-29 08:51:39,798 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-29 08:54:45,242 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-29 08:54:45,283 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-29 08:54:45,288 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-29 08:54:45,351 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-29 08:54:45,386 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-29 08:54:45,879 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-29 08:58:43,465 [24] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-29 08:58:43,508 [24] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-29 08:58:43,514 [24] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-29 08:58:43,579 [24] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-29 08:58:43,594 [24] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-29 08:58:43,757 [24] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-29 09:06:08,960 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-29 09:06:09,012 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-29 09:06:09,018 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-29 09:06:09,179 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-29 09:06:09,206 [1] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-29 09:06:09,542 [1] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-04-29 09:12:45,900 [24] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-04-29 09:12:45,951 [24] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-04-29 09:12:45,968 [24] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-04-29 09:12:46,052 [24] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-04-29 09:12:46,100 [24] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-04-29 09:12:46,325 [24] INFO Lynicon.Modules.SearchModule - Ending search index build

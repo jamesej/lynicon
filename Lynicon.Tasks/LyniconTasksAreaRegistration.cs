@@ -23,7 +23,7 @@ namespace Lynicon.Base
 
         public override void RegisterArea(AreaRegistrationContext context)
         {
-            LyniconModuleManager.Instance.EnsureRoutes<TasksModule>(context);
+            LyniconModuleManager.Instance.EnsureRoutes(context, "Lynicon.Tasks");
         }
     }
 }

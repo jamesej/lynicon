@@ -5,7 +5,7 @@
 
 @{
     int useDepth = ViewData.TemplateInfo.TemplateDepth + ((ViewData["addDepth"] as int?) ?? 0) - 1;
-    var props = ViewData.ModelMetadata.Properties.Where(pm => pm.PropertyName != "SelectedProperty" && pm.ShowForEdit).ToList();
+    var props = ViewData.ModelMetadata.Properties.Where(pm => pm.PropertyName != "SelectedProperty" && (pm.AdditionalValues.ContainsKey(SwitchableIconAttribute.Markup) || pm.ShowForEdit)).ToList();
 }
 <div class='object level-@useDepth'>
     @if (props.All(p => p.AdditionalValues.ContainsKey(SwitchableIconAttribute.Markup)))

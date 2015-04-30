@@ -1,0 +1,7 @@
+﻿@model Lynicon.Extensions.StringFieldFilter
+<div class="field-filter">
+    <label>@Model.Name</label>
+    @Html.TextBoxFor(m => m.Search)
+    @Html.HiddenFor(m => m.ModelType)
+</div>
+

@@ -1,12 +1,22 @@
 ﻿@model Lynicon.Models.PagingSpec
 @{
     Uri currentUri = ViewContext.HttpContext.Request.Url;
+    string id = "pager" + Guid.NewGuid().ToString();
+    string href = null;
     }
 @if (Model.NeedsPager) {
-<div class="lynicon-number-pager">
+<div id="@id" class="lynicon-number-pager">
     @foreach (int p in Model.PageRange(6)) {
+        if (string.IsNullOrEmpty(Model.ClientReload))
+        {
+            href = Model.GetUrl(currentUri, p);
+        }
+        else
+        {
+            href = string.Format("javascript:{0}('{1}');", Model.ClientReload, Model.GetUrl(currentUri, p));
+        }
     <span class="@(Model.Page == p ? " current" : "")">
-        <a class="paging-link" href="@Model.GetUrl(currentUri, p)">
+        <a class="paging-link" href="@href">
             @if (Model.IsEndPage(6, p) && p > 0) {
                 <i class='fa fa-caret-right'></i>
             } else if (Model.IsEndPage(6, p)) {

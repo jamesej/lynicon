@@ -1,0 +1,12 @@
+﻿
+@{
+    Layout = "~/Areas/Lynicon/Views/Shared/EditorLayout.cshtml";
+    ViewBag.Title = "Item Lister";
+}
+
+@section Head {
+    
+}
+
+<h1>Item Lister</h1>
+@Html.Action("ItemLister", "Items")

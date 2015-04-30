@@ -4,5 +4,5 @@
     typeof(BbText).IsAssignableFrom(ViewData.ModelMetadata.ModelType) ? ((Model as BbText) ?? BbText.Empty).Text : ViewData.TemplateInfo.FormattedModelValue.ToString(),
     ViewData["rows"] != null ? (int)ViewData["rows"] : 4,
     0,
-    new { @class = ViewData["classes"] })
+    new { @class = "lyn-text-area " + (string)ViewData["classes"] })
 

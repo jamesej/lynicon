@@ -2,5 +2,6 @@
     @{
         object list = ViewData["list"];
     }
-    @Html.EditorFor(m => list, null, ViewData["propertyPath"] as string)
+    @Html.EditorFor(m => list, null, ViewData["propertyPath"] as string,
+        new { CollectionAdditionalValues = ViewData["CollectionAdditionalValues"] })
 </div>

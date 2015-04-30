@@ -19,19 +19,19 @@
     lynSelectLists." + Model.SelectListId()
             + " = ["
             + Model.GetSelectList()
-            .Select(sli => "{value:\"" + sli.Value + "\",text:\"" + sli.Text.Replace("\"", "\\\"") + "\"}" )
+            .Select(sli => "{value:\"" + sli.Value + "\",text:\"" + (sli.Text ?? "").Replace("\"", "\\\"") + "\"}")
             .Join(",")
             + @"];
     
     function loadRefSelect($refSel) {
         var $listId = $refSel.siblings('input.select-list-id');
         if ($listId.length) {
-            var current = $refSel.val();
+            var currSelected = $refSel.find('option').map(function () { return this.value; }).get();
             var selList = lynSelectLists[$listId.val()];
             $refSel.empty();
             var html = '';
             for (var i = 0; i < selList.length; i++) {
-                html += '<option value=""' + selList[i].value + '""' + (selList[i].value == current ? ' selected' : '') + '>' + selList[i].text + '</option>';
+                html += '<option value=""' + selList[i].value + '""' + (currSelected.indexOf(selList[i].value) >= 0 ? ' selected' : '') + '>' + selList[i].text + '</option>';
             }
             $refSel.html(html);
         }

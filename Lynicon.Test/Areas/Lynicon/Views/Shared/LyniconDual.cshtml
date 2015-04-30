@@ -1,6 +1,7 @@
 ﻿@{
     Layout = "~/Areas/Lynicon/Views/Shared/EditorLayout.cshtml";
-    ViewBag.BaseUrl = (string)Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea });
+    ViewBag.BaseUrl = Request.Url.AbsolutePath;
+    @*ViewBag.BaseUrl = (string)Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea });*@
 }
 
 <div id='container' style="height: 100%; width: 100%; position:relative;">
@@ -19,6 +20,8 @@
                         <input type="hidden" id="updatedCheck" name="updatedCheck" value="@((long)ViewBag.UpdatedCheck)" />
                     }
                 }
+                @Html.Hidden("modelId", (string)ViewBag.Id)
+                @Html.Hidden("modelType", (string)Model.GetType().FullName)
             </div>
             @if (!ViewData.ModelState.IsValid)
             {

@@ -126,8 +126,14 @@ function readUrlEntry($container) {
 }
 
 $('#lyn-item-selector').on('shown', '.object.level-1', function (ev) {
-    var typeName = $(this).closest('.editor-unit').find('.type-name').val();
-    $(this).load('/lynicon/items/getpage?$top=10&$orderby=Title&datatype=' + typeName, notifyLayout);
+    var $this = $(this);
+    var $box = $this.closest('.editor-unit');
+    var typeName = $box.find('.type-name').val();
+    setBoxSpinner($box, true);
+    $this.load('/lynicon/items/getpage?$top=10&$orderby=Title&datatype=' + typeName, function () {
+        setBoxSpinner($box.closest('.editor-unit'), false);
+        notifyLayout();
+    });
 }).on('click', 'a.paging-link', function (ev) {
     var $panel = $(this).closest('.object.level-1');
     $panel.load($(this).prop('href'), notifyLayout);
@@ -163,7 +169,7 @@ $('#lyn-item-selector').on('shown', '.object.level-1', function (ev) {
         else if (res == "Already Exists") {
             alert("url has not been changed as the new url already exists");
         }
-        var datatype = $entry.closest('.lyn-type-items').prev('h2').find('input.type-name').val()
+        var datatype = $entry.closest('.editor-field').prev('.editor-label').find('input.type-name').val()
         $.get("@Url.Action("GetItem", "Items", new { area = "Lynicon" })", { id: id, datatype: datatype }, function (res) {
             $entry.replaceWith($(res));
             endAjax();

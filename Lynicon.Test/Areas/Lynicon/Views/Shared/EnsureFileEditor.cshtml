@@ -30,13 +30,13 @@
 @Html.RegisterScript("layout", "/Lynicon/Embedded/Scripts/jquery.layout.js/", new List<string>
     { "jquery" })
 @Html.RegisterScript("jstreelist", "/Lynicon/Embedded/Scripts/jquery.jstreelist.js/", new List<string>
-    { "jstree", "contextMenu", "fileuploader" }) %>
+    { "jstree", "contextMenu", "fileuploader" })
 @Html.RegisterScript("lyn_fileeditor_script",
     @"javascript:
     $(document).ready(function() {
         $('#_L24FileMgrContainer').jstreelist({ rootPath: '" + (ViewBag.FileManagerRoot as string) + @"' });
     });
-    function getFile(current, updateFile) {
+    function getFile(current, info, updateFile) {
         var $fm = $('#_L24FileMgrContainer').css('display', 'block');
         $fm.find('#outer').layout();
         $fm.css({ 'z-index': '1010', position: 'fixed' });
