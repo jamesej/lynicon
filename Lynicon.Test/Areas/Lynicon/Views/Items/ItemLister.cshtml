@@ -3,43 +3,159 @@
 @using Lynicon.Models
 @using Lynicon.Extensibility
 
-@Html.RegisterScript("ko", "/Areas/Lynicon/Scripts/knockout-3.2.0.js", new List<string> { "jquery" })
 @Html.RegisterLocalStyles("item-lister", @"
 #class-filter { width: 300px; }
 ")
 @{
     var filters = LyniconUi.Instance.Filters;
+    var versSelector = (List<VersionSelectionViewModel>)ViewData["VersionSelector"];
+    int vIdx = 0;
 }
 <form id="filter-section" action="/Lynicon/Items/FilterItems?$top=10">
-    @Html.DropDownList("classFilter", Model.ContentClasses, new { @class = "chosen-select", multiple = "multiple" })
-    @Html.EditorFor(m => m.Filters, "Filters")
+    <fieldset id="version-filter">
+    @foreach (var vsvm in versSelector)
+    {
+        <label>@vsvm.Title</label>
+        @Html.DropDownList("versionFilter[" + vIdx + "]", vsvm.SelectList, new { @class = "version-select", data_versionkey = vsvm.VersionKey })
+        vIdx++;
+    }
+    </fieldset>
+    <fieldset id="type-filter">
+        @Html.DropDownList("classFilter", Model.ContentClasses, new { @class = "chosen-select", multiple = "multiple" })
+    </fieldset>
+    <fieldset id="specific-filters">
+        @Html.EditorFor(m => m.Filters, "Filters")
+    </fieldset>
     <button id="show-results">SHOW</button>
 </form>
 <div id="results-section">
     
 </div>
+Checked: <span id="check-count">0</span>
+<button id="clear-all">Clear All</button>
+<button id="set-page">Set Page</button>
+<div id="buttons">
+    @foreach (var ilb in LyniconUi.Instance.CurrentItemsListButtons())
+    {
+        <button class="items-list-button" data-url="@ilb.Url" data-confirm="@ilb.ConfirmMessage">@ilb.Caption</button>
+    }
+</div>
+<div id="result"></div>
 
 
 <script type="text/javascript">
     //$.ajax({ traditional: true });
     $('#filter-section').find(".chosen-select").chosen({ search_contains: true });
+    $('.lyn-datetime').datepicker({ changeMonth: true, changeYear: true, dateFormat: 'yy-mm-dd' });
+
     $('#show-results').click(function (ev) {
         ev.preventDefault();
         var data = $('#filter-section').serialize();
-        $.post($('#filter-section').prop('action'), data, function (d) {
+        var url = $('#filter-section').prop('action').split('?')[0] + '?$top=10';
+        $('#filter-section').prop('action', url);
+        $.post(url, data, function (d) {
             $('#results-section').html(d);
+            clearChecks();
+        }).fail(function () {
+            alert('There was an error');
+        }).always(function () {
+            $('#show-results').text('SHOW');
+        });
+        $('#show-results').text('working...');
+    });
+    
+    function getVersions() {
+        var versions = {};
+        $('.version-select').each(function () {
+            versions[$(this).data('versionkey')] = $(this).val();
+        });
+        return versions;
+    }
+    var checkStorageKey = "itemChecks";
+    function getChecks() {
+        var str = localStorage.getItem(checkStorageKey) || '';
+        return str == '' ? [] : str.split(',');
+    }
+    function addCheck(itemId) {
+        var items = getChecks();
+        if (items.indexOf(itemId) < 0) {
+            items.push(itemId);
+            localStorage.setItem(checkStorageKey, items.join(','));
+            $('#check-count').text(items.length);
+        }    
+    }
+    function removeCheck(itemId) {
+        var items = getChecks();
+        var pos = items.indexOf(itemId);
+        if (pos >= 0) {
+            items.splice(pos, 1);
+            localStorage.setItem(checkStorageKey, items.join(','));
+            $('#check-count').text(items.length);
+        }
+    }
+    function clearChecks() {
+        localStorage.removeItem(checkStorageKey);
+        $('#check-count').text('0');
+    }
+    function applyChecks() {
+        var items = getChecks();
+        $('#results-section .item-check').each(function () {
+            if (items.indexOf($(this).data('id')) >= 0)
+                $(this).prop('checked', true);
+        });
+    }
+    
+    clearChecks();
+    $('#results-section').on('change', '.item-check', function () {
+        if ($(this).is(':checked'))
+            addCheck($(this).data('id'));
+        else
+            removeCheck($(this).data('id'));
+    });
+    $('#clear-all').click(function (ev) {
+        ev.preventDefault();
+        $('#results-section .item-check:checked').each(function () {
+            $(this).prop('checked', false);
+        });
+        clearChecks();
+    });
+    $('#set-page').click(function (ev) {
+        ev.preventDefault();
+        $('#results-section .item-check').not(':checked').each(function () {
+            $(this).prop('checked', true);
+            addCheck($(this).data('id'));
         });
     });
+
+    // functions
+    $('#buttons').on('click', '.items-list-button', function (ev) {
+        ev.preventDefault();
+        var $this = $(this);
+        if ($this.data('confirm') && !confirm($this.data('confirm')))
+            return;
+        var url = $this.data('url');
+        var origText = $this.text();
+        $this.text('Working...');
+        $.post(url, { itemIds: getChecks(), version: getVersions() }, function (html) {
+            if (html) $('#result').html(html);
+        }).always(function () {
+            $this.text(origText);
+        }).fail(function () {
+            alert('The process failed');
+        });
+    })
 
     // paging overrides
     function navigate(url) {
         var data = $('#filter-section').serialize();
-        $('#results-section').load(url, data, function () {
+        $.post(url, data, function (html) {
+            $('#results-section').html(html);
             var top = url.replace(/.*(\$top=.*?)(&.*)?$/, '$1');
             var skip = url.replace(/.*(\$skip=.*?)(&.*)?$/, '$1');
             skip = (skip == url) ? '' : '&' + skip;
             var newUrl = url.split('?')[0] + '?' + top + skip;
             $('#filter-section').prop('action', newUrl);
+            applyChecks();
         });
     }
 </script>

@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Routing;
 using Lynicon.Attributes;
+using Lynicon.Base.Models;
+using Lynicon.Base.Modules;
 using Lynicon.Collation;
 using Lynicon.Models;
 using Lynicon.Relations;
@@ -51,10 +53,16 @@ namespace Lynicon.Test.Models
         [Summary]
         public string Title { get; set; }
 
-        [Summary, UIHint("Html")]
+        [Summary, UIHint("MaxHtml")]
         public string Description { get; set; }
         [UIHint("ReferenceSelect")]
         public Reference<ChefContent> Chef { get; set; }
+
+        [UIHint("ReferenceServer")]
+        public Reference<HeaderContent> TestHeader { get; set; }
+
+        [UIHint("ReferenceServer")]
+        public CrossVersionReference<ChefContent> CVChef { get; set; }
 
         public MinHtml SomeInfo { get; set; }
 
@@ -69,15 +77,19 @@ namespace Lynicon.Test.Models
         {
             get
             {
-                if (chefFull == null)
+                if (chefFull == null && Chef.ItemId != null)
+                {
                     chefFull = Collator.Instance.Get<ChefContent>(Chef.ItemId);
-                return chefFull.Biography;
+                    return chefFull.Biography;
+                }
+                return "";
             }
         }
 
         public RestaurantContent()
         {
             BaseContent.InitialiseProperties(this);
+            CVChef = new CrossVersionReference<ChefContent>(Partition.AnyPartition);
         }
     }
 }

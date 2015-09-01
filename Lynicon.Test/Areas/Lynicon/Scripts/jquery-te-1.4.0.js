@@ -680,7 +680,7 @@
 				// if not selected to link-type of picture
 				if(linktypes.data("linktype")!="2") {
 				    //selectionSet("createlink",linkinput.val()); // insert link url of link-input to the selected node
-				    selectionSet("insertHtml", "<a href=\"" + linkinput.val() + "\" " + (linkopencheck.prop("checked") ? "target=\"_blank\" " : "") + (linkfollowcheck.prop("checked") ? "" : "rel=\"nofollow\" ") + ">" + selectionGet() + "</a>");
+				    selectionSet("insertHtml", "<a href=\"" + linkinput.val() + "\"" + (linkopencheck.prop("checked") ? " target=\"_blank\"" : "") + (linkfollowcheck.prop("checked") ? "" : " rel=\"nofollow\"") + ">" + selectionGet() + "</a>");
 				// if selected to link-type of picture
 				} else {
 					selectionSet("insertImage",linkinput.val()); // insert image url of link-input to the selected node
@@ -936,8 +936,9 @@
 			{
 				var $htmlContent, $htmlPattern, $htmlReplace;
 
-				// first remove to unnecessary gaps
-				$htmlContent = strings.replace(/\n/gim,"").replace(/\r/gim,"").replace(/\t/gim,"").replace(/&nbsp;/gim," ");
+			    // first remove to unnecessary gaps
+                // PATCH add spaces for \n and \t otherwise word pastes lose spaces
+				$htmlContent = strings.replace(/\n/gim," ").replace(/\r/gim,"").replace(/\t/gim," ").replace(/&nbsp;/gim," ");
 
 				$htmlPattern =  [
 					/\<span(|\s+.*?)><span(|\s+.*?)>(.*?)<\/span><\/span>/gim, // trim nested spans

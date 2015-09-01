@@ -2,6 +2,11 @@
 <div class="field-filter">
     <label>@Model.Name</label>
     @Html.TextBoxFor(m => m.Search)
+    @if (Model.Showable)
+    {
+        <label>Show</label>
+        @Html.CheckBoxFor(m => m.Show)
+    }
     @Html.HiddenFor(m => m.ModelType)
 </div>
 

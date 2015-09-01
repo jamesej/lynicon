@@ -12,6 +12,14 @@ using Newtonsoft.Json;
 
 namespace Lynicon.Test.Models
 {
+    [Serializable]
+    public class SubTest
+    {
+        public string A {get; set;}
+
+        [Index(IndexAttribute.Mode.TextualAndAgglomerated)]
+        public string B {get; set;}
+    }
     [Serializable, RedirectPropertySource("Common")]
     public class HeaderContent : PageContent
     {
@@ -20,6 +28,8 @@ namespace Lynicon.Test.Models
         public string HeaderBody { get; set; }
 
         public string Common { get; set; }
+
+        public List<SubTest> SubTests { get; set; }
 
         private List<GeneralSummary> childItems = null;
         [JsonIgnore, ScaffoldColumn(false)]
@@ -37,6 +47,7 @@ namespace Lynicon.Test.Models
         {
             Summary = new GeneralSummary();
             this.AlternateUrls = new AlternateUrlList();
+            this.SubTests = new List<SubTest>();
         }
     }
 }

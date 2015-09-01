@@ -1,0 +1,13 @@
+﻿@model Lynicon.Base.Models.TransferFilter
+<div class="field-filter">
+    <label>@Model.Name</label>
+    <label>Never Transferred</label>
+    @Html.EditorFor(m => m.NeverTransferred)
+    <label>Requiring Transfer</label>
+    @Html.EditorFor(m => m.RequiringTransfer)
+    <label>Show</label>
+    @Html.CheckBoxFor(m => m.Show)
+
+    @Html.HiddenFor(m => m.ModelType)
+</div>
+

@@ -2,27 +2,20 @@
 @using System.Reflection
 @using Lynicon.Utility
 @using Lynicon.Models
+@using Lynicon.Extensibility
 
 @{
-    var showPropsCont = (List<PropertyInfo>)ViewData["ShowPropsCont"];
-    var showPropsSumm = (List<PropertyInfo>)ViewData["ShowPropsSumm"];
+    var showFilts = (List<ListFilter>)ViewData["ShowFilts"];
 }
-<table>
-    @foreach (var summ in Model)
+<table id="results">
+    @foreach (var dataLine in Model)
     {
         <tr>
-            <td>@summ.Item2.Title</td>
-            @foreach (var prop in showPropsCont)
+            <td><input data-id="@dataLine.Item2.ItemId" type="checkbox" class="item-check" /></td>
+            <td><a href="@dataLine.Item2.Url">@dataLine.Item2.DisplayTitle()</a></td>
+            @foreach (var filt in showFilts)
             {
-                if (prop.DeclaringType.IsAssignableFrom(summ.GetType()))
-                {
-                    <td>@prop.GetValue(summ.Item2)</td>
-                }
-                else
-                {
-                    <td></td>
-                }
-
+                <td>@filt.GetShowText(dataLine)</td>
             }
         </tr>
     }

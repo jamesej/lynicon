@@ -23,6 +23,9 @@ namespace Lynicon.Test
             routes.AddDataRoute<TestContent>("test", "Test/{action}",
                 new { controller = "Test", action = "Index" });
 
+            routes.MapRoute("testaction", "TestAction/{action}",
+                new { controller = "Test" });
+
             routes.AddDataRoute<SingleContent>("single", "Single",
                 new { controller = "Single", action = "Index", vsn = new DynamicRouteValue(() => VersionManager.Instance.CurrentVersion.ToString()) });
 
@@ -49,6 +52,11 @@ namespace Lynicon.Test
 
             routes.AddDataRoute<RestaurantContent>("restaurants", "restaurants/{_0}",
                 new { controller = "Restaurant", action = "Index" });
+
+            routes.AddDataRoute<TagContent>("tags", "tags/{_0}",
+                new { controller = "Tag", action = "Index" });
+
+            routes.Redirect("stuff", "stuff/{_0}", "articles/{_0}");
 
             //routes.MapRoute(
             //    name: "Default",

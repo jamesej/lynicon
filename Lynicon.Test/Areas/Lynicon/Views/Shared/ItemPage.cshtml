@@ -26,11 +26,11 @@
     @if (ViewData.ContainsKey("UrlPermission") && (bool)ViewData["UrlPermission"])
     {
         <div class="reveal-funcs">
-            <a class="move-link cmd-link" href="/@summ.Url?$urlget=true" title="Move Url">Url</a>
+            <a class="move-link cmd-link" href="@summ.Url?$urlget=true" title="Move Url">Url</a>
             <a class="del-link cmd-link" title="Delete Url"><i class="fa fa-times"></i></a>
         </div>
     }
-    <a class="item-link" href="/@summ.Url" target="_blank" title="@summ.Id">@summ.DisplayTitle()</a>
+    <a class="item-link" href="@summ.Url" target="_blank" title="@summ.Id">@summ.DisplayTitle()</a>
 </div>
 }
 @if (paging != null)
@@ -42,6 +42,7 @@
             var $panel = $button.closest('.object.level-1');
             $panel.load(url, notifyLayout);
             }
-            function thisUrl() {
-            return """ + currentUri.OriginalString + @"""
+            function thisUrl($this) {
+            var datatype = $this.closest('.editor-unit').find('.type-name').val();
+            return """ + currentUri.OriginalString + @""".replace(/datatype=.*$/, 'datatype=' + datatype);
             }", new List<string> { "lynicon-filter-textbox" })

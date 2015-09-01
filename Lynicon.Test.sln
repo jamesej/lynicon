@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lynicon.Test", "Lynicon.Test\Lynicon.Test.csproj", "{E892F2D8-83F7-408A-8438-D8739A9C5746}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lynicon.Workflow", "Lynicon.Workflow\Lynicon.Workflow.csproj", "{A9FACE40-83C8-48BC-A208-BBF4B37B889C}"
@@ -10,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lynicon", "..\Lynicon\Lynicon.Core\Lynicon.csproj", "{F9FB7EA1-57D4-49D0-9776-A7A7A8E23475}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lynicon.Base", "..\Lynicon\Lynicon.Base\Lynicon.Base.csproj", "{47A2D927-CF55-4185-8125-9740736299DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lynicon.AutoTests", "Lynicon.AutoTests\Lynicon.AutoTests.csproj", "{ED7EE577-CFFA-4ABA-8535-3BA89D50DEF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -70,6 +74,16 @@ Global
 		{47A2D927-CF55-4185-8125-9740736299DD}.QA|Any CPU.Build.0 = Release|Any CPU
 		{47A2D927-CF55-4185-8125-9740736299DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47A2D927-CF55-4185-8125-9740736299DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED7EE577-CFFA-4ABA-8535-3BA89D50DEF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED7EE577-CFFA-4ABA-8535-3BA89D50DEF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED7EE577-CFFA-4ABA-8535-3BA89D50DEF7}.ForServices|Any CPU.ActiveCfg = Release|Any CPU
+		{ED7EE577-CFFA-4ABA-8535-3BA89D50DEF7}.ForServices|Any CPU.Build.0 = Release|Any CPU
+		{ED7EE577-CFFA-4ABA-8535-3BA89D50DEF7}.Prod|Any CPU.ActiveCfg = Release|Any CPU
+		{ED7EE577-CFFA-4ABA-8535-3BA89D50DEF7}.Prod|Any CPU.Build.0 = Release|Any CPU
+		{ED7EE577-CFFA-4ABA-8535-3BA89D50DEF7}.QA|Any CPU.ActiveCfg = Release|Any CPU
+		{ED7EE577-CFFA-4ABA-8535-3BA89D50DEF7}.QA|Any CPU.Build.0 = Release|Any CPU
+		{ED7EE577-CFFA-4ABA-8535-3BA89D50DEF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED7EE577-CFFA-4ABA-8535-3BA89D50DEF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

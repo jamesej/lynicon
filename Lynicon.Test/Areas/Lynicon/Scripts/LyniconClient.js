@@ -1,6 +1,8 @@
 ﻿var lynicon = {
     getCrop: function (url, cropDef) {
-        url = url.replace("gbc.blob.core.windows.net", "az723720.vo.msecnd.net");
+        if (url == null) {
+            return url;
+        }
         var pathParts = url.split("/");
         if (pathParts.length == 1)
             return url;

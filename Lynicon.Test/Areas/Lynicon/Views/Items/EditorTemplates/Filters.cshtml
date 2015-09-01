@@ -13,6 +13,7 @@
         string fieldName = String.Format("filters[{0}]", index);
         string templateName = filter.GetType().Name.UpTo("`");
         @Html.EditorFor(m => filter, templateName, fieldName)
+        index++;
     }
     @{
         ViewData.TemplateInfo.HtmlFieldPrefix = oldPrefix;

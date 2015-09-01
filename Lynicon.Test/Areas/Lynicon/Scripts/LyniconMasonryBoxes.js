@@ -9,7 +9,11 @@ function notifyVisible($container) {
         loadRefSelect($(this));
     });
     if ($.fn.chosen)
-        $container.find(".chosen-select:visible").chosen({ search_contains: true });
+        $container.find("select.chosen-select:visible").chosen({ search_contains: true, allow_single_deselect: true });
+    if ($.fn.selectize)
+        $container.find("select.lyn-selectize:visible").each(function () {
+            initSelectize($(this));
+        });
 }
 
 function notifyAddSelectOption($container, type, val, txt)

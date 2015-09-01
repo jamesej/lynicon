@@ -38,7 +38,7 @@
         itemHeading = propName.EndsWith("ies") ? propName.UpToLast("ies") + "y" : propName.UpToLast("s");
         itemHeading = itemHeading.ExpandCamelCase();
     }
-    var additionalValues = (Dictionary<string, object>)(ViewData["CollectionAdditionalValues"] ?? ViewData.ModelMetadata.AdditionalValues);
+    var additionalValues = (ViewData.ModelMetadata.AdditionalValues ?? new Dictionary<string, object>()).Merge(ViewData["CollectionAdditionalValues"] as Dictionary<string, object>);
     string template = (string)(additionalValues.ContainsKey(ItemTemplateAttribute.Key) ? additionalValues[ItemTemplateAttribute.Key] : null);
 
     if (count == 0)
@@ -85,7 +85,7 @@
                 @Html.EditorFor(m => item, template, fieldName, new { CollectionAdditionalValues = additionalValues })
             </div>
 
-                    index++;
+            index++;
         }
     }
 

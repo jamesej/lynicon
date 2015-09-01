@@ -15,7 +15,7 @@ using Lynicon.Workflow.Models;
 using Lynicon.Utility;
 using Lynicon.Models;
 
-namespace Lynicon
+namespace Lynicon.Workflow
 {
     public class WorkflowModule : Module
     {
@@ -39,8 +39,7 @@ namespace Lynicon
             if (!VerifyDbState("LyniconWorkflow 0.0"))
                 return false;
 
-            VersionManager.Instance.RegisterVersion(VersionKey, false,
-                SetCurrentVersion, GetItemVersion, SetItemVersion, TestVersioningMode, DisplayItemVersion, null, null);
+            VersionManager.Instance.RegisterVersion(VersionKey, false, new WorkflowVersioner(VersionKey), null);
 
             EventHub.Instance.RegisterEventProcessor("Repository.Get", ProcessGet, "Workflow",
                 new OrderConstraint("Workflow", "Caching"));

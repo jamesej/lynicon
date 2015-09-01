@@ -24,7 +24,7 @@
     $(document).ready(function () {
         function doFilter(ev) {
             ev.preventDefault();
-            var url = thisUrl();
+            var url = thisUrl($(this));
             if ($(this).hasClass('filter-clear')) {
                 url = ensureKeyValue(url, '$filter', null);
                 url = ensureKeyValue(url, 'search-value', null);
@@ -36,7 +36,7 @@
                 var fields = filterFields[$(this).data('filter')];
                 var filt = '';
                 for (var i = 0; i < fields.length; i++) {
-                    filt += (filt ? ' or ' : '') + ""substringof('"" + val.toLowerCase().replace(""'"", ""''"") + ""',tolower("" + fields[i] + ""))"";
+                    filt += (filt ? ' or ' : '') + fields[i] + "" ne null and substringof('"" + val.toLowerCase().replace(""'"", ""''"") + ""',tolower("" + fields[i] + ""))"";
                 }
                 url = ensureKeyValue(url, '$filter', filt);
                 url = ensureKeyValue(url, '$skip', 0);

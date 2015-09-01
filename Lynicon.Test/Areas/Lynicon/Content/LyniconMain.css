@@ -665,6 +665,62 @@ margin-left: 16px;
 	border-radius: 12px;
 	float: right;
 	margin-right: 1px;
+	position: relative;
+}
+
+#funcPanel .lyn-version-next {
+	position: absolute;
+  top: -5px;
+  left: 8px;
+}
+
+#funcPanel .lyn-version-prev {
+	position: absolute;
+  bottom: -5px;
+  left: 8px;
+}
+
+#funcPanel .lyn-version-arrow {
+  color: #909090;
+  cursor: pointer;
+}
+
+#funcPanel .lyn-version-arrow:hover {
+  color: #000;
+}
+
+#funcPanel .lyn-version-go {
+	float: right;
+  width: 4px;
+  height: 19px;
+  padding: 6px 4px;
+}
+
+#funcPanel .lyn-version-go-button {
+	color: white;
+	font-size: 17px;
+	cursor: pointer;
+}
+
+#funcPanel .overridden .lyn-version-display {
+  background-color: #ce5858;
+  color: white;
+}
+
+#funcPanel .overridden .lyn-version-arrow {
+  color: #f99393;
+}
+
+#funcPanel .overridden .lyn-version-arrow:hover {
+  color: #fff;
+}
+
+#funcPanel #fpbPublish.needs-pub {
+    background-color: #cea758 !important;
+}
+
+#funcPanel #fpbPublish.unpub {
+    background-color: #ce5858 !important;
 }
 
 /* LIST EDITOR */
@@ -1015,6 +1071,10 @@ float: right;
 
 .lyn-item-filter-bar i.fa {
 color: #fff;
+}
+
+#lister-bottom-spacer {
+	height: 60px;
 }
 
 /* LOGIN */

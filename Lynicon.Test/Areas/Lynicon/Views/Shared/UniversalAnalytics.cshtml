@@ -9,15 +9,55 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', '@Model', 'auto');
 ga('send', 'pageview');
 
-$(document).ready(function () {
-    $('body').on('click', 'a', function (ev) {
-        var $trackContext = $(this).closest('link-track');
+$(document).ready(function() {
+    $('body').on('click', 'a', function(ev) {
+        //var $trackContext = $(this).closest('.link-track');
+        var $trackContext;
+        if ($(this).hasClass('link-track'))
+            $trackContext = $(this);
+        else
+            $trackContext = $(this).closest('.link-track');
         if ($trackContext.length && $trackContext.data('link-track')) {
             var link = $(this).attr('href') || 'no link';
             var linkType = link.substr(0, 4) == 'http' && link.indexOf(window.location.hostname) == -1 ? 'External Link' : 'Internal Link';
-            ga('send', linkType, $trackContext.data('link-track'), link);
+            ga('send', 'event', linkType, $trackContext.data('link-track'), link);
+            //alert('send ' + linkType + " " + $trackContext.data('link-track') + " " + link);
         }
-    })
-})
+    });
+    $('body').on('click', '.track-click', function(ev) {
+        $trackContext = $(this);
+        if ($trackContext.length && $trackContext.data('track-click')) {
+            var link = 'click';
+            var linkType = 'Internal Link';
+            var linkTrackData = $trackContext.data('track-click');
+            ga('send', 'event', linkType, linkTrackData, link);
+            //alert('send ' + linkType + " " + linkTrackData + " " + link);
+        }
+            
+    });
+    $('body').on('change', '.track-change', function (ev) {
+        $trackContext = $(this);
+        if ($trackContext.length && $trackContext.data('track-change')) {
+            var link = 'change';
+            var linkType = 'Internal Link';
+            var linkTrackData = $trackContext.data('track-change');
+            ga('send', 'event', linkType, linkTrackData, link);
+            //alert('send ' + linkType + " " + linkTrackData + " " + link);
+        }
+
+    });
+    $('video').on('play stop pause error ended volumechange', function (ev) {
+        $trackContext = $(this);
+        if ($trackContext.length) {
+            var link = ev.type;
+            var linkType = 'Internal Link';
+            var linkTrackData = 'video';
+            ga('send', 'event', linkType, linkTrackData, link);
+            //alert('send ' + linkType + " " + linkTrackData + " " + link);
+        }
+    });
+
+
+});
 
 </script>

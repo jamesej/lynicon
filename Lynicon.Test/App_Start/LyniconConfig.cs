@@ -34,15 +34,25 @@ namespace Lynicon.Test
             LyniconModuleManager.Instance.RegisterModule(new CoreModule());
             LyniconModuleManager.Instance.RegisterModule(new ContentSchemaModule());
             LyniconModuleManager.Instance.RegisterModule(new UrlListModule(t => t != typeof(User)));
-            LyniconModuleManager.Instance.RegisterModule(fullCache);
-            //LyniconModuleManager.Instance.RegisterModule(new Auditing());
+            LyniconModuleManager.Instance.RegisterModule(new SummaryCache(t => t != Repository.Instance.ContainerType(typeof(User))));
+            LyniconModuleManager.Instance.RegisterModule(new Auditing());
             LyniconModuleManager.Instance.RegisterModule(new Publishing());
             LyniconModuleManager.Instance.RegisterModule(new TasksModule());
             LyniconModuleManager.Instance.RegisterModule(new SoftDelete());
+            var transfer = new Transfer(t => true, Publishing.PublishedVersion);
+            transfer.AutoTransferType = t => t == typeof(TagContent);
+            LyniconModuleManager.Instance.RegisterModule(transfer);
+            LyniconModuleManager.Instance.RegisterModule(new Sitemap());
 
             var searchModule = new SearchModule(t => t == typeof(HeaderContent));
             searchModule.DontRebuild = true;
             LyniconModuleManager.Instance.RegisterModule(searchModule);
+
+            LyniconModuleManager.Instance.RegisterModule(new DomainPartition(
+                new DomainPartitionInfo[] {
+                    new DomainPartitionInfo { PartitionId = 1, Domain = "localhost", Code = "LH", Name = "Localhost" },
+                    new DomainPartitionInfo { PartitionId = 2, Domain = "www.gic.com", Code = "GIC", Name = "GIC" }
+                }));
 
             LyniconModuleManager.Instance.ValidateModules();
         }
@@ -63,7 +73,7 @@ namespace Lynicon.Test
 
             BuildTaskflows();
 
-            DalTrack.Instance.Initialise();
+            //DalTrack.Instance.Initialise();
         }
 
         public static void Shutdown()

@@ -151,7 +151,7 @@ $('#lyn-item-selector').on('shown', '.object.level-1', function (ev) {
         var edHtml = urlEntryHtml(patt, 'edit-link', 'Save', 'save-url-link');
         var $ed = $(edHtml).hide();
         $item.after($ed);
-        $ed.show('fast');
+        $ed.show('fast', function () { notifyLayout(); });
         $mover.hide();
         $item.closest('.lyn-item-entry').find('.edit-link input:first').focus();
     });
@@ -222,7 +222,7 @@ $('#lyn-item-selector').on('shown', '.object.level-1', function (ev) {
         $newEntry = null;
         notifyLayout();
     });
-    window.open("/" + url);
+    window.open("/" + url + "?$type=" + $(this).closest('.editor-unit').find('.type-name').val());
 }).on('mouseenter', '.lyn-item-entry', function () {
     $(this).find('.reveal-funcs').show();
 }).on('mouseleave', '.lyn-item-entry', function () {

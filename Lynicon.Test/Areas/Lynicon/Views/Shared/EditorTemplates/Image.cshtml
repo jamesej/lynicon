@@ -4,7 +4,7 @@
 @if (Model != null)
 {
     bool showImg = (Model != null && !string.IsNullOrEmpty(Model.Url));
-    var avs = (Dictionary<string, object>)ViewData["CollectionAdditionalValues"] ?? ViewData.ModelMetadata.AdditionalValues;
+    var avs = (ViewData.ModelMetadata.AdditionalValues ?? new Dictionary<string, object>()).Merge(ViewData["CollectionAdditionalValues"] as Dictionary<string, object>);
     string getFileInfo = avs.ContainsKey(RequiredCropsAttribute.CropsKey)
         ? (string)avs[RequiredCropsAttribute.CropsKey]
         : null;
@@ -24,10 +24,8 @@
             <div class='lyn-image-load' data-get-file-info="@getFileInfo">Find</div>
             <span class="editor-label">Alt</span>
             @Html.EditorFor(m => m.Alt)
-            <span class="editor-label">X%</span>
-            @Html.EditorFor(m => m.BackgroundXPc)
-            <span class="editor-label">Y%</span>
-            @Html.EditorFor(m => m.BackgroundYPc)
+            @Html.HiddenFor(m => m.BackgroundXPc)
+            @Html.HiddenFor(m => m.BackgroundYPc)
         </div>
     </div>
 }

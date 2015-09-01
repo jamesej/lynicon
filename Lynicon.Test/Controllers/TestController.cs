@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Lynicon.Attributes;
 using Lynicon.Collation;
 using Lynicon.Extensibility;
 using Lynicon.Linq;
@@ -221,5 +223,28 @@ namespace Lynicon.Test.Controllers
             return View("HtmlNorm", sio);
         }
 
+        public ActionResult VersioningTest()
+        {
+            var vt = new VersioningTest();
+            vt.Run();
+            Debug.WriteLine(string.Format("[{0}]Req ran option {1}", Thread.CurrentThread.ManagedThreadId, vt.Option));
+            return Content("Ran option " + vt.Option.ToString());
+        }
+
+        public ActionResult VersioningTestBackground()
+        {
+            Task.Run(() =>
+                {
+                    while (true)
+                    {
+                        var vt = new VersioningTest();
+                        vt.Run();
+                        Debug.WriteLine(string.Format("[{0}] ran option {1}", Thread.CurrentThread.ManagedThreadId, vt.Option));
+                        Task.Delay(new Random().Next(100));
+                    }
+                });
+
+            return Content("Running background");
+        }
     }
 }

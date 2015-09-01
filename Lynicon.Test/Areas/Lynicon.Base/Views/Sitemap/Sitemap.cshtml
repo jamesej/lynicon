@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Summary>
+@using Lynicon.Models;
+@using Lynicon.Base.Models;
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+    @foreach (var summ in Model)
+    {
+        <url>
+            <loc>@(ViewData["Site"].ToString())@summ.Url</loc>
+            @if (summ is IHasVideo)
+            {
+                var vSumm = (IHasVideo)summ;
+                if (vSumm.Video != null && !string.IsNullOrEmpty(vSumm.Video.Url) && vSumm.Video.Poster != null && !string.IsNullOrEmpty(vSumm.Video.Poster.Url) && !vSumm.Video.Poster.Url.StartsWith("~"))
+                {
+                    <video:video>
+                        <video:thumbnail_loc>@vSumm.Video.Poster.Url.StartsWith("//") ? "http:" + vSumm.Video.Poster.Url : vSumm.Video.Poster.Url</video:thumbnail_loc>
+                        <video:title>@summ.Title</video:title>
+                        <video:content_loc>@vSumm.Video.Url.StartsWith("//") ? "http:" + vSumm.Video.Url : vSumm.Video.Url</video:content_loc>
+                        <video:live>no</video:live>
+                    </video:video>
+                }
+            }
+        </url>
+    }
+
+</urlset>

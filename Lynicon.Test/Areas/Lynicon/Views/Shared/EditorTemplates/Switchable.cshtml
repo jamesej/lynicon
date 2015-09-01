@@ -2,10 +2,25 @@
 @using Lynicon.Models
 @using Lynicon.Utility
 @using Lynicon.Attributes
+@using System.Reflection
 
 @{
     int useDepth = ViewData.TemplateInfo.TemplateDepth + ((ViewData["addDepth"] as int?) ?? 0) - 1;
     var props = ViewData.ModelMetadata.Properties.Where(pm => pm.PropertyName != "SelectedProperty" && (pm.AdditionalValues.ContainsKey(SwitchableIconAttribute.Markup) || pm.ShowForEdit)).ToList();
+}
+@{
+    Func<ModelMetadata, bool> ShouldShow = (ModelMetadata metadata) =>
+    {
+        bool shouldShowType = true;
+        PropertyInfo pi = metadata.ModelType.GetProperty("ShouldShow", BindingFlags.Public | BindingFlags.Static);
+        if (pi != null)
+            shouldShowType = (bool)pi.GetValue(null);
+
+        return metadata.ShowForEdit
+            //&& !metadata.IsComplexType
+            && !ViewData.TemplateInfo.Visited(metadata)
+            && shouldShowType;
+    };
 }
 <div class='object level-@useDepth'>
     @if (props.All(p => p.AdditionalValues.ContainsKey(SwitchableIconAttribute.Markup)))
@@ -33,7 +48,8 @@
         }
     }
     @{ ViewData["HeaderRendered" + useDepth] = true; }
-    @foreach (var prop in props) {
+    @foreach (var prop in props.Where(pm => ShouldShow(pm)))
+    {
         <div class="editor-unit level-@useDepth prop-@prop.PropertyName" style="@(prop.PropertyName == Model.SelectedProperty ? "" : "display:none")">
             <div class="editor-field indent-@useDepth">@Html.Editor(prop.PropertyName)</div>
         </div>
@@ -52,7 +68,9 @@ $(document).ready(function () {
     }).on('click', '.switchable-icon', function () {
         var $this = $(this);
         $this.addClass('selected').siblings('.switchable-icon').removeClass('selected');
-        $this.closest('.switchable-icons-block').siblings('.editor-unit').hide().filter('.prop-' + $this.data('property-name')).show();
+        var $showCont = $this.closest('.switchable-icons-block').siblings('.editor-unit').hide().filter('.prop-' + $this.data('property-name'));
+        $showCont.show();
+        notifyVisible($showCont);
         $this.siblings('input').val($this.data('property-name'));
         var $hdg = $this.closest('.editor-field').prev('.collection-item-bar').find('.collection-item-heading');
         if ($hdg.length && $hdg[0].firstChild)

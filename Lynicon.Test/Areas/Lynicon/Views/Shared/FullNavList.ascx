@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<Lynicon.Map.NavTreeSummary>" %>
 <li>
-    <a class="nav-link" href="/<%= Model.Url %>"><%= Model.Title %></a>
+    <a class="nav-link" href="<%= Model.Url %>"><%= Model.Title %></a>
 </li>
 <% if (Model.Children != null && Model.Children.Count > 0) { %>
 <ul>
