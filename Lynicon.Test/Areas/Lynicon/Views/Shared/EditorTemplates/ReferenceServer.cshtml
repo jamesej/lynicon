@@ -4,10 +4,15 @@
 @Html.RegisterLocalStyles("serverSelCss", @"
 .lyn-server-select { width: 90%; }
 .lyn-ss-input { width: 90%; }
-.lyn-ss-drop-pane { width: 90%; position: absolute; z-index: 999; background-color: #e2f5f5; padding: 1%; box-sizing: border-box; border: 1px solid #3a7777; }
+.lyn-ss-drop-pane { width: 90%; position: absolute; z-index: 999; background-color: #e2f5f5; padding: 1%; box-sizing: border-box; border: 1px solid #3a7777; max-height: 170px; overflow-x: auto; }
 .lyn-ss-drop-item, .lyn-ref-sel-clear { cursor: pointer; }
-.lyn-ss-drop-item:hover { background-color: #8abcbc; color: white; }
+.lyn-ss-drop-item { padding: 2px 1px 3px 1px; background-color: #e2f5f5; }
+.lyn-ss-drop-item:nth-child(2n) { background-color: #c8eded; }
+.lyn-ss-drop-item:hover { background-color: #c0c0c0; color: white; }
 .lyn-ss-drop-item em { color: #000; }
+.lyn-ss-drop-item.xvsn { background-color: #fff6da; }
+.lyn-ss-drop-item.xvsn:nth-child(2n) { background-color: #f9e193; }
+.lyn-ss-drop-item.xvsn:hover { background-color: #c0c0c0; color: white; }
 ")
 @{
     string vsn = null;
@@ -59,10 +64,10 @@ $(document).ready(function () {
                     var htmls = [];
                     var words = $this.val().split(' ');
                     $.each(d.items, function (i, v) {
-                        $.each(words, function (j, w) {
-                            v.label = v.label.replace(w, '<em>' + w + '</em>');
-                        });
-                        htmls.push(""<div class='lyn-ss-drop-item' data-val='"" + v.value + ""'>"" + v.label + ""</div>"");
+                        var regexp = new RegExp('(' + words.join('|') + ')', 'gi');
+                        v.label = v.label.replace(regexp, '<em>$1</em>');
+                        var xvsnClass = v.label.slice(-1) == ']' ? ' xvsn' : '';
+                        htmls.push(""<div class='lyn-ss-drop-item"" + xvsnClass + ""' data-val='"" + v.value + ""'>"" + v.label + ""</div>"");
                     });
 
                     $dd.html(htmls.join(' ')).show();
@@ -70,6 +75,8 @@ $(document).ready(function () {
                 });
             }, 600);
         }
+    }).on('click', '.lyn-ss-input', function () {
+        $(this).select();
     });
     $('.lyn-ss-input').blur(function () {
         if (!ssMouseOverPane) {

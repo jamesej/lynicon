@@ -1,4 +1,5 @@
-﻿@using Lynicon.Utility
+﻿@model string
+@using Lynicon.Utility
 @Html.RegisterCss("/Lynicon/Embedded/Content/jquery.jstreelist.css/")
 @Html.RegisterCss("/Lynicon/Embedded/Content/jquery.contextMenu.css/")
 @Html.RegisterHtmlBlock("lyn_fileeditor",
@@ -36,7 +37,7 @@
     $(document).ready(function() {
         $('#_L24FileMgrContainer').jstreelist({ rootPath: '" + (ViewBag.FileManagerRoot as string) + @"' });
     });
-    function getFile(current, info, updateFile) {
+    function get" + Model + @"(current, info, updateFile) {
         var $fm = $('#_L24FileMgrContainer').css('display', 'block');
         $fm.find('#outer').layout();
         $fm.css({ 'z-index': '1010', position: 'fixed' });

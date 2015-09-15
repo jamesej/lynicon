@@ -7,10 +7,10 @@
     @if (ViewData.ContainsKey("UrlPermission") && (bool)ViewData["UrlPermission"])
     {
         <div class="reveal-funcs">
-            <a class="move-link cmd-link" href="/@Model.Url?$urlget=true" title="Move Url">Url</a>
+            <a class="move-link cmd-link" href="@Model.Url?$urlget=true" title="Move Url">Url</a>
             <a class="del-link cmd-link" title="Delete Url"><i class="fa fa-times"></i></a>
         </div>
     }
-    <a class="item-link" href="/@Model.Url" target="_blank" title="@Model.Id">@Model.DisplayTitle()</a>
+    <a class="item-link" href="@Model.Url" target="_blank" title="@Model.Id">@Model.DisplayTitle()</a>
 </div>
 

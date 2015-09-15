@@ -125,6 +125,19 @@ function readUrlEntry($container) {
         return url;
 }
 
+function addUrl($clicked, $newEntry) {
+    var $pattern = $clicked.closest('.add-link').find('.pattern');
+    var url = readUrlEntry($pattern);
+    if (url == null)
+        return;
+    $newEntry.hide('fast', function () {
+        $newEntry.remove();
+        $newEntry = null;
+        notifyLayout();
+    });
+    window.open("/" + url + "?$type=" + $clicked.closest('.editor-unit').find('.type-name').val());
+}
+
 $('#lyn-item-selector').on('shown', '.object.level-1', function (ev) {
     var $this = $(this);
     var $box = $this.closest('.editor-unit');
@@ -211,18 +224,20 @@ $('#lyn-item-selector').on('shown', '.object.level-1', function (ev) {
         addNew($(this).closest('.editor-field'), $ul.find('li input').val());
     }
 }).on('click', '.new-item-url-patterns li', function (ev) {
-    addNew($(this).closest('.editor-unit'), $(this).find('input').val());
+    $('.new-item-url-patterns').hide();
+    addNew($(this).closest('.editor-field'), $(this).find('input').val());
 }).on('click', '.add-url-link', function (ev) {
-    var $pattern = $(this).closest('.add-link').find('.pattern');
-    var url = readUrlEntry($pattern);
-    if (url == null)
-        return;
-    $newEntry.hide('fast', function () {
-        $newEntry.remove();
-        $newEntry = null;
-        notifyLayout();
-    });
-    window.open("/" + url + "?$type=" + $(this).closest('.editor-unit').find('.type-name').val());
+    addUrl($(this), $newEntry);
+}).on('keydown', '.pattern input', function (ev) {
+    if (ev.keyCode == 13) {
+        var filled = true;
+        $('.pattern input').each(function () {
+            if (!$(this).val())
+                filled = false;
+        });
+        if (filled)
+            addUrl($(this), $newEntry);
+    }
 }).on('mouseenter', '.lyn-item-entry', function () {
     $(this).find('.reveal-funcs').show();
 }).on('mouseleave', '.lyn-item-entry', function () {

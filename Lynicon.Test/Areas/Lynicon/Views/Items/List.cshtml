@@ -5,10 +5,12 @@
 }
 
 @section Head {
-    
+    <link href="~/Content/listView.min.css" rel="stylesheet" />
 }
 
-<h1>Item Lister</h1>
-@Html.Action("ItemLister", "Items")
+<div class="formWrap">
+    <h1>Item Lister</h1>
+    @Html.Action("ItemLister", "Items")
+</div>
 <div id="lister-bottom-spacer"></div>
 @Html.DisplayForModel("FuncPanel", new { ShowVersions = false })

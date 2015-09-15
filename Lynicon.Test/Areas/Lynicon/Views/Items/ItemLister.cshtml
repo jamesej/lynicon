@@ -5,6 +5,7 @@
 
 @Html.RegisterLocalStyles("item-lister", @"
 #class-filter { width: 300px; }
+.filters label { width: 150px; display: inline-block; }
 ")
 @{
     var filters = LyniconUi.Instance.Filters;
@@ -13,6 +14,8 @@
 }
 <form id="filter-section" action="/Lynicon/Items/FilterItems?$top=10">
     <fieldset id="version-filter">
+    <span>Types</span>
+    @Html.DropDownList("classFilter", Model.ContentClasses, new { @class = "chosen-select", multiple = "multiple" })
     @foreach (var vsvm in versSelector)
     {
         <label>@vsvm.Title</label>
@@ -20,9 +23,7 @@
         vIdx++;
     }
     </fieldset>
-    <fieldset id="type-filter">
-        @Html.DropDownList("classFilter", Model.ContentClasses, new { @class = "chosen-select", multiple = "multiple" })
-    </fieldset>
+
     <fieldset id="specific-filters">
         @Html.EditorFor(m => m.Filters, "Filters")
     </fieldset>
@@ -31,13 +32,16 @@
 <div id="results-section">
     
 </div>
-Checked: <span id="check-count">0</span>
-<button id="clear-all">Clear All</button>
-<button id="set-page">Set Page</button>
+<div class="checked">
+    Checked: <span id="check-count">0</span>
+    <button id="clear-all">Clear All</button>
+    <button id="set-page">Set Page</button>
+</div>
+
 <div id="buttons">
     @foreach (var ilb in LyniconUi.Instance.CurrentItemsListButtons())
     {
-        <button class="items-list-button" data-url="@ilb.Url" data-confirm="@ilb.ConfirmMessage">@ilb.Caption</button>
+        <button class="items-list-button" data-url="/@ilb.Url" data-confirm="@ilb.ConfirmMessage">@ilb.Caption</button>
     }
 </div>
 <div id="result"></div>

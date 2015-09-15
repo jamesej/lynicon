@@ -432,22 +432,23 @@ video.thumb-vid
 {
 	cursor: auto;
 }
-#editPanel .lyn-image-load, #editPanel .lyn-video-load {
+#editPanel .lyn-image-load, #editPanel .lyn-video-load, #editPanel .lyn-media-load {
 	cursor: pointer;
 	text-transform: capitalize;
 	padding: 2px;
 	background-color: #8abcbc;
 	color: #fff;
 	margin: 3px 4px 0 0;
+	border: none;
 }
-#editPanel .lyn-image-load:hover, #editPanel .lyn-video-load:hover {
+#editPanel .lyn-image-load:hover, #editPanel .lyn-video-load:hover, #editPanel .lyn-media-load:hover {
 	color: #aaa;
 }
 #editPanel .lyn-image-url, #editPanel .lyn-video-url
 {
 	box-sizing: border-box;
 }
-#editPanel .lyn-image-url span, #editPanel .lyn-video-url span
+#editPanel .lyn-image-url span, #editPanel .lyn-video-url span, #editPanel .lyn-media-url span
 {
 	width: 235px;
 	height: 17px;
@@ -805,12 +806,13 @@ cursor: pointer;
 #lyn-item-selector .new-item-url-patterns {
 	display: none;
 position: absolute;
-background-color: #000;
+background-color: #bddddd;
 z-index: 99;
 list-style: none;
-padding: 2px;
-top: -2px;
-left: 43px;
+padding: 3px;
+top: -18px;
+right: 0px;
+border: solid 2px #f4f4f4;
 }
 
 #lyn-item-selector .new-item-url-patterns li:hover {

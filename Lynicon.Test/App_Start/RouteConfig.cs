@@ -20,6 +20,8 @@ namespace Lynicon.Test
 
             routes.AddUrlListRoute("Listed");
 
+            routes.AddRequestMatchRoute("matchroute", "", ctx => ctx.Request.Url.Host == "www.testdomain.com", url => "//www.testdomain.com/" + url, new { controller = "Domain", action = "Domain" });
+
             routes.AddDataRoute<TestContent>("test", "Test/{action}",
                 new { controller = "Test", action = "Index" });
 

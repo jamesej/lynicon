@@ -281,6 +281,16 @@ function notifyChanged() {
             var rteWidth = $rte.width();
             var rteHeight = $rte.height();
             $rte.css({ 'z-index': '1010', position: 'fixed', width: '75%' });
+            var isRTEResizeDrag = false;
+            $('.jqte_editor').mousedown(function () { isRTEResizeDrag = true; console.log('drag.start'); });
+            $('body').mouseup(function () {
+                if (isRTEResizeDrag) {
+                    isRTEResizeDrag = false;
+                    console.log('drag.end');
+                    $('#modalPlaceholder').width($rte.width()).height($rte.height());
+                    $.modal.update($rte.height(), $rte.width());
+                }
+            });
 
             $("<div id='modalPlaceholder' style='background-color: #eoeoff; width: 75%;'></div>")
                 .height($rte.height())

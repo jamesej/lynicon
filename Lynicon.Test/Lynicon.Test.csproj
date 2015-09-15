@@ -15,7 +15,7 @@
     <AssemblyName>Lynicon.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -133,6 +133,7 @@
     <Compile Include="Controllers\AltItemController.cs" />
     <Compile Include="Controllers\ChefController.cs" />
     <Compile Include="Controllers\RestaurantController.cs" />
+    <Compile Include="Controllers\DomainController.cs" />
     <Compile Include="Controllers\TagController.cs" />
     <Compile Include="Controllers\SingleController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
@@ -700,7 +701,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>19907</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:19907/</IISUrl>
+          <IISUrl>http://localhost</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

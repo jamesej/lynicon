@@ -10978,3 +10978,35 @@ System.Runtime.Serialization.SerializationException: Type 'Lynicon.Base.Models.B
 2015-08-28 17:10:39,428 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
 2015-08-28 17:10:39,456 [31] INFO Lynicon.Modules.SearchModule - Starting search index build
 2015-08-28 17:10:39,955 [31] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-09-09 12:50:28,968 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-09-09 12:50:29,012 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-09-09 12:50:29,016 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-09-09 12:50:29,084 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-09-09 12:50:29,085 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-09-09 12:50:29,167 [5] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-09-09 12:50:29,624 [5] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-09-09 14:06:15,796 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-09-09 14:06:15,895 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-09-09 14:06:15,903 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-09-09 14:06:16,003 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-09-09 14:06:16,005 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-09-09 14:06:16,048 [8] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-09-09 14:06:16,486 [8] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-09-09 14:15:43,655 [29] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-09-09 14:15:43,743 [29] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-09-09 14:15:43,753 [29] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-09-09 14:15:43,840 [29] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-09-09 14:15:43,842 [29] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-09-09 14:15:43,874 [21] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-09-09 14:15:44,303 [21] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-09-09 16:35:11,038 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-09-09 16:35:11,126 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-09-09 16:35:11,133 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-09-09 16:35:11,221 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-09-09 16:35:11,223 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-09-09 16:35:11,281 [8] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-09-09 16:35:11,774 [8] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-09-09 16:57:47,550 [21] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions defc1591-fbb7-4d7d-8ea5-8a525df3d444:Lynicon.Test.Models.HeaderContent
+2015-09-09 17:05:56,837 [33] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 86775a42-b94d-4406-8a1d-c60f19f8463e:Lynicon.Test.Models.HeaderContent
+2015-09-09 17:06:37,055 [33] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 74a5a666-c1d6-462b-9135-6dbb6dedd947:Lynicon.Base.Models.BlogPostContent
+2015-09-09 17:06:50,941 [9] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions a9ed3f37-5396-482f-96c7-d16cf176557f:Lynicon.Test.Models.HeaderContent

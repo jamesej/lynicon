@@ -17,11 +17,15 @@
         $(this).find(".lyn-image-content, .lyn-image-url, .lyn-image-alt").toggle();
     }).on("click", ".lyn-image-load, .lyn-media-load", function () {
         var $this = $(this);
-        var $fname = $this.closest(".lyn-image").find(".lyn-image-url input");
+        var isMedia = $this.hasClass('lyn-media-load');
+        var fPrefix = isMedia ? ".lyn-media" : ".lyn-image";
+        var $fname = $this.closest(fPrefix).find(fPrefix + "-url input");
         var info = $this.data("get-file-info");
-        top.getFile($fname.val(), info, function (fname) {
+        
+        var getFileFunc = top[isMedia ? "getMediaFile" : "getFile"];
+        getFileFunc($fname.val(), info, function (fname) {
             var files = fname.split(",");
-            if ($this.hasClass("lyn-image-load")) {
+            if (!isMedia) {
                 for (var i = 0; i < files.length; i++) {
                     var suffix = fname.upTo("|").afterLast(".").toLowerCase();
                     if (suffix && suffix.length && "png|jpg|gif".indexOf(suffix) < 0)
