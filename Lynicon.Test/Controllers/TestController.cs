@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Lynicon.Attributes;
+using Lynicon.Base.Modules;
 using Lynicon.Collation;
 using Lynicon.Extensibility;
 using Lynicon.Linq;
@@ -245,6 +246,32 @@ namespace Lynicon.Test.Controllers
                 });
 
             return Content("Running background");
+        }
+
+        public ActionResult TestGetId()
+        {
+            var iid = new ItemId(typeof(HeaderContent), new Guid("D0672E83-5FCD-4595-A0F2-78205E50C148"));
+            DateTime st = DateTime.Now;
+            for (int ctr = 0; ctr < 10000; ctr++)
+            {
+                var gs = Collator.Instance.Get<GeneralSummary>(iid);
+            }
+            TimeSpan dur = st - DateTime.Now;
+            return Content(dur.ToString(@"ss\:fff"));
+        }
+
+        public ActionResult TestDirectGetId()
+        {
+            var iid = new ItemId(typeof(HeaderContent), new Guid("D0672E83-5FCD-4595-A0F2-78205E50C148"));
+            Type ctype = CompositeTypeManager.Instance.ExtendedTypes[typeof(ContentItem)];
+            DateTime st = DateTime.Now;
+            for (int ctr = 0; ctr < 10000; ctr++)
+            {
+                var gs = (ContentItem)LyniconModuleManager.Instance.GetModule<FullCache>().TestDirectPull(ctype, iid);
+                var summ = gs.GetSummary();
+            }
+            TimeSpan dur = st - DateTime.Now;
+            return Content(dur.ToString(@"ss\:fff"));
         }
     }
 }

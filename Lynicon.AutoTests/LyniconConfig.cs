@@ -7,8 +7,10 @@ using Lynicon.Base.Modules;
 using Lynicon.Collation;
 using Lynicon.Extensibility;
 using Lynicon.Membership;
+using Lynicon.Models;
 using Lynicon.Modules;
 using Lynicon.Repositories;
+using Lynicon.Test.Models;
 
 namespace Lynicon.AutoTests
 {
@@ -40,8 +42,10 @@ namespace Lynicon.AutoTests
 
         public static void InitialiseDataApi()
         {
-            //Collator.RegisterExtensionType(typeof(ExtendedUser));
-
+            Collator.Instance.SetupTypeForBasic<TestData>();
+            Collator.RegisterExtensionType(typeof(TestData));
+            ContentTypeHierarchy.RegisterType(typeof(HeaderContent));
+            ContentTypeHierarchy.RegisterType(typeof(TestData));
             Collator.Instance.BuildRepository();
         }
 

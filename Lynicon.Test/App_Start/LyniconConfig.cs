@@ -29,12 +29,12 @@ namespace Lynicon.Test
             var fullCache = new FullCache();
             Repository.Instance.EFProxyCreationEnabled = false;
             //Repository.Instance.ReadWriteDisabled = true;
-            fullCache.PersistToFile = false;
+            //fullCache.PersistToFile = false;
 
             LyniconModuleManager.Instance.RegisterModule(new CoreModule());
             LyniconModuleManager.Instance.RegisterModule(new ContentSchemaModule());
             LyniconModuleManager.Instance.RegisterModule(new UrlListModule(t => t != typeof(User)));
-            LyniconModuleManager.Instance.RegisterModule(new SummaryCache(t => t != Repository.Instance.ContainerType(typeof(User))));
+            LyniconModuleManager.Instance.RegisterModule(new FullCache(t => t != Repository.Instance.ContainerType(typeof(User))));
             LyniconModuleManager.Instance.RegisterModule(new Auditing());
             LyniconModuleManager.Instance.RegisterModule(new Publishing());
             LyniconModuleManager.Instance.RegisterModule(new TasksModule());

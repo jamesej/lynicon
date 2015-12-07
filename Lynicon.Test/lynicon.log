@@ -11010,3 +11010,449 @@ System.Runtime.Serialization.SerializationException: Type 'Lynicon.Base.Models.B
 2015-09-09 17:05:56,837 [33] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 86775a42-b94d-4406-8a1d-c60f19f8463e:Lynicon.Test.Models.HeaderContent
 2015-09-09 17:06:37,055 [33] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 74a5a666-c1d6-462b-9135-6dbb6dedd947:Lynicon.Base.Models.BlogPostContent
 2015-09-09 17:06:50,941 [9] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions a9ed3f37-5396-482f-96c7-d16cf176557f:Lynicon.Test.Models.HeaderContent
+2015-10-15 10:12:09,359 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-10-15 10:12:09,461 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-10-15 10:12:09,471 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-10-15 10:12:09,553 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-10-15 10:12:09,557 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-10-15 10:12:09,591 [7] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-10-15 10:12:10,218 [7] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-10-15 13:19:43,129 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-10-15 13:19:43,191 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-10-15 13:19:43,207 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-10-15 13:19:43,269 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-10-15 13:19:43,269 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-10-15 13:19:43,318 [8] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-10-15 13:19:43,792 [8] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-10-16 08:22:45,192 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-10-16 08:22:45,198 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-10-16 08:22:45,198 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-10-16 08:22:45,221 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-10-16 08:22:45,221 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-10-16 08:22:45,229 [7] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-10-16 08:22:45,800 [7] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-10-16 08:27:11,994 [11] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-10-16 08:27:12,089 [11] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-10-16 08:27:12,102 [11] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-10-16 08:27:12,214 [11] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-10-16 08:27:12,217 [11] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-10-16 08:27:12,283 [10] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-10-16 08:27:12,985 [10] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-10-16 09:20:26,225 [8] ERROR Lynicon.Extensibility.Cache - Error saving cache dump: 
+System.ArgumentNullException: Object Graph cannot be null.
+Parameter name: graph
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 130
+2015-10-16 09:20:26,381 [8] ERROR Lynicon.Extensibility.Cache - Error saving cache dump: 
+System.ArgumentNullException: Object Graph cannot be null.
+Parameter name: graph
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 130
+2015-10-16 09:21:09,510 [6] ERROR Lynicon.Extensibility.Cache - Error saving cache dump: 
+System.ArgumentNullException: Object Graph cannot be null.
+Parameter name: graph
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 130
+2015-10-16 09:21:09,623 [6] ERROR Lynicon.Extensibility.Cache - Error saving cache dump: 
+System.ArgumentNullException: Object Graph cannot be null.
+Parameter name: graph
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 130
+2015-10-16 09:22:51,680 [6] ERROR Lynicon.Extensibility.Cache - Error saving cache dump: 
+System.ArgumentNullException: Object Graph cannot be null.
+Parameter name: graph
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 130
+2015-10-16 09:22:51,771 [6] ERROR Lynicon.Extensibility.Cache - Error saving cache dump: 
+System.ArgumentNullException: Object Graph cannot be null.
+Parameter name: graph
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 130
+2015-10-16 09:28:01,090 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-10-16 09:28:01,116 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-10-16 09:28:01,120 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-10-16 09:28:01,179 [1] ERROR Lynicon.Extensibility.Cache - System.TypeLoadException: Could not load type 'Composite0_ContentItem' from assembly 'CompositeClasses, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at System.UnitySerializationHolder.GetRealObject(StreamingContext context)
+   at System.Runtime.Serialization.ObjectManager.ResolveObjectReference(ObjectHolder holder)
+   at System.Runtime.Serialization.ObjectManager.DoFixups()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 92
+2015-10-16 09:28:01,190 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-10-16 09:28:01,212 [1] ERROR Lynicon.Extensibility.Cache - System.TypeLoadException: Could not load type 'Composite0_ContentItem' from assembly 'CompositeClasses, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at System.UnitySerializationHolder.GetRealObject(StreamingContext context)
+   at System.Runtime.Serialization.ObjectManager.ResolveObjectReference(ObjectHolder holder)
+   at System.Runtime.Serialization.ObjectManager.DoFixups()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 92
+2015-10-16 09:28:01,218 [1] INFO Lynicon.Base.Modules.SummaryCache - START SummaryCache Load
+2015-10-16 09:28:06,590 [1] INFO Lynicon.Base.Modules.SummaryCache - END SummaryCache Load: cache fails 0
+2015-10-16 09:28:06,591 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-10-16 09:28:06,631 [7] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-10-16 09:28:06,918 [7] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-10-16 16:39:54,967 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-10-16 16:39:55,007 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-10-16 16:39:55,010 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-10-16 16:39:55,050 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-10-16 16:39:55,051 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-10-16 16:39:55,076 [10] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-10-16 16:39:55,337 [10] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-10-19 12:57:57,984 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-10-19 12:57:58,015 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-10-19 12:57:58,019 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-10-19 12:57:58,063 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-10-19 12:57:58,064 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-10-19 12:57:58,163 [6] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-10-19 12:57:58,307 [6] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-10-19 17:35:42,524 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-10-19 17:35:42,559 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-10-19 17:35:42,563 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-10-19 17:35:42,612 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-10-19 17:35:42,614 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-10-19 17:35:42,642 [69] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-10-19 17:35:42,912 [69] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-10-19 17:36:40,498 [73] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions e1c77d75-697b-4bf6-ac45-17374641991d:Lynicon.Test.Models.HeaderContent
+2015-10-20 14:41:09,751 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-10-20 14:41:09,776 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-10-20 14:41:09,780 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-10-20 14:41:09,817 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-10-20 14:41:09,818 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-10-20 14:41:09,848 [5] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-10-20 14:41:09,997 [5] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-11-10 17:12:22,785 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-11-10 17:12:22,808 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-11-10 17:12:22,814 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-11-10 17:12:22,851 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-11-10 17:12:22,852 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-11-10 17:12:22,880 [6] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-11-10 17:12:23,103 [6] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-11-10 17:29:29,086 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-11-10 17:29:29,111 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-11-10 17:29:29,115 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-11-10 17:29:29,152 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-11-10 17:29:29,153 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-11-10 17:29:29,174 [32] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-11-10 17:29:29,415 [32] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-11-10 18:16:41,236 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-11-10 18:16:41,261 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-11-10 18:16:41,265 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-11-10 18:16:41,302 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-11-10 18:16:41,303 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-11-10 18:16:41,323 [45] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-11-10 18:16:41,556 [45] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-11-10 18:20:22,364 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-11-10 18:20:22,390 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-11-10 18:20:22,393 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-11-10 18:20:22,433 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-11-10 18:20:22,434 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-11-10 18:20:22,459 [49] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-11-10 18:20:22,728 [49] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-11-10 18:28:13,316 [43] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-11-10 18:28:13,342 [43] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-11-10 18:28:13,348 [43] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-11-10 18:28:13,386 [43] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-11-10 18:28:13,387 [43] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-11-10 18:28:13,410 [55] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-11-10 18:28:13,651 [55] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-11-10 18:34:38,923 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-11-10 18:34:38,949 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-11-10 18:34:38,953 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-11-10 18:34:38,992 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-11-10 18:34:38,993 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-11-10 18:34:39,012 [52] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-11-10 18:34:39,369 [52] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-11-10 18:41:20,393 [35] INFO Lynicon.Base.Modules.SummaryCache - START SummaryCache Load
+2015-11-10 18:43:00,753 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-11-10 18:43:00,778 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-11-10 18:43:00,784 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-11-10 18:43:00,822 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-11-10 18:43:00,823 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-11-10 18:43:00,845 [49] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-11-10 18:43:01,105 [49] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-11-10 18:43:40,705 [36] INFO Lynicon.Base.Modules.SummaryCache - START SummaryCache Load
+2015-11-10 18:44:08,316 [36] INFO Lynicon.Base.Modules.SummaryCache - END SummaryCache Load: cache fails 0
+2015-11-10 18:44:08,316 [36] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-11-11 09:51:16,204 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-11-11 09:51:16,242 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-11-11 09:51:16,247 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-11-11 09:51:16,308 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-11-11 09:51:16,310 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-11-11 09:51:16,340 [130] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-11-11 09:51:16,579 [130] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-11-11 09:51:54,788 [131] INFO Lynicon.Base.Modules.SummaryCache - START SummaryCache Load
+2015-11-11 09:53:18,138 [131] INFO Lynicon.Base.Modules.SummaryCache - END SummaryCache Load: cache fails 0
+2015-11-11 09:53:18,138 [131] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-11-11 09:58:15,173 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-11-11 09:58:15,201 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-11-11 09:58:15,205 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-11-11 09:58:15,229 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-11-11 09:58:15,233 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-11-11 09:58:15,253 [130] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-11-11 09:58:15,506 [130] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-11-11 10:11:11,613 [129] INFO Lynicon.Base.Modules.SummaryCache - START SummaryCache Load
+2015-11-11 10:12:31,156 [129] INFO Lynicon.Base.Modules.SummaryCache - START SummaryCache Load
+2015-11-11 10:12:35,298 [120] INFO Lynicon.Base.Modules.SummaryCache - START SummaryCache Load
+2015-11-11 10:14:40,232 [129] INFO Lynicon.Base.Modules.SummaryCache - START SummaryCache Load
+2015-11-11 10:26:49,286 [107] INFO Lynicon.Base.Modules.SummaryCache - START SummaryCache Load
+2015-11-11 10:28:22,961 [109] INFO Lynicon.Base.Modules.SummaryCache - START SummaryCache Load
+2015-11-11 10:57:16,054 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-11-11 10:57:16,091 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-11-11 10:57:16,095 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-11-11 10:57:16,131 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-11-11 10:57:16,133 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-11-11 10:57:16,159 [54] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-11-11 10:57:16,395 [54] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-11-11 11:03:23,344 [58] INFO Lynicon.Base.Modules.SummaryCache - START SummaryCache Load
+2015-11-11 11:03:35,825 [58] INFO Lynicon.Base.Modules.SummaryCache - END SummaryCache Load: cache fails 0
+2015-11-11 11:03:35,825 [58] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-11-11 17:25:27,108 [294] ERROR Lynicon.Extensibility.Cache - Error saving cache dump: 
+System.ArgumentNullException: Object Graph cannot be null.
+Parameter name: graph
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 130
+2015-11-11 17:25:27,159 [294] ERROR Lynicon.Extensibility.Cache - Error saving cache dump: 
+System.ArgumentNullException: Object Graph cannot be null.
+Parameter name: graph
+   at System.Runtime.Serialization.Formatters.Binary.ObjectWriter.Serialize(Object graph, Header[] inHeaders, __BinaryWriter serWriter, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph, Header[] headers, Boolean fCheck)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize(Stream serializationStream, Object graph)
+   at Lynicon.Extensibility.Cache.SaveToBinaryFile[T](String appDataPath, T cache) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 130
+2015-11-11 17:36:23,457 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-11-11 17:36:23,487 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-11-11 17:36:23,491 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-11-11 17:36:23,576 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-11-11 17:36:23,577 [1] DEBUG Lynicon.Base.Modules.SummaryCache - Loaded Summary cache 2 types
+2015-11-11 17:36:23,595 [291] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-11-11 17:36:23,845 [291] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-02 18:08:46,858 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-02 18:08:46,893 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-02 18:08:46,902 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-12-02 18:08:47,023 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-12-02 18:08:47,024 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: START Loading dump
+2015-12-02 18:08:47,029 [1] INFO Lynicon.Extensibility.Cache - SummaryCache: END Loading dump
+2015-12-02 18:08:47,034 [1] INFO Lynicon.Base.Modules.TotalCache - START Caching.Summaries.Full Load
+2015-12-02 18:08:54,875 [1] INFO Lynicon.Base.Modules.TotalCache - END Caching.Summaries.Full Load: cache fails 0
+2015-12-02 18:08:54,877 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded SummaryCache cache 2 types
+2015-12-02 18:08:54,964 [5] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-02 18:08:55,360 [5] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-03 08:49:09,322 [18] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions dc0430a4-7033-4ca4-a633-6a6257406cb7:Lynicon.Test.Models.HeaderContent
+2015-12-03 09:00:17,563 [28] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-03 09:00:17,616 [28] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-03 09:00:26,837 [28] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-03 09:00:26,995 [28] ERROR Lynicon.Extensibility.Cache - System.TypeLoadException: Could not load type 'Composite1_User' from assembly 'CompositeClasses, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at System.UnitySerializationHolder.GetRealObject(StreamingContext context)
+   at System.Runtime.Serialization.ObjectManager.ResolveObjectReference(ObjectHolder holder)
+   at System.Runtime.Serialization.ObjectManager.DoFixups()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 92
+2015-12-03 09:00:29,799 [28] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-03 09:00:29,974 [28] ERROR Lynicon.Extensibility.Cache - System.TypeLoadException: Could not load type 'Composite1_User' from assembly 'CompositeClasses, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at System.UnitySerializationHolder.GetRealObject(StreamingContext context)
+   at System.Runtime.Serialization.ObjectManager.ResolveObjectReference(ObjectHolder holder)
+   at System.Runtime.Serialization.ObjectManager.DoFixups()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 92
+2015-12-03 09:00:34,776 [28] INFO Lynicon.Base.Modules.TotalCache - START Caching.Summaries.Full Load
+2015-12-03 09:00:46,314 [28] INFO Lynicon.Base.Modules.TotalCache - END Caching.Summaries.Full Load: cache fails 0
+2015-12-03 09:00:46,318 [28] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-03 09:00:53,609 [30] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-03 09:00:54,041 [30] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-03 09:08:58,380 [16] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 5afd2e4c-8e4a-43ac-a839-fa0c5503a6af:Lynicon.Test.Models.HeaderContent
+2015-12-04 14:48:05,507 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 14:48:05,536 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 14:49:06,426 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 14:49:06,513 [1] ERROR Lynicon.Extensibility.Cache - System.TypeLoadException: Could not load type 'Composite1_User' from assembly 'CompositeClasses, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at System.UnitySerializationHolder.GetRealObject(StreamingContext context)
+   at System.Runtime.Serialization.ObjectManager.ResolveObjectReference(ObjectHolder holder)
+   at System.Runtime.Serialization.ObjectManager.DoFixups()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 92
+2015-12-04 14:49:06,528 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 14:49:06,555 [1] ERROR Lynicon.Extensibility.Cache - System.TypeLoadException: Could not load type 'Composite1_User' from assembly 'CompositeClasses, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'.
+   at System.Reflection.RuntimeAssembly.GetType(RuntimeAssembly assembly, String name, Boolean throwOnError, Boolean ignoreCase, ObjectHandleOnStack type)
+   at System.Reflection.RuntimeAssembly.GetType(String name, Boolean throwOnError, Boolean ignoreCase)
+   at System.UnitySerializationHolder.GetRealObject(StreamingContext context)
+   at System.Runtime.Serialization.ObjectManager.ResolveObjectReference(ObjectHolder holder)
+   at System.Runtime.Serialization.ObjectManager.DoFixups()
+   at System.Runtime.Serialization.Formatters.Binary.ObjectReader.Deserialize(HeaderHandler handler, __BinaryParser serParser, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream, HeaderHandler handler, Boolean fCheck, Boolean isCrossAppDomain, IMethodCallMessage methodCallMessage)
+   at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(Stream serializationStream)
+   at Lynicon.Extensibility.Cache.TryLoadFromBinaryFile[T](String appDataPath) in c:\Dev\Lynicon\Lynicon.Core\Extensibility\Cache.cs:line 92
+2015-12-04 14:49:06,561 [1] INFO Lynicon.Base.Modules.TotalCache - START Caching.Summaries.Full Load
+2015-12-04 14:49:12,310 [1] INFO Lynicon.Base.Modules.TotalCache - END Caching.Summaries.Full Load: cache fails 0
+2015-12-04 14:49:12,312 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 14:49:12,399 [5] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 14:49:13,070 [5] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 14:56:58,062 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 14:56:58,090 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 14:56:58,095 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 14:56:58,114 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 14:56:58,115 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 14:56:58,152 [7] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 14:56:58,484 [7] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 15:20:11,958 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 15:20:11,984 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 15:20:11,990 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 15:20:12,007 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 15:20:12,008 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 15:20:12,060 [6] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 15:20:13,554 [6] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 15:32:13,080 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 15:32:13,108 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 15:32:13,115 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 15:32:13,154 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 15:32:13,160 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 15:32:13,180 [8] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 15:32:13,472 [8] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 15:45:45,804 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 15:45:45,831 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 15:45:45,840 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 15:45:45,879 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 15:45:45,881 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 15:45:45,904 [19] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 15:45:46,167 [19] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 15:48:23,841 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 15:48:23,870 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 15:48:23,877 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 15:48:23,917 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 15:48:23,918 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 15:48:23,941 [22] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 15:48:24,167 [22] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 15:50:28,388 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 15:50:28,416 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 15:50:28,421 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 15:50:28,467 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 15:50:28,468 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 15:50:28,487 [22] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 15:50:28,716 [22] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 15:55:03,887 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 15:55:03,916 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 15:55:03,922 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 15:55:03,964 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 15:55:03,965 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 15:55:03,990 [27] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 15:55:04,235 [27] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 16:23:10,952 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 16:23:10,981 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 16:23:10,988 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 16:23:11,030 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 16:23:11,033 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 16:23:11,055 [36] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 16:23:11,268 [36] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 16:38:36,624 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 16:38:36,658 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 16:38:36,668 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 16:38:36,731 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 16:38:36,732 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 16:38:37,241 [7] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 16:38:37,637 [7] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 17:00:40,614 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 17:00:40,640 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 17:00:40,645 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 17:00:40,687 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 17:00:40,688 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 17:00:40,756 [6] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 17:00:41,355 [6] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 17:15:24,748 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 17:15:24,784 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 17:15:24,790 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 17:15:24,838 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 17:15:24,840 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 17:15:24,863 [26] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 17:15:25,263 [26] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 17:20:57,026 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 17:20:57,062 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 17:20:57,072 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 17:20:57,139 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 17:20:57,141 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 17:20:57,171 [26] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 17:20:57,601 [26] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 17:22:41,707 [14] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 17:22:41,747 [14] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 17:22:41,758 [14] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 17:22:41,817 [14] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 17:22:41,819 [14] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 17:22:41,848 [22] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 17:22:42,207 [22] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 17:44:48,537 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 17:44:48,570 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 17:44:48,575 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 17:44:48,618 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 17:44:48,621 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 17:44:48,643 [25] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 17:44:48,925 [25] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 17:48:04,704 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 17:48:04,737 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 17:48:04,745 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 17:48:04,790 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 17:48:04,791 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 17:48:04,819 [25] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 17:48:05,100 [25] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 17:51:45,868 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 17:51:45,905 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 17:51:45,912 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 17:51:45,971 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 17:51:45,973 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 17:51:45,999 [17] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 17:51:46,421 [17] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 17:53:59,905 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 17:53:59,937 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 17:53:59,947 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 17:53:59,995 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 17:53:59,997 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 17:54:00,039 [13] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 17:54:00,283 [13] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 18:35:54,155 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 18:35:54,195 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 18:35:54,200 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 18:35:54,262 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 18:35:54,263 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 18:35:54,295 [16] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 18:35:54,984 [16] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 18:38:20,398 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 18:38:20,454 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 18:38:20,463 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 18:38:20,559 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 18:38:20,560 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 18:38:20,615 [7] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 18:38:20,902 [7] INFO Lynicon.Modules.SearchModule - Ending search index build
+2015-12-04 18:44:32,635 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2015-12-04 18:44:32,665 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2015-12-04 18:44:32,673 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2015-12-04 18:44:32,733 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2015-12-04 18:44:32,743 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2015-12-04 18:44:32,781 [8] INFO Lynicon.Modules.SearchModule - Starting search index build
+2015-12-04 18:44:33,184 [8] INFO Lynicon.Modules.SearchModule - Ending search index build

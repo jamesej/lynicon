@@ -13,6 +13,13 @@ namespace Lynicon.Workflow
 {
     public class WorkflowVersioner : Versioner
     {
+        public override object PublicVersionValue
+        {
+            get
+            {
+                return null;
+            }
+        }
         public WorkflowVersioner(string versionKey) : base(versionKey)
         { }
         public WorkflowVersioner(string versionKey, Func<Type, bool> isVersionable) : base(versionKey, isVersionable)
