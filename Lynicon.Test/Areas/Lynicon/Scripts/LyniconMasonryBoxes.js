@@ -9,11 +9,14 @@ function notifyVisible($container) {
         loadRefSelect($(this));
     });
     if ($.fn.chosen)
-        $container.find("select.chosen-select:visible").chosen({ search_contains: true, allow_single_deselect: true });
+        $container.find("select.chosen-select:visible").chosen({ search_contains: true });
     if ($.fn.selectize)
         $container.find("select.lyn-selectize:visible").each(function () {
             initSelectize($(this));
         });
+    $container.find("select.lyn-jquiac:visible").each(function () {
+        initJquiac($(this));
+    })
 }
 
 function notifyAddSelectOption($container, type, val, txt)
@@ -24,7 +27,8 @@ function notifyAddSelectOption($container, type, val, txt)
     }
     $container.find(".chosen-container").each(function () {
         var $listId = $(this).siblings("input.select-list-id");
-        if ($listId.val().indexOf(type) >= 0) {
+        var v = $listId.val();
+        if (v && v.indexOf(type) >= 0) {
             $(this).siblings("select.chosen-select")
                 .append($("<option value=\"\"" + val + "\"\">" + txt + "</option>"))
                 .trigger("chosen:updated");

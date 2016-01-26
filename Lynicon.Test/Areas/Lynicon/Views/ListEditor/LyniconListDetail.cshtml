@@ -23,24 +23,15 @@
     </div>
     <div id="edit">
         <div id="editPanelContainer">
-            <div id='editPanel'>
-                @{
-                    var item = ((ICollection)Model).Cast<object>().FirstOrDefault();
-                    if (item == null)
-                    {
-                        item = Activator.CreateInstance(Model.GetType().GetGenericArguments()[0]);
-                        ViewBag.ItemIndex = -1;
-                    }
-                }
-                @using (Html.BeginForm())
+            @{
+                var item = ((ICollection)Model).Cast<object>().FirstOrDefault();
+                if (item == null)
                 {
-                    @Html.EditorFor(m => item, "EditorObject")
-                    @Html.Hidden("formState")
-                    @Html.Hidden("lynicon_itemIndex", (int)ViewBag.ItemIndex)
+                    item = Activator.CreateInstance(Model.GetType().GetGenericArguments()[0]);
+                    ViewData["ItemIndex"] = -1;
                 }
-            </div>
-            @Html.DisplayForModel("FuncPanel", new { Sections = "Record,Opener" })
-            <div style="clear:both; height: 44px;"></div>
+            }
+            @Html.EditorFor(m => item, "LyniconEditPanel")
         </div>
     </div>
 </div>
@@ -66,24 +57,13 @@
         mapForm(function ($fld) {
             formNames += $fld.prop('name') + ' ';
         });
-        $.post("@(ViewBag.BaseUrl as string)?$mode=getValues@(Html.Raw(ViewBag.OriginalQuery as string))",
+        $('#editPanelContainer').load(
+            "@(ViewBag.BaseUrl as string)?$mode=getValues@(Html.Raw(ViewBag.OriginalQuery as string))",
             { formNames: formNames, idx: idx },
-            function (d) {
-                $('form').find('input, textarea, select').each(function () {
-                    var nm = $(this).prop('name');
-                    var tp = $(this).attr('type');
-                    if (d.hasOwnProperty(nm)) {
-                        // detect fall-through to hidden, val=true standard form checkbox
-                        var isChk = ($('form').find('input[name="' + nm + '"]').length > 1);
-                        var v = processField(d[nm]);
-                        if (tp == "checkbox") {
-                            $(this).prop('checked', v);
-                        } else if (tp != "hidden" || !isChk) {
-                            $(this).val(v);
-                        }
-                        $(this).prev('.text-display').text(v || '---');
-                    }
-                });
+            function () {
+                setupAfterLoad($('#editPanel'));
+                createGeneralContainer();
+                $('#editPanel .object.level-0').masonry();
             });
     }
     function clearForm() {
@@ -105,7 +85,7 @@
 
     $(document).ready(function() {
         //$('#container').layout({ east: { size: '280', spacing_open: 10, spacing_closed: 14, togglerLength_open: 60 } });
-        loadDetail(parseInt($('#lynicon_itemIndex').val()));
+        loadDetail(0);
     });
 </script>
 }

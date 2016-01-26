@@ -11456,3 +11456,38 @@ Parameter name: graph
 2015-12-04 18:44:32,743 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
 2015-12-04 18:44:32,781 [8] INFO Lynicon.Modules.SearchModule - Starting search index build
 2015-12-04 18:44:33,184 [8] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-01-07 12:46:37,294 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-01-07 12:46:37,328 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-01-07 12:46:37,334 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-01-07 12:46:37,384 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-01-07 12:46:37,385 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-01-07 12:46:37,417 [6] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-01-07 12:46:37,640 [6] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-01-07 12:52:43,183 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-01-07 12:52:43,209 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-01-07 12:52:43,218 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-01-07 12:52:43,262 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-01-07 12:52:43,263 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-01-07 12:52:43,286 [6] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-01-07 12:52:43,584 [6] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-01-07 13:27:31,928 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-01-07 13:27:31,959 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-01-07 13:27:31,964 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-01-07 13:27:32,011 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-01-07 13:27:32,013 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-01-07 13:27:32,035 [19] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-01-07 13:27:32,252 [19] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-01-07 13:53:35,379 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-01-07 13:53:35,411 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-01-07 13:53:35,423 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-01-07 13:53:35,471 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-01-07 13:53:35,473 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-01-07 13:53:35,501 [50] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-01-07 13:53:35,754 [50] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-01-26 15:47:10,043 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-01-26 15:47:10,079 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-01-26 15:47:10,086 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-01-26 15:47:10,134 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-01-26 15:47:10,136 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-01-26 15:47:10,437 [6] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-01-26 15:47:10,749 [6] INFO Lynicon.Modules.SearchModule - Ending search index build

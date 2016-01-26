@@ -782,14 +782,10 @@ cursor: pointer;
 /* ITEM SELECTOR */
 
 #lyn-item-selector h2 {
-	font-size: 16px;
-	font-family: Arial, sans-serif;
-	background-color: #888;
-	color: #FFF;
-	border: none;
-	padding-top: 4px;
-	padding-bottom: 4px;
-	border-radius: 14px;
+	font-size: 19px;
+    font-family: Arial, sans-serif;
+    border-bottom: 1px solid #888;
+    padding: 4px 5px;
 }
 
 /*
@@ -955,7 +951,6 @@ font-weight: bold;
 
 #lyn-item-selector .object.level-0
 {
-	padding-bottom: 40px;
 }
 
 #lyn-item-selector .editor-label {
@@ -999,6 +994,11 @@ overflow:auto;
 	text-align: center;
 	background-color: #8abcbc;
 	border-top: 1px solid #fff;
+}
+
+.lyn-item-paging-container .total {
+	color: white;
+    padding-bottom: 3px;
 }
 
 .lyn-item-paging-container .lynicon-number-pager{

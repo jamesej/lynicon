@@ -1,17 +1,26 @@
-﻿@using Lynicon.Models
+﻿@using Lynicon.Attributes
+@using Lynicon.Models
 @using Lynicon.Map
 @using Lynicon.Collation
 @using System.Text.RegularExpressions
 @{
     var enumElementReplacer = new Regex("\\{.*\\}");
     bool canAdd = ViewData.ContainsKey("UrlPermission") && (bool)ViewData["UrlPermission"];
+    bool firstGroup = true;
 }
 <div id='lyn-item-selector' class="edit-100" style="@(ViewData.ContainsKey("popup") ? "display:none" : "")">
     <div id="edit">
         <div id="editPanelContainer">
             <div id="editPanel">
+                @foreach (var typeGroup in ContentTypeHierarchy.AllContentTypes.GroupBy(t => ContentTypeCategoryAttribute.GetForType(t)).OrderBy(tg => tg.Key ?? "ZZZ"))
+                {
+                if (!(firstGroup && string.IsNullOrEmpty(typeGroup.Key)))
+                {
+                    <h2>@(typeGroup.Key ?? "Others")</h2>
+                }
+                    firstGroup = false;
                 <div class="object level-0">
-                @foreach (var type in ContentTypeHierarchy.AllContentTypes.OrderBy(t => t.Name))
+                @foreach (var type in typeGroup.OrderBy(t => t.Name))
                 {
                     var patts = ContentMap.Instance.GetUrlPatterns(type);
                     if (!patts.Any()) { continue; }
@@ -47,6 +56,7 @@
                     </div>
                 }
                 </div>
+                }
             </div>
         </div>
     </div>

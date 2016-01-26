@@ -1,0 +1,17 @@
+﻿@model int?
+@using Lynicon.Extensibility
+@using Lynicon.Base.Modules;
+
+@{
+    var domainModule = LyniconModuleManager.Instance.GetModule<DomainPartition>();
+    IEnumerable<SelectListItem> slis = null;
+    if (domainModule != null)
+    {
+        slis = domainModule.GetDomainSelector(Model);
+    }
+}
+
+@if (domainModule != null)
+{
+ @Html.DropDownList("", slis, ViewData)
+}

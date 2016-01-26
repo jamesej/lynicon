@@ -1,6 +1,4 @@
-﻿@using Lynicon.Extensibility
-
-@{
+﻿@{
     Layout = "~/Areas/Lynicon/Views/Shared/EditorLayout.cshtml";
     ViewBag.Title = "Editor";
     ViewBag.BaseUrl = (string)Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea });
@@ -8,7 +6,8 @@
 
 @section Head {
     <script type="text/javascript">
-        var filterValueFunctions = [];
+        if (location.href.indexOf('$top') < 0)
+            location.href = ensureKeyValue(ensureKeyValue(location.href, '$top', '15'), '$orderby', 'Title');
     </script>
     <style type="text/css">
         .ui-selected td { background-color: #c2e3fa; }
@@ -20,19 +19,18 @@
         .fa { display: block; margin-top: 10px; cursor: pointer; }
         .fa:hover { opacity: 0.6; }
         #functions { height: 19%; width: 98%; margin-top: 1%; }
-        #search-button { height: 20px; width: 60px; }
     </style>
 }
 
 <div id="filters" style="height: 20%; width: 100%">
-    @foreach (var filter in LyniconUi.Instance.Filters)
-    {
-        Html.RenderPartial(filter.ViewName);
-    }
-    <div id="search-button">SEARCH</div>
+    <div class="filter-unit">
+        <label>Title</label>
+        <input type="text" name="Title" />
+    </div>
 </div>
 <div id='container' style="height: 80%; width: 100%; position:relative;">
     <div id="list">
+        @Html.Partial((string)ViewContext.RouteData.Values["listView"], (object)Model)
     </div>
     <div id="bar" >
         <i id="move-left" class="fa fa-chevron-left fa-2x"></i>
@@ -42,6 +40,9 @@
     <div id="items">
         <select id="items-list" multiple></select>
         <div id="functions">
+            @Html.Action((string)ViewContext.RouteData.Values["functionAction"],
+                     (string)ViewContext.RouteData.Values["functionController"],
+                     new { area = (string)ViewContext.RouteData.Values["functionArea"] ?? "" })
         </div>
     </div>
 </div>
@@ -89,14 +90,6 @@
         });
         $('#clear').click(function () {
             clear();
-        });
-        $('#search-button').click(function () {
-            var values = [];
-            for (var i = 0; i < filterValueFunctions.length; i++) {
-                var val = filterValueFunctions[i]();
-                if (val) values.push(val);
-            }
-            $('#list').load('/lynicon/admin/search', { filters: values });
-        });
+        })
     </script>
 }

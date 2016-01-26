@@ -25,6 +25,7 @@ namespace Lynicon.AutoTests
             var db = new CoreDb();
             db.Database.ExecuteSqlCommand("DELETE FROM ContentItems WHERE DataType IN ('Lynicon.Test.Models.HeaderContent', 'Lynicon.Test.Models.Sub1TContent', 'Lynicon.Test.Models.Sub2TContent')");
             db.Database.ExecuteSqlCommand("DELETE FROM TestData");
+            LyniconModuleManager.Instance.GetModule<SummaryCache>().Load();
         }
 
         [TestMethod]
@@ -32,19 +33,39 @@ namespace Lynicon.AutoTests
         {
             var hc = Collator.Instance.GetNew<HeaderContent>(new Address(typeof(HeaderContent), "a"));
 
-            hc.Summary.Title = "Header A";
-            hc.Summary.Image.Url = "/abc.gif";
+            hc.Title = "Header A";
+            hc.Image.Url = "/abc.gif";
             hc.HeaderBody = "xyz";
+            hc.SubTests = new List<SubTest> { new SubTest { A = "aab", B = "bbc" } };
 
             Collator.Instance.Set(hc);
 
             var item = Collator.Instance.Get<HeaderContent>(new Address(typeof(HeaderContent), "a"));
             Assert.IsNotNull(item, "Get by path");
+            Assert.AreEqual(item.SubTestsCount, 1);
+
+            var hc2 = Collator.Instance.GetNew<HeaderContent>(new Address(typeof(HeaderContent), "b"));
+
+            hc2.Title = "Header B";
+            hc2.Image.Url = "/def.gif";
+            hc2.HeaderBody = "bbb";
+
+            Collator.Instance.Set(hc2, true);
+
+            var items = Collator.Instance.Get<HeaderContent>();
+            Assert.AreEqual(3, items.Count(), "Get all items"); // There is an extra item which holds shared data
 
             var itemId = new ItemId(item);
             var item2 = Collator.Instance.Get<HeaderContent>(itemId);
             Assert.IsNotNull(item2, "Get by Id");
-            Assert.AreEqual(item.Summary.Title, item2.Summary.Title, "Get right item by Id");
+            Assert.AreEqual(item.Title, item2.Title, "Get right item by Id");
+
+            Collator.Instance.Delete(item2);
+
+            var items2 = Collator.Instance.Get<HeaderContent>();
+            Assert.AreEqual(2, items2.Count(), "Delete"); // There is an extra item which holds shared data
+
+            Collator.Instance.Delete(hc2);
         }
 
         [TestMethod]
@@ -59,6 +80,15 @@ namespace Lynicon.AutoTests
             var item = Collator.Instance.Get<TestData>(new Address(typeof(TestData), "x"));
             Assert.IsNotNull(item, "GetByPath");
 
+            var td2 = Collator.Instance.GetNew<TestData>(new Address(typeof(TestData), "y"));
+            td2.Value1 = "nnn";
+            td2.Path = "y";
+            td2.Id = 2;
+            Collator.Instance.Set(td2, true);
+
+            var items = Collator.Instance.Get<TestData>();
+            Assert.AreEqual(2, items.Count(), "Get all items");
+
             var itemId = new ItemId(item);
             var item2 = Collator.Instance.Get<TestData>(itemId);
             Assert.IsNotNull(item2, "Get by Id");
@@ -67,6 +97,11 @@ namespace Lynicon.AutoTests
             var item3 = Collator.Instance.Get<TestData>(new Address(typeof(TestData), "x"));
             Assert.IsNotNull(item3, "Get by Address");
             Assert.AreEqual(item3.Id, item.Id, "Get right item by Address");
+
+            Collator.Instance.Delete(item2);
+
+            var items2 = Collator.Instance.Get<TestData>();
+            Assert.AreEqual(1, items2.Count(), "Delete"); // There is an extra item which holds shared data
         }
 
         [TestMethod]
@@ -78,6 +113,45 @@ namespace Lynicon.AutoTests
             var s2 = Collator.Instance.GetNew<Sub2TContent>(new Address(typeof(Sub2TContent), "s2"));
             s2.Title = "Sub2";
             s2.Links.Add(new Models.Link { Content = "linky", Url = "/abc" });
+        }
+
+        [TestMethod]
+        public void Summaries()
+        {
+            var hc = Collator.Instance.GetNew<HeaderContent>(new Address(typeof(HeaderContent), "c"));
+
+            hc.Title = "Header A";
+            hc.Image.Url = "/abc.gif";
+            hc.HeaderBody = "xyz";
+            hc.SubTests = new List<SubTest> { new SubTest { A = "aab", B = "bbc" } };
+
+            Collator.Instance.Set(hc);
+
+            var item = Collator.Instance.Get<HeaderSummary>(new Address(typeof(HeaderContent), "c"));
+            Assert.IsNotNull(item, "Get summary by path");
+            Assert.AreEqual(item.SubTestsCount, 1, "Summary computed property");
+
+            var hc2 = Collator.Instance.GetNew<HeaderContent>(new Address(typeof(HeaderContent), "d"));
+
+            hc2.Title = "Header B";
+            hc2.Image.Url = "/def.gif";
+            hc2.HeaderBody = "bbb";
+            hc2.SubTests = new List<SubTest> { new SubTest { A = "aab", B = "bbc" }, new SubTest { A = "aabx", B = "bbcx" } };
+
+            Collator.Instance.Set(hc2, true);
+
+            var items = Collator.Instance.Get<HeaderSummary>();
+            Assert.AreEqual(3, items.Count(), "Get all summaries"); // There is an extra item which holds shared data
+
+            var itemId = new ItemId(item);
+            var item2 = Collator.Instance.Get<HeaderContent>(itemId);
+            Assert.IsNotNull(item2, "Get summary by Id");
+            Assert.AreEqual(item.Title, item2.Title, "Get right summary by Id");
+
+            Collator.Instance.Delete(item2);
+
+            var items2 = Collator.Instance.Get<HeaderSummary>();
+            Assert.AreEqual(2, items2.Count(), "Delete"); // There is an extra item which holds shared data
         }
     }
 }

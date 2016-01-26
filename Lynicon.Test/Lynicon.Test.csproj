@@ -148,6 +148,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AltItemContent.cs" />
+    <Compile Include="Models\BaseTContent.cs" />
     <Compile Include="Models\PropertyRedirectContent.cs" />
     <Compile Include="Models\RestaurantContent.cs" />
     <Compile Include="Models\HeaderContent.cs" />

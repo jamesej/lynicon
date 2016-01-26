@@ -35,7 +35,7 @@
         {
             propName = propName.LastAfter(".");
         }
-        itemHeading = propName.EndsWith("ies") ? propName.UpToLast("ies") + "y" : propName.UpToLast("s");
+        itemHeading = propName.Depluralise();
         itemHeading = itemHeading.ExpandCamelCase();
     }
     var additionalValues = (ViewData.ModelMetadata.AdditionalValues ?? new Dictionary<string, object>()).Merge(ViewData["CollectionAdditionalValues"] as Dictionary<string, object>);

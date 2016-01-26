@@ -40,13 +40,13 @@ namespace Lynicon.AutoTests
             Assert.AreEqual(ci.Id, Guid.Empty, "Content item id not initialised to empty guid");
 
             var hc = new HeaderContent();
-            hc.Summary.Title = "Header A";
-            hc.Summary.Image.Url = "/abc.gif";
+            hc.Title = "Header A";
+            hc.Image.Url = "/abc.gif";
             hc.HeaderBody = "xyz";
             ci.SetContent(hc);
             ci.Path = "a";
             Assert.AreEqual(ci.Title, "Header A", "Title not built on SetContent");
-            Assert.AreEqual(((GeneralSummary)ci.GetSummary()).Image.Url, "/abc.gif", "Summary not built on SetContent");
+            Assert.AreEqual(((HeaderSummary)ci.GetSummary()).Image.Url, "/abc.gif", "Summary not built on SetContent");
 
             Repository.Instance.Set(ci);
 
@@ -65,8 +65,8 @@ namespace Lynicon.AutoTests
             var ci = Repository.Instance.New<ContentItem>();
 
             var hc = new HeaderContent();
-            hc.Summary.Title = "Header B";
-            hc.Summary.Image.Url = "/abcd.gif";
+            hc.Title = "Header B";
+            hc.Image.Url = "/abcd.gif";
             hc.HeaderBody = "aaa";
             ci.SetContent(hc);
             ci.Path = "b";

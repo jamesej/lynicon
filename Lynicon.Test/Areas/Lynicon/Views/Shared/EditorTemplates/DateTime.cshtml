@@ -4,5 +4,5 @@
 <span class="text-display@(ViewData.ModelMetadata.IsReadOnly ? "-readonly" : "")">@(Model == null || Model.ToString() == "" ? "---" : Model.Value.ToString("g"))</span>
 @if (!ViewData.ModelMetadata.IsReadOnly)
 {
-@Html.TextBox("", string.Format("{0:yyyy-MM-dd}", Model.HasValue && Model != DateTime.MinValue ? Model : DateTime.Today), (object) new { @class = "text-box lyn-datetime" })
+@Html.TextBox("", string.Format("{0:yyyy-MM-dd}", Model.HasValue ? Model : DateTime.Today), (object) new { @class = "text-box lyn-datetime" })
 }

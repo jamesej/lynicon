@@ -1,0 +1,32 @@
+﻿@model object
+@using Lynicon.Utility
+@{
+    var url = Request.RawUrl.UpTo("?");
+    if (Request.QueryString.AllKeys.Contains("$type"))
+    {
+        url += "?$type=" + Request.QueryString["$type"];
+    }
+}
+<div id='editPanel'>
+    <form method="post" action="@url">
+        @Html.Partial("~/Areas/Lynicon/Views/Shared/EditorTemplates/EditorObject.cshtml")
+        @Html.Hidden("formState")
+        @if (ViewBag.UpdatedCheck != null && (long)ViewBag.UpdatedCheck != long.MaxValue)
+        {
+            <input type="hidden" id="updatedCheck" name="updatedCheck" value="@((long)ViewBag.UpdatedCheck)" />
+        }
+        @if (ViewData.ContainsKey("ItemIndex"))
+        {
+            @Html.Hidden("lynicon_itemIndex", ViewData["ItemIndex"])
+        }
+    </form>
+    @Html.Hidden("modelId", (string)ViewBag.Id)
+    @Html.Hidden("modelType", (string)Model.GetType().FullName)
+
+
+    @Html.DisplayForModel("FuncPanel", new { Sections = "Record,Opener" })
+    <div style="clear:both; height: 44px;"></div>
+</div>
+
+
+

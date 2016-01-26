@@ -9,7 +9,7 @@
     @{ int i = 0; }
     @foreach (object o in Model)
     {
-    <tr id="o-@i++" class="@(i == 1 ? " selected" : "")">
+    <tr id="o-@(i++)" class="@(i == 1 ? " selected" : "")">
         @foreach (var fld in (List<string>)ViewBag.ListFields)
         {
             <td>@o.GetType().GetProperty(fld).GetValue(o)</td>

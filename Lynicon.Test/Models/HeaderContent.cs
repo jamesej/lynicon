@@ -20,15 +20,39 @@ namespace Lynicon.Test.Models
         [Index(IndexAttribute.Mode.TextualAndAgglomerated)]
         public string B {get; set;}
     }
-    [Serializable, RedirectPropertySource("Common")]
+
+    [Serializable]
+    public class HeaderSummary : Summary
+    {
+        public Image Image { get; set; }
+        public int SubTestsCount { get; set; }
+
+        public HeaderSummary()
+        {
+            Image = new Image();
+        }
+    }
+
+    [Serializable, RedirectPropertySource("Common"), SummaryType(typeof(HeaderSummary))]
     public class HeaderContent : PageContent
     {
-        public GeneralSummary Summary { get; set; }
+        [Summary]
+        public string Title { get; set; }
+
+        [Summary]
+        public Image Image { get; set; }
+
         [UIHint("MinHtml"), Index(IndexAttribute.Mode.Agglomerate)]
         public string HeaderBody { get; set; }
 
         public string Common { get; set; }
 
+        [Summary]
+        public int SubTestsCount
+        {
+            get { return SubTests == null ? 0 : SubTests.Count; }
+            set { }
+        }
         public List<SubTest> SubTests { get; set; }
 
         private List<GeneralSummary> childItems = null;
@@ -45,9 +69,9 @@ namespace Lynicon.Test.Models
 
         public HeaderContent()
         {
-            Summary = new GeneralSummary();
             this.AlternateUrls = new AlternateUrlList();
             this.SubTests = new List<SubTest>();
+            this.Image = new Image();
         }
     }
 }

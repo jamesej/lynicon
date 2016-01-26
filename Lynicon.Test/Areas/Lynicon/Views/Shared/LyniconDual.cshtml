@@ -10,19 +10,7 @@
     </div>
     <div id="edit">
         <div id="editPanelContainer">
-            <div id='editPanel'>
-                @using (Html.BeginForm())
-                {
-                    @Html.EditorForModel("EditorObject")
-                    @Html.Hidden("formState")
-                    if (ViewBag.UpdatedCheck != null && (long)ViewBag.UpdatedCheck != long.MaxValue)
-                    {
-                        <input type="hidden" id="updatedCheck" name="updatedCheck" value="@((long)ViewBag.UpdatedCheck)" />
-                    }
-                }
-                @Html.Hidden("modelId", (string)ViewBag.Id)
-                @Html.Hidden("modelType", (string)Model.GetType().FullName)
-            </div>
+            @Html.EditorForModel("LyniconEditPanel")
             @if (!ViewData.ModelState.IsValid)
             {
                 <div id="error-panel">

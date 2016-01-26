@@ -34,7 +34,7 @@ namespace Lynicon.Test.Models
         public Image AnImage { get; set; }
     }
 
-    [Serializable]
+    [Serializable, SummaryType(typeof(Sub2TSummary))]
     public class Sub2TContent : BaseTContent
     {
         [Summary]

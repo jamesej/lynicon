@@ -23,30 +23,11 @@
     };
 }
 <div class='object level-@useDepth'>
-    @if (props.All(p => p.AdditionalValues.ContainsKey(SwitchableIconAttribute.Markup)))
-    {
-        <div class="switchable-icons-block">
-            @foreach (var prop in props)
-            {
-                string markup = (string)prop.AdditionalValues[SwitchableIconAttribute.Markup];
-                if (prop.PropertyName == Model.SelectedProperty)
-                {
-                    markup = markup.Replace("class='switchable-icon'", "class='switchable-icon selected'");
-                }
-                @Html.Raw(markup)
-            }
-            @Html.HiddenFor(m => m.SelectedProperty)
-            <div style="clear:both"></div>
-        </div>
-    }
-    else
-    {
-        foreach (var prop in props)
-        {
-            @Html.RadioButtonFor(m => m.SelectedProperty, prop.PropertyName, new { @class = "lyn-switchable-radio" })
-            <span>@prop.PropertyName</span>
-        }
-    }
+    @Html.DropDownListFor(m => m.SelectedProperty,
+            new SelectList(props.Select(p => new { Name = p.PropertyName.ExpandCamelCase(), Value = p.PropertyName }),
+            "Value", "Name",
+            Model.SelectedProperty.First()), new { @class = "lyniconBlockSelectBox" })
+
     @{ ViewData["HeaderRendered" + useDepth] = true; }
     @foreach (var prop in props.Where(pm => ShouldShow(pm)))
     {
@@ -65,6 +46,17 @@ $(document).ready(function () {
         if ($hdg.length && $hdg[0].firstChild)
             $hdg[0].firstChild.data = $this.next('span').text() + ' ';
         notifyLayout();
+    }).on('change', '.lyniconBlockSelectBox', function() {
+        var $this = $(this);
+        console.log($this);
+        var currentVal = $this.find('option:selected').val();
+        console.log(currentVal);
+        $this.siblings('.editor-unit').hide().filter('.prop-' + currentVal).show();
+        var $hdg = $this.closest('.editor-field').prev('.collection-item-bar').find('collection-item-heading');
+        if ($hdg.length && $hdg[0].firstChild)
+            $hdg[0].firstChild.data = $this.next('span').text() + ' ';
+        notifyLayout();
+        notifyVisible($this.parent().find('.lyn-reference-select'));
     }).on('click', '.switchable-icon', function () {
         var $this = $(this);
         $this.addClass('selected').siblings('.switchable-icon').removeClass('selected');
@@ -76,5 +68,20 @@ $(document).ready(function () {
         if ($hdg.length && $hdg[0].firstChild)
             $hdg[0].firstChild.data = $this.prop('title') + ' ';
         notifyLayout();
-    });
+    })
 });", new List<string> { "jquery" })
+
+@*
+    .on('click', '.switchable-icon', function () {
+        var $this = $(this);
+        $this.addClass('selected').siblings('.switchable-icon').removeClass('selected');
+        var $showCont = $this.closest('.switchable-icons-block').siblings('.editor-unit').hide().filter('.prop-' + $this.data('property-name'));
+        $showCont.show();
+        notifyVisible($showCont);
+        $this.siblings('input').val($this.data('property-name'));
+        var $hdg = $this.closest('.editor-field').prev('.collection-item-bar').find('.collection-item-heading');
+        if ($hdg.length && $hdg[0].firstChild)
+            $hdg[0].firstChild.data = $this.prop('title') + ' ';
+        notifyLayout();
+    })
+*@

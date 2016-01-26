@@ -46,6 +46,8 @@ namespace Lynicon.AutoTests
             Collator.RegisterExtensionType(typeof(TestData));
             ContentTypeHierarchy.RegisterType(typeof(HeaderContent));
             ContentTypeHierarchy.RegisterType(typeof(TestData));
+            ContentTypeHierarchy.RegisterType(typeof(Sub1TContent));
+            ContentTypeHierarchy.RegisterType(typeof(Sub2TContent));
             Collator.Instance.BuildRepository();
         }
 
