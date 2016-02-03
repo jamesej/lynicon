@@ -36,7 +36,7 @@
                 var fields = filterFields[$(this).data('filter')];
                 var filt = '';
                 for (var i = 0; i < fields.length; i++) {
-                    filt += (filt ? ' or ' : '') + fields[i] + "" ne null and substringof('"" + val.toLowerCase().replace(""'"", ""''"") + ""',tolower("" + fields[i] + ""))"";
+                    filt += (filt ? ' or ' : '') + fields[i] + "" ne null and substringof('"" + val.toUpperCase().replace(""'"", ""''"") + ""',toupper("" + fields[i] + ""))"";
                 }
                 url = ensureKeyValue(url, '$filter', filt);
                 url = ensureKeyValue(url, '$skip', 0);
