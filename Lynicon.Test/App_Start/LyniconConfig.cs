@@ -14,9 +14,11 @@ using Lynicon.Map;
 using Lynicon.Membership;
 using Lynicon.Modules;
 using Lynicon.Repositories;
-using Lynicon.Search;
+//using Lynicon.Search;
+using Lynicon.Base.Search;
 using Lynicon.Tasks.Models;
 using Lynicon.Test.Models;
+//using Lynicon.Sites.Modules;
 
 namespace Lynicon.Test
 {
@@ -33,9 +35,11 @@ namespace Lynicon.Test
 
             LyniconModuleManager.Instance.RegisterModule(new CoreModule());
             LyniconModuleManager.Instance.RegisterModule(new ContentSchemaModule());
-            LyniconModuleManager.Instance.RegisterModule(new UrlListModule(t => t != typeof(User)));
-            LyniconModuleManager.Instance.RegisterModule(new FullCache(t => t != Repository.Instance.ContainerType(typeof(User))));
-            LyniconModuleManager.Instance.RegisterModule(new Auditing());
+            //LyniconModuleManager.Instance.RegisterModule(new UrlListModule(t => t != typeof(User)));
+            LyniconModuleManager.Instance.RegisterModule(new FullCache(t =>
+                t != Repository.Instance.ContainerType(typeof(User))
+                && t != typeof(Audit)));
+            LyniconModuleManager.Instance.RegisterModule(new Auditing(TimeSpan.FromDays(90)));
             LyniconModuleManager.Instance.RegisterModule(new Publishing());
             LyniconModuleManager.Instance.RegisterModule(new TasksModule());
             LyniconModuleManager.Instance.RegisterModule(new SoftDelete());
@@ -43,16 +47,17 @@ namespace Lynicon.Test
             transfer.AutoTransferType = t => t == typeof(TagContent);
             LyniconModuleManager.Instance.RegisterModule(transfer);
             LyniconModuleManager.Instance.RegisterModule(new Sitemap());
+            LyniconModuleManager.Instance.RegisterModule(new References());
 
             var searchModule = new SearchModule(t => t == typeof(HeaderContent));
             searchModule.DontRebuild = true;
             LyniconModuleManager.Instance.RegisterModule(searchModule);
 
-            LyniconModuleManager.Instance.RegisterModule(new DomainPartition(
-                new DomainPartitionInfo[] {
-                    new DomainPartitionInfo { PartitionId = 1, Domain = "localhost", Code = "LH", Name = "Localhost" },
-                    new DomainPartitionInfo { PartitionId = 2, Domain = "www.gic.com", Code = "GIC", Name = "GIC" }
-                }));
+            //LyniconModuleManager.Instance.RegisterModule(new DomainPartition(
+            //    new DomainPartitionInfo[] {
+            //        new DomainPartitionInfo { PartitionId = 1, Domain = "localhost", Code = "LH", Name = "Localhost" },
+            //        new DomainPartitionInfo { PartitionId = 2, Domain = "www.gic.com", Code = "GIC", Name = "GIC" }
+            //    }));
 
             LyniconModuleManager.Instance.ValidateModules();
         }

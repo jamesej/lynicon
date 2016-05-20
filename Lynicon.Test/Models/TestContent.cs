@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using Lynicon.Base.Models;
 using Lynicon.Models;
 
 namespace Lynicon.Test.Models
@@ -18,7 +19,7 @@ namespace Lynicon.Test.Models
     }
 
     [Serializable]
-    public class TestContent : PageContent
+    public class TestContent : PageWithUrlsContent
     {
         public string Title { get; set; }
         public TestSub Sub { get; set; }

@@ -24,6 +24,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C007AF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lynicon.AnalyticsApi", "..\Lynicon\Lynicon.AnalyticsApi\Lynicon.AnalyticsApi.csproj", "{273170B6-788D-4DF5-83DE-531413E8C200}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lynicon.Sites", "..\Lynicon\Lynicon.Sites\Lynicon.Sites.csproj", "{5CFD2A0E-BF56-4688-8CDF-A3F473FE9EBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lynicon.Relations", "..\Lynicon\Lynicon.Relations\Lynicon.Relations.csproj", "{ADFC5E15-D2E5-4EB0-B52E-E6D8A9D1DBED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,6 +107,26 @@ Global
 		{273170B6-788D-4DF5-83DE-531413E8C200}.QA|Any CPU.Build.0 = Release|Any CPU
 		{273170B6-788D-4DF5-83DE-531413E8C200}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{273170B6-788D-4DF5-83DE-531413E8C200}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CFD2A0E-BF56-4688-8CDF-A3F473FE9EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CFD2A0E-BF56-4688-8CDF-A3F473FE9EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CFD2A0E-BF56-4688-8CDF-A3F473FE9EBC}.ForServices|Any CPU.ActiveCfg = Release|Any CPU
+		{5CFD2A0E-BF56-4688-8CDF-A3F473FE9EBC}.ForServices|Any CPU.Build.0 = Release|Any CPU
+		{5CFD2A0E-BF56-4688-8CDF-A3F473FE9EBC}.Prod|Any CPU.ActiveCfg = Release|Any CPU
+		{5CFD2A0E-BF56-4688-8CDF-A3F473FE9EBC}.Prod|Any CPU.Build.0 = Release|Any CPU
+		{5CFD2A0E-BF56-4688-8CDF-A3F473FE9EBC}.QA|Any CPU.ActiveCfg = Release|Any CPU
+		{5CFD2A0E-BF56-4688-8CDF-A3F473FE9EBC}.QA|Any CPU.Build.0 = Release|Any CPU
+		{5CFD2A0E-BF56-4688-8CDF-A3F473FE9EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CFD2A0E-BF56-4688-8CDF-A3F473FE9EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADFC5E15-D2E5-4EB0-B52E-E6D8A9D1DBED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADFC5E15-D2E5-4EB0-B52E-E6D8A9D1DBED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADFC5E15-D2E5-4EB0-B52E-E6D8A9D1DBED}.ForServices|Any CPU.ActiveCfg = Release|Any CPU
+		{ADFC5E15-D2E5-4EB0-B52E-E6D8A9D1DBED}.ForServices|Any CPU.Build.0 = Release|Any CPU
+		{ADFC5E15-D2E5-4EB0-B52E-E6D8A9D1DBED}.Prod|Any CPU.ActiveCfg = Release|Any CPU
+		{ADFC5E15-D2E5-4EB0-B52E-E6D8A9D1DBED}.Prod|Any CPU.Build.0 = Release|Any CPU
+		{ADFC5E15-D2E5-4EB0-B52E-E6D8A9D1DBED}.QA|Any CPU.ActiveCfg = Release|Any CPU
+		{ADFC5E15-D2E5-4EB0-B52E-E6D8A9D1DBED}.QA|Any CPU.Build.0 = Release|Any CPU
+		{ADFC5E15-D2E5-4EB0-B52E-E6D8A9D1DBED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADFC5E15-D2E5-4EB0-B52E-E6D8A9D1DBED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

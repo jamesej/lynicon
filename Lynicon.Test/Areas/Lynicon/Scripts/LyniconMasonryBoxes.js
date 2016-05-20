@@ -4,7 +4,8 @@ function notifyLayout() {
 }
 
 function notifyVisible($container) {
-    $container.trigger("shown");
+    var showDeferreds = [];
+    $container.trigger("shown", [ showDeferreds ]);
     $container.find("select.post-load-select:visible").each(function () {
         loadRefSelect($(this));
     });
@@ -16,7 +17,8 @@ function notifyVisible($container) {
         });
     $container.find("select.lyn-jquiac:visible").each(function () {
         initJquiac($(this));
-    })
+    });
+    return $.when.apply($, showDeferreds);
 }
 
 function notifyAddSelectOption($container, type, val, txt)
@@ -54,26 +56,47 @@ function setBoxSpinner($box, isStart, margin) {
     }
 }
 
+function toggleParent($parentLabel) {
+    var $editor = $parentLabel.next(".editor-field")
+    var $collobj = $editor.children(".collection, .object, .object-wrapper");
+    if ($collobj.hasClass("object-wrapper"))
+        $collobj = $collobj.children(".collection, .object");
+    if ($collobj.length == 0) return;
+    $parentLabel.toggleClass("child-closed").toggleClass("child-open");
+    var wasClosed = $collobj.hasClass('closed');
+    var $wrap = $editor.wrap('<div></div>').parent();
+    if (wasClosed)
+        $wrap.css('visibility', 'hidden');
+    else {
+        $wrap.css({ height: $editor.height() });
+        $editor.slideUp(300, function () {
+            $editor.show().unwrap();
+            notifyLayout();
+        });
+    }
+    $collobj.toggleClass("closed");
+    var formState = $("#formState").val();
+    if (!wasClosed) {
+        if (formState || (formState == ""))
+            $("#formState").val(formState.replace($collobj.prop("id") + ";", ""));
+    } else {
+        //$('#formState').val(formState + $collection.prop('id') + ";");
+        var makeVisible = notifyVisible($collobj);
+        notifyLayout();
+        makeVisible.done(function () {
+            $wrap.css({ height: $editor.height() });
+            $editor.hide();
+            $wrap.css({ visibility: 'visible' });
+            $editor.slideDown(300).unwrap();
+        });
+    }
+}
+
 $(document).ready(function () {
     $("body").on("click", ".editor-label.parent", function (ev) {
         if (!$(ev.target).hasClass("parent")) // ignore click on buttons on bar
             return;
-        var $editor = $(this).next(".editor-field")
-        var $collobj = $editor.children(".collection, .object, .object-wrapper");
-        if ($collobj.hasClass("object-wrapper"))
-            $collobj = $collobj.children(".collection, .object");
-        if ($collobj.length == 0) return;
-        $(this).toggleClass("child-closed").toggleClass("child-open");
-        $collobj.toggleClass("closed");
-        var formState = $("#formState").val();
-        if ($collobj.hasClass("closed")) {
-            if (formState || (formState == ""))
-                $("#formState").val(formState.replace($collobj.prop("id") + ";", ""));
-        } else {
-            //$('#formState').val(formState + $collection.prop('id') + ";");
-            notifyVisible($collobj);
-        }
-        notifyLayout();
+        toggleParent($(this));
     }).on("dblclick", ".editor-unit.level-0 > .editor-label", function (ev) {
         $(this).closest(".editor-unit").toggleClass("wide");
         notifyLayout();

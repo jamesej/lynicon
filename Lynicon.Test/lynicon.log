@@ -11505,3 +11505,890 @@ Parameter name: graph
 2016-02-01 09:07:26,928 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
 2016-02-01 09:07:27,041 [6] INFO Lynicon.Modules.SearchModule - Starting search index build
 2016-02-01 09:07:27,758 [6] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-02-15 09:17:34,616 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-02-15 09:17:34,647 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-02-15 09:17:34,654 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-02-15 09:17:34,700 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-02-15 09:17:34,704 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-02-15 09:17:34,801 [5] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-02-15 09:17:34,991 [5] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-02-24 11:01:22,892 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-02-24 11:01:22,927 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-02-24 11:01:22,934 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-02-24 11:01:22,977 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-02-24 11:01:22,979 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-02-24 11:01:23,150 [5] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-02-24 11:01:23,920 [5] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-03-01 08:47:55,572 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-03-01 08:47:55,597 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-03-01 08:47:55,604 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-03-01 08:47:55,640 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-03-01 08:47:55,641 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-03-01 08:47:55,691 [5] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-03-01 08:47:56,002 [5] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-03-01 08:49:20,008 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-03-01 08:49:20,031 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-03-01 08:49:20,038 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-03-01 08:49:20,106 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-03-01 08:49:20,107 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-03-01 08:49:20,171 [8] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-03-01 08:49:20,478 [8] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-03-01 08:55:19,451 [5] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 949eb499-2bf8-44a9-a616-76258985273b:Lynicon.Base.Models.WikiContent
+2016-03-22 20:43:44,471 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-03-22 20:43:44,539 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-03-22 20:43:44,548 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-03-22 20:43:44,637 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-03-22 20:43:44,665 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-03-22 20:43:45,195 [5] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-03-22 20:43:45,709 [5] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-03-22 20:49:38,290 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-03-22 20:49:38,336 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-03-22 20:49:38,346 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-03-22 20:49:38,420 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-03-22 20:49:38,422 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-03-22 20:49:38,475 [9] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-03-22 20:49:38,965 [9] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-03-22 21:06:32,258 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-03-22 21:06:32,322 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-03-22 21:06:32,333 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-03-22 21:06:32,420 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-03-22 21:06:32,425 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-03-22 21:06:32,511 [23] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-03-22 21:06:33,433 [23] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-03-23 16:50:33,431 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-03-23 16:50:33,490 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-03-23 16:50:33,498 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-03-23 16:50:33,574 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-03-23 16:50:33,597 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-03-23 16:50:34,012 [5] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-03-23 16:50:34,551 [5] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-03-23 16:54:35,584 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-03-23 16:54:35,626 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-03-23 16:54:35,634 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-03-23 16:54:35,698 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-03-23 16:54:35,700 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-03-23 16:54:35,741 [7] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-03-23 16:54:36,019 [7] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-03-23 17:01:06,491 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-03-23 17:01:06,532 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-03-23 17:01:06,540 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-03-23 17:01:06,607 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-03-23 17:01:06,609 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-03-23 17:01:06,647 [5] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-03-23 17:01:06,977 [5] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-03-23 17:17:42,935 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-03-23 17:17:42,978 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-03-23 17:17:42,988 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-03-23 17:17:43,055 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-03-23 17:17:43,057 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-03-23 17:17:43,099 [5] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-03-23 17:17:43,418 [5] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-03-23 17:21:28,682 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-03-23 17:21:28,727 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-03-23 17:21:28,736 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-03-23 17:21:28,805 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-03-23 17:21:28,808 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-03-23 17:21:28,851 [20] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-03-23 17:21:29,186 [20] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-03-23 17:29:08,770 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-03-23 17:29:08,815 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-03-23 17:29:08,824 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-03-23 17:29:08,890 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-03-23 17:29:08,892 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-03-23 17:29:08,935 [20] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-03-23 17:29:09,317 [20] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-03-23 17:34:48,640 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-03-23 17:34:48,683 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-03-23 17:34:48,694 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-03-23 17:34:48,759 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-03-23 17:34:48,761 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-03-23 17:34:48,803 [20] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-03-23 17:34:49,156 [20] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-03-23 17:39:15,133 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-03-23 17:39:15,176 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-03-23 17:39:15,185 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-03-23 17:39:15,254 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-03-23 17:39:15,256 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-03-23 17:39:15,298 [29] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-03-23 17:39:15,657 [29] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-03-23 17:45:30,595 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-03-23 17:45:30,648 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-03-23 17:45:30,662 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-03-23 17:45:30,751 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-03-23 17:45:30,753 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-03-23 17:45:30,813 [26] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-03-23 17:45:31,542 [26] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-03-23 17:59:23,774 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-03-23 17:59:23,818 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-03-23 17:59:23,826 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-03-23 17:59:23,892 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-03-23 17:59:23,894 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-03-23 17:59:23,938 [14] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-03-23 17:59:24,269 [14] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-03-31 09:22:35,502 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-03-31 09:22:35,593 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-03-31 09:22:35,603 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-03-31 09:22:35,717 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-03-31 09:22:35,753 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-03-31 09:22:36,247 [6] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-03-31 09:22:37,671 [6] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-03-31 09:28:53,294 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: START Loading dump
+2016-03-31 09:28:53,338 [1] INFO Lynicon.Extensibility.Cache - UrlListModule: END Loading dump
+2016-03-31 09:28:53,346 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-03-31 09:28:53,413 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-03-31 09:28:53,416 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-03-31 09:28:53,458 [11] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-03-31 09:28:53,821 [11] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-04-03 21:39:55,621 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-03 21:39:55,774 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-03 21:39:55,804 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-03 21:39:56,391 [5] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-04-03 21:39:57,428 [5] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-04-03 21:44:21,699 [12] INFO Lynicon.Base.Modules.TotalCache - START Caching.Items.Full Load
+2016-04-03 21:44:21,707 [12] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Membership.User
+2016-04-03 21:44:25,984 [12] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.WikiContent
+2016-04-03 21:44:26,456 [12] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.TestContent
+2016-04-03 21:44:26,469 [12] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.SingleContent
+2016-04-03 21:44:26,480 [12] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.HeaderContent
+2016-04-03 21:44:26,493 [12] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.ItemContent
+2016-04-03 21:44:26,503 [12] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.AltItemContent
+2016-04-03 21:44:26,516 [12] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.BlogPostContent
+2016-04-03 21:44:26,527 [12] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.ChefContent
+2016-04-03 21:44:26,543 [12] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.RestaurantContent
+2016-04-03 21:44:26,557 [12] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.TagContent
+2016-04-03 21:44:26,575 [12] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.Audit
+2016-04-03 21:44:26,818 [12] INFO Lynicon.Base.Modules.TotalCache - END Caching.Items.Full Load: cache fails 0
+2016-04-03 21:44:26,819 [12] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 3 types
+2016-04-03 21:45:35,091 [6] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 646b86c2-40d3-457d-bb4e-655a53c0d962:Lynicon.Test.Models.HeaderContent
+2016-04-03 21:47:59,000 [16] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 646b86c2-40d3-457d-bb4e-655a53c0d962:Lynicon.Test.Models.HeaderContent
+2016-04-07 12:59:42,586 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-07 12:59:42,757 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-07 12:59:42,790 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 3 types
+2016-04-07 12:59:43,310 [7] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-07 12:59:44,163 [7] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-07 13:00:41,945 [7] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Collation.Address.GetAsString(String key) in c:\Dev\Lynicon\Lynicon.Core\Collation\Address.cs:line 156
+   at Lynicon.Collation.Address.<GetAsContentPath>b__19(KeyValuePair`2 kvp) in c:\Dev\Lynicon\Lynicon.Core\Collation\Address.cs:line 165
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at Lynicon.Utility.LinqX.Join[T](IEnumerable`1 source, String separator) in c:\Dev\Lynicon\Lynicon.Core\Utility\LinqX.cs:line 319
+   at Lynicon.Collation.Address.GetAsContentPath() in c:\Dev\Lynicon\Lynicon.Core\Collation\Address.cs:line 165
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 200
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 13:00:41,945 [9] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Collation.Address.GetAsString(String key) in c:\Dev\Lynicon\Lynicon.Core\Collation\Address.cs:line 156
+   at Lynicon.Collation.Address.<GetAsContentPath>b__19(KeyValuePair`2 kvp) in c:\Dev\Lynicon\Lynicon.Core\Collation\Address.cs:line 165
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at Lynicon.Utility.LinqX.Join[T](IEnumerable`1 source, String separator) in c:\Dev\Lynicon\Lynicon.Core\Utility\LinqX.cs:line 319
+   at Lynicon.Collation.Address.GetAsContentPath() in c:\Dev\Lynicon\Lynicon.Core\Collation\Address.cs:line 165
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 200
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 13:00:47,846 [7] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Collation.Address.GetAsString(String key) in c:\Dev\Lynicon\Lynicon.Core\Collation\Address.cs:line 156
+   at Lynicon.Collation.Address.<GetAsContentPath>b__19(KeyValuePair`2 kvp) in c:\Dev\Lynicon\Lynicon.Core\Collation\Address.cs:line 165
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at Lynicon.Utility.LinqX.Join[T](IEnumerable`1 source, String separator) in c:\Dev\Lynicon\Lynicon.Core\Utility\LinqX.cs:line 319
+   at Lynicon.Collation.Address.GetAsContentPath() in c:\Dev\Lynicon\Lynicon.Core\Collation\Address.cs:line 165
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 200
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 13:00:48,203 [9] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Collation.Address.GetAsString(String key) in c:\Dev\Lynicon\Lynicon.Core\Collation\Address.cs:line 156
+   at Lynicon.Collation.Address.<GetAsContentPath>b__19(KeyValuePair`2 kvp) in c:\Dev\Lynicon\Lynicon.Core\Collation\Address.cs:line 165
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at Lynicon.Utility.LinqX.Join[T](IEnumerable`1 source, String separator) in c:\Dev\Lynicon\Lynicon.Core\Utility\LinqX.cs:line 319
+   at Lynicon.Collation.Address.GetAsContentPath() in c:\Dev\Lynicon\Lynicon.Core\Collation\Address.cs:line 165
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 200
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 13:00:52,096 [5] INFO Lynicon.Base.Modules.Auditing - Purged audits before 08/01/2016
+2016-04-07 13:50:06,684 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-07 13:50:06,783 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-07 13:50:06,786 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 3 types
+2016-04-07 13:50:06,844 [37] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-04-07 13:50:07,178 [37] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-04-07 13:50:17,692 [37] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Collation.Address.ToString() in c:\Dev\Lynicon\Lynicon.Core\Collation\Address.cs:line 334
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 253
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 13:50:18,060 [37] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Collation.Address.ToString() in c:\Dev\Lynicon\Lynicon.Core\Collation\Address.cs:line 334
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 253
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 13:50:20,940 [34] INFO Lynicon.Base.Modules.Auditing - Purged audits before 08/01/2016
+2016-04-07 13:54:06,879 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-07 13:54:06,986 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-07 13:54:06,989 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 3 types
+2016-04-07 13:54:07,055 [32] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-04-07 13:54:07,419 [32] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-04-07 13:54:17,713 [34] INFO Lynicon.Base.Modules.Auditing - Purged audits before 08/01/2016
+2016-04-07 13:55:06,960 [9] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 747ed22f-caa6-48be-835d-048da15f6c42:Lynicon.Test.Models.HeaderContent
+2016-04-07 13:55:31,338 [9] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent: {"Published":false,"Existence":"Exists","Partition":1}
+2016-04-07 13:55:47,799 [34] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent: {"Published":false,"Existence":"Exists","Partition":1}
+2016-04-07 13:55:48,551 [11] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent: {"Published":false,"Existence":"Exists","Partition":1}
+2016-04-07 13:55:48,850 [9] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 976b8bb0-da93-45a5-82ac-0f9a6f7e0341:Lynicon.Test.Models.HeaderContent
+2016-04-07 14:04:04,232 [26] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent: {"Published":false,"Existence":"Exists","Partition":1}
+2016-04-07 14:06:07,470 [17] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent: {"Published":false,"Existence":"Exists","Partition":1}
+2016-04-07 14:06:07,713 [17] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 0f45b7e1-57dd-44d9-af8a-f133935fbc48:Lynicon.Test.Models.HeaderContent
+2016-04-07 14:08:19,635 [16] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent: {"Published":false,"Existence":"Exists","Partition":1}
+2016-04-07 14:08:23,843 [16] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent: {"Published":false,"Existence":"Exists","Partition":1}
+2016-04-07 14:08:24,225 [18] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions b882e862-454b-4ddf-beec-fa4267b5d99f:Lynicon.Test.Models.HeaderContent
+2016-04-07 14:11:12,508 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-07 14:11:12,678 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-07 14:11:12,682 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 3 types
+2016-04-07 14:11:12,747 [26] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-04-07 14:11:13,345 [26] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-04-07 14:14:25,849 [14] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent: {"Published":false,"Existence":"Exists","Partition":1}
+2016-04-07 14:14:35,282 [18] INFO Lynicon.Base.Modules.Auditing - Purged audits before 08/01/2016
+2016-04-07 14:15:11,899 [26] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent: {"Published":false,"Existence":"Exists","Partition":1}
+2016-04-07 14:15:12,314 [14] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions d528b43e-6d8d-4927-8d36-3e1c1a58c504:Lynicon.Test.Models.HeaderContent
+2016-04-07 14:17:08,200 [14] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent: {"Published":false,"Existence":"Exists","Partition":1}
+2016-04-07 14:20:27,791 [26] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent: {"Published":false,"Existence":"Exists","Partition":1}
+2016-04-07 14:20:27,989 [26] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions c65dadee-fff9-48de-a950-4c5735f8fe09:Lynicon.Test.Models.HeaderContent
+2016-04-07 14:21:14,015 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-07 14:21:14,178 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-07 14:21:14,180 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 3 types
+2016-04-07 14:21:14,250 [6] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-04-07 14:21:14,675 [6] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-04-07 14:22:52,095 [26] INFO Lynicon.Base.Modules.Auditing - Purged audits before 08/01/2016
+2016-04-07 14:37:52,731 [37] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 646b86c2-40d3-457d-bb4e-655a53c0d962:Lynicon.Test.Models.HeaderContent
+2016-04-07 14:38:13,704 [34] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":false,"Existence":"Exists","Partition":1}
+2016-04-07 14:38:15,946 [34] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 14:38:18,134 [29] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions f374e287-91a9-478f-a7ec-a066ecbb4ebf:Lynicon.Test.Models.HeaderContent
+2016-04-07 14:38:22,026 [34] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 285
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 14:38:22,223 [34] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 285
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 14:38:26,573 [29] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 285
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 14:38:26,739 [29] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 285
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 14:40:06,459 [34] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 285
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 14:40:06,631 [34] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 285
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 14:40:21,395 [29] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 285
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 14:40:21,581 [29] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 285
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 14:40:33,760 [29] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 285
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 14:40:33,922 [29] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 285
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 14:58:10,305 [29] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 285
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 14:58:10,568 [29] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 285
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 15:01:59,290 [39] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 285
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 15:03:03,741 [39] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern '{*_0}', req 'http://localhost:19907/' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 285
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 55
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 211
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 167
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 150
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 171
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 122
+2016-04-07 15:03:51,286 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-07 15:03:51,448 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-07 15:03:51,452 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 3 types
+2016-04-07 15:03:51,534 [41] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-04-07 15:03:52,045 [41] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-04-07 15:07:43,203 [39] INFO Lynicon.Base.Modules.Auditing - Purged audits before 08/01/2016
+2016-04-07 15:08:14,240 [41] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions f374e287-91a9-478f-a7ec-a066ecbb4ebf:Lynicon.Test.Models.HeaderContent
+2016-04-07 15:09:20,228 [41] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 15:09:25,504 [50] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions f374e287-91a9-478f-a7ec-a066ecbb4ebf:Lynicon.Test.Models.HeaderContent
+2016-04-07 15:09:38,718 [49] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions f374e287-91a9-478f-a7ec-a066ecbb4ebf:Lynicon.Test.Models.HeaderContent
+2016-04-07 15:09:42,533 [41] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 15:09:54,308 [49] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions f374e287-91a9-478f-a7ec-a066ecbb4ebf:Lynicon.Test.Models.HeaderContent
+2016-04-07 15:09:57,149 [41] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 15:12:45,556 [41] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions f374e287-91a9-478f-a7ec-a066ecbb4ebf:Lynicon.Test.Models.HeaderContent
+2016-04-07 15:13:37,418 [43] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 15:14:41,176 [41] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 15:15:02,837 [42] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions f374e287-91a9-478f-a7ec-a066ecbb4ebf:Lynicon.Test.Models.HeaderContent
+2016-04-07 15:17:06,097 [41] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 15:17:19,832 [50] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions f374e287-91a9-478f-a7ec-a066ecbb4ebf:Lynicon.Test.Models.HeaderContent
+2016-04-07 15:18:11,543 [50] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 15:22:10,140 [41] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 15:28:12,510 [41] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 15:37:14,233 [28] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 15:41:54,526 [18] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 15:46:02,760 [20] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 15:46:11,484 [20] INFO Lynicon.Base.Modules.TotalCache - START Caching.Items.Full Load
+2016-04-07 15:46:11,489 [20] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Membership.User
+2016-04-07 15:46:14,117 [20] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.WikiContent
+2016-04-07 15:46:14,570 [20] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.HeaderContent
+2016-04-07 15:46:14,584 [20] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.Audit
+2016-04-07 15:46:14,768 [20] INFO Lynicon.Base.Modules.TotalCache - END Caching.Items.Full Load: cache fails 0
+2016-04-07 15:46:14,768 [20] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 3 types
+2016-04-07 15:46:25,668 [16] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 079787ac-37b4-4332-a81a-c3d67f0b578e:Lynicon.Test.Models.HeaderContent
+2016-04-07 15:49:07,179 [16] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 685e7ec0-ef95-4dee-b19b-0fb728ae11b5:Lynicon.Test.Models.HeaderContent
+2016-04-07 15:49:52,991 [17] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 57a88b6f-16e0-4f60-915c-8b6c4bf69854:Lynicon.Test.Models.HeaderContent
+2016-04-07 15:53:24,684 [16] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 71d2eb24-1bc5-4a45-8089-287ccc4ed19f:Lynicon.Test.Models.HeaderContent
+2016-04-07 15:54:43,477 [16] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 0b22642e-4321-46eb-a6dc-0391b50f792a:Lynicon.Test.Models.HeaderContent
+2016-04-07 15:56:20,980 [16] INFO Lynicon.Base.Modules.TotalCache - START Caching.Items.Full Load
+2016-04-07 15:56:55,097 [16] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Membership.User
+2016-04-07 15:56:55,112 [16] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.WikiContent
+2016-04-07 15:56:55,117 [16] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.HeaderContent
+2016-04-07 15:56:55,122 [16] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.Audit
+2016-04-07 15:56:55,273 [16] INFO Lynicon.Base.Modules.TotalCache - END Caching.Items.Full Load: cache fails 0
+2016-04-07 15:56:55,273 [16] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 3 types
+2016-04-07 15:59:23,389 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-07 15:59:23,495 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-07 15:59:23,497 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 3 types
+2016-04-07 15:59:23,569 [17] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-04-07 15:59:24,174 [17] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-04-07 15:59:35,523 [16] INFO Lynicon.Base.Modules.Auditing - Purged audits before 08/01/2016
+2016-04-07 16:00:05,807 [27] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 3a444f17-7c50-401d-9286-0345564a7457:Lynicon.Test.Models.HeaderContent
+2016-04-07 16:03:38,863 [7] INFO Lynicon.Base.Modules.TotalCache - START Caching.Items.Full Load
+2016-04-07 16:04:10,161 [7] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Membership.User
+2016-04-07 16:06:40,808 [7] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.WikiContent
+2016-04-07 16:08:10,596 [7] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.HeaderContent
+2016-04-07 16:12:12,039 [7] INFO Lynicon.Base.Modules.TotalCache - END Caching.Items.Full Load: cache fails 0
+2016-04-07 16:12:12,039 [7] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-07 16:14:09,065 [35] INFO Lynicon.Base.Modules.TotalCache - START Caching.Items.Full Load
+2016-04-07 16:14:09,065 [35] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Membership.User
+2016-04-07 16:14:09,076 [35] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.WikiContent
+2016-04-07 16:14:09,080 [35] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.HeaderContent
+2016-04-07 16:14:09,085 [35] INFO Lynicon.Base.Modules.TotalCache - END Caching.Items.Full Load: cache fails 0
+2016-04-07 16:14:09,085 [35] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-07 16:14:25,817 [35] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 5cd24d38-22b0-40b1-93e0-c11421944ebe:Lynicon.Test.Models.HeaderContent
+2016-04-07 16:15:17,214 [34] INFO Lynicon.Base.Modules.TotalCache - START Caching.Items.Full Load
+2016-04-07 16:15:17,214 [34] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Membership.User
+2016-04-07 16:15:25,209 [34] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.WikiContent
+2016-04-07 16:15:27,935 [34] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.HeaderContent
+2016-04-07 16:17:32,860 [34] INFO Lynicon.Base.Modules.TotalCache - END Caching.Items.Full Load: cache fails 0
+2016-04-07 16:17:32,860 [34] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-07 16:17:39,848 [25] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 254e3a1b-2285-4f2a-bc27-bb1860abbb44:Lynicon.Test.Models.HeaderContent
+2016-04-07 16:18:19,155 [25] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":false,"Existence":"Exists","Partition":1}
+2016-04-07 16:18:19,272 [25] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 16:18:20,960 [34] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 79357b48-14ed-47da-b7d9-95b20bbcb950:Lynicon.Test.Models.HeaderContent
+2016-04-07 16:18:31,021 [25] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 79357b48-14ed-47da-b7d9-95b20bbcb950:Lynicon.Test.Models.HeaderContent
+2016-04-07 16:18:39,668 [25] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 79357b48-14ed-47da-b7d9-95b20bbcb950:Lynicon.Test.Models.HeaderContent
+2016-04-07 16:18:45,805 [34] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 16:18:58,619 [23] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 79357b48-14ed-47da-b7d9-95b20bbcb950:Lynicon.Test.Models.HeaderContent
+2016-04-07 16:19:09,181 [25] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 79357b48-14ed-47da-b7d9-95b20bbcb950:Lynicon.Test.Models.HeaderContent
+2016-04-07 16:19:12,105 [34] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 16:20:27,819 [34] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 16:25:44,484 [34] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 16:33:17,610 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-07 16:33:17,741 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-07 16:33:17,743 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-07 16:33:17,820 [14] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-04-07 16:33:18,269 [14] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-04-07 16:33:29,474 [35] INFO Lynicon.Base.Modules.Auditing - Purged audits before 08/01/2016
+2016-04-07 16:34:34,059 [30] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 16:34:34,060 [30] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":false,"Existence":"Exists","Partition":1}
+2016-04-07 16:34:50,984 [30] ERROR Lynicon.Collation.ContentCollator - Duplicate versioned address in db: Lynicon.Test.Models.HeaderContent:_0= {"Published":true,"Existence":"Exists","Partition":1}
+2016-04-07 16:37:53,553 [20] ERROR Lynicon.Editors.DualFrameEditorController - Save edit failed
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.SetRelated(String path, Object data, Boolean bypassChecks) in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 559
+   at Lynicon.Collation.ContentCollator.Set(Address a, Object data, Dictionary`2 setOptions) in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 381
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Dictionary`2 setOptions) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 462
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Nullable`1 create, Boolean bypassChecks) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 450
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Nullable`1 create) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 495
+   at Lynicon.Editors.EditorController.SaveWithRedirect(Object data) in c:\Dev\Lynicon\Lynicon.Core\Editors\EditorController.cs:line 73
+   at Lynicon.Editors.DualFrameEditorController.Index(Object data, FormCollection form, String editAction, String formState, Nullable`1 updatedCheck) in c:\Dev\Lynicon\Lynicon.Core\Editors\DualFrameEditorController.cs:line 48
+2016-04-07 16:53:39,609 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-07 16:53:39,745 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-07 16:53:39,748 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-07 16:53:39,818 [53] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-04-07 16:53:40,472 [53] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-04-07 16:53:45,282 [34] INFO Lynicon.Base.Modules.Auditing - Purged audits before 08/01/2016
+2016-04-07 16:54:51,700 [53] INFO Lynicon.Base.Modules.TotalCache - START Caching.Items.Full Load
+2016-04-07 16:54:51,709 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Membership.User
+2016-04-07 16:54:55,293 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.WikiContent
+2016-04-07 16:54:55,689 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.TestContent
+2016-04-07 16:54:55,704 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.SingleContent
+2016-04-07 16:54:55,714 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.HeaderContent
+2016-04-07 16:54:55,725 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.ItemContent
+2016-04-07 16:54:55,736 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.AltItemContent
+2016-04-07 16:54:55,746 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.BlogPostContent
+2016-04-07 16:54:55,756 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.ChefContent
+2016-04-07 16:54:55,767 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.RestaurantContent
+2016-04-07 16:54:55,778 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.TagContent
+2016-04-07 16:54:55,790 [53] INFO Lynicon.Base.Modules.TotalCache - END Caching.Items.Full Load: cache fails 0
+2016-04-07 16:54:55,791 [53] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-08 09:27:11,997 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-08 09:27:12,303 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-08 09:27:12,370 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-08 09:27:13,147 [6] INFO Lynicon.Modules.SearchModule - Starting search index build
+2016-04-08 09:27:14,798 [6] INFO Lynicon.Modules.SearchModule - Ending search index build
+2016-04-08 09:27:28,488 [7] INFO Lynicon.Base.Modules.Auditing - Purged audits before 09/01/2016
+2016-04-12 09:14:05,351 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-12 09:14:05,424 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-12 09:14:05,444 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-12 09:14:05,820 [5] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-12 09:14:06,663 [5] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-12 09:14:12,269 [6] INFO Lynicon.Base.Modules.Auditing - Purged audits before 13/01/2016
+2016-04-21 08:46:01,569 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-21 08:46:01,672 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-21 08:46:01,699 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-21 08:46:02,084 [6] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-21 08:46:03,116 [6] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-21 08:46:11,034 [8] INFO Lynicon.Base.Modules.Auditing - Purged audits before 22/01/2016
+2016-04-21 09:21:58,957 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-21 09:21:59,082 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-21 09:21:59,084 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-21 09:21:59,150 [46] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-21 09:21:59,845 [46] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-21 09:22:06,395 [43] INFO Lynicon.Base.Modules.Auditing - Purged audits before 22/01/2016
+2016-04-24 08:17:21,967 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-24 08:17:22,111 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-24 08:17:22,134 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-24 08:17:22,522 [6] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-24 08:17:23,214 [6] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-24 08:17:31,272 [5] INFO Lynicon.Base.Modules.Auditing - Purged audits before 25/01/2016
+2016-04-24 08:20:34,986 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-24 08:20:35,094 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-24 08:20:35,096 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-24 08:20:35,155 [11] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-24 08:20:35,720 [11] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-24 08:20:39,947 [9] INFO Lynicon.Base.Modules.Auditing - Purged audits before 25/01/2016
+2016-04-24 08:25:14,853 [8] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 62c056a5-43a6-4c1b-b1e3-beba85097d4b:Lynicon.Test.Models.TestContent
+2016-04-24 08:28:31,765 [19] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-24 08:28:31,889 [19] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-24 08:28:31,891 [19] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-24 08:28:31,959 [13] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-24 08:28:32,460 [13] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-24 08:28:37,441 [15] INFO Lynicon.Base.Modules.Auditing - Purged audits before 25/01/2016
+2016-04-24 08:40:10,020 [19] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-24 08:40:10,145 [19] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-24 08:40:10,148 [19] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-24 08:40:10,217 [28] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-24 08:40:10,793 [28] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-24 08:40:15,058 [23] INFO Lynicon.Base.Modules.Auditing - Purged audits before 25/01/2016
+2016-04-24 08:43:59,114 [19] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-24 08:43:59,231 [19] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-24 08:43:59,236 [19] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-24 08:43:59,299 [29] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-24 08:43:59,712 [29] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-24 08:44:04,286 [28] INFO Lynicon.Base.Modules.Auditing - Purged audits before 25/01/2016
+2016-04-24 08:48:02,294 [19] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-24 08:48:02,411 [19] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-24 08:48:02,414 [19] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-24 08:48:02,470 [5] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-24 08:48:02,949 [5] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-24 08:48:07,663 [21] INFO Lynicon.Base.Modules.Auditing - Purged audits before 25/01/2016
+2016-04-24 08:56:22,221 [19] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-24 08:56:22,342 [19] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-24 08:56:22,347 [19] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-24 08:56:22,398 [22] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-24 08:56:23,141 [22] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-24 08:56:27,515 [21] INFO Lynicon.Base.Modules.Auditing - Purged audits before 25/01/2016
+2016-04-25 09:07:54,407 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-25 09:07:54,747 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-25 09:07:54,753 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-25 09:07:54,842 [231] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-25 09:07:55,801 [231] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-25 09:08:05,621 [259] INFO Lynicon.Base.Modules.Auditing - Purged audits before 26/01/2016
+2016-04-25 09:18:56,549 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-25 09:18:56,710 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-25 09:18:56,713 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-25 09:18:56,786 [253] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-25 09:18:57,305 [253] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-25 09:19:02,261 [254] INFO Lynicon.Base.Modules.Auditing - Purged audits before 26/01/2016
+2016-04-25 09:26:25,694 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-25 09:26:25,832 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-25 09:26:25,835 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-25 09:26:25,892 [256] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-25 09:26:26,564 [256] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-25 09:26:30,718 [247] INFO Lynicon.Base.Modules.Auditing - Purged audits before 26/01/2016
+2016-04-25 09:36:58,875 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-25 09:36:59,005 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-25 09:36:59,006 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-25 09:36:59,075 [21] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-25 09:36:59,557 [21] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-25 09:37:05,063 [251] INFO Lynicon.Base.Modules.Auditing - Purged audits before 26/01/2016
+2016-04-26 08:13:10,606 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-26 08:13:10,759 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-26 08:13:10,784 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-26 08:13:11,389 [7] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-26 08:13:12,818 [7] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-26 08:13:20,654 [5] INFO Lynicon.Base.Modules.Auditing - Purged audits before 27/01/2016
+2016-04-26 08:21:13,242 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-26 08:21:13,357 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-26 08:21:13,361 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-26 08:21:13,410 [15] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-26 08:21:13,823 [15] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-26 08:21:17,299 [13] INFO Lynicon.Base.Modules.Auditing - Purged audits before 27/01/2016
+2016-04-26 08:53:19,429 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-26 08:53:19,541 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-26 08:53:19,543 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-26 08:53:19,599 [53] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-26 08:53:20,009 [53] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-26 08:53:23,803 [42] INFO Lynicon.Base.Modules.Auditing - Purged audits before 27/01/2016
+2016-04-26 09:15:17,407 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-26 09:15:17,517 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-26 09:15:17,519 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-26 09:15:17,576 [40] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-26 09:15:18,232 [40] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-26 09:15:22,562 [48] INFO Lynicon.Base.Modules.Auditing - Purged audits before 27/01/2016
+2016-04-26 09:17:36,165 [53] INFO Lynicon.Base.Modules.TotalCache - START Caching.Items.Full Load
+2016-04-26 09:17:36,176 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.WikiContent
+2016-04-26 09:17:39,859 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.TestContent
+2016-04-26 09:17:39,874 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.SingleContent
+2016-04-26 09:17:39,874 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.HeaderContent
+2016-04-26 09:17:39,890 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.ItemContent
+2016-04-26 09:17:39,906 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.AltItemContent
+2016-04-26 09:17:39,906 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.BlogPostContent
+2016-04-26 09:17:39,921 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.ChefContent
+2016-04-26 09:17:39,937 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.RestaurantContent
+2016-04-26 09:17:39,937 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.TagContent
+2016-04-26 09:17:39,952 [53] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Membership.User
+2016-04-26 09:17:40,140 [53] INFO Lynicon.Base.Modules.TotalCache - END Caching.Items.Full Load: cache fails 0
+2016-04-26 09:17:40,140 [53] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-26 09:23:50,499 [49] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-26 09:23:50,560 [49] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-26 09:23:50,562 [49] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-26 09:23:50,616 [44] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-26 09:23:51,128 [44] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-26 09:23:55,579 [47] INFO Lynicon.Base.Modules.Auditing - Purged audits before 27/01/2016
+2016-04-26 21:21:47,311 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-26 21:21:47,394 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-26 21:21:47,419 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-26 21:21:47,909 [7] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-26 21:21:48,599 [7] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-26 21:21:55,428 [6] INFO Lynicon.Base.Modules.Auditing - Purged audits before 27/01/2016
+2016-04-26 21:36:26,646 [20] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions d599327c-6592-4ac3-adf6-20741f0cc55c:Lynicon.Test.Models.ChefContent
+2016-04-26 21:37:29,773 [15] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 99d73996-deb2-4990-9805-190b6e78e7cf:Lynicon.Test.Models.ChefContent
+2016-04-28 09:06:28,567 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-04-28 09:06:28,655 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-04-28 09:06:28,682 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-04-28 09:06:29,068 [7] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-04-28 09:06:29,942 [7] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-04-28 09:06:37,286 [6] INFO Lynicon.Base.Modules.Auditing - Purged audits before 29/01/2016
+2016-04-28 09:12:39,941 [13] INFO Lynicon.Base.Modules.TotalCache - START Caching.Items.Full Load
+2016-04-28 09:12:39,950 [13] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.WikiContent
+2016-04-28 09:12:43,707 [13] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.TestContent
+2016-04-28 09:12:43,721 [13] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.SingleContent
+2016-04-28 09:12:43,731 [13] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.HeaderContent
+2016-04-28 09:12:43,743 [13] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.ItemContent
+2016-04-28 09:12:43,754 [13] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.AltItemContent
+2016-04-28 09:12:43,764 [13] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.BlogPostContent
+2016-04-28 09:12:43,775 [13] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.ChefContent
+2016-04-28 09:12:43,785 [13] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.RestaurantContent
+2016-04-28 09:12:43,797 [13] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.TagContent
+2016-04-28 09:12:43,806 [13] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Membership.User
+2016-04-28 09:12:44,016 [13] INFO Lynicon.Base.Modules.TotalCache - END Caching.Items.Full Load: cache fails 0
+2016-04-28 09:12:44,016 [13] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-05-18 12:02:38,521 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-05-18 12:02:38,605 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-05-18 12:02:38,614 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-05-18 12:02:39,045 [10] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-05-18 12:02:39,855 [10] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-05-18 12:02:46,968 [6] INFO Lynicon.Base.Modules.Auditing - Purged audits before 18/02/2016
+2016-05-18 12:08:23,295 [10] ERROR Lynicon.Editors.DualFrameEditorController - Save edit failed
+System.Data.Entity.Infrastructure.DbUpdateConcurrencyException: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. Refresh ObjectStateManager entries. ---> System.Data.Entity.Core.OptimisticConcurrencyException: Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. Refresh ObjectStateManager entries.
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.ValidateRowsAffected(Int64 rowsAffected, UpdateCommand source)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at Lynicon.Repositories.ContentRepository.Set(List`1 items, Dictionary`2 setOptions) in c:\Dev\Lynicon\Lynicon.Core\Repositories\ContentRepository.cs:line 321
+   at Lynicon.Repositories.Repository.<>c__DisplayClass62.<Set>b__61(IGrouping`2 igroup) in c:\Dev\Lynicon\Lynicon.Core\Repositories\Repository.cs:line 449
+   at System.Linq.Enumerable.<SelectManyIterator>d__16`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Lynicon.Repositories.Repository.Set(List`1 items, Dictionary`2 setOptions) in c:\Dev\Lynicon\Lynicon.Core\Repositories\Repository.cs:line 448
+   at Lynicon.Collation.ContentCollator.Set(Address a, Object data, Dictionary`2 setOptions) in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 398
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Dictionary`2 setOptions) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 489
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Nullable`1 create, Boolean bypassChecks) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 477
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Nullable`1 create) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 522
+   at Lynicon.Editors.EditorController.SaveWithRedirect(Object data) in c:\Dev\Lynicon\Lynicon.Core\Editors\EditorController.cs:line 108
+   at Lynicon.Editors.DualFrameEditorController.Index(Object data, FormCollection form, String editAction, String formState, Nullable`1 updatedCheck) in c:\Dev\Lynicon\Lynicon.Core\Editors\DualFrameEditorController.cs:line 66
+2016-05-18 12:11:33,563 [10] ERROR Lynicon.Editors.DualFrameEditorController - Save edit failed
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.SetRelated(String path, Object data, Boolean bypassChecks) in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 577
+   at Lynicon.Collation.ContentCollator.Set(Address a, Object data, Dictionary`2 setOptions) in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 393
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Dictionary`2 setOptions) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 489
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Nullable`1 create, Boolean bypassChecks) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 477
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Nullable`1 create) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 522
+   at Lynicon.Editors.EditorController.SaveWithRedirect(Object data) in c:\Dev\Lynicon\Lynicon.Core\Editors\EditorController.cs:line 108
+   at Lynicon.Editors.DualFrameEditorController.Index(Object data, FormCollection form, String editAction, String formState, Nullable`1 updatedCheck) in c:\Dev\Lynicon\Lynicon.Core\Editors\DualFrameEditorController.cs:line 66
+2016-05-18 12:16:20,233 [10] ERROR Lynicon.Editors.DualFrameEditorController - Save edit failed
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.SetRelated(String path, Object data, Boolean bypassChecks) in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 577
+   at Lynicon.Collation.ContentCollator.Set(Address a, Object data, Dictionary`2 setOptions) in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 393
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Dictionary`2 setOptions) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 489
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Nullable`1 create, Boolean bypassChecks) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 477
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Nullable`1 create) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 522
+   at Lynicon.Editors.EditorController.SaveWithRedirect(Object data) in c:\Dev\Lynicon\Lynicon.Core\Editors\EditorController.cs:line 108
+   at Lynicon.Editors.DualFrameEditorController.Index(Object data, FormCollection form, String editAction, String formState, Nullable`1 updatedCheck) in c:\Dev\Lynicon\Lynicon.Core\Editors\DualFrameEditorController.cs:line 66
+2016-05-18 12:19:21,698 [11] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-05-18 12:19:21,816 [11] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-05-18 12:19:21,818 [11] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-05-18 12:19:21,876 [10] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-05-18 12:19:22,202 [10] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-05-18 12:19:26,534 [6] INFO Lynicon.Base.Modules.Auditing - Purged audits before 18/02/2016
+2016-05-18 12:20:35,887 [10] ERROR Lynicon.Editors.DualFrameEditorController - Save edit failed
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.SetRelated(String path, Object data, Boolean bypassChecks) in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 577
+   at Lynicon.Collation.ContentCollator.Set(Address a, Object data, Dictionary`2 setOptions) in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 393
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Dictionary`2 setOptions) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 489
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Nullable`1 create, Boolean bypassChecks) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 477
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Nullable`1 create) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 522
+   at Lynicon.Editors.EditorController.SaveWithRedirect(Object data) in c:\Dev\Lynicon\Lynicon.Core\Editors\EditorController.cs:line 108
+   at Lynicon.Editors.DualFrameEditorController.Index(Object data, FormCollection form, String editAction, String formState, Nullable`1 updatedCheck) in c:\Dev\Lynicon\Lynicon.Core\Editors\DualFrameEditorController.cs:line 66
+2016-05-18 12:22:15,118 [6] ERROR Lynicon.Editors.DualFrameEditorController - Save edit failed
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.SetRelated(String path, Object data, Boolean bypassChecks) in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 577
+   at Lynicon.Collation.ContentCollator.Set(Address a, Object data, Dictionary`2 setOptions) in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 393
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Dictionary`2 setOptions) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 489
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Nullable`1 create, Boolean bypassChecks) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 477
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Nullable`1 create) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 522
+   at Lynicon.Editors.EditorController.SaveWithRedirect(Object data) in c:\Dev\Lynicon\Lynicon.Core\Editors\EditorController.cs:line 108
+   at Lynicon.Editors.DualFrameEditorController.Index(Object data, FormCollection form, String editAction, String formState, Nullable`1 updatedCheck) in c:\Dev\Lynicon\Lynicon.Core\Editors\DualFrameEditorController.cs:line 66
+2016-05-18 12:30:19,626 [11] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-05-18 12:30:19,756 [11] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-05-18 12:30:19,758 [11] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-05-18 12:30:19,815 [10] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-05-18 12:30:20,335 [10] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-05-18 12:30:23,474 [6] INFO Lynicon.Base.Modules.Auditing - Purged audits before 18/02/2016
+2016-05-18 12:33:12,084 [11] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-05-18 12:33:12,220 [11] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-05-18 12:33:12,222 [11] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-05-18 12:33:12,280 [12] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-05-18 12:33:12,937 [12] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-05-18 12:33:16,864 [6] INFO Lynicon.Base.Modules.Auditing - Purged audits before 18/02/2016
+2016-05-19 11:53:28,388 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-05-19 11:53:28,526 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-05-19 11:53:28,529 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-05-19 11:53:28,594 [10] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-05-19 11:53:29,081 [10] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-05-19 11:53:33,420 [6] INFO Lynicon.Base.Modules.Auditing - Purged audits before 19/02/2016
+2016-05-20 09:27:05,915 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-05-20 09:27:06,081 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-05-20 09:27:06,105 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-05-20 09:27:06,485 [1] ERROR Lynicon.Extensibility.LyniconModuleManager - Module References blocked, initialisation exception
+System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Lynicon.Utility.ReflectionX.InvokeGenericMethod(Object instance, String method, Boolean isPublic, Func`2 methodSelector, IEnumerable`1 types, Object[] args) in c:\Dev\Lynicon\Lynicon.Core\Utility\ReflectionX.cs:line 382
+   at Lynicon.Utility.ReflectionX.InvokeGenericMethod(Object instance, String method, Func`2 methodSelector, IEnumerable`1 types, Object[] args) in c:\Dev\Lynicon\Lynicon.Core\Utility\ReflectionX.cs:line 367
+   at Lynicon.Utility.ReflectionX.InvokeGenericMethod(Object instance, String method, Type type0, Object[] args) in c:\Dev\Lynicon\Lynicon.Core\Utility\ReflectionX.cs:line 343
+   at Lynicon.Base.Modules.References.Load() in c:\Dev\Lynicon\Lynicon.Base\Modules\References.cs:line 80
+   at Lynicon.Base.Modules.References.Initialise() in c:\Dev\Lynicon\Lynicon.Base\Modules\References.cs:line 40
+   at Lynicon.Extensibility.LyniconModuleManager.Initialise() in c:\Dev\Lynicon\Lynicon.Core\Extensibility\LyniconModuleManager.cs:line 145
+2016-05-20 09:27:06,533 [7] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-05-20 09:27:07,305 [7] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-05-20 09:27:14,925 [6] INFO Lynicon.Base.Modules.Auditing - Purged audits before 20/02/2016
+2016-05-20 09:56:28,793 [18] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-05-20 09:56:28,922 [18] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-05-20 09:56:28,925 [18] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-05-20 09:58:28,909 [16] INFO Lynicon.Base.Modules.Auditing - Purged audits before 20/02/2016
+2016-05-20 10:02:31,971 [12] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-05-20 10:02:32,856 [12] INFO Lynicon.Base.Modules.SearchModule - Ending search index build

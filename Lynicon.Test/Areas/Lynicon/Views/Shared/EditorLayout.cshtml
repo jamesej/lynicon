@@ -1,4 +1,5 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿@using Lynicon.Membership
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" style="height: 100%; width: 100%">
 <head runat="server">
@@ -22,8 +23,8 @@
     <script type="text/javascript" src="/Lynicon/Embedded/Scripts/LyniconEditPanel.js/"></script>
     @RenderSection("Head", required: false)
     <script type="text/javascript">
-        var userIsAdmin = @(User.IsInRole("A") ? "true" : "false");
-        var userIsPower = @(User.IsInRole("P") ? "true" : "false");
+        var userIsAdmin = @(LyniconSecurityManager.Current.CurrentUserInRole("A") ? "true" : "false");
+        var userIsPower = @(LyniconSecurityManager.Current.CurrentUserInRole("P") ? "true" : "false");
     </script>
 </head>
 <body style="height: 100%; width: 100%">

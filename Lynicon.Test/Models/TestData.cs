@@ -5,10 +5,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 using Lynicon.Attributes;
+using Lynicon.Models;
 
 namespace Lynicon.Test.Models
 {
-    [Table("TestData"), Serializable]
+    [Serializable]
+    public class TestDataSummary : Summary
+    {
+        public string Value1 { get; set; }
+    }
+
+    [Table("TestData"), Serializable, SummaryType(typeof(TestDataSummary))]
     public class TestData
     {
         [Key]
@@ -17,6 +24,12 @@ namespace Lynicon.Test.Models
         [AddressComponent(UsePath=true)]
         public string Path { get; set; }
 
+        [Summary]
+        public string Title { get; set; }
+
+        public int ValueInt { get; set; }
+
+        [Summary]
         public string Value1 { get; set; }
     }
 }

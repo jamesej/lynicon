@@ -1,9 +1,10 @@
 ﻿@model IEnumerable<Summary>
 @using Lynicon.Models;
 @using Lynicon.Base.Models;
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
     @foreach (var summ in Model)
     {
@@ -15,11 +16,26 @@
                 if (vSumm.Video != null && !string.IsNullOrEmpty(vSumm.Video.Url) && vSumm.Video.Poster != null && !string.IsNullOrEmpty(vSumm.Video.Poster.Url) && !vSumm.Video.Poster.Url.StartsWith("~"))
                 {
                     <video:video>
-                        <video:thumbnail_loc>@vSumm.Video.Poster.Url.StartsWith("//") ? "http:" + vSumm.Video.Poster.Url : vSumm.Video.Poster.Url</video:thumbnail_loc>
+                        <video:thumbnail_loc>@(vSumm.Video.Poster.Url.StartsWith("//") ? "http:" + vSumm.Video.Poster.Url : vSumm.Video.Poster.Url)</video:thumbnail_loc>
                         <video:title>@summ.Title</video:title>
-                        <video:content_loc>@vSumm.Video.Url.StartsWith("//") ? "http:" + vSumm.Video.Url : vSumm.Video.Url</video:content_loc>
+                        <video:content_loc>@(vSumm.Video.Url.StartsWith("//") ? "http:" + vSumm.Video.Url : vSumm.Video.Url)</video:content_loc>
                         <video:live>no</video:live>
                     </video:video>
+                }
+            }
+            @if (summ is ISitemapImage)
+            {
+                var iSumm = (ISitemapImage)summ;
+                if (!string.IsNullOrEmpty(iSumm.SitemapImage.Url))
+                {
+                    <image:image>
+                        <image:loc>@(iSumm.SitemapImage.Url.StartsWith("//") ? "http:" + iSumm.SitemapImage.Url : iSumm.SitemapImage.Url)</image:loc>
+                        <image:title>@iSumm.Title</image:title>
+                        @if (iSumm is ISitemapImageCaption && !string.IsNullOrEmpty(((ISitemapImageCaption)iSumm).SitemapImageCaption))
+                        {
+                            <image:caption>@(((ISitemapImageCaption)iSumm).SitemapImageCaption)</image:caption>
+                        }
+                    </image:image>
                 }
             }
         </url>

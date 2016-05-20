@@ -3,48 +3,88 @@
 @using Lynicon.Models
 @using Lynicon.Extensibility
 
+@Html.RegisterScript("/Lynicon/Embedded/Scripts/chosen.jquery.js/")
 @Html.RegisterLocalStyles("item-lister", @"
 #class-filter { width: 300px; }
 .filters label { width: 150px; display: inline-block; }
+#left-panel { position: absolute; top: 50px; bottom: 0px; width: 500px; }
+#right-panel { margin-left: 500px; padding-left: 10px; }
+#active-filters { padding-bottom: 30px; }
+.filter-container { cursor: pointer; }
+#Filters > div > div > * { display: none !important; }
+#Filters > div > div > label.filter-name { display: block !important; }
+#Filters .field-filter { background-color: #9FC2CA; margin: 4px 0px; padding: 4px; color: white; }
+#filter-section .lyn-datetime {  width: 100px; }
+#filter-section .filter-container { border: 1px solid #9fc2ca; padding: 4px; margin: 4px 0px; }
+#filter-section label.filter-name { font-weight: bold; }
+fieldset { margin-top: 15px; border: 1px solid #bbb; }
+#classFilter { width: 80%; }
+#type-filter { margin: 4px 0px; border-bottom: 1px solid #bbb; padding-bottom: 4px; }
+.version-filter { margin: 6px 0px; }
+button { border: none; background-color: #A3C3AD; color: white; padding: 4px; cursor: pointer; }
+#show-results { margin-left: 4px; }
+h1 { margin: 4px; }
+thead td { border: 1px solid #aaa; font-weight: bold; }
+h2 { color: #aaa; padding: 4px; font-size: 20px; background-color: #F1F1F1; margin: 4px 0; }
+#buttons { margin-top: 4px; }
+#buttons button { background-color: #E8938A; }
+#results a { color: #236C6D; }
+#spacer-bottom { height: 90px; }
 ")
 @{
     var filters = LyniconUi.Instance.Filters;
     var versSelector = (List<VersionSelectionViewModel>)ViewData["VersionSelector"];
     int vIdx = 0;
 }
-<form id="filter-section" action="/Lynicon/Items/FilterItems?$top=10">
-    <fieldset id="version-filter">
-    <span>Types</span>
-    @Html.DropDownList("classFilter", Model.ContentClasses, new { @class = "chosen-select", multiple = "multiple" })
-    @foreach (var vsvm in versSelector)
-    {
-        <label>@vsvm.Title</label>
-        @Html.DropDownList("versionFilter[" + vIdx + "]", vsvm.SelectList, new { @class = "version-select", data_versionkey = vsvm.VersionKey })
-        vIdx++;
-    }
-    </fieldset>
-
+<div id="left-panel">
+    <form id="filter-section" action="/Lynicon/Items/FilterItems?$top=25">
+        <button id="show-results">SHOW</button>
+        <fieldset id="version-filter">
+            <div id="type-filter">
+                <label class="filter-name">Types</label>
+                @Html.DropDownList("classFilter", Model.ContentClasses, new { @class = "chosen-select", multiple = "multiple" })
+            </div>
+            @foreach (var vsvm in versSelector)
+            {
+                <div class="version-filter">
+                    <label class="filter-name">@vsvm.Title</label>
+                    @Html.DropDownList("versionFilter[" + vIdx + "]", vsvm.SelectList, new { @class = "version-select", data_versionkey = vsvm.VersionKey })
+                </div>
+                vIdx++;
+            }
+        </fieldset>
+        <fieldset id="active-filters">
+            <h2>Active Filters</h2>
+        </fieldset>
+    </form>
     <fieldset id="specific-filters">
+        <h2>Available Filters</h2>
         @Html.EditorFor(m => m.Filters, "Filters")
     </fieldset>
-    <button id="show-results">SHOW</button>
-</form>
-<div id="results-section">
-    
-</div>
-<div class="checked">
-    Checked: <span id="check-count">0</span>
-    <button id="clear-all">Clear All</button>
-    <button id="set-page">Set Page</button>
-</div>
+    <div id="spacer-bottom">
 
-<div id="buttons">
-    @foreach (var ilb in LyniconUi.Instance.CurrentItemsListButtons())
-    {
-        <button class="items-list-button" data-url="/@ilb.Url" data-confirm="@ilb.ConfirmMessage">@ilb.Caption</button>
-    }
+    </div>
 </div>
-<div id="result"></div>
+<div id="right-panel">
+    <h2>Results</h2>
+    <div id="results-section">
+
+    </div>
+    <div class="checked">
+        Checked: <span id="check-count">0</span>
+        <button id="clear-all">Clear All</button>
+        <button id="set-page">Set Page</button>
+        <button id="download-csv">CSV</button>
+    </div>
+
+    <div id="buttons">
+        @foreach (var ilb in LyniconUi.Instance.CurrentItemsListButtons())
+        {
+            <button class="items-list-button" data-url="/@ilb.Url" data-confirm="@ilb.ConfirmMessage">@ilb.Caption</button>
+        }
+    </div>
+    <div id="result"></div>
+</div>
 
 
 <script type="text/javascript">
@@ -54,8 +94,13 @@
 
     $('#show-results').click(function (ev) {
         ev.preventDefault();
+        if ($('#classFilter option:selected').length == 0 && !confirm("You are filtering all data on the system, is this OK?"))
+            return;
+
+        saveTypes();
+
         var data = $('#filter-section').serialize();
-        var url = $('#filter-section').prop('action').split('?')[0] + '?$top=10';
+        var url = $('#filter-section').prop('action').split('?')[0] + '?$top=25';
         $('#filter-section').prop('action', url);
         $.post(url, data, function (d) {
             $('#results-section').html(d);
@@ -67,7 +112,26 @@
         });
         $('#show-results').text('working...');
     });
-    
+    $('#download-csv').click(function (ev) {
+        ev.preventDefault();
+        var saveAction = $('#filter-section').prop('action');
+        $('#filter-section').prop('action', '/Lynicon/Items/FilterCsv').prop('target', '_blank');
+        $('#filter-section').submit();
+        $('#filter-section').prop('action', saveAction);
+    });
+
+    function updateActiveFilters() {
+        $('#active-filters input, #active-filters select').each(function () {
+            var nm = $(this).attr('name') || '';
+            var nmWds = nm.split('[');
+            if (nmWds.length > 1) {
+                nmPostWds = nmWds[1].split(']');
+                var idx = $(this).closest('.filter-container').index() - 1;
+                $(this).attr('name', nmWds[0] + '[' + idx + ']' + (nmPostWds.length > 1 ? nmPostWds[1] : ''));
+            }
+        });
+    }
+
     function getVersions() {
         var versions = {};
         $('.version-select').each(function () {
@@ -75,7 +139,7 @@
         });
         return versions;
     }
-    var checkStorageKey = "itemChecks";
+    var checkStorageKey = "itemChecks", filterStorageKey = "activeFilters", typesStorageKey = "typeFilters";
     function getChecks() {
         var str = localStorage.getItem(checkStorageKey) || '';
         return str == '' ? [] : str.split(',');
@@ -86,7 +150,7 @@
             items.push(itemId);
             localStorage.setItem(checkStorageKey, items.join(','));
             $('#check-count').text(items.length);
-        }    
+        }
     }
     function removeCheck(itemId) {
         var items = getChecks();
@@ -108,7 +172,37 @@
                 $(this).prop('checked', true);
         });
     }
-    
+
+    function saveFilters() {
+        var active = $('#active-filters input[name$=".Idx"]').map(function () { return $(this).val(); }).get().join();
+        localStorage.setItem(filterStorageKey, active);
+    }
+    function applyFilters() {
+        var activeList = localStorage.getItem(filterStorageKey) || '';
+        var active = activeList == '' ? [] : activeList.split(',');
+        $('#Filters .filter-container').each(function () {
+            if (active.indexOf($(this).find('input[name$="Idx"]').val()) >= 0) {
+                $('#active-filters').append($(this));
+                $(this).trigger('activateFilter');
+            }
+        });
+        updateActiveFilters();
+    }
+
+    function saveTypes() {
+        var types = $('#classFilter').val();
+        localStorage.setItem(typesStorageKey, types.join(' '));
+    }
+
+    function applyTypes() {
+        var ser = localStorage.getItem(typesStorageKey);
+        if (ser) {
+            var types = ser.split(' ');
+            $('#classFilter').val(types);
+            $('#classFilter').trigger('chosen:updated');
+        }
+    }
+
     clearChecks();
     $('#results-section').on('change', '.item-check', function () {
         if ($(this).is(':checked'))
@@ -162,4 +256,29 @@
             applyChecks();
         });
     }
+
+    $('.filter-container').draggable({ revert: true });
+    $('#active-filters').droppable({
+        hoverClass: 'dropping',
+        drop: function (ev, ui) {
+            ui.draggable.appendTo($('#active-filters'));
+            updateActiveFilters();
+            saveFilters();
+            $(ui.draggable).trigger('activateFilter');
+        }
+    });
+    $('#Filters').droppable({
+        hoverClass: 'dropping',
+        drop: function (ev, ui) {
+            ui.draggable.prependTo($('#Filters'));
+            updateActiveFilters();
+            saveFilters();
+        }
+    });
+
+    applyTypes();
+
+    $(document).ready(function () {
+        setTimeout(applyFilters, 200);
+    });
 </script>

@@ -24,14 +24,15 @@
     <div id="edit">
         <div id="editPanelContainer">
             @{
-                var item = ((ICollection)Model).Cast<object>().FirstOrDefault();
+                int index = (int)ViewData["ItemIndex"];
+                var item = ((ICollection)Model).Cast<object>().Skip(index).FirstOrDefault();
                 if (item == null)
                 {
                     item = Activator.CreateInstance(Model.GetType().GetGenericArguments()[0]);
                     ViewData["ItemIndex"] = -1;
                 }
             }
-            @Html.EditorFor(m => item, "LyniconEditPanel")
+            @Html.Partial("EditorTemplates/LyniconEditPanel", item)
         </div>
     </div>
 </div>
@@ -85,7 +86,7 @@
 
     $(document).ready(function() {
         //$('#container').layout({ east: { size: '280', spacing_open: 10, spacing_closed: 14, togglerLength_open: 60 } });
-        loadDetail(0);
+        //loadDetail(0);
     });
 </script>
 }

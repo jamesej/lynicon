@@ -7,6 +7,7 @@ using System.Web.Routing;
 using Lynicon.Base.Models;
 using Lynicon.Extensibility;
 using Lynicon.Routing;
+using Lynicon.Base.Routing;
 using Lynicon.Test.Models;
 using Lynicon.Utility;
 

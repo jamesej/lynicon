@@ -8,11 +8,13 @@
         int index = 0;
         ViewData.TemplateInfo.HtmlFieldPrefix = String.Empty;
     }
-    @foreach (var filter in Model)
+    @foreach (var filter in Model.OrderBy(m => m.Name))
     {
         string fieldName = String.Format("filters[{0}]", index);
-        string templateName = filter.GetType().Name.UpTo("`");
-        @Html.EditorFor(m => filter, templateName, fieldName)
+        //string templateName = filter.GetType().Name.UpTo("`");
+        <div class="filter-container">
+            @Html.EditorFor(m => filter, filter.ViewName, fieldName)
+        </div>
         index++;
     }
     @{

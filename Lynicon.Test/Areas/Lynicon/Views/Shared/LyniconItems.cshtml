@@ -148,14 +148,17 @@ function addUrl($clicked, $newEntry) {
     window.open("/" + url + "?$type=" + $clicked.closest('.editor-unit').find('.type-name').val());
 }
 
-$('#lyn-item-selector').on('shown', '.object.level-1', function (ev) {
+$('#lyn-item-selector').on('shown', '.object.level-1', function (ev, deferreds) {
     var $this = $(this);
     var $box = $this.closest('.editor-unit');
     var typeName = $box.find('.type-name').val();
     setBoxSpinner($box, true);
+    var doLoad = $.Deferred();
+    deferreds.push(doLoad);
     $this.load('/lynicon/items/getpage?$top=10&$orderby=Title&datatype=' + typeName, function () {
         setBoxSpinner($box.closest('.editor-unit'), false);
         notifyLayout();
+        doLoad.resolve();
     });
 }).on('click', 'a.paging-link', function (ev) {
     var $panel = $(this).closest('.object.level-1');

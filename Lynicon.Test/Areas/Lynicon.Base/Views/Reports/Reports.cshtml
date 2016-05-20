@@ -28,7 +28,7 @@
         {
             if (fld.IsFilter)
             {
-                @Html.DropDownList(fld.Name, fld.SelectList(Model.GetContentType()))
+                @Html.DropDownList(fld.Name, fld.SelectList(Model.GetType()))
             }
         }
         <button id="gen-csv">Generate CSV</button>

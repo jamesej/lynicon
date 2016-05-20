@@ -29,7 +29,7 @@ namespace Lynicon.AutoTests
         public static void Init(TestContext ctx)
         {
             var db = new CoreDb();
-            db.Database.ExecuteSqlCommand("DELETE FROM ContentItems WHERE DataType = 'Lynicon.Test.Models.HeaderContent'");
+            db.Database.ExecuteSqlCommand("DELETE FROM ContentItems WHERE DataType = 'Lynicon.Test.Models.HeaderContent' AND [Path] like 'rt-%'");
             db.Database.ExecuteSqlCommand("DELETE FROM TestData");
         }
 
@@ -44,7 +44,7 @@ namespace Lynicon.AutoTests
             hc.Image.Url = "/abc.gif";
             hc.HeaderBody = "xyz";
             ci.SetContent(hc);
-            ci.Path = "a";
+            ci.Path = "rt-a";
             Assert.AreEqual(ci.Title, "Header A", "Title not built on SetContent");
             Assert.AreEqual(((HeaderSummary)ci.GetSummary()).Image.Url, "/abc.gif", "Summary not built on SetContent");
 
@@ -69,7 +69,7 @@ namespace Lynicon.AutoTests
             hc.Image.Url = "/abcd.gif";
             hc.HeaderBody = "aaa";
             ci.SetContent(hc);
-            ci.Path = "b";
+            ci.Path = "rt-b";
             ((IPublishable)ci).IsPubVersion = false;
 
             Repository.Instance.Set(ci);
@@ -81,12 +81,12 @@ namespace Lynicon.AutoTests
         {
             var td = Repository.Instance.New<TestData>();
             td.Value1 = "nnn";
-            td.Path = "x";
+            td.Path = "rt-x";
             td.Id = 1;
             Repository.Instance.Set(td, true);
 
             var cont = Repository.Instance.Get<TestData>(typeof(TestData),
-                iq => iq.Where(x => x.Path == "x")).FirstOrDefault();
+                iq => iq.Where(x => x.Path == "rt-x")).FirstOrDefault();
             Assert.IsNotNull(cont, "GetByPath");
 
             var itemId = new ItemId(cont);
@@ -94,7 +94,7 @@ namespace Lynicon.AutoTests
             Assert.IsNotNull(cont2, "Get by Id");
             Assert.AreEqual(cont2.Id, cont.Id, "Get right item by Id");
 
-            var cont3 = Repository.Instance.Get<TestData>(typeof(TestData), new Address(typeof(TestData), "x")).FirstOrDefault();
+            var cont3 = Repository.Instance.Get<TestData>(typeof(TestData), new Address(typeof(TestData), "rt-x")).FirstOrDefault();
             Assert.IsNotNull(cont3, "Get by Address");
             Assert.AreEqual(cont3.Id, cont.Id, "Get right item by Address");
         }

@@ -1,5 +1,7 @@
 ﻿@model System.Collections.Generic.List<Lynicon.Membership.User>
-
+@{
+    int index = (int)ViewData["ItemIndex"];
+}
 <table class="list-table user-list-table">
     <tr>
         @foreach (var fld in (List<string>)ViewBag.ListFields)
@@ -12,7 +14,7 @@
     }
     @foreach (var u in Model)
     {
-    <tr id="u-@(i++)" class="@(i == 1 ? "selected" : "")">
+    <tr id="u-@(i++)" class="@(i - 1 == index ? "selected" : "")">
         @foreach (var fld in (List<string>)ViewBag.ListFields)
         {
             <td>@u.GetType().GetProperty(fld).GetValue(u)</td>
@@ -20,4 +22,4 @@
     </tr>
     }
 </table>
-@Html.Partial("FilterPanel", new Dictionary<string, List<string>> { { "Filter", new List<string> { "UserName", "Email" } } })
+@Html.Partial("FilterPanel", new Dictionary<string, List<string>> { { "Filter", new List<string> { "UserName", "Email" } } }, new ViewDataDictionary { { "caseSensitive", true } })

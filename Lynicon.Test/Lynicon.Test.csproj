@@ -149,6 +149,11 @@
     </Compile>
     <Compile Include="Models\AltItemContent.cs" />
     <Compile Include="Models\BaseTContent.cs" />
+    <Compile Include="Models\RefContent.cs" />
+    <Compile Include="Models\MockClaimsPrincipal.cs" />
+    <Compile Include="Models\RequestModel.cs" />
+    <Compile Include="Models\SearchContent.cs" />
+    <Compile Include="Models\UrlRedirectContent.cs" />
     <Compile Include="Models\PropertyRedirectContent.cs" />
     <Compile Include="Models\RestaurantContent.cs" />
     <Compile Include="Models\HeaderContent.cs" />
@@ -448,7 +453,6 @@
     <Content Include="Areas\Lynicon\Views\Shared\NavList.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconGARegister.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconUser.aspx" />
-    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\MediaFileLink.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Recaptcha.ascx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconFileManager.aspx" />
     <Content Include="Areas\Lynicon\Views\Shared\LyniconFileOpen.ascx" />
@@ -486,6 +490,11 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="Areas\Lynicon.Base\Views\ConfigPage\ConfigPage.cshtml" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\ContentType.cshtml" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Domain.cshtml" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\LyniconEditPanel.cshtml" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\MediaFileLink.cshtml" />
+    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Video.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -504,6 +513,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Test\HtmlNorm.cshtml" />
     <Content Include="Views\Tag\Index.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\OEM.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -588,6 +598,10 @@
     <ProjectReference Include="..\..\Lynicon\Lynicon.Core\Lynicon.csproj">
       <Project>{f9fb7ea1-57d4-49d0-9776-a7a7a8e23475}</Project>
       <Name>Lynicon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lynicon\Lynicon.Sites\Lynicon.Sites.csproj">
+      <Project>{5cfd2a0e-bf56-4688-8cdf-a3f473fe9ebc}</Project>
+      <Name>Lynicon.Sites</Name>
     </ProjectReference>
     <ProjectReference Include="..\Lynicon.Tasks\Lynicon.Tasks.csproj">
       <Project>{07156843-d89f-46d9-9eff-44a25d0d535c}</Project>

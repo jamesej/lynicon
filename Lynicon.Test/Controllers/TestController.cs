@@ -16,7 +16,8 @@ using Lynicon.Linq;
 using Lynicon.Membership;
 using Lynicon.Models;
 using Lynicon.Repositories;
-using Lynicon.Search;
+//using Lynicon.Search;
+using Lynicon.Base.Search;
 using Lynicon.Test.Models;
 using Lynicon.Utility;
 //using Lynicon.Workflow.Models;
@@ -33,14 +34,27 @@ namespace Lynicon.Test.Controllers
     {
         //
         // GET: /Test/
-
+        [HttpGet]
         public ActionResult Index(TestContent data)
         {
-            //var parser = new ODataExpressionParser();
-            //parser.Variables.Add("a", typeof(string));
-            //var res = parser.Parse("'p' eq a");
-            LinqTest.Test();
-            return View(data);
+            var r = new Request();
+            ViewBag.OemList = new SelectList(
+                new List<SelectListItem> { 
+                new SelectListItem { Text = "Item 1", Value = "1" },
+                new SelectListItem { Text = "Item 2", Value = "2" }
+            });
+            return View(r);
+        }
+
+        [HttpPost]
+        public ActionResult Index(TestContent data, Request r)
+        {
+            ViewBag.OemList = new SelectList(
+    new List<SelectListItem> { 
+                new SelectListItem { Text = "Item 1", Value = "1" },
+                new SelectListItem { Text = "Item 2", Value = "2" }
+            });
+            return View(r);
         }
 
         public ActionResult ConstraintOrdering(TestContent data)
@@ -272,6 +286,15 @@ namespace Lynicon.Test.Controllers
             }
             TimeSpan dur = st - DateTime.Now;
             return Content(dur.ToString(@"ss\:fff"));
+        }
+
+        public ActionResult TestSummz()
+        {
+            var db = new SummaryDb();
+            var qry = db.SummarisedSet(typeof(ContentItem));
+            var items = qry.AsFacade<ContentItem>().Where(ci => ci.Id == new Guid("F1E27308-16A6-44FE-A728-D22CD0F9FF07"));
+            var item = items.FirstOrDefault();
+            return Content("OK");
         }
     }
 }

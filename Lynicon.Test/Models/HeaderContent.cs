@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Routing;
 using Lynicon.Attributes;
+using Lynicon.Base.Attributes;
+using Lynicon.Base.Models;
 using Lynicon.Collation;
 using Lynicon.Models;
 using Lynicon.Utility;
@@ -34,7 +36,7 @@ namespace Lynicon.Test.Models
     }
 
     [Serializable, RedirectPropertySource("Common"), SummaryType(typeof(HeaderSummary))]
-    public class HeaderContent : PageContent
+    public class HeaderContent : PageWithUrlsContent
     {
         [Summary]
         public string Title { get; set; }

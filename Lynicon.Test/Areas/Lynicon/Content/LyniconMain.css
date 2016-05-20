@@ -9,7 +9,7 @@ BODY
 	padding: 0px;
 }
 input, textarea {
-	border: 1px solid #A0A0A0;
+	border: 1px solid #b8b8b8;
 }
 
 .clearfix {
@@ -197,12 +197,15 @@ font-size: 14px;
 	font-size: 13px;
 	position: relative;
 	color:#3a7777;
+	padding-top: 5px;
 	padding-bottom: 50px;
 }
 
 #editPanel a
 {
 	color: #4f4f4f;
+	display: inline-block;
+    padding: 3px 0 3px 4px;
 }
 #editPanel .editor-field.indent-0 {
 	background-color: #cbdfdf;
@@ -214,7 +217,10 @@ font-size: 14px;
 }
 #editPanel INPUT[type="text"]
 {
-	font-size: 11px;
+	font-size: 13px;
+	padding: 2px;
+    margin-top: -3px;
+    margin-left: -3px;
 }
 #editPanel .text-box
 {
@@ -325,6 +331,10 @@ font-size: 14px;
 }
 #editPanel .editor-field .editor-field .action-button {
 color: #87C1C1;
+}
+.object.level-1
+{
+	padding-bottom: 6px;
 }
 .collection > .editor-field, .collection > .editor-label, .object > .editor-field, .object > .editor-label
 {
@@ -515,6 +525,19 @@ video.thumb-vid
 	width: 68px;
 	display: inline-block;
 }
+
+#editPanel .lyn-datetime-now
+{
+    background-color: #eee;
+    border: 1px solid #bbb;
+    padding: 3px;
+    cursor: pointer;
+}
+#editPanel .lyn-datetime-now:hover
+{
+    background-color: #aaa;
+}
+
 #editPanel .lyn-file-url
 {
 	width: 100%;
@@ -727,17 +750,24 @@ margin-left: 16px;
 /* LIST EDITOR */
 table.list-table {
 	border-collapse: collapse;
-	margin: 5px;
+	width:99%;
+	color: #3a7777;
+	margin: 0.5%;
+	border: 2px solid #9c9c9c;
 }
 .list-table th, .list-table td {
 	padding: 5px;
-	border-left: 2px solid #D2D5D7;
+	border-left: 2px solid #9c9c9c;
+}
+.list-table th {
+	background-color: #8abcbc;
+    color: white;
 }
 .list-table th:first-child, .list-table td:first-child {
 	border-left: none;
 }
 .list-table tr.selected {
-	background-color: #98c5f1
+	background-color: #dadada
 }
 
 .lynicon-number-pager > span {
@@ -827,7 +857,7 @@ border: solid 2px #f4f4f4;
 
 #lyn-item-selector .cmd-link {
 color: #fff;
-padding: 1px 5px;
+padding: 3px 5px 1px;
 height: 16px;
 border-radius: 9px;
 text-decoration: none;
@@ -869,6 +899,10 @@ padding: 0px;
 float: left;
 margin: 3px 5px 3px 9px;
 font-weight: bold;
+}
+
+#lyn-item-selector .object.level-1 {
+	padding-bottom:0;
 }
 
 .lynicon-number-pager
@@ -969,7 +1003,7 @@ padding-bottom: 0px;
 }
 
 .lyn-item-entry {
-padding: 10px;
+padding: 3px;
 border-top: 1px solid #fff;
 color: #254e4e;
 font-weight: bold;
@@ -994,6 +1028,7 @@ overflow:auto;
 	text-align: center;
 	background-color: #8abcbc;
 	border-top: 1px solid #fff;
+	padding-top: 2px;
 }
 
 .lyn-item-paging-container .total {

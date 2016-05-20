@@ -4,6 +4,7 @@
 
 @{
     Uri currentUri = ViewContext.HttpContext.Request.Url;
+    bool caseSensitive = (bool?)ViewData["caseSensitive"] ?? false;
 }
 @foreach (var filter in Model) {
 <div class="lynicon-filter-textbox clearfix">
@@ -35,9 +36,11 @@
             if (val) {
                 var fields = filterFields[$(this).data('filter')];
                 var filt = '';
-                for (var i = 0; i < fields.length; i++) {
-                    filt += (filt ? ' or ' : '') + fields[i] + "" ne null and substringof('"" + val.toUpperCase().replace(""'"", ""''"") + ""',toupper("" + fields[i] + ""))"";
-                }
+                for (var i = 0; i < fields.length; i++) {"
+                + (caseSensitive
+                  ? @"filt += (filt ? ' or ' : '') + fields[i] + "" ne null and substringof('"" + val.replace(""'"", ""''"") + ""',"" + fields[i] + "")"";"
+                  : @"filt += (filt ? ' or ' : '') + fields[i] + "" ne null and substringof('"" + val.toUpperCase().replace(""'"", ""''"") + ""',toupper("" + fields[i] + ""))"";")
+                + @"}
                 url = ensureKeyValue(url, '$filter', filt);
                 url = ensureKeyValue(url, '$skip', 0);
                 url = ensureKeyValue(url, 'search-value', val);

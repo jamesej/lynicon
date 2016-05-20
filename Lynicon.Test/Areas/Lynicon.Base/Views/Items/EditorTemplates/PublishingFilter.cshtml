@@ -1,6 +1,6 @@
 ﻿@model Lynicon.Base.Models.PublishingFilter
 <div class="field-filter">
-    <label>@Model.Name</label>
+    <label class="filter-name">@Model.Name</label>
     <label>Show</label>
     @Html.CheckBoxFor(m => m.Show)
     <label>Never Published</label>
@@ -10,5 +10,6 @@
 
 
     @Html.HiddenFor(m => m.ModelType)
+    @Html.HiddenFor(m => m.Idx)
 </div>
 
