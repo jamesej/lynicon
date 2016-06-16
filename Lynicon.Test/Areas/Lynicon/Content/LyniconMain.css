@@ -137,7 +137,7 @@ input, textarea {
 	float: right;
 	border-left: 4px solid #747474;
 	box-sizing: border-box;
-	padding-left: 4px;
+	padding: 0 4px;
 	background-color: #fff;
 	min-height: 100%;
 	overflow: hidden;
@@ -152,6 +152,7 @@ input, textarea {
 }
 #view {
 	height: 100%;
+    box-sizing: border-box;
 }
 
 .editor-label
@@ -207,6 +208,10 @@ font-size: 14px;
 	display: inline-block;
     padding: 3px 0 3px 4px;
 }
+#editPanel .jqte a, #editPanel .chosen-container a
+{
+    padding: 0;
+}
 #editPanel .editor-field.indent-0 {
 	background-color: #cbdfdf;
 }
@@ -242,6 +247,8 @@ font-size: 14px;
 #editPanel .collection-item-bar .reorder,  #editPanel .collection-item-bar .delete
 {
 	float: right;
+    margin-top: 1px;
+    height: 17px;
 }
 #editPanel .reorder .action-button
 {
@@ -271,7 +278,7 @@ font-size: 14px;
 #edit .add-button-top
 {
 	position: absolute;
-	top: -29px;
+	top: -28px;
 	right: 6px;
 	width: 24px;
 	height: 28px;
@@ -748,16 +755,18 @@ margin-left: 16px;
 }
 
 /* LIST EDITOR */
+.lynicon-list-detail #view {
+    padding: 8px;
+}
 table.list-table {
 	border-collapse: collapse;
-	width:99%;
+	width:100%;
 	color: #3a7777;
-	margin: 0.5%;
-	border: 2px solid #9c9c9c;
 }
 .list-table th, .list-table td {
 	padding: 5px;
-	border-left: 2px solid #9c9c9c;
+	border-left: 4px solid #fff;
+    background-color: #cbdfdf;
 }
 .list-table th {
 	background-color: #8abcbc;
@@ -766,16 +775,16 @@ table.list-table {
 .list-table th:first-child, .list-table td:first-child {
 	border-left: none;
 }
-.list-table tr.selected {
-	background-color: #dadada
+.list-table tr.selected td {
+	background-color: #ccc
 }
 
 .lynicon-number-pager > span {
-	background-color: #8080D0;
+	background-color: #888;
 	border-radius: 12px;
 	display: inline-block;
-	width: 24px;
-	height: 24px;
+	min-width: 25px;
+	height: 25px;
 	text-align: center;
 }
 .lynicon-number-pager a {
@@ -784,12 +793,24 @@ table.list-table {
 	font-size: 17px;
 	font-family: Arial,sans-serif;
 	position: relative;
-	top: 2px;
+	top: 3px;
+    padding: 0 4px;
 }
 .lynicon-number-pager .current a {
 	padding-bottom: 5px;
 	border-bottom: 4px solid grey;
 }
+.lynicon-number-pager a .fa-caret-right {
+    padding: 1px 0px 0px 2px;
+}
+.lynicon-number-pager a .fa-caret-left {
+    padding: 1px 0px 0px 0px;
+    margin-left: -1px;
+}
+.lynicon-number-pager-total {
+    color: #777;
+}
+
 .lynicon-ctl-button {
 	display: inline-block;
 padding: 2px 4px;
@@ -798,16 +819,24 @@ color: #FFF;
 float: left;
 margin-right: 5px;
 }
+
+.lynicon-list-detail .lynicon-filter-textbox {
+    margin: 8px 0;
+}
 .lynicon-filter-textbox input {
 	float: left;
+    margin-right: 5px;
 }
 .lynicon-filter-textbox a {
-	background-color: #80a080;
+	background-color: #8abcbc;
 	cursor:pointer;
+    padding: 2px 6px;
+    font-weight: bold;
 }
 #lynicon-list-add-button {
-background-color: #808080;
-cursor: pointer;
+    background-color: #808080;
+    cursor: pointer;
+    padding: 3px 6px;
 }
 /* ITEM SELECTOR */
 
@@ -872,7 +901,7 @@ background-color: #8abcbc;
 #lyn-item-selector #edit .add-button
 {
 	position: absolute;
-	top: -33px;
+	top: -31px;
 	right: 6px;
 	color: #fff;
 	font-size: 24px;
@@ -905,9 +934,14 @@ font-weight: bold;
 	padding-bottom:0;
 }
 
+#lyn-item-selector .lynicon-number-pager-total {
+    padding-bottom: 4px;
+    color: #fff;
+}
+
 .lynicon-number-pager
 {
-	margin: 0px 0px 12px 8px;
+	margin: 0px 0px 12px 0px;
 }
 
 .lyn-type-items .lynicon-number-pager
@@ -1091,7 +1125,7 @@ padding: 1px 7px;
 	border-top: 1px solid #fff;
 }
 
-.lyn-item-filter-bar .lynicon-filter-textbox input {
+#editPanel .lyn-item-filter-bar .lynicon-filter-textbox input {
 border-radius: 14px;
 margin: 6px 6px 6px 10px;
 height: 22px;

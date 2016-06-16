@@ -92,13 +92,13 @@ namespace Lynicon.Workflow.Models
 
                 SetUserLayer(wfUser, newLayer.Level);
 
-                var wfUserDummy = new WorkflowUser { Id = wfUser.Id };
+                var wfUserDummy = new WorkflowUser { IdAsString = wfUser.IdAsString };
                 db.Users.Attach(wfUserDummy);
                 newLayer.Users.Add(wfUserDummy);
                 
                 db.Layers.Add(newLayer);
                 var newLayerTrans = new LayerTransaction {
-                    Layer = newLayer, Date = DateTime.Now, Type = LayerTransaction.Create, UserId = wfUser.Id
+                    Layer = newLayer, Date = DateTime.Now, Type = LayerTransaction.Create, UserId = wfUser.IdAsString
                 };
                 db.LayerTransactions.Add(newLayerTrans);
                 db.SaveChanges();

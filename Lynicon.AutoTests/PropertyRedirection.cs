@@ -25,8 +25,6 @@ namespace Lynicon.AutoTests
         [ClassInitialize]
         public static void Init(TestContext ctx)
         {
-            var db = new CoreDb();
-            db.Database.ExecuteSqlCommand("DELETE FROM ContentItems WHERE DataType = 'Lynicon.Test.Models.PropertyRedirectContent'");
             ContentTypeHierarchy.RegisterType(typeof(PropertyRedirectContent));
         }
 
@@ -38,6 +36,8 @@ namespace Lynicon.AutoTests
             prc0.Title = "Item 0";
             prc0.Common = "Common Text";
             Collator.Instance.Set(prc0);
+
+            // GetNew should set common values
             prc1 = Collator.Instance.GetNew<PropertyRedirectContent>(new Address(typeof(PropertyRedirectContent), "bb"));
             prc1.Title = "Item 1";
             Collator.Instance.Set(prc1);

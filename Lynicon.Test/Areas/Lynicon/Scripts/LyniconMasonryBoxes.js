@@ -87,7 +87,10 @@ function toggleParent($parentLabel) {
             $wrap.css({ height: $editor.height() });
             $editor.hide();
             $wrap.css({ visibility: 'visible' });
-            $editor.slideDown(300).unwrap();
+            $editor.slideDown(300, function () {
+                $editor.unwrap();
+                notifyLayout();
+            });
         });
     }
 }

@@ -17,9 +17,13 @@ CREATE TABLE [dbo].[ContentItems](
 	[DataType] [varchar](250) NOT NULL,
 	[Path] [nvarchar](250) NULL,
 	[Locale] [varchar](10) NULL,
-	[Summary] [nvarchar](3000) NULL,
-	[References] [VARCHAR] (4000) NULL,
+	[Summary] [nvarchar](max) NULL,
 	[Content] [nvarchar](max) NULL,
+	[Title] [nvarchar](250) NULL,
+	[Created] [datetime] NOT NULL,
+	[UserCreated] [uniqueidentifier] NULL,
+	[Updated] [datetime] NOT NULL,
+	[UserUpdated] [uniqueidentifier] NULL,
  CONSTRAINT [PK_ContentItems] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -80,7 +84,7 @@ INSERT INTO [dbo].[DbChanges]
            ([Change]
            ,[WhenChanged])
      VALUES
-           ('LyniconInit 0.0'
+           ('LyniconInit 0.1'
            ,GETDATE())
 GO
 

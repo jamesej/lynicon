@@ -35,6 +35,7 @@ namespace Lynicon.AutoTests
             var transfer = new Transfer(t => true, Publishing.PublishedVersion);
             LyniconModuleManager.Instance.RegisterModule(transfer);
             LyniconModuleManager.Instance.RegisterModule(new Sitemap());
+            LyniconModuleManager.Instance.RegisterModule(new References());
             var search = new SearchModule();
             search.DontRebuild = true;
             LyniconModuleManager.Instance.RegisterModule(search);
@@ -76,6 +77,7 @@ namespace Lynicon.AutoTests
 
         public static void MockRoutes()
         {
+            RouteTable.Routes.RouteExistingFiles = true;
             RouteTable.Routes.AddDataRoute<UrlRedirectContent>("urlred", "aaa/{_0}", new { controller = "mock", action = "mock" });
             RouteTable.Routes.AddDataRoute<HeaderContent>("header", "header/{_0}", new { controller = "mock", action = "mock" });
             RouteTable.Routes.AddDataRoute<TestData>("test-data", "testd/{_0}", new { controller = "mock", action = "mock" });

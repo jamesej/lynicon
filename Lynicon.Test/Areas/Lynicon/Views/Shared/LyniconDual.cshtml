@@ -1,12 +1,12 @@
 ﻿@{
     Layout = "~/Areas/Lynicon/Views/Shared/EditorLayout.cshtml";
-    ViewBag.BaseUrl = Request.Url.AbsolutePath;
-    @*ViewBag.BaseUrl = (string)Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea });*@
+    ViewBag._Lyn_BaseUrl = Request.Url.AbsolutePath;
+    @*ViewBag._Lyn_BaseUrl = (string)Url.Action(ViewBag.OriginalAction, ViewBag.OriginalController, new { area = ViewBag.OriginalArea });*@
 }
 
 <div id='container' style="height: 100%; width: 100%; position:relative;">
     <div id="view-container">
-        <iframe id="view" src="@(ViewBag.BaseUrl as string)?$mode=view@(ViewBag.OriginalQuery as string)"></iframe>
+        <iframe id="view" src="@(ViewBag._Lyn_BaseUrl as string)?$mode=view@(ViewBag.OriginalQuery as string)"></iframe>
     </div>
     <div id="edit">
         <div id="editPanelContainer">

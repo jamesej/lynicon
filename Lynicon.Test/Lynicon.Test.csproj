@@ -495,6 +495,11 @@
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\LyniconEditPanel.cshtml" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\MediaFileLink.cshtml" />
     <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Video.cshtml" />
+    <Content Include="Areas\Lynicon.Base\Views\Items\EditorTemplates\PublishingFilter.cshtml" />
+    <Content Include="Areas\Lynicon.Base\Views\Items\EditorTemplates\TransferFilter.cshtml" />
+    <Content Include="Areas\Lynicon.Base\Views\Reports\Reports.cshtml" />
+    <Content Include="Areas\Lynicon.Sites\Views\Items\EditorTemplates\CanonicalFilter.cshtml" />
+    <Content Include="Areas\Lynicon.Sites\Views\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

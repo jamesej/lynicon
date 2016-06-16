@@ -25,7 +25,7 @@ namespace Lynicon.Workflow.Models
         {
             base.Created = iWfUser.Created;
             base.Email = iWfUser.Email;
-            base.Id = iWfUser.Id;
+            base.IdAsString = iWfUser.IdAsString;
             base.Modified = iWfUser.Modified;
             base.Password = iWfUser.Password;
             base.Roles = iWfUser.Roles;

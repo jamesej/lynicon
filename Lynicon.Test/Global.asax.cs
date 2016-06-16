@@ -20,21 +20,20 @@ namespace Lynicon.Test
         protected void Application_Start()
         {
             LyniconConfig.RegisterModules();
-            
-            LyniconConfig.InitialiseDataApi();
+
             // Register areas
             AreaRegistration.RegisterAllAreas(this);
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            
+            LyniconConfig.InitialiseDataApi();
             LyniconConfig.Initialise();
         }
 
         protected void Application_OnPostAuthenticateRequest(object sender, EventArgs e)
         {
-            LyniconSecurityManager.Current.EnsureLightweightIdentity();
+            LyniconSecurityManager.CurrentAs<LyniconSecurityManager>().EnsureLightweightIdentity();
         }
 
         protected void Application_End()

@@ -5,6 +5,7 @@
             fname = fname.split('|')[0];
         }
         $input.val(fname);
+        notifyChanged();
         $input.siblings("span").text(fname);
         $input.closest(".lyn-image").find(".lyn-image-content").show().html("<div class='file-image-thumb' style='background-image:url(" + fname + ")'></div>");
         $input.closest(".lyn-image").find(".lyn-image-url, .lyn-image-alt").hide();

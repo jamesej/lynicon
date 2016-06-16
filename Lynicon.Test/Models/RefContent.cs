@@ -28,6 +28,8 @@ namespace Lynicon.Test.Models
     {
         public Reference<RefTargetContent> RefTarget { get; set; }
 
+        public Reference<RefTargetContent> RefTargetOther { get; set; }
+
         public RefSummary()
         {
             RefTarget = new Reference<RefTargetContent>();
@@ -42,6 +44,9 @@ namespace Lynicon.Test.Models
 
         [Summary]
         public Reference<RefTargetContent> RefTarget { get; set; }
+
+        [Summary]
+        public Reference<RefTargetContent> RefTargetOther { get; set; }
 
         [UIHint("MinHtml"), Index(IndexAttribute.Mode.Agglomerate)]
         public string Body { get; set; }

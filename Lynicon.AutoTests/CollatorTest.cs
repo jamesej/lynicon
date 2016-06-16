@@ -22,11 +22,6 @@ namespace Lynicon.AutoTests
         [ClassInitialize]
         public static void Init(TestContext ctx)
         {
-            var db = new CoreDb();
-            db.Database.ExecuteSqlCommand("DELETE FROM ContentItems WHERE DataType = 'Lynicon.Test.Models.HeaderContent' AND [Path] like 'ct-%'");
-            db.Database.ExecuteSqlCommand("DELETE FROM ContentItems WHERE DataType IN ('Lynicon.Test.Models.Sub1TContent', 'Lynicon.Test.Models.Sub2TContent')");
-            db.Database.ExecuteSqlCommand("DELETE FROM TestData");
-            LyniconModuleManager.Instance.GetModule<SummaryCache>().Load();
         }
 
         [TestMethod]
@@ -74,7 +69,7 @@ namespace Lynicon.AutoTests
         {
             var td = Collator.Instance.GetNew<TestData>(new Address(typeof(TestData), "x"));
             td.Value1 = "nnn";
-            td.Title = "Title";
+            td.Title = "TitleCT";
             td.Path = "x";
             td.Id = 1;
             Collator.Instance.Set(td, true);
@@ -84,38 +79,38 @@ namespace Lynicon.AutoTests
 
             var td2 = Collator.Instance.GetNew<TestData>(new Address(typeof(TestData), "y"));
             td2.Value1 = "nnn";
-            td2.Title = "Title2";
+            td2.Title = "TitleCT2";
             td2.Path = "y";
             td2.Id = 2;
             Collator.Instance.Set(td2, true);
 
-            var items = Collator.Instance.Get<TestData>();
+            var items = Collator.Instance.Get<TestData, TestData>(iq => iq.Where(d => d.Title.StartsWith("TitleCT")));
             Assert.AreEqual(2, items.Count(), "Get all items");
 
             var itemId = new ItemId(item);
             var item2 = Collator.Instance.Get<TestData>(itemId);
             Assert.IsNotNull(item2, "Get by Id");
-            Assert.AreEqual("Title", item2.Title, "Item has correct Title (got by Id)");
+            Assert.AreEqual("TitleCT", item2.Title, "Item has correct Title (got by Id)");
             Assert.AreEqual(item2.Id, item.Id, "Get right item by Id");
 
             var item3 = Collator.Instance.Get<TestData>(new Address(typeof(TestData), "x"));
             Assert.IsNotNull(item3, "Get by Address");
-            Assert.AreEqual("Title", item3.Title, "Item has correct Title (got by Address)");
+            Assert.AreEqual("TitleCT", item3.Title, "Item has correct Title (got by Address)");
             Assert.AreEqual(item3.Id, item.Id, "Get right item by Address");
 
             var summ = Collator.Instance.Get<TestDataSummary>(itemId);
             Assert.IsNotNull(summ, "Get summary by id");
-            Assert.AreEqual("Title", summ.Title, "summary by id has correct Title");
+            Assert.AreEqual("TitleCT", summ.Title, "summary by id has correct Title");
             Assert.AreEqual("/testd/x", summ.Url, "summary by id has correct url");
 
             var summ2 = Collator.Instance.Get<TestDataSummary>(new Address(typeof(TestData), "y"));
             Assert.IsNotNull(summ2, "Get summary by path");
-            Assert.AreEqual("Title2", summ2.Title, "summary by path has correct Title");
+            Assert.AreEqual("TitleCT2", summ2.Title, "summary by path has correct Title");
             Assert.AreEqual("/testd/y", summ2.Url, "summary by path has correct url");
 
             Collator.Instance.Delete(item2);
 
-            var items2 = Collator.Instance.Get<TestData>();
+            var items2 = Collator.Instance.Get<TestData, TestData>(iq => iq.Where(d => d.Title.StartsWith("TitleCT")));
             Assert.AreEqual(1, items2.Count(), "Delete"); // There is an extra item which holds shared data
         }
 

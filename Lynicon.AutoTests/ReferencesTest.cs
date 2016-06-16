@@ -23,8 +23,7 @@ namespace Lynicon.AutoTests
         [ClassInitialize]
         public static void Init(TestContext ctx)
         {
-            var db = new CoreDb();
-            db.Database.ExecuteSqlCommand("DELETE FROM ContentItems WHERE DataType IN ('Lynicon.Test.Models.RefTargetContent', 'Lynicon.Test.Models.RefContent')");
+
         }
 
         [TestMethod]
@@ -43,14 +42,26 @@ namespace Lynicon.AutoTests
             rc1.Title = "RC1";
             rc2.Title = "RC2";
             rc1.RefTarget = new Reference<RefTargetContent>(rt1.ItemId);
+            rc1.RefTargetOther = new Reference<RefTargetContent>(rt2.ItemId);
             rc2.RefTarget = new Reference<RefTargetContent>(rt1.ItemId);
             Collator.Instance.Set(rc1);
             Collator.Instance.Set(rc2);
 
-            //var backRefs = Reference.GetReferencesFrom<RefContent>(new ItemVersionedId(rt1.OriginalRecord), "RefTarget").ToList();
-            //Assert.AreEqual(2, backRefs.Count, "Get references to item with 2 refs");
-            //backRefs = Reference.GetReferencesFrom<RefContent>(new ItemVersionedId(rt2.OriginalRecord), "RefTarget").ToList();
-            //Assert.AreEqual(0, backRefs.Count, "Get references to item with 0 refs");
+            var backRefs = Reference.GetReferencesFrom<RefContent>(new ItemVersionedId(rt1.OriginalRecord), "RefTarget").ToList();
+            Assert.AreEqual(2, backRefs.Count, "Get references to item with 2 refs");
+            backRefs = Reference.GetReferencesFrom<RefContent>(new ItemVersionedId(rt2.OriginalRecord), "RefTarget").ToList();
+            Assert.AreEqual(0, backRefs.Count, "Get references to item with 0 refs");
+            backRefs = Reference.GetReferencesFrom<RefContent>(new ItemVersionedId(rt2.OriginalRecord), "RefTargetOther").ToList();
+            Assert.AreEqual(1, backRefs.Count, "Get references to item with 1 refs");
+
+            rc2.RefTarget = new Reference<RefTargetContent>(rt2.ItemId);
+            Collator.Instance.Set(rc2);
+            backRefs = Reference.GetReferencesFrom<RefContent>(new ItemVersionedId(rt1.OriginalRecord), "RefTarget").ToList();
+            Assert.AreEqual(1, backRefs.Count, "Get references after update");
+
+            Collator.Instance.Delete(rc1);
+            backRefs = Reference.GetReferencesFrom<RefContent>(new ItemVersionedId(rt1.OriginalRecord), "RefTarget").ToList();
+            Assert.AreEqual(0, backRefs.Count, "Get references after delete");
         }
     }
 }

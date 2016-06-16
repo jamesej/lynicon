@@ -22,15 +22,17 @@ namespace Lynicon.AutoTests
         [AssemblyInitialize]
         public static void GlobalInit(TestContext ctx)
         {
+            var db = new PreloadDb();
+            db.Database.ExecuteSqlCommand("DELETE FROM TestData");
+            db.Database.ExecuteSqlCommand("DELETE FROM ContentItems WHERE DataType IN ('Lynicon.Test.Models.UrlRedirectContent','Lynicon.Test.Models.SearchContent', 'Lynicon.Test.Models.HeaderContent', 'Lynicon.Test.Models.Sub1TContent', 'Lynicon.Test.Models.Sub2TContent', 'Lynicon.Test.Models.PropertyRedirectContent', 'Lynicon.Test.Models.RefTargetContent', 'Lynicon.Test.Models.RefContent')");
+
             LyniconConfig.Run();
         }
 
         [ClassInitialize]
         public static void Init(TestContext ctx)
         {
-            var db = new CoreDb();
-            db.Database.ExecuteSqlCommand("DELETE FROM ContentItems WHERE DataType = 'Lynicon.Test.Models.HeaderContent' AND [Path] like 'rt-%'");
-            db.Database.ExecuteSqlCommand("DELETE FROM TestData");
+
         }
 
         [TestMethod]
@@ -50,7 +52,7 @@ namespace Lynicon.AutoTests
 
             Repository.Instance.Set(ci);
 
-            var cont = Repository.Instance.GetByPath(typeof(HeaderContent), new List<string> { "a" }).FirstOrDefault();
+            var cont = Repository.Instance.GetByPath(typeof(HeaderContent), new List<string> { "rt-a" }).FirstOrDefault();
             Assert.IsNotNull(cont, "Get by path");
 
             var itemId = new ItemId(cont);

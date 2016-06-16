@@ -20,7 +20,7 @@ namespace Lynicon.Workflow.Models
         [ForeignKey("Level")]
         public Layer Layer { get; set; }
         public DateTime Date { get; set; }
-        public Guid? UserId { get; set; }
+        public string UserId { get; set; }
         [ForeignKey("UserId")]
         public WorkflowUser User { get; set; }
         public string Type { get; set; }

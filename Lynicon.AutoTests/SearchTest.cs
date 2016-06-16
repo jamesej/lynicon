@@ -23,8 +23,6 @@ namespace Lynicon.AutoTests
         [ClassInitialize]
         public static void Init(TestContext ctx)
         {
-            var db = new CoreDb();
-            db.Database.ExecuteSqlCommand("DELETE FROM ContentItems WHERE DataType = 'Lynicon.Test.Models.SearchContent'");
 
             var s1 = Collator.Instance.GetNew<SearchContent>(new Address(typeof(SearchContent), "s1"));
             s1.Body = new MinHtml("<p>Here is some text with plurals and a few accénts thrown in.  CAPITALISATION.</p>");

@@ -17,8 +17,6 @@
     @Html.Hidden("modelId", (string)ViewBag.Id)
     @Html.Hidden("modelType", (string)Model.GetType().FullName)
 
-
-    @Html.Partial("DisplayTemplates/FuncPanel", Model, new ViewDataDictionary(ViewData) { { "Sections", "Record,Opener" } })
     <div style="clear:both; height: 44px;"></div>
 </div>
 

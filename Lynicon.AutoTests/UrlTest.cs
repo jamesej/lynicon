@@ -23,8 +23,7 @@ namespace Lynicon.AutoTests
         [ClassInitialize]
         public static void Init(TestContext ctx)
         {
-            var db = new CoreDb();
-            db.Database.ExecuteSqlCommand("DELETE FROM ContentItems WHERE DataType = 'Lynicon.Test.Models.HeaderContent' AND [Path] like 'ut-%'");
+
         }
 
         [TestMethod]
