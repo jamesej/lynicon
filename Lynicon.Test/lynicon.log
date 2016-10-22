@@ -12607,3 +12607,648 @@ System.Collections.Generic.KeyNotFoundException: The given key was not present i
 2016-06-13 13:15:00,603 [5] INFO Lynicon.Base.Modules.Auditing - Purged audits before 15/03/2016
 2016-06-13 13:15:01,004 [6] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
 2016-06-13 13:15:02,897 [6] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-06-17 11:01:59,965 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Base.Models.HierarchySummary
+2016-06-17 11:02:00,002 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.GeneralSummary
+2016-06-17 11:02:00,003 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.ChefSummary
+2016-06-17 11:02:00,003 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Models.Summary
+2016-06-17 11:02:00,016 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-06-17 11:02:00,037 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-06-17 11:02:00,039 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-06-17 11:02:03,228 [5] INFO Lynicon.Base.Modules.Auditing - Purged audits before 19/03/2016
+2016-06-17 11:02:03,502 [5] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-06-17 11:02:03,831 [5] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-06-17 11:07:40,464 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Base.Models.HierarchySummary
+2016-06-17 11:07:40,497 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.GeneralSummary
+2016-06-17 11:07:40,497 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.ChefSummary
+2016-06-17 11:07:40,497 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Models.Summary
+2016-06-17 11:07:40,511 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-06-17 11:07:40,530 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-06-17 11:07:40,532 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-06-17 11:07:44,256 [7] INFO Lynicon.Base.Modules.Auditing - Purged audits before 19/03/2016
+2016-06-17 11:07:44,593 [7] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-06-17 11:07:45,002 [7] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-06-23 18:27:53,859 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Base.Models.HierarchySummary
+2016-06-23 18:27:53,895 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.GeneralSummary
+2016-06-23 18:27:53,895 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.ChefSummary
+2016-06-23 18:27:53,895 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Models.Summary
+2016-06-23 18:27:53,910 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-06-23 18:27:53,930 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-06-23 18:27:53,932 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-06-23 18:27:57,389 [5] INFO Lynicon.Base.Modules.Auditing - Purged audits before 25/03/2016
+2016-06-23 18:27:57,711 [5] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-06-23 18:27:58,094 [5] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-06-23 18:56:48,280 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Base.Models.HierarchySummary
+2016-06-23 18:56:48,319 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.GeneralSummary
+2016-06-23 18:56:48,319 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.ChefSummary
+2016-06-23 18:56:48,319 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Models.Summary
+2016-06-23 18:56:48,337 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-06-23 18:56:48,366 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-06-23 18:56:48,369 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-06-23 18:56:54,430 [32] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-06-23 18:56:54,440 [24] INFO Lynicon.Base.Modules.Auditing - Purged audits before 25/03/2016
+2016-06-23 18:56:56,253 [32] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-06-23 19:07:53,730 [24] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 3c7955e1-387f-4fd1-8484-574ede4c7d8d:Lynicon.Test.Models.HeaderContent
+2016-06-23 19:08:38,354 [26] ERROR Lynicon.Editors.DualFrameEditorController - Save edit failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Map.ContentMap.<AddressOccupied>b__41(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Map\ContentMap.cs:line 401
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Lynicon.Map.ContentMap.AddressOccupied(Address address) in c:\Dev\Lynicon\Lynicon.Core\Map\ContentMap.cs:line 399
+   at Lynicon.Editors.EditorController.SaveWithRedirect(Object data) in c:\Dev\Lynicon\Lynicon.Core\Editors\EditorController.cs:line 109
+   at Lynicon.Editors.DualFrameEditorController.Index(Object data, FormCollection form, String editAction, String formState, Nullable`1 updatedCheck) in c:\Dev\Lynicon\Lynicon.Core\Editors\DualFrameEditorController.cs:line 66
+2016-06-23 19:08:39,894 [24] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions b6f96bfa-bd69-4f25-a293-3b9f67889765:Lynicon.Test.Models.HeaderContent
+2016-06-23 19:23:01,107 [20] ERROR Lynicon.Editors.DualFrameEditorController - Save edit failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Map.ContentMap.<AddressOccupied>b__41(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Map\ContentMap.cs:line 401
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Lynicon.Map.ContentMap.AddressOccupied(Address address) in c:\Dev\Lynicon\Lynicon.Core\Map\ContentMap.cs:line 399
+   at Lynicon.Editors.EditorController.SaveWithRedirect(Object data) in c:\Dev\Lynicon\Lynicon.Core\Editors\EditorController.cs:line 109
+   at Lynicon.Editors.DualFrameEditorController.Index(Object data, FormCollection form, String editAction, String formState, Nullable`1 updatedCheck) in c:\Dev\Lynicon\Lynicon.Core\Editors\DualFrameEditorController.cs:line 66
+2016-06-23 19:23:02,588 [19] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 240a9392-0eea-4b52-ae5a-22008e393b6a:Lynicon.Test.Models.HeaderContent
+2016-06-23 19:36:02,031 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Base.Models.HierarchySummary
+2016-06-23 19:36:02,077 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.GeneralSummary
+2016-06-23 19:36:02,077 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.ChefSummary
+2016-06-23 19:36:02,078 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Models.Summary
+2016-06-23 19:36:02,095 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-06-23 19:36:02,172 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-06-23 19:36:02,174 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-06-23 19:36:08,695 [50] INFO Lynicon.Base.Modules.Auditing - Purged audits before 25/03/2016
+2016-06-23 19:36:10,182 [52] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-06-23 19:36:12,811 [52] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-06-23 19:39:39,638 [57] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions fc587939-6a66-49db-92ff-890f748be0e2:Lynicon.Test.Models.HeaderContent
+2016-06-23 19:41:12,783 [53] ERROR Lynicon.Editors.DualFrameEditorController - Save edit failed
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Lynicon.Map.ContentMap.<AddressOccupied>b__41(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Map\ContentMap.cs:line 401
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Lynicon.Map.ContentMap.AddressOccupied(Address address) in c:\Dev\Lynicon\Lynicon.Core\Map\ContentMap.cs:line 399
+   at Lynicon.Editors.EditorController.SaveWithRedirect(Object data) in c:\Dev\Lynicon\Lynicon.Core\Editors\EditorController.cs:line 109
+   at Lynicon.Editors.DualFrameEditorController.Index(Object data, FormCollection form, String editAction, String formState, Nullable`1 updatedCheck) in c:\Dev\Lynicon\Lynicon.Core\Editors\DualFrameEditorController.cs:line 66
+2016-06-23 19:41:14,483 [50] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 5d551577-c7f9-4de3-9145-43864009165f:Lynicon.Test.Models.HeaderContent
+2016-06-23 19:43:45,231 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Base.Models.HierarchySummary
+2016-06-23 19:43:45,272 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.GeneralSummary
+2016-06-23 19:43:45,272 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.ChefSummary
+2016-06-23 19:43:45,272 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Models.Summary
+2016-06-23 19:43:45,284 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-06-23 19:43:45,337 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-06-23 19:43:45,340 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-06-23 19:43:50,283 [56] INFO Lynicon.Base.Modules.Auditing - Purged audits before 25/03/2016
+2016-06-23 19:43:50,664 [56] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-06-23 19:43:51,210 [56] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-06-23 19:45:27,592 [44] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions c876ea73-9ea7-4596-ac58-068b573cd65b:Lynicon.Test.Models.HeaderContent
+2016-06-23 19:46:16,651 [43] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty?$type=Lynicon.Test.Models.HeaderContent' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 19:46:16,845 [43] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty?$type=Lynicon.Test.Models.HeaderContent' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 19:46:33,587 [56] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty?$type=Lynicon.Test.Models.HeaderContent' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 19:46:33,758 [56] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty?$type=Lynicon.Test.Models.HeaderContent' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 19:47:06,805 [56] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty?$type=Lynicon.Test.Models.HeaderContent' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 19:47:06,986 [56] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty?$type=Lynicon.Test.Models.HeaderContent' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 19:47:22,440 [56] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 19:47:22,618 [56] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 19:47:27,430 [45] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/rt-b' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 19:47:27,609 [45] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/rt-b' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 19:47:31,724 [56] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.ContentCollator.GetNew[T](Address a) in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 151
+   at Lynicon.Collation.Collator.GetNew[T](Address a) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 458
+   at Lynicon.Collation.Collator.GetNew[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 441
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 250
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 19:47:31,918 [56] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.ContentCollator.GetNew[T](Address a) in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 151
+   at Lynicon.Collation.Collator.GetNew[T](Address a) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 458
+   at Lynicon.Collation.Collator.GetNew[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 441
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 250
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 19:54:54,952 [39] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 19:55:01,719 [39] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 20:00:16,690 [42] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 20:00:23,828 [42] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 20:03:38,707 [37] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 20:04:14,714 [37] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 20:04:50,041 [37] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 20:04:52,004 [37] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 20:05:01,301 [11] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 20:05:10,649 [11] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 20:06:08,555 [37] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 20:07:32,496 [37] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 20:07:54,776 [41] INFO Lynicon.Base.Modules.TotalCache - START Caching.Items.Full Load
+2016-06-23 20:07:54,778 [41] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.WikiContent
+2016-06-23 20:08:01,038 [41] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.TestContent
+2016-06-23 20:08:01,053 [41] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.SingleContent
+2016-06-23 20:08:01,063 [41] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.HeaderContent
+2016-06-23 20:08:01,074 [41] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.ItemContent
+2016-06-23 20:08:01,082 [41] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.AltItemContent
+2016-06-23 20:08:01,090 [41] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.BlogPostContent
+2016-06-23 20:08:01,098 [41] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.ChefContent
+2016-06-23 20:08:01,108 [41] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.RestaurantContent
+2016-06-23 20:08:01,118 [41] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.TagContent
+2016-06-23 20:08:01,126 [41] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Membership.User
+2016-06-23 20:08:01,264 [41] INFO Lynicon.Base.Modules.TotalCache - END Caching.Items.Full Load: cache fails 0
+2016-06-23 20:08:01,264 [41] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-06-23 20:08:41,769 [17] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 4dc4df68-9b6f-49de-b55a-5f2fdaa03a4b:Lynicon.Test.Models.HeaderContent
+2016-06-23 20:08:53,636 [41] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/headerq?$type=Lynicon.Test.Models.HeaderContent' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 20:08:53,845 [41] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/headerq?$type=Lynicon.Test.Models.HeaderContent' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 20:23:24,658 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Base.Models.HierarchySummary
+2016-06-23 20:23:24,710 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.GeneralSummary
+2016-06-23 20:23:24,710 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.ChefSummary
+2016-06-23 20:23:24,710 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Models.Summary
+2016-06-23 20:23:24,725 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-06-23 20:23:24,777 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-06-23 20:23:24,780 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-06-23 20:23:27,982 [21] INFO Lynicon.Base.Modules.Auditing - Purged audits before 25/03/2016
+2016-06-23 20:23:28,296 [21] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-06-23 20:23:28,695 [21] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-06-23 20:24:02,848 [21] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty?$type=Lynicon.Test.Models.HeaderContent' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 20:24:03,041 [21] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty?$type=Lynicon.Test.Models.HeaderContent' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 20:24:11,358 [21] INFO Lynicon.Base.Modules.TotalCache - START Caching.Items.Full Load
+2016-06-23 20:24:11,363 [21] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.WikiContent
+2016-06-23 20:24:14,671 [21] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.TestContent
+2016-06-23 20:24:14,681 [21] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.SingleContent
+2016-06-23 20:24:14,688 [21] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.HeaderContent
+2016-06-23 20:24:14,696 [21] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.ItemContent
+2016-06-23 20:24:14,703 [21] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.AltItemContent
+2016-06-23 20:24:14,710 [21] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.BlogPostContent
+2016-06-23 20:24:14,718 [21] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.ChefContent
+2016-06-23 20:24:14,725 [21] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.RestaurantContent
+2016-06-23 20:24:14,732 [21] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.TagContent
+2016-06-23 20:24:14,739 [21] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Membership.User
+2016-06-23 20:24:14,923 [21] INFO Lynicon.Base.Modules.TotalCache - END Caching.Items.Full Load: cache fails 0
+2016-06-23 20:24:14,923 [21] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-06-23 20:25:16,972 [21] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 6876ac49-3300-471f-aff3-20ee81843089:Lynicon.Test.Models.HeaderContent
+2016-06-23 20:32:29,122 [36] ERROR Lynicon.Base.Controllers.PublishController - Wrong number of published/unpublished versions 72179820-177a-4788-81c4-c2b115adfd96:Lynicon.Test.Models.HeaderContent
+2016-06-23 20:40:05,654 [53] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 20:40:05,841 [53] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 20:40:30,612 [38] INFO Lynicon.Base.Modules.TotalCache - START Caching.Items.Full Load
+2016-06-23 20:40:30,612 [38] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.WikiContent
+2016-06-23 20:40:30,622 [38] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.TestContent
+2016-06-23 20:40:30,627 [38] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.SingleContent
+2016-06-23 20:40:30,633 [38] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.HeaderContent
+2016-06-23 20:40:30,637 [38] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.ItemContent
+2016-06-23 20:40:30,641 [38] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.AltItemContent
+2016-06-23 20:40:30,644 [38] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Base.Models.BlogPostContent
+2016-06-23 20:40:30,649 [38] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.ChefContent
+2016-06-23 20:40:30,653 [38] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.RestaurantContent
+2016-06-23 20:40:30,656 [38] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Test.Models.TagContent
+2016-06-23 20:40:30,660 [38] INFO Lynicon.Base.Modules.TotalCache - Loading data items for Lynicon.Membership.User
+2016-06-23 20:40:30,669 [38] INFO Lynicon.Base.Modules.TotalCache - END Caching.Items.Full Load: cache fails 0
+2016-06-23 20:40:30,669 [38] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-06-23 20:46:00,581 [53] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 20:46:00,614 [53] ERROR Lynicon.Routing.DataRoute`1 - Failed in DataRoute url pattern 'Articles/{_0}', req 'http://localhost:19907/Articles/qwerty' :
+System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.IO.StringReader..ctor(String s)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at Lynicon.Collation.ContentCollator.<Collate>d__3c`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 300
+   at Lynicon.Collation.ContentCollator.<Get>d__2`1.MoveNext() in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 60
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Lynicon.Collation.Collator.Get[T](Type contentType, RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 243
+   at Lynicon.Collation.Collator.Get[T](RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 199
+   at Lynicon.Routing.DataRoute`1.GetData(RouteData rd) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 198
+   at Lynicon.Routing.DataRoute`1.PostProcessRoute(RouteData rd, HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 228
+   at Lynicon.Routing.DataRoute`1.GetRouteData(HttpContextBase httpContext) in c:\Dev\Lynicon\Lynicon.Core\Routing\DataRoute.cs:line 170
+2016-06-23 20:53:54,803 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Base.Models.HierarchySummary
+2016-06-23 20:53:54,837 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.GeneralSummary
+2016-06-23 20:53:54,837 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.ChefSummary
+2016-06-23 20:53:54,839 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Models.Summary
+2016-06-23 20:53:54,850 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-06-23 20:53:54,909 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-06-23 20:53:54,911 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-06-23 20:53:57,935 [35] INFO Lynicon.Base.Modules.Auditing - Purged audits before 25/03/2016
+2016-06-23 20:53:58,273 [35] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-06-23 20:53:58,708 [35] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-06-23 20:57:20,270 [22] ERROR Lynicon.Editors.DualFrameEditorController - Save edit failed
+System.Exception: Content type Composite_0ContentItem not registered via a route or directly with ContentTypeHierarchy
+   at Lynicon.Repositories.ContentItem.get_ContentType() in c:\Dev\Lynicon\Lynicon.Core\Repositories\ContentItem.cs:line 318
+   at Lynicon.Repositories.ContentItem.SetContent(Object value) in c:\Dev\Lynicon\Lynicon.Core\Repositories\ContentItem.cs:line 464
+   at Lynicon.Collation.ContentCollator.SetRelated(String path, Object data, Boolean bypassChecks) in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 589
+   at Lynicon.Collation.ContentCollator.Set(Address a, Object data, Dictionary`2 setOptions) in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 386
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Dictionary`2 setOptions) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 494
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Nullable`1 create, Boolean bypassChecks) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 482
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Nullable`1 create) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 527
+   at Lynicon.Editors.EditorController.SaveWithRedirect(Object data) in c:\Dev\Lynicon\Lynicon.Core\Editors\EditorController.cs:line 112
+   at Lynicon.Editors.DualFrameEditorController.Index(Object data, FormCollection form, String editAction, String formState, Nullable`1 updatedCheck) in c:\Dev\Lynicon\Lynicon.Core\Editors\DualFrameEditorController.cs:line 66
+2016-06-23 20:57:41,874 [11] ERROR Lynicon.Editors.DualFrameEditorController - Save edit failed
+System.Exception: Content type Composite_0ContentItem not registered via a route or directly with ContentTypeHierarchy
+   at Lynicon.Repositories.ContentItem.get_ContentType() in c:\Dev\Lynicon\Lynicon.Core\Repositories\ContentItem.cs:line 318
+   at Lynicon.Repositories.ContentItem.SetContent(Object value) in c:\Dev\Lynicon\Lynicon.Core\Repositories\ContentItem.cs:line 464
+   at Lynicon.Collation.ContentCollator.SetRelated(String path, Object data, Boolean bypassChecks) in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 589
+   at Lynicon.Collation.ContentCollator.Set(Address a, Object data, Dictionary`2 setOptions) in c:\Dev\Lynicon\Lynicon.Core\Collation\ContentCollator.cs:line 386
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Dictionary`2 setOptions) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 494
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Nullable`1 create, Boolean bypassChecks) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 482
+   at Lynicon.Collation.Collator.Set(Address address, Object data, Nullable`1 create) in c:\Dev\Lynicon\Lynicon.Core\Collation\Collator.cs:line 527
+   at Lynicon.Editors.EditorController.SaveWithRedirect(Object data) in c:\Dev\Lynicon\Lynicon.Core\Editors\EditorController.cs:line 112
+   at Lynicon.Editors.DualFrameEditorController.Index(Object data, FormCollection form, String editAction, String formState, Nullable`1 updatedCheck) in c:\Dev\Lynicon\Lynicon.Core\Editors\DualFrameEditorController.cs:line 66
+2016-06-23 21:04:53,797 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Base.Models.HierarchySummary
+2016-06-23 21:04:53,845 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.GeneralSummary
+2016-06-23 21:04:53,845 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.ChefSummary
+2016-06-23 21:04:53,845 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Models.Summary
+2016-06-23 21:04:53,861 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-06-23 21:04:53,938 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-06-23 21:04:53,941 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-06-23 21:04:57,103 [37] INFO Lynicon.Base.Modules.Auditing - Purged audits before 25/03/2016
+2016-06-23 21:04:57,388 [37] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-06-23 21:04:57,785 [37] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-08-09 10:32:41,012 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Base.Models.HierarchySummary
+2016-08-09 10:32:41,048 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.GeneralSummary
+2016-08-09 10:32:41,049 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.ChefSummary
+2016-08-09 10:32:41,049 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Models.Summary
+2016-08-09 10:32:41,066 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-08-09 10:32:41,146 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-08-09 10:32:41,148 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-08-11 09:13:40,872 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Base.Models.HierarchySummary
+2016-08-11 09:13:40,908 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.GeneralSummary
+2016-08-11 09:13:40,909 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.ChefSummary
+2016-08-11 09:13:40,909 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Models.Summary
+2016-08-11 09:13:40,921 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-08-11 09:13:41,039 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-08-11 09:13:41,051 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-08-11 09:14:28,826 [6] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-08-11 09:14:29,780 [6] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-08-11 09:14:29,993 [5] INFO Lynicon.Base.Modules.Auditing - Purged audits before 13/05/2016
+2016-09-27 10:57:07,595 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Base.Models.HierarchySummary
+2016-09-27 10:57:07,629 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.GeneralSummary
+2016-09-27 10:57:07,629 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.ChefSummary
+2016-09-27 10:57:07,630 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Models.Summary
+2016-09-27 10:57:07,641 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-09-27 10:57:07,693 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-09-27 10:57:07,695 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-09-27 10:57:25,818 [7] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-09-27 10:57:25,830 [6] INFO Lynicon.Base.Modules.Auditing - Purged audits before 29/06/2016
+2016-09-27 10:57:26,247 [7] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-09-27 13:44:22,845 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Base.Models.HierarchySummary
+2016-09-27 13:44:22,883 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.GeneralSummary
+2016-09-27 13:44:22,883 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.ChefSummary
+2016-09-27 13:44:22,883 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Models.Summary
+2016-09-27 13:44:22,896 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-09-27 13:44:22,947 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-09-27 13:44:22,949 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-09-27 13:44:27,454 [6] INFO Lynicon.Base.Modules.Auditing - Purged audits before 29/06/2016
+2016-09-27 13:44:27,487 [8] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-09-27 13:44:28,274 [8] INFO Lynicon.Base.Modules.SearchModule - Ending search index build
+2016-09-27 13:49:24,771 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Base.Models.HierarchySummary
+2016-09-27 13:49:24,806 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.GeneralSummary
+2016-09-27 13:49:24,806 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Test.Models.ChefSummary
+2016-09-27 13:49:24,806 [1] WARN Lynicon.Models.ContentModelSchema - Unused summary type: Lynicon.Models.Summary
+2016-09-27 13:49:24,818 [1] INFO Lynicon.Extensibility.Cache - FullCache: START Loading dump
+2016-09-27 13:49:24,873 [1] INFO Lynicon.Extensibility.Cache - FullCache: END Loading dump
+2016-09-27 13:49:24,875 [1] DEBUG Lynicon.Base.Modules.TotalCache - Loaded FullCache cache 2 types
+2016-09-27 13:49:27,894 [6] INFO Lynicon.Base.Modules.Auditing - Purged audits before 29/06/2016
+2016-09-27 13:49:28,155 [6] INFO Lynicon.Base.Modules.SearchModule - Starting search index build
+2016-09-27 13:49:28,970 [6] INFO Lynicon.Base.Modules.SearchModule - Ending search index build

@@ -37,7 +37,7 @@ namespace Lynicon.Test
             LyniconModuleManager.Instance.RegisterModule(new ContentSchemaModule());
             //LyniconModuleManager.Instance.RegisterModule(new UrlListModule(t => t != typeof(User)));
             LyniconModuleManager.Instance.RegisterModule(new FullCache(t =>
-                t != Repository.Instance.ContainerType(typeof(User))
+                t != Collator.Instance.ContainerType(typeof(User))
                 && t != typeof(Audit)));
             LyniconModuleManager.Instance.RegisterModule(new Auditing(TimeSpan.FromDays(90)));
             LyniconModuleManager.Instance.RegisterModule(new Publishing());

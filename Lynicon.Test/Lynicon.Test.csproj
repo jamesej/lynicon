@@ -450,13 +450,6 @@
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\mctabs.js" />
     <Content Include="Areas\Lynicon\Scripts\tiny_mce\utils\validate.js" />
     <Content Include="Areas\Lynicon\Views\Shared\FullNavList.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\NavList.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\LyniconGARegister.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\LyniconUser.aspx" />
-    <Content Include="Areas\Lynicon\Views\Shared\EditorTemplates\Recaptcha.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\LyniconFileManager.aspx" />
-    <Content Include="Areas\Lynicon\Views\Shared\LyniconFileOpen.ascx" />
-    <Content Include="Areas\Lynicon\Views\Shared\LyniconPropertyItem.ascx" />
     <Content Include="Areas\Lynicon\Views\Ui\FunctionReveal.ascx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />

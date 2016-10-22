@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Threading;
+using Lynicon.Base.Modules;
 using Lynicon.Base.Routing;
 using Lynicon.Base.Search;
 using Lynicon.Collation;
+using Lynicon.Extensibility;
 using Lynicon.Models;
 using Lynicon.Repositories;
 using Lynicon.Routing;
@@ -23,6 +25,8 @@ namespace Lynicon.AutoTests
         [ClassInitialize]
         public static void Init(TestContext ctx)
         {
+            if (LyniconModuleManager.Instance.GetModule<SearchModule>() == null)
+                return;
 
             var s1 = Collator.Instance.GetNew<SearchContent>(new Address(typeof(SearchContent), "s1"));
             s1.Body = new MinHtml("<p>Here is some text with plurals and a few accénts thrown in.  CAPITALISATION.</p>");
@@ -65,6 +69,9 @@ namespace Lynicon.AutoTests
         [TestMethod]
         public void StaticSearch()
         {
+            if (LyniconModuleManager.Instance.GetModule<SearchModule>() == null)
+                Assert.Inconclusive("No Search Module");
+
             var csr = ClientSearch.Instance.Search("plural");
             Assert.AreEqual(1, csr.Total, "Match count wrong single match singular search, match plural word");
             csr = ClientSearch.Instance.Search("bit");
@@ -82,6 +89,9 @@ namespace Lynicon.AutoTests
         [TestMethod]
         public void DataSearch()
         {
+            if (LyniconModuleManager.Instance.GetModule<SearchModule>() == null)
+                Assert.Inconclusive("No Search Module");
+
             var ss = new SearchSpec();
             ss.AddFilterField("Date", new DateTime(2016, 10, 21).ToString());
             int total;
@@ -92,6 +102,9 @@ namespace Lynicon.AutoTests
         [TestMethod]
         public void SearchUpdate()
         {
+            if (LyniconModuleManager.Instance.GetModule<SearchModule>() == null)
+                Assert.Inconclusive("No Search Module");
+
             var csr = ClientSearch.Instance.Search("Update");
             Assert.AreEqual(1, csr.Total, "Post update match");
 

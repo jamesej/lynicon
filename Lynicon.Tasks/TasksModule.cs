@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Web.Mvc;
 using Lynicon.Base.Models;
 using Lynicon.Collation;
+using Lynicon.DataSources;
 using Lynicon.Extensibility;
 using Lynicon.Models;
 using Lynicon.Repositories;
@@ -27,7 +28,7 @@ namespace Lynicon.Base
 
             TaskManager.Instance.Initialise();
 
-            Collator.Instance.SetupType(typeof(ItemTask), new BasicCollator(), new BasicRepository());
+            Collator.Instance.SetupType(typeof(ItemTask), new BasicCollator(Repository.Instance), new BasicRepository(new CoreDataSourceFactory()));
         }
 
         public override bool Initialise()

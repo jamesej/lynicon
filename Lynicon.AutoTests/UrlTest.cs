@@ -57,16 +57,17 @@ namespace Lynicon.AutoTests
             }
             Assert.IsNotNull(ex, "Failed to block move to an existing data route url");
 
-            ex = null;
-            try
-            {
-                Collator.Instance.MoveAddress(hc2iid, new Address(typeof(HeaderContent), "ut-x"));
-            }
-            catch (ApplicationException appEx)
-            {
-                ex = appEx;
-            }
-            Assert.IsNotNull(ex, "Failed to block move to an existing standard url");
+            // Does not now consider standard urls
+            //ex = null;
+            //try
+            //{
+            //    Collator.Instance.MoveAddress(hc2iid, new Address(typeof(HeaderContent), "ut-x"));
+            //}
+            //catch (ApplicationException appEx)
+            //{
+            //    ex = appEx;
+            //}
+            //Assert.IsNotNull(ex, "Failed to block move to an existing standard url");
         }
     }
 }

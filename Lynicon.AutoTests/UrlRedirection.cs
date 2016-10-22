@@ -1,7 +1,9 @@
 ﻿using System.Threading;
 using Lynicon.Base.Models;
+using Lynicon.Base.Modules;
 using Lynicon.Base.Routing;
 using Lynicon.Collation;
+using Lynicon.Extensibility;
 using Lynicon.Models;
 using Lynicon.Repositories;
 using Lynicon.Routing;
@@ -28,6 +30,9 @@ namespace Lynicon.AutoTests
         [TestMethod]
         public void UrlRedirect301()
         {
+            if (LyniconModuleManager.Instance.GetModule<UrlListModule>() == null)
+                Assert.Inconclusive("No UrlList Module");
+
             var urc = Collator.Instance.GetNew<UrlRedirectContent>(new Address(typeof(UrlRedirectContent), "a"));
             urc.Title = "URC1";
             urc.AlternateUrls.Add(new AlternativeUrl("urc", UrlRedirectMode.Redirect301));
@@ -46,6 +51,9 @@ namespace Lynicon.AutoTests
         [TestMethod]
         public void UrlMain()
         {
+            if (LyniconModuleManager.Instance.GetModule<UrlListModule>() == null)
+                Assert.Inconclusive("No UrlList Module");
+
             var urc = Collator.Instance.GetNew<UrlRedirectContent>(new Address(typeof(UrlRedirectContent), "x"));
             urc.Title = "URC2";
             urc.AlternateUrls.Add(new AlternativeUrl("urc2", UrlRedirectMode.Main));
@@ -67,6 +75,9 @@ namespace Lynicon.AutoTests
         [TestMethod]
         public void UrlsWhenUrlChanged()
         {
+            if (LyniconModuleManager.Instance.GetModule<UrlListModule>() == null)
+                Assert.Inconclusive("No UrlList Module");
+
             var urc = Collator.Instance.GetNew<UrlRedirectContent>(new Address(typeof(UrlRedirectContent), "b"));
             urc.Title = "URC3";
             urc.AlternateUrls.Add(new AlternativeUrl("aaa/q", UrlRedirectMode.Main));

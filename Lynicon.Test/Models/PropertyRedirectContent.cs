@@ -8,7 +8,7 @@ using Lynicon.Attributes;
 namespace Lynicon.Test.Models
 {
     [RedirectPropertySource("Common"),
-     RedirectPropertySource("ExternalVal < Value1", ContentType=typeof(TestData), SourceDescriptor="{0}")]
+     RedirectPropertySource("ExternalVal > Value1", ContentType=typeof(TestData), SourceDescriptor="{0}")]
     public class PropertyRedirectContent : BaseContent
     {
         [Summary]

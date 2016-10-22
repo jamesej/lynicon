@@ -35,14 +35,19 @@ namespace Lynicon.AutoTests
             prc0 = Collator.Instance.GetNew<PropertyRedirectContent>(aaAddr);
             prc0.Title = "Item 0";
             prc0.Common = "Common Text";
-            Collator.Instance.Set(prc0);
+            prc0.ExternalVal = "External";
+            Collator.Instance.Set(aaAddr, prc0);
 
             // GetNew should set common values
-            prc1 = Collator.Instance.GetNew<PropertyRedirectContent>(new Address(typeof(PropertyRedirectContent), "bb"));
-            prc1.Title = "Item 1";
-            Collator.Instance.Set(prc1);
+            var bbAddr = new Address(typeof(PropertyRedirectContent), "bb");
+            prc1 = Collator.Instance.GetNew<PropertyRedirectContent>(bbAddr);
 
-            Assert.IsTrue(prc1.Common == "Common Text", "new record has common");
+            Assert.IsTrue(prc1.Common == "Common Text", "new record has common (content record)");
+
+            prc1.Title = "Item 1";
+            Collator.Instance.Set(bbAddr, prc1);
+
+            Assert.IsTrue(prc1.Common == "Common Text", "saved record has common (content record)");
 
             prc1.Common = "Changed";
             Collator.Instance.Set(prc1);
@@ -60,6 +65,8 @@ namespace Lynicon.AutoTests
             prc2 = Collator.Instance.Get<PropertyRedirectContent>(prc0.ItemId);
 
             Assert.IsTrue(prc2.Common == "Changed", "common on get by id");
+
+
         }
     }
 }

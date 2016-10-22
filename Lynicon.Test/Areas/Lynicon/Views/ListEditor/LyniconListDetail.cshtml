@@ -60,7 +60,7 @@
             formNames += $fld.prop('name') + ' ';
         });
         $('#editPanelContainer').load(
-            "@(ViewBag._Lyn_BaseUrl as string)?$mode=getValues@(Html.Raw(ViewBag.OriginalQuery as string))",
+            "@(ViewBag._Lyn_BaseUrl as string)?$mode=getValues@(Html.Raw(ViewBag.OriginalQuery as string)) #editPanel",
             { formNames: formNames, idx: idx },
             function () {
                 setupAfterLoad($('#editPanel'));

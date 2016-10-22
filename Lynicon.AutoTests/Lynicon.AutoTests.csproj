@@ -89,7 +89,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="FacadeTest.cs" />
+    <Compile Include="GlobalEventTest.cs" />
     <Compile Include="MockController.cs" />
+    <Compile Include="MembershipTest.cs" />
     <Compile Include="UrlTest.cs" />
     <Compile Include="ReferencesTest.cs" />
     <Compile Include="SearchTest.cs" />

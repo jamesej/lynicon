@@ -21,9 +21,9 @@ CREATE TABLE [dbo].[ContentItems](
 	[Content] [nvarchar](max) NULL,
 	[Title] [nvarchar](250) NULL,
 	[Created] [datetime] NOT NULL,
-	[UserCreated] [uniqueidentifier] NULL,
+	[UserCreated] [varchar](40) NULL,
 	[Updated] [datetime] NOT NULL,
-	[UserUpdated] [uniqueidentifier] NULL,
+	[UserUpdated] [varchar](40) NULL,
  CONSTRAINT [PK_ContentItems] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC

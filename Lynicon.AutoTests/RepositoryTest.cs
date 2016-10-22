@@ -64,6 +64,9 @@ namespace Lynicon.AutoTests
         [TestMethod]
         public void Publish()
         {
+            if (LyniconModuleManager.Instance.GetModule<Publishing>() == null)
+                Assert.Inconclusive("No Publishing Module");
+
             var ci = Repository.Instance.New<ContentItem>();
 
             var hc = new HeaderContent();

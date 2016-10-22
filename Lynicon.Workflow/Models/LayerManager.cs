@@ -58,7 +58,7 @@ namespace Lynicon.Workflow.Models
             LayerNames = new Dictionary<int, string>();
 
             LayerContentTypes = ContentTypeHierarchy.AllContentTypes
-                .Where(t => typeof(ILayered).IsAssignableFrom(Repository.Instance.ContainerType(t)))
+                .Where(t => typeof(ILayered).IsAssignableFrom(Collator.Instance.ContainerType(t)))
                 .ToList();
         }
 

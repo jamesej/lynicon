@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Lynicon.Membership;
 using Lynicon.Repositories;
 using Lynicon.Linq;
+using Lynicon.DataSources;
 
 namespace Lynicon.Test.Models
 {
@@ -71,7 +72,7 @@ namespace Lynicon.Test.Models
             //users[0].Roles = "XYZ";
             //db.SaveChanges();
 
-            var cr = new BasicRepository();
+            var cr = new BasicRepository(new CoreDataSourceFactory());
             var ci = Repository.Instance.Get<User>(typeof(User), new Guid("040C7CFD-4107-4EF6-AD2C-A9D7779227E1"));
             ci.Roles = "PDQ";
         }
