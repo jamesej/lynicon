@@ -7,7 +7,7 @@ using Lynicon.Models;
 using Lynicon.Repositories;
 using Lynicon.Test.Models;
 using Lynicon.Utility;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 // Initialise database with test data
 //  use ef directly, use appropriate schema for modules in use
@@ -16,19 +16,19 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lynicon.AutoTests
 {
-    [TestClass]
+    [TestFixture]
     public class PropertyRedirection
     {
         PropertyRedirectContent prc0, prc1, prc2, prc3;
         List<PropertyRedirectContent> prcs;
 
-        [ClassInitialize]
-        public static void Init(TestContext ctx)
+        [TestFixtureSetUp]
+        public static void Init()
         {
             ContentTypeHierarchy.RegisterType(typeof(PropertyRedirectContent));
         }
 
-        [TestMethod]
+        [Test]
         public void CommonPropertyRedirect()
         {
             var aaAddr = new Address(typeof(PropertyRedirectContent), "aa");

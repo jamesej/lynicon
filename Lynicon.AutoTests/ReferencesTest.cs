@@ -4,11 +4,9 @@ using System.Collections.Generic;
 using Lynicon.Collation;
 using Lynicon.Repositories;
 using Lynicon.Test.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Lynicon.Extensibility;
-using Lynicon.Base.Modules;
-using Lynicon.Base.Models;
 using Lynicon.Relations;
+using NUnit.Framework;
 
 // Initialise database with test data
 //  use ef directly, use appropriate schema for modules in use
@@ -17,16 +15,10 @@ using Lynicon.Relations;
 
 namespace Lynicon.AutoTests
 {
-    [TestClass]
+    [TestFixture]
     public class ReferencesTest
     {
-        [ClassInitialize]
-        public static void Init(TestContext ctx)
-        {
-
-        }
-
-        [TestMethod]
+        [Test]
         public void FollowRefs()
         {
             var rt1 = Collator.Instance.GetNew<RefTargetContent>(new Address(typeof(RefTargetContent), "1"));

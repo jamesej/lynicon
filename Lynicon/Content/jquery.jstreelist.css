@@ -1,0 +1,113 @@
+
+.listContainer { font-family: Arial; font-size: 12px; position: relative; overflow-x: auto; }
+.treeContainer { font-family: Arial; font-size: 12px; }
+
+.listContainer table { width: 400px; border-collapse: collapse; }
+.listContainer table th { text-align: left; }
+.listContainer td.ext { width: 20px; }
+ins.ext_dir { width:16px; height:16px; display:inline-block; background-position: -56px -19px; }
+
+.qq-uploader { position:relative; width: 100%;}
+
+.qq-upload-button {
+    display:block; /* or inline-block */
+    padding: 7px 0; text-align:center;    
+    background:#c0c0f0;
+}
+.qq-upload-button-hover {background:#808080;}
+.qq-upload-button-focus {outline:1px dotted black;}
+
+.qq-upload-drop-area {
+    position:absolute; top:0; left:0; width:100%; height:100%; min-height: 70px; z-index:2;
+    background-color: #d0d0ff; opacity:0.3; filter:alpha(opacity=30);
+}
+.qq-upload-drop-area span {
+    display:block; position:absolute; top: 50%; width:100%; margin-top:-8px; font-size:16px;
+}
+
+.qq-upload-drop-area-active { background-color: #7bafc6; }
+
+.qq-upload-list {margin:15px 35px; padding:0; list-style:disc;}
+.qq-upload-list li { margin:0; padding:0; line-height:15px; font-size:12px;}
+.qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text {
+    margin-right: 7px;
+}
+
+.qq-upload-file {}
+.qq-upload-spinner {display:inline-block; background: url("/Lynicon/Embedded/Content/Images/loading.gif/"); width:15px; height:15px; vertical-align:text-bottom;}
+.qq-upload-size,.qq-upload-cancel {font-size:11px;}
+
+.qq-upload-failed-text {display:none;}
+.qq-upload-fail .qq-upload-failed-text {display:inline;}
+
+.selected td { background-color: #e0e0ff; }
+
+
+/* Core Styles */
+.directory { background: url(/Lynicon/Embedded/Content/Images/directory.png/) left top no-repeat; }
+.expanded { background: url(/Lynicon/Embedded/Content/Images/folder_open.png/) left top no-repeat; }
+.file { background: url(/Lynicon/Embedded/Content/Images/file.png/) left top no-repeat; }
+.wait {
+	background: url(/Lynicon/Embedded/Content/Images/spinner.gif/) left top no-repeat;
+}
+/* File Extensions*/
+.ext { background: url(/Lynicon/Embedded/Content/Images/file.png/) left top no-repeat; }
+.ext_3gp { background: url(/Lynicon/Embedded/Content/Images/film.png/) left top no-repeat; }
+.ext_afp { background: url(/Lynicon/Embedded/Content/Images/code.png/) left top no-repeat; }
+.ext_afpa { background: url(/Lynicon/Embedded/Content/Images/code.png/) left top no-repeat; }
+.ext_asp { background: url(/Lynicon/Embedded/Content/Images/code.png/) left top no-repeat; }
+.ext_aspx { background: url(/Lynicon/Embedded/Content/Images/code.png/) left top no-repeat; }
+.ext_avi { background: url(/Lynicon/Embedded/Content/Images/film.png/) left top no-repeat; }
+.ext_bat { background: url(/Lynicon/Embedded/Content/Images/application.png/) left top no-repeat; }
+.ext_bmp { background: url(/Lynicon/Embedded/Content/Images/picture.png/) left top no-repeat; }
+.ext_c { background: url(/Lynicon/Embedded/Content/Images/code.png/) left top no-repeat; }
+.ext_cfm { background: url(/Lynicon/Embedded/Content/Images/code.png/) left top no-repeat; }
+.ext_cgi { background: url(/Lynicon/Embedded/Content/Images/code.png/) left top no-repeat; }
+.ext_com { background: url(/Lynicon/Embedded/Content/Images/application.png/) left top no-repeat; }
+.ext_cpp { background: url(/Lynicon/Embedded/Content/Images/code.png/) left top no-repeat; }
+.ext_css { background: url(/Lynicon/Embedded/Content/Images/css.png/) left top no-repeat; }
+.ext_doc { background: url(/Lynicon/Embedded/Content/Images/doc.png/) left top no-repeat; }
+.ext_exe { background: url(/Lynicon/Embedded/Content/Images/application.png/) left top no-repeat; }
+.ext_gif { background: url(/Lynicon/Embedded/Content/Images/picture.png/) left top no-repeat; }
+.ext_fla { background: url(/Lynicon/Embedded/Content/Images/flash.png/) left top no-repeat; }
+.ext_h { background: url(/Lynicon/Embedded/Content/Images/code.png/) left top no-repeat; }
+.ext_htm { background: url(/Lynicon/Embedded/Content/Images/html.png/) left top no-repeat; }
+.ext_html { background: url(/Lynicon/Embedded/Content/Images/html.png/) left top no-repeat; }
+.ext_jar { background: url(/Lynicon/Embedded/Content/Images/java.png/) left top no-repeat; }
+.ext_jpg { background: url(/Lynicon/Embedded/Content/Images/picture.png/) left top no-repeat; }
+.ext_jpeg { background: url(/Lynicon/Embedded/Content/Images/picture.png/) left top no-repeat; }
+.ext_js { background: url(/Lynicon/Embedded/Content/Images/script.png/) left top no-repeat; }
+.ext_lasso { background: url(/Lynicon/Embedded/Content/Images/code.png/) left top no-repeat; }
+.ext_log { background: url(/Lynicon/Embedded/Content/Images/txt.png/) left top no-repeat; }
+.ext_m4p { background: url(/Lynicon/Embedded/Content/Images/music.png/) left top no-repeat; }
+.ext_mov { background: url(/Lynicon/Embedded/Content/Images/film.png/) left top no-repeat; }
+.ext_mp3 { background: url(/Lynicon/Embedded/Content/Images/music.png/ left top no-repeat; }
+.ext_mp4 { background: url(/Lynicon/Embedded/Content/Images/film.png/) left top no-repeat; }
+.ext_mpg { background: url(/Lynicon/Embedded/Content/Images/film.png/) left top no-repeat; }
+.ext_mpeg { background: url(/Lynicon/Embedded/Content/Images/film.png/) left top no-repeat; }
+.ext_ogg { background: url(/Lynicon/Embedded/Content/Images/music.png/) left top no-repeat; }
+.ext_pcx { background: url(/Lynicon/Embedded/Content/Images/picture.png/) left top no-repeat; }
+.ext_pdf { background: url(/Lynicon/Embedded/Content/Images/pdf.png/) left top no-repeat; }
+.ext_php { background: url(/Lynicon/Embedded/Content/Images/php.png/) left top no-repeat; }
+.ext_png { background: url(/Lynicon/Embedded/Content/Images/picture.png/) left top no-repeat; }
+.ext_ppt { background: url(/Lynicon/Embedded/Content/Images/ppt.png/) left top no-repeat; }
+.ext_psd { background: url(/Lynicon/Embedded/Content/Images/psd.png/) left top no-repeat; }
+.ext_pl { background: url(/Lynicon/Embedded/Content/Images/script.png/) left top no-repeat; }
+.ext_py { background: url(/Lynicon/Embedded/Content/Images/script.png/) left top no-repeat; }
+.ext_rb { background: url(/Lynicon/Embedded/Content/Images/ruby.png/) left top no-repeat; }
+.ext_rbx { background: url(/Lynicon/Embedded/Content/Images/ruby.png/) left top no-repeat; }
+.ext_rhtml { background: url(/Lynicon/Embedded/Content/Images/ruby.png/) left top no-repeat; }
+.ext_rpm { background: url(/Lynicon/Embedded/Content/Images/linux.png/) left top no-repeat; }
+.ext_ruby { background: url(/Lynicon/Embedded/Content/Images/ruby.png/) left top no-repeat; }
+.ext_sql { background: url(/Lynicon/Embedded/Content/Images/db.png/) left top no-repeat; }
+.ext_swf { background: url(/Lynicon/Embedded/Content/Images/flash.png/) left top no-repeat; }
+.ext_tif { background: url(/Lynicon/Embedded/Content/Images/picture.png/) left top no-repeat; }
+.ext_tiff { background: url(/Lynicon/Embedded/Content/Images/picture.png/) left top no-repeat; }
+.ext_txt { background: url(/Lynicon/Embedded/Content/Images/txt.png/) left top no-repeat; }
+.ext_vb { background: url(/Lynicon/Embedded/Content/Images/code.png/) left top no-repeat; }
+.ext_wav { background: url(/Lynicon/Embedded/Content/Images/music.png/) left top no-repeat; }
+.ext_wmv { background: url(/Lynicon/Embedded/Content/Images/film.png/) left top no-repeat; }
+.ext_xls { background: url(/Lynicon/Embedded/Content/Images/xls.png/) left top no-repeat; }
+.ext_xml { background: url(/Lynicon/Embedded/Content/Images/code.png/) left top no-repeat; }
+.ext_zip { background: url(/Lynicon/Embedded/Content/Images/zip.png/) left top no-repeat; }
+

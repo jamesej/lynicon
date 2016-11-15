@@ -1,0 +1,191 @@
+IFRAME
+{
+	border: 0;
+}
+BODY
+{
+	font-family: Arial, Sans-Serif;
+	margin: 0px;
+	padding: 0px;
+}
+.editor-label
+{
+	background-color: #808080;
+	color: #FFFFFF;
+	padding: 2px;
+	font-size: 12px;
+	height: auto;
+}
+.field-validation-valid {
+	display:none;
+}
+#editPanelContainer {
+	position: absolute;
+	top: 30px;
+	bottom: 0px;
+}
+#editPanel
+{
+	font-size: 11px;
+}
+#editPanel INPUT[type="text"]
+{
+	font-size: 11px;
+}
+.file-image-thumb
+{
+	max-width: 50px;
+	max-height: 50px;
+}
+#editPanel .action-button, #editPanel .add-button
+{
+	color: #FFFFFF;
+	background-color: #808080;
+	font-size: 16px;
+	width: 16px;
+	text-align: center;
+	border: 1px solid #FFFFFF;
+	cursor: pointer;
+}
+#editPanel .action-button:hover, #editPanel .add-button:hover
+{
+	background-color: #000000;
+}
+#editPanel #save
+{
+	width: auto;
+}
+#editPanel .closed
+{
+	display: none;
+}
+#editPanel .collection > TABLE, #editPanel .collection > DIV
+{
+	border-bottom: 2px solid #FFFFFF;
+}
+#editPanel .collection .action-button
+{
+	background-color: #808080;
+	float: left;
+}
+#editPanel .editor-field .text-box
+{
+	width: 100%;
+}
+#outer
+{
+	width: 600px;
+	height: 300px;
+	z-index: 0;
+}
+#listContainer, #treeContainer
+{
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.jstreelist-folder-active
+{
+	border: 1px solid #3030FF;
+	background-color: Red important!;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+#simplemodal-overlay
+{
+	background-color: #000;
+}
+#simplemodal-container
+{
+	padding: 20px;
+	background-color: #E0E0FF;
+	border-radius: 8px;
+	-moz-border-radius: 10px;
+}
+#filename
+{
+	width: 320px;
+}
+#fileDetails
+{
+	float: right;
+}
+.file-image-thumb
+{
+	max-width: 50px;
+	max-height: 50px;
+}
+#structureManager .editor-label
+{
+	height: 22px;
+	margin-bottom: 3px;
+	cursor: pointer;
+}
+#structureManager .template-name
+{
+	float: left;
+	width: 120px;
+	overflow: hidden;
+	font-size: 16px;
+}
+#structureManager .inst
+{
+	font-size: 12px;
+}
+#structureManager .inst-list
+{
+	max-height: 400px;
+	overflow: auto;
+}
+#structureManager .edit-area
+{
+	background-color: #F0F0F0;
+	margin-top: 3px;
+}
+#structureManager .url-pattern
+{
+	font-size: 12px;
+	margin-top: 2px;
+}
+#structureManager .enter-route
+{
+	margin-top: 2px;
+}
+#structureManager .input0
+{
+	border: 1px solid #0000D6;
+}
+#structureManager .input1
+{
+	border: 1px solid #1414FF;
+}
+#structureManager .input2
+{
+	border: 1px solid #00994D;
+}
+#structureManager .input3
+{
+	border: 1px solid #4D9900;
+}
+#structureManager .input4
+{
+	border: 1px solid #999900;
+}
+#structureManager .input5
+{
+	border: 1px solid #D6D600;
+}
+#funcPanel
+{
+	font-size: 10pt;
+	margin-bottom: 2px;
+	margin-top: 2px;
+	background-color: #D2D5D7;
+	padding: 2px;
+}
+#funcPanel A, #funcPanel A:visited
+{
+	color: #000;
+}

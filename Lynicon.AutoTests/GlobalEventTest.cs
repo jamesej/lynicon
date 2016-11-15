@@ -6,7 +6,7 @@ using Lynicon.Extensibility;
 using Lynicon.Models;
 using Lynicon.Repositories;
 using Lynicon.Test.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 // Initialise database with test data
 //  use ef directly, use appropriate schema for modules in use
@@ -15,16 +15,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lynicon.AutoTests
 {
-    [TestClass]
+    [TestFixture]
     public class GlobalEventTest
     {
-        [ClassInitialize]
-        public static void Init(TestContext ctx)
-        {
-
-        }
-
-        [TestMethod]
+        [Test]
         public void ConstraintOrderedCollection()
         {
             var list = new ConstraintOrderedCollection<EventHubData>(ehd => ehd.EventName);
@@ -34,7 +28,7 @@ namespace Lynicon.AutoTests
             list.Add(new EventHubData { EventName = "e3" }, ConstraintType.ItemsAfter, "e4");
         }
 
-        [TestMethod]
+        [Test]
         public void GlobalEvents()
         {
             EventHub testHub = new EventHub();

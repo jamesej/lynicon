@@ -4,10 +4,8 @@ using System.Collections.Generic;
 using Lynicon.Collation;
 using Lynicon.Repositories;
 using Lynicon.Test.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Lynicon.Extensibility;
-using Lynicon.Base.Modules;
-using Lynicon.Base.Models;
+using NUnit.Framework;
 
 // Initialise database with test data
 //  use ef directly, use appropriate schema for modules in use
@@ -16,26 +14,10 @@ using Lynicon.Base.Models;
 
 namespace Lynicon.AutoTests
 {
-    [TestClass]
+    [TestFixture]
     public class RepositoryTest
     {
-        [AssemblyInitialize]
-        public static void GlobalInit(TestContext ctx)
-        {
-            var db = new PreloadDb();
-            db.Database.ExecuteSqlCommand("DELETE FROM TestData");
-            db.Database.ExecuteSqlCommand("DELETE FROM ContentItems WHERE DataType IN ('Lynicon.Test.Models.UrlRedirectContent','Lynicon.Test.Models.SearchContent', 'Lynicon.Test.Models.HeaderContent', 'Lynicon.Test.Models.Sub1TContent', 'Lynicon.Test.Models.Sub2TContent', 'Lynicon.Test.Models.PropertyRedirectContent', 'Lynicon.Test.Models.RefTargetContent', 'Lynicon.Test.Models.RefContent')");
-
-            LyniconConfig.Run();
-        }
-
-        [ClassInitialize]
-        public static void Init(TestContext ctx)
-        {
-
-        }
-
-        [TestMethod]
+        [Test]
         public void WriteRead()
         {
             var ci = Repository.Instance.New<ContentItem>();
@@ -61,33 +43,13 @@ namespace Lynicon.AutoTests
             Assert.AreEqual(cont2.Id, cont.Id, "Get right item by Id");
         }
 
-        [TestMethod]
-        public void Publish()
-        {
-            if (LyniconModuleManager.Instance.GetModule<Publishing>() == null)
-                Assert.Inconclusive("No Publishing Module");
-
-            var ci = Repository.Instance.New<ContentItem>();
-
-            var hc = new HeaderContent();
-            hc.Title = "Header B";
-            hc.Image.Url = "/abcd.gif";
-            hc.HeaderBody = "aaa";
-            ci.SetContent(hc);
-            ci.Path = "rt-b";
-            ((IPublishable)ci).IsPubVersion = false;
-
-            Repository.Instance.Set(ci);
-            PublishingManager.Instance.Publish<HeaderContent>(new ItemId(ci));
-        }
-
-        [TestMethod]
+        [Test]
         public void WriteReadBasic()
         {
             var td = Repository.Instance.New<TestData>();
             td.Value1 = "nnn";
             td.Path = "rt-x";
-            td.Id = 1;
+            td.Id = 10;
             Repository.Instance.Set(td, true);
 
             var cont = Repository.Instance.Get<TestData>(typeof(TestData),

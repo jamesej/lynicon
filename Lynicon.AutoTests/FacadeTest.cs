@@ -7,7 +7,7 @@ using Lynicon.Linq;
 using Lynicon.Models;
 using Lynicon.Repositories;
 using Lynicon.Test.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 // Initialise database with test data
 //  use ef directly, use appropriate schema for modules in use
@@ -16,7 +16,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lynicon.AutoTests
 {
-    [TestClass]
+    [TestFixture]
     public class FacadeTests
     {
         private class C0
@@ -41,14 +41,7 @@ namespace Lynicon.AutoTests
             public string Z { get; set; }
         }
 
-
-        [ClassInitialize]
-        public static void Init(TestContext ctx)
-        {
-
-        }
-
-        [TestMethod]
+        [Test]
         public void TestAsFacade()
         {
             var l1 = new List<C0>();

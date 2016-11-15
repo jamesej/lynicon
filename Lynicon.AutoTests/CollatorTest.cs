@@ -4,10 +4,8 @@ using System.Collections.Generic;
 using Lynicon.Collation;
 using Lynicon.Repositories;
 using Lynicon.Test.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Lynicon.Extensibility;
-using Lynicon.Base.Modules;
-using Lynicon.Base.Models;
+using NUnit.Framework;
 
 // Initialise database with test data
 //  use ef directly, use appropriate schema for modules in use
@@ -16,18 +14,13 @@ using Lynicon.Base.Models;
 
 namespace Lynicon.AutoTests
 {
-    [TestClass]
+    [TestFixture]
     public class CollatorTest
     {
-        [ClassInitialize]
-        public static void Init(TestContext ctx)
-        {
-        }
-
-        [TestMethod]
+        [Test]
         public void WriteRead()
         {
-            var hc = Collator.Instance.GetNew<HeaderContent>(new Address(typeof(HeaderContent), "ct-a"));
+            var hc = Collator.Instance.GetNew<HeaderContent2>(new Address(typeof(HeaderContent2), "ct-a"));
 
             hc.Title = "CT Header A";
             hc.Image.Url = "/abc.gif";
@@ -36,11 +29,11 @@ namespace Lynicon.AutoTests
 
             Collator.Instance.Set(hc);
 
-            var item = Collator.Instance.Get<HeaderContent>(new Address(typeof(HeaderContent), "ct-a"));
+            var item = Collator.Instance.Get<HeaderContent2>(new Address(typeof(HeaderContent2), "ct-a"));
             Assert.IsNotNull(item, "Get by path");
             Assert.AreEqual(item.SubTestsCount, 1);
 
-            var hc2 = Collator.Instance.GetNew<HeaderContent>(new Address(typeof(HeaderContent), "ct-b"));
+            var hc2 = Collator.Instance.GetNew<HeaderContent2>(new Address(typeof(HeaderContent2), "ct-b"));
 
             hc2.Title = "CT Header B";
             hc2.Image.Url = "/def.gif";
@@ -48,23 +41,23 @@ namespace Lynicon.AutoTests
 
             Collator.Instance.Set(hc2, true);
 
-            var items = Collator.Instance.Get<HeaderContent>();
+            var items = Collator.Instance.Get<HeaderContent2>();
             Assert.AreEqual(2, items.Count(i => (i.Title ?? "").StartsWith("CT")), "Get all items");
 
             var itemId = new ItemId(item);
-            var item2 = Collator.Instance.Get<HeaderContent>(itemId);
+            var item2 = Collator.Instance.Get<HeaderContent2>(itemId);
             Assert.IsNotNull(item2, "Get by Id");
             Assert.AreEqual(item.Title, item2.Title, "Get right item by Id");
 
             Collator.Instance.Delete(item2);
 
-            var items2 = Collator.Instance.Get<HeaderContent>();
+            var items2 = Collator.Instance.Get<HeaderContent2>();
             Assert.AreEqual(1, items2.Count(i => (i.Title ?? "").StartsWith("CT")), "Delete");
 
             Collator.Instance.Delete(hc2);
         }
 
-        [TestMethod]
+        [Test]
         public void WriteReadBasic()
         {
             var td = Collator.Instance.GetNew<TestData>(new Address(typeof(TestData), "x"));
@@ -84,7 +77,7 @@ namespace Lynicon.AutoTests
             td2.Id = 2;
             Collator.Instance.Set(td2, true);
 
-            var items = Collator.Instance.Get<TestData, TestData>(iq => iq.Where(d => d.Title.StartsWith("TitleCT")));
+            var items = Collator.Instance.Get<TestData, TestData>(iq => iq.Where(d =>(d.Title ?? "").StartsWith("TitleCT")));
             Assert.AreEqual(2, items.Count(), "Get all items");
 
             var itemId = new ItemId(item);
@@ -110,11 +103,11 @@ namespace Lynicon.AutoTests
 
             Collator.Instance.Delete(item2);
 
-            var items2 = Collator.Instance.Get<TestData, TestData>(iq => iq.Where(d => d.Title.StartsWith("TitleCT")));
+            var items2 = Collator.Instance.Get<TestData, TestData>(iq => iq.Where(d => (d.Title ?? "").StartsWith("TitleCT")));
             Assert.AreEqual(1, items2.Count(), "Delete"); // There is an extra item which holds shared data
         }
 
-        [TestMethod]
+        [Test]
         public void Polymorphic()
         {
             var s1 = Collator.Instance.GetNew<Sub1TContent>(new Address(typeof(Sub1TContent), "s1"));
@@ -125,7 +118,7 @@ namespace Lynicon.AutoTests
             s2.Links.Add(new Models.Link { Content = "linky", Url = "/abc" });
         }
 
-        [TestMethod]
+        [Test]
         public void Summaries()
         {
             var hc = Collator.Instance.GetNew<HeaderContent>(new Address(typeof(HeaderContent), "ct-c"));

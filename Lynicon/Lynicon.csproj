@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F9FB7EA1-57D4-49D0-9776-A7A7A8E23475}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lynicon</RootNamespace>
+    <AssemblyName>Lynicon</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Lynicon.Test\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Lynicon.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ForServices|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ForServices\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GBC\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\GBC\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.5, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Linq2Rest">
+      <HintPath>..\..\GBC\packages\Linq2Rest.4.1.0.0\lib\Net45\Linq2Rest.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net, Version=2.9.2.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ThirdParty\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\TestLynClassic\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\TestLynClassic\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\TestLynClassic\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.8.1\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.OData.5.8.1\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\TestLynClassic\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\TestLynClassic\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\GBC\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\..\TestLynClassic\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GBC\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Spatial, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Spatial.5.8.1\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GBC\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GBC\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\GBC\packages\Microsoft.AspNet.WebApi.OData.5.7.0\lib\net45\System.Web.Http.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GBC\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GBC\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GBC\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GBC\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GBC\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GBC\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\AddressComponentAttribute.cs" />
+    <Compile Include="Attributes\AlwaysIncludeAttribute.cs" />
+    <Compile Include="Attributes\BasicAuthorizeAttribute.cs" />
+    <Compile Include="Attributes\CompressContentAttribute.cs" />
+    <Compile Include="Attributes\ContentTypeCategoryAttribute.cs" />
+    <Compile Include="Attributes\DontRequireHttpSchemeAttribute.cs" />
+    <Compile Include="Attributes\ExcludeFilterAttribute.cs" />
+    <Compile Include="Attributes\FieldFilterAttribute.cs" />
+    <Compile Include="Attributes\DisplayBlockAttribute.cs" />
+    <Compile Include="Attributes\ItemTemplateAttribute.cs" />
+    <Compile Include="Attributes\LogAllErrorsAttribute.cs" />
+    <Compile Include="Attributes\CompositeForeignKey.cs" />
+    <Compile Include="Attributes\NotSummarisedAttribute.cs" />
+    <Compile Include="Attributes\RequiredCropsAttribute.cs" />
+    <Compile Include="Attributes\ContentTypeDisplayNameAttribute.cs" />
+    <Compile Include="Attributes\RequireHttpAttribute.cs" />
+    <Compile Include="Attributes\NonPageAttribute.cs" />
+    <Compile Include="Attributes\UsesCoreDbAttribute.cs" />
+    <Compile Include="Attributes\SwitchableIconAttribute.cs" />
+    <Compile Include="Attributes\SummaryTypeAttribute.cs" />
+    <Compile Include="Attributes\NonCompositeAttribute.cs" />
+    <Compile Include="Attributes\SummaryAttribute.cs" />
+    <Compile Include="Attributes\ProcessIncludesAttribute.cs" />
+    <Compile Include="Attributes\ListEditorAttribute.cs" />
+    <Compile Include="Attributes\NoCacheAttribute.cs" />
+    <Compile Include="Attributes\ProcessHtmlAttribute.cs" />
+    <Compile Include="Attributes\RedirectPropertySourceAttribute.cs" />
+    <Compile Include="Attributes\ThrottleAttribute.cs" />
+    <Compile Include="Collation\AdaptorCollator.cs" />
+    <Compile Include="Collation\Address.cs" />
+    <Compile Include="Collation\BaseCollator.cs" />
+    <Compile Include="Collation\ChangeProblem.cs" />
+    <Compile Include="Collation\ContentCollator.cs" />
+    <Compile Include="Collation\Collator.cs" />
+    <Compile Include="Collation\BasicCollator.cs" />
+    <Compile Include="Collation\DataApi.cs" />
+    <Compile Include="Collation\ICollator.cs" />
+    <Compile Include="Collation\VersionedAddress.cs" />
+    <Compile Include="Collation\LyniconUpdateException.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\NavController.cs" />
+    <Compile Include="Controllers\UiController.cs" />
+    <Compile Include="Controllers\UrlManagerController.cs" />
+    <Compile Include="Controllers\VersionController.cs" />
+    <Compile Include="DataSources\CoreDataSource.cs" />
+    <Compile Include="DataSources\CoreDataSourceFactory.cs" />
+    <Compile Include="DataSources\EFDataSource.cs" />
+    <Compile Include="DataSources\EFDataSourceFactory.cs" />
+    <Compile Include="DataSources\IDataSource.cs" />
+    <Compile Include="DataSources\IDataSourceFactory.cs" />
+    <Compile Include="DataSources\NullDataSource.cs" />
+    <Compile Include="DataSources\NullDataSourceFactory.cs" />
+    <Compile Include="Editors\WebEditorRedirect.cs" />
+    <Compile Include="Editors\WebEditorController.cs" />
+    <Compile Include="Editors\EditorController.cs" />
+    <Compile Include="Editors\NullEditorRedirect.cs" />
+    <Compile Include="Extensibility\ConstraintOrderedCollection.cs" />
+    <Compile Include="Collation\ItemVersionedId.cs" />
+    <Compile Include="Extensibility\ContentPermission.cs" />
+    <Compile Include="Extensibility\ContentProcessor.cs" />
+    <Compile Include="Extensibility\CookieManager.cs" />
+    <Compile Include="Extensibility\EditorPanel.cs" />
+    <Compile Include="Extensibility\FuncPanelButton.cs" />
+    <Compile Include="Extensibility\IContentProcessor.cs" />
+    <Compile Include="Extensibility\IQueryEventData.cs" />
+    <Compile Include="Extensibility\EventHub.cs" />
+    <Compile Include="Extensibility\ItemsListButton.cs" />
+    <Compile Include="Extensibility\ListFilter.cs" />
+    <Compile Include="Extensibility\Cache.cs" />
+    <Compile Include="Extensibility\CookieObject.cs" />
+    <Compile Include="Extensibility\Module.cs" />
+    <Compile Include="Extensibility\LyniconModuleManager.cs" />
+    <Compile Include="Extensibility\CacheAdminViewModel.cs" />
+    <Compile Include="Extensibility\ModuleAdminViewModel.cs" />
+    <Compile Include="Extensibility\OrderConstraint.cs" />
+    <Compile Include="Extensibility\QueryEventData.cs" />
+    <Compile Include="Extensibility\ItemVersion.cs" />
+    <Compile Include="Extensibility\UIElement.cs" />
+    <Compile Include="Extensibility\Versioner.cs" />
+    <Compile Include="Extensibility\VersionManager.cs" />
+    <Compile Include="Extensibility\VersionSelectionViewModel.cs" />
+    <Compile Include="Extensions\DateFieldFilter.cs" />
+    <Compile Include="Extensions\DynamicViewEngine.cs" />
+    <Compile Include="Extensions\FieldFilter.cs" />
+    <Compile Include="Extensions\ReferenceFilter.cs" />
+    <Compile Include="Extensions\ForeignKeyFilter.cs" />
+    <Compile Include="Extensions\StringFieldFilter.cs" />
+    <Compile Include="Files\FileStoreFile.cs" />
+    <Compile Include="Files\IFileStore.cs" />
+    <Compile Include="JsonP\JsonpEnabledAttribute.cs" />
+    <Compile Include="JsonP\JsonpResult.cs" />
+    <Compile Include="Linq\FieldAccessExtractor.cs" />
+    <Compile Include="Linq\FacadeTypeQueryable.cs" />
+    <Compile Include="Linq\FacadeTypeQueryProvider.cs" />
+    <Compile Include="Linq\FacadeTypeX.cs" />
+    <Compile Include="Membership\IdentityAdaptorCollator.cs" />
+    <Compile Include="Membership\ISecurityManager.cs" />
+    <Compile Include="Membership\LyniconIdentitySecurityManager.cs" />
+    <Compile Include="Membership\LyniconIdentityUser.cs" />
+    <Compile Include="Models\AdminViewModel.cs" />
+    <Compile Include="Models\ContentModelSchema.cs" />
+    <Compile Include="Models\ContentReferenceChecker.cs" />
+    <Compile Include="Models\ContentTypeVisitor.cs" />
+    <Compile Include="Models\DocumentNodeInserter.cs" />
+    <Compile Include="Models\FilterManager.cs" />
+    <Compile Include="Models\IHasDefaultAddress.cs" />
+    <Compile Include="Models\SimpleSwitchable.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Relations\ICrossVersionReference.cs" />
+    <Compile Include="Models\IBasicAuditable.cs" />
+    <Compile Include="Models\ItemListerViewModel.cs" />
+    <Compile Include="Models\MinHtml.cs" />
+    <Compile Include="Models\ContentBindingPreparer.cs" />
+    <Compile Include="Models\ContentVisitor.cs" />
+    <Compile Include="Models\NoContent.cs" />
+    <Compile Include="Models\NoNullObjectCheck.cs" />
+    <Compile Include="Models\RequestThreadCache.cs" />
+    <Compile Include="Models\ScoredSummary.cs" />
+    <Compile Include="Relations\CrossVersionReference.cs" />
+    <Compile Include="Relations\ReferenceList.cs" />
+    <Compile Include="Modules\ContentSchemaModule.cs" />
+    <Compile Include="Modules\CoreModule.cs" />
+    <Compile Include="Map\ContentMap.cs" />
+    <Compile Include="Collation\PathFunctions.cs" />
+    <Compile Include="Config\ConfigHelper.cs" />
+    <Compile Include="Config\LyniconSection.cs" />
+    <Compile Include="Controllers\AjaxController.cs" />
+    <Compile Include="Controllers\ItemsController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\EmbeddedController.cs" />
+    <Compile Include="Controllers\FileManagerController.cs" />
+    <Compile Include="Controllers\HttpStatusCodeResult.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\UploadController.cs" />
+    <Compile Include="Cyotek.Web.BbCodeFormatter\BbCodeProcessor.cs" />
+    <Compile Include="Cyotek.Web.BbCodeFormatter\IHtmlFormatter.cs" />
+    <Compile Include="Cyotek.Web.BbCodeFormatter\LinkBreaksFormatter.cs" />
+    <Compile Include="Cyotek.Web.BbCodeFormatter\PlainTextProcessor.cs" />
+    <Compile Include="Cyotek.Web.BbCodeFormatter\RegexFormatter.cs" />
+    <Compile Include="Cyotek.Web.BbCodeFormatter\SearchReplaceFormatter.cs" />
+    <Compile Include="Editors\ContentEditorRedirect.cs" />
+    <Compile Include="Editors\DualFrameEditorController.cs" />
+    <Compile Include="Editors\ListEditorController.cs" />
+    <Compile Include="Editors\EditorRedirect.cs" />
+    <Compile Include="Editors\IEditorRedirect.cs" />
+    <Compile Include="Editors\ListEditorRedirect.cs" />
+    <Compile Include="Extensions\IncludeEntry.cs" />
+    <Compile Include="Extensions\ProcessHtmlFilter.cs" />
+    <Compile Include="Extensions\IncludesManager.cs" />
+    <Compile Include="Linq\TypeHelper.cs" />
+    <Compile Include="LyniconAreaRegistration.cs" />
+    <Compile Include="Map\INavManager.cs" />
+    <Compile Include="Map\NavManager.cs" />
+    <Compile Include="Map\NavTreeSummary.cs" />
+    <Compile Include="Membership\IUser.cs" />
+    <Compile Include="Membership\LightweightIdentity.cs" />
+    <Compile Include="Membership\LightweightMembershipProvider.cs" />
+    <Compile Include="Membership\LightweightMembershipUser.cs" />
+    <Compile Include="Membership\LightweightRoleProvider.cs" />
+    <Compile Include="Membership\LyniconSecurityManager.cs" />
+    <Compile Include="Models\BaseContent.cs" />
+    <Compile Include="Models\BbText.cs" />
+    <Compile Include="Models\ContentTypeHierarchy.cs" />
+    <Compile Include="Models\DbChange.cs" />
+    <Compile Include="Models\Image.cs" />
+    <Compile Include="Models\ImageLink.cs" />
+    <Compile Include="Models\ImageVideo.cs" />
+    <Compile Include="Models\Link.cs" />
+    <Compile Include="Models\ListingSummary.cs" />
+    <Compile Include="Models\LoginForm.cs" />
+    <Compile Include="Extensibility\LyniconUi.cs" />
+    <Compile Include="Models\MediaFileLink.cs" />
+    <Compile Include="Models\Multiline.cs" />
+    <Compile Include="Models\PageContent.cs" />
+    <Compile Include="Models\Summary.cs" />
+    <Compile Include="Membership\User.cs" />
+    <Compile Include="Models\SummaryEqualityComparer.cs" />
+    <Compile Include="Models\Switchable.cs" />
+    <Compile Include="Models\Video.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relations\Reference.cs" />
+    <Compile Include="Repositories\CompositeClassFactory.cs" />
+    <Compile Include="Repositories\CompositeTypeManager.cs" />
+    <Compile Include="Repositories\ContentItem.cs" />
+    <Compile Include="Repositories\BasicRepository.cs" />
+    <Compile Include="Repositories\ContentRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Repositories\ICachesContent.cs" />
+    <Compile Include="Repositories\ICachesSummary.cs" />
+    <Compile Include="Repositories\IContentContainer.cs" />
+    <Compile Include="Collation\ItemId.cs" />
+    <Compile Include="Repositories\IContentItem.cs" />
+    <Compile Include="Repositories\IShrinkable.cs" />
+    <Compile Include="Repositories\PreloadDb.cs" />
+    <Compile Include="Repositories\CoreDb.cs" />
+    <Compile Include="Models\PagingSpec.cs" />
+    <Compile Include="Repositories\IRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Repositories\IUserRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Repositories\Repository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Repositories\RepositoryEventData.cs" />
+    <Compile Include="Repositories\SummaryDb.cs" />
+    <Compile Include="Repositories\UserRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Routing\DomainConstraint.cs" />
+    <Compile Include="Routing\MockHttpContextBase.cs" />
+    <Compile Include="Routing\RequestMatchRoute.cs" />
+    <Compile Include="Routing\DynamicRouteValue.cs" />
+    <Compile Include="Routing\RedirectHttpHandler.cs" />
+    <Compile Include="Routing\RedirectRouteHandler.cs" />
+    <Compile Include="Routing\RedirectRoute.cs" />
+    <Compile Include="Routing\DataRoute.cs" />
+    <Compile Include="Routing\DataRouteInterceptEventData.cs" />
+    <Compile Include="Routing\UrlRequestInterceptor.cs" />
+    <Compile Include="ThirdParty\Dynamic.cs" />
+    <Compile Include="ThirdParty\RssReader.cs" />
+    <Compile Include="Utility\ArrayGraph.cs" />
+    <Compile Include="Routing\RouteX.cs" />
+    <Compile Include="Utility\CodeTimer.cs" />
+    <Compile Include="Utility\DictionaryX.cs" />
+    <Compile Include="Utility\EncryptX.cs" />
+    <Compile Include="Utility\ExcludeFilterProvider.cs" />
+    <Compile Include="Utility\GuidX.cs" />
+    <Compile Include="Utility\HtmlX.cs" />
+    <Compile Include="Utility\Paths.cs" />
+    <Compile Include="Utility\StringSelectorComparer.cs" />
+    <Compile Include="Utility\FileUploader.cs" />
+    <Compile Include="Utility\FormFileUploader.cs" />
+    <Compile Include="Utility\IQueryCacheProvider.cs" />
+    <Compile Include="Utility\JsonX.cs" />
+    <Compile Include="Utility\MemoryQueryCacheProvider.cs" />
+    <Compile Include="Utility\DateTimeX.cs" />
+    <Compile Include="Utility\HtmlHelperX.cs" />
+    <Compile Include="Utility\IOX.cs" />
+    <Compile Include="Utility\LinqX.cs" />
+    <Compile Include="Utility\SelectorComparer.cs" />
+    <Compile Include="Utility\QueryCache.cs" />
+    <Compile Include="Utility\ReflectionX.cs" />
+    <Compile Include="Utility\StringX.cs" />
+    <Compile Include="Utility\Token.cs" />
+    <Compile Include="Utility\TopologicalSorter.cs" />
+    <Compile Include="Utility\TypeDiscriminatingModelBinder.cs" />
+    <Compile Include="Utility\TypeRegistry.cs" />
+    <Compile Include="Utility\UrlHelperX.cs" />
+    <Compile Include="Utility\UrlX.cs" />
+    <Compile Include="Utility\UserException.cs" />
+    <Compile Include="Utility\Validation.cs" />
+    <Compile Include="Utility\WebX.cs" />
+    <Compile Include="Utility\XhrFileUploader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Lynicon.dll" />
+    <Content Include="bin\Debug\Lynicon.pdb" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <EmbeddedResource Include="Content\fileuploader.css" />
+    <EmbeddedResource Include="Content\Images\application.png" />
+    <EmbeddedResource Include="Content\Images\close-white.png" />
+    <EmbeddedResource Include="Content\Images\code.png" />
+    <EmbeddedResource Include="Content\Images\css.png" />
+    <EmbeddedResource Include="Content\Images\cut.png" />
+    <EmbeddedResource Include="Content\Images\db.png" />
+    <EmbeddedResource Include="Content\Images\directory.png" />
+    <EmbeddedResource Include="Content\Images\doc.png" />
+    <EmbeddedResource Include="Content\Images\door.png" />
+    <EmbeddedResource Include="Content\Images\dropdownarrow.png" />
+    <EmbeddedResource Include="Content\Images\file.png" />
+    <EmbeddedResource Include="Content\Images\film.png" />
+    <EmbeddedResource Include="Content\Images\flash.png" />
+    <EmbeddedResource Include="Content\Images\folder_open.png" />
+    <EmbeddedResource Include="Content\Images\html.png" />
+    <EmbeddedResource Include="Content\Images\java.png" />
+    <EmbeddedResource Include="Content\Images\linux.png" />
+    <EmbeddedResource Include="Content\Images\loading.gif" />
+    <EmbeddedResource Include="Content\Images\music.png" />
+    <EmbeddedResource Include="Content\Images\page_white_copy.png" />
+    <EmbeddedResource Include="Content\Images\page_white_delete.png" />
+    <EmbeddedResource Include="Content\Images\page_white_edit.png" />
+    <EmbeddedResource Include="Content\Images\page_white_paste.png" />
+    <EmbeddedResource Include="Content\Images\pdf.png" />
+    <EmbeddedResource Include="Content\Images\php.png" />
+    <EmbeddedResource Include="Content\Images\picture.png" />
+    <EmbeddedResource Include="Content\Images\ppt.png" />
+    <EmbeddedResource Include="Content\Images\psd.png" />
+    <EmbeddedResource Include="Content\Images\ruby.png" />
+    <EmbeddedResource Include="Content\Images\script.png" />
+    <EmbeddedResource Include="Content\Images\spinner.gif" />
+    <EmbeddedResource Include="Content\Images\txt.png" />
+    <EmbeddedResource Include="Content\Images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <EmbeddedResource Include="Content\Images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <EmbeddedResource Include="Content\Images\ui-bg_flat_10_000000_40x100.png" />
+    <EmbeddedResource Include="Content\Images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <EmbeddedResource Include="Content\Images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <EmbeddedResource Include="Content\Images\ui-bg_glass_65_ffffff_1x400.png" />
+    <EmbeddedResource Include="Content\Images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <EmbeddedResource Include="Content\Images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <EmbeddedResource Include="Content\Images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <EmbeddedResource Include="Content\Images\ui-icons_222222_256x240.png" />
+    <EmbeddedResource Include="Content\Images\ui-icons_228ef1_256x240.png" />
+    <EmbeddedResource Include="Content\Images\ui-icons_ef8c08_256x240.png" />
+    <EmbeddedResource Include="Content\Images\ui-icons_ffd27a_256x240.png" />
+    <EmbeddedResource Include="Content\Images\ui-icons_ffffff_256x240.png" />
+    <EmbeddedResource Include="Content\Images\xls.png" />
+    <EmbeddedResource Include="Content\Images\zip.png" />
+    <EmbeddedResource Include="Content\jquery-ui.css" />
+    <EmbeddedResource Include="Content\jquery.contextMenu.css" />
+    <EmbeddedResource Include="Content\jquery.jstreelist.css" />
+    <EmbeddedResource Include="Content\jquery.layout.css" />
+    <EmbeddedResource Include="Content\LyniconExternal.css" />
+    <EmbeddedResource Include="Content\LyniconMain.css" />
+    <EmbeddedResource Include="Content\chosen.css" />
+    <EmbeddedResource Include="Content\Images\chosen-sprite.png" />
+    <EmbeddedResource Include="Content\Images\jquery-te.png" />
+    <EmbeddedResource Include="Content\jquery-te.css" />
+    <EmbeddedResource Include="Content\selectize.css" />
+    <Content Include="obj\Debug\Lynicon.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Lynicon.dll" />
+    <Content Include="obj\Debug\Lynicon.pdb" />
+    <EmbeddedResource Include="Scripts\fileuploader.js" />
+    <EmbeddedResource Include="Scripts\jquery-ui.js" />
+    <EmbeddedResource Include="Scripts\jquery.contextMenu.js" />
+    <EmbeddedResource Include="Scripts\jquery.js" />
+    <EmbeddedResource Include="Scripts\jquery.jstree.js" />
+    <EmbeddedResource Include="Scripts\jquery.jstreelist.js" />
+    <EmbeddedResource Include="Scripts\jquery.layout.js" />
+    <EmbeddedResource Include="Scripts\jquery.simplemodal.js" />
+    <EmbeddedResource Include="Scripts\jquery.tmpl.js" />
+    <EmbeddedResource Include="Scripts\LyniconControls.js" />
+    <EmbeddedResource Include="Scripts\LyniconEditPanel.js" />
+    <EmbeddedResource Include="Scripts\LyniconMain.js" />
+    <EmbeddedResource Include="Scripts\themes\default\d.gif" />
+    <EmbeddedResource Include="Scripts\themes\default\d.png" />
+    <EmbeddedResource Include="Scripts\themes\default\style.css" />
+    <EmbeddedResource Include="Scripts\themes\default\throbber.gif" />
+    <EmbeddedResource Include="Scripts\BrowserDetect.js" />
+    <EmbeddedResource Include="Scripts\chosen.jquery.js" />
+    <EmbeddedResource Include="Scripts\jquery.hopscotch.js" />
+    <EmbeddedResource Include="Scripts\masonry.js" />
+    <EmbeddedResource Include="Scripts\jquery-te.js" />
+    <EmbeddedResource Include="Scripts\selectize.js" />
+    <Content Include="ThirdParty\Lucene.Net.dll" />
+    <Content Include="ThirdParty\Lucene.Net.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="bin\Debug\Lynicon.dll.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Lynicon.csprojResolveAssemblyReference.cache" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

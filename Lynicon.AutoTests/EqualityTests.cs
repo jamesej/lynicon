@@ -5,7 +5,7 @@ using Lynicon.Extensibility;
 using Lynicon.Models;
 using Lynicon.Repositories;
 using Lynicon.Test.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 // Initialise database with test data
 //  use ef directly, use appropriate schema for modules in use
@@ -14,17 +14,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lynicon.AutoTests
 {
-    [TestClass]
+    [TestFixture]
     public class EqualityTests
     {
-
-        [ClassInitialize]
-        public static void Init(TestContext ctx)
-        {
-
-        }
-
-        [TestMethod]
+        [Test]
         public void ItemId()
         {
             Guid id0 = Guid.NewGuid();
@@ -44,7 +37,7 @@ namespace Lynicon.AutoTests
             Assert.IsFalse(ii1.GetHashCode() == ii3.GetHashCode(), "hash code by id");
         }
 
-        [TestMethod]
+        [Test]
         public void ItemVersion()
         {
             Dictionary<string, object> vers = new Dictionary<string, object> { { "Existence", "Exists" }, { "Published", false } };
@@ -75,7 +68,7 @@ namespace Lynicon.AutoTests
             Assert.IsTrue(ii5.GetHashCode() == ii4.GetHashCode(), "hash code compare null value");
         }
 
-        [TestMethod]
+        [Test]
         public void Address()
         {
             ContentTypeHierarchy.RegisterType(typeof(HeaderContent));
