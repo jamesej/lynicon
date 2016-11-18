@@ -32,17 +32,25 @@ namespace Lynicon.Tools
 
         protected override void ProcessRecord()
         {
-
-            ProjectContextLoader.Ensure(this);
+            ProjectContextLoader.InitialiseDataApi(this);
 
             using (AppConfig.Change(ProjectContextLoader.WebConfigPath))
             {
                 try
                 {
-                    var coll = Collator.Instance;
-                    var getu = coll.Get<User>();
-                    int ct = getu.Count();
-                    WriteObject(ct);
+                    var adminUser = Collator.Instance.Get<User, User>(iq => iq.Where(u => u.UserName == "administrator")).FirstOrDefault();
+                    if (adminUser == null)
+                    {
+                        Guid adminUserId = Guid.NewGuid();
+                        adminUser = Collator.Instance.GetNew<User>(new Address(typeof(User), adminUserId.ToString()));
+                        adminUser.Email = "admin@lynicon-user.com";
+                        adminUser.Id = adminUserId;
+                        adminUser.Roles = "AEU";
+                        adminUser.UserName = "administrator";
+                        Collator.Instance.Set(adminUser, true);
+                    }
+
+                    LyniconSecurityManager.Current.SetPassword(adminUser.IdAsString, Password);
                 }
                 catch (Exception ex)
                 {
@@ -50,15 +58,6 @@ namespace Lynicon.Tools
                     ThrowTerminatingError(new ErrorRecord(ex, "USERACTIONSFAIL", ErrorCategory.InvalidOperation, null));
                 }
             }
-
-            //Guid adminUserId = Guid.NewGuid();
-            //var adminUser = Collator.Instance.GetNew<User>(new Address(typeof(User), adminUserId.ToString()));
-            //adminUser.Email = "admin@lynicon-user.com";
-            //adminUser.Id = adminUserId;
-            //adminUser.Roles = "AEU";
-            //adminUser.UserName = "administrator";
-            //Collator.Instance.Set(adminUser, true);
-            //LyniconSecurityManager.Current.SetPassword(adminUserId.ToString(), Password);
         }
     }
 }
