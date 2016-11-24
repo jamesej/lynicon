@@ -4,15 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Management.Automation;
-using Lynicon.Utility;
-using Lynicon.Membership;
-using Lynicon.Collation;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 using EnvDTE;
 using System.Reflection;
 using System.IO;
-using Lynicon.Repositories;
 
 namespace Lynicon.Tools
 {
@@ -29,8 +25,16 @@ namespace Lynicon.Tools
 
             using (AppConfig.Change(ProjectContextLoader.WebConfigPath))
             {
-                var pdb = new PreloadDb();
-                pdb.EnsureCoreDb();
+                dynamic pdb = Activator.CreateInstance("Lynicon", "Lynicon.Repositories.PreloadDb").Unwrap();
+                try
+                {
+                    pdb.EnsureCoreDb();
+                }
+                catch (Exception ex)
+                {
+                    ToolsHelper.WriteException(this, ex);
+                    ThrowTerminatingError(new ErrorRecord(ex, "DATABASEFAIL", ErrorCategory.ReadError, pdb));
+                }
             }
         }
     }

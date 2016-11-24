@@ -8,10 +8,8 @@ using System.Reflection;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 using System.Collections;
-using Lynicon.Models;
-using System.Data.Entity;
 
-namespace Lynicon.Utility
+namespace Lynicon.Tools
 {
     public static class LinqX
     {
@@ -477,11 +475,6 @@ namespace Lynicon.Utility
                 yield return batch;
         }
 
-        public static IEnumerable<T> ApplyPaging<T>(this IEnumerable<T> source, PagingSpec paging)
-        {
-            return source.Skip(paging.Skip).Take(paging.Take);
-        }
-
         public static IEnumerable<T> ShufflePositions<T>(this IEnumerable<T> source, int[] positions)
         {
             T[] buffer = new T[positions.Length];
@@ -521,26 +514,6 @@ namespace Lynicon.Utility
 
         }
 
-        /// <summary>
-        /// Update an entity in a context, taking appropriate action based on
-        /// whether it is already tracked or not
-        /// </summary>
-        /// <param name="context">The database context</param>
-        /// <param name="entity">The entity to update in the context</param>
-        public static void SafeUpdate(this DbContext context, object entity)
-        {
-            var entry = context.Entry(entity);
-            if (entry.State != EntityState.Detached)
-                return;
-
-            Type entityType = entity.GetType().ContentType();
-            object id = LinqX.GetIdProp(entity.GetType(), null).GetValue(entity);
-            var attachedEntity = context.Set(entityType).Find(id);
-            if (attachedEntity != null)
-                context.Entry(attachedEntity).CurrentValues.SetValues(entity);
-            else
-                entry.State = EntityState.Modified;
-        }
 
     }
 }

@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace Lynicon.DataSources
 {
     /// <summary>
-    /// Factory interface for creating persistence services with appropriate lifetime
+    /// Factory interface for creating persistence services (data sources) with appropriate lifetime.  Controls whether
+    /// the data source is recreated for every request, or persists across a request.
     /// </summary>
     public interface IDataSourceFactory
     {

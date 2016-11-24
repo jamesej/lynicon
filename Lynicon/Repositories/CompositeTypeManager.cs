@@ -99,7 +99,9 @@ namespace Lynicon.Repositories
             else if (BaseTypes.Contains(t.BaseType))
                 baseType = t.BaseType;
             else
-                throw new Exception("Type " + t.FullName + " has no composite type");
+                // -- may not be handled by composite system
+                //throw new Exception("Type " + t.FullName + " has no composite type");
+                return o;
 
             Type compType = ExtendedTypes[baseType];
             var tProps = t.GetProperties().ToDictionary(pi => pi.Name, pi => pi);

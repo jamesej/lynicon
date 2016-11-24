@@ -11,7 +11,8 @@ using System.Web;
 namespace Lynicon.DataSources
 {
     /// <summary>
-    /// Data source which provides access to Lynicon's main DbContext
+    /// Data source which provides access to Lynicon's main DbContext (which has facilities like
+    /// type composition)
     /// </summary>
     public class CoreDataSource : IDataSource
     {

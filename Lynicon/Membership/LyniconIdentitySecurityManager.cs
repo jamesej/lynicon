@@ -36,9 +36,19 @@ namespace Lynicon.AspNet.Identity
         public LyniconIdentitySecurityManager()
         {
             this.context = () => new TContext();
-            this.userManager = () => HttpContext.Current.GetOwinContext().GetUserManager<TUserManager>();
+            this.userManager = GetUserManager;
             this.signInManager = () => HttpContext.Current.GetOwinContext().Get<TSignInManager>();
             this.authenticationManager = () => HttpContext.Current.GetOwinContext().Authentication;
+        }
+
+        public TUserManager GetUserManager()
+        {
+            if (HttpContext.Current != null)
+                return HttpContext.Current.GetOwinContext().GetUserManager<TUserManager>();
+            else
+            {
+                return (TUserManager)Activator.CreateInstance(typeof(TUserManager), new UserStore<TUser>(this.context()));
+            }
         }
 
         /// <summary>
@@ -59,7 +69,7 @@ namespace Lynicon.AspNet.Identity
             Repository.Instance.Register(typeof(TUser), appDbRepository);
 
             // override existing collator registration for User
-            var identityAdaptorCollator = new IdentityAdaptorCollator<TUser, TUserManager>();
+            var identityAdaptorCollator = new IdentityAdaptorCollator<TUser, TUserManager>(GetUserManager);
             identityAdaptorCollator.Repository = Repository.Instance;
             Collator.Instance.Register(typeof(User), identityAdaptorCollator);
         }
@@ -165,13 +175,24 @@ namespace Lynicon.AspNet.Identity
                 UserManager<TUser> UserManager = new UserManager<TUser>(store);
                 String hashedNewPassword = UserManager.PasswordHasher.HashPassword(newPw);
                 TUser cUser = await store.FindByIdAsync(userId);
-                await store.SetPasswordHashAsync(cUser, hashedNewPassword);
-                await store.UpdateAsync(cUser);
+                await store.SetPasswordHashAsync(cUser, hashedNewPassword).ConfigureAwait(false);
+                await store.UpdateAsync(cUser).ConfigureAwait(false);
                 return true;
             }
             catch (Exception ex)
             {
                 return false;
+            }
+        }
+
+        public void EnsureRoles(string roles)
+        {
+            var roleStore = new RoleStore<IdentityRole>(context());
+            var roleManager = new RoleManager<IdentityRole>(roleStore);
+            foreach (string role in roles.ToCharArray().Select(c => c.ToString()))
+            {
+                if (!roleManager.RoleExists(role))
+                    roleManager.Create(new IdentityRole(role) { Id = role });
             }
         }
     }

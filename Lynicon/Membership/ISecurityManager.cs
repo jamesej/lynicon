@@ -46,5 +46,11 @@ namespace Lynicon.Membership
         /// <param name="newPw">The new password</param>
         /// <returns>True if succeeded</returns>
         bool SetPassword(string userId, string newPw);
+
+        /// <summary>
+        /// Ensure all the role letters in the roles string exist
+        /// </summary>
+        /// <param name="roles"></param>
+        void EnsureRoles(string roles);
     }
 }

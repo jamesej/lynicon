@@ -30,14 +30,13 @@ namespace Lynicon.Membership
         /// <summary>
         /// Create a new IdentityAdaptorCollator
         /// </summary>
-        /// <param name="userManager">A function which returns the current UserManager</param>
-        public IdentityAdaptorCollator() : base(new BasicCollator(Repository.Instance), null, null)
+        public IdentityAdaptorCollator(Func<TUserManager> getUserManager) : base(new BasicCollator(Repository.Instance), null, null)
         {
             this.PropertyMap = new Dictionary<string, string>();
             this.IdWriteConvert = id => "'" + id.ToString() + "'";
             this.readConvert = ReadConvert;
             this.writeConvert = WriteConvert;
-            this.userManager = () => HttpContext.Current.GetOwinContext().GetUserManager<TUserManager>();
+            this.userManager = getUserManager;
 
             extUserType = CompositeTypeManager.Instance.ExtendedTypes.ContainsKey(typeof(User))
                 ? CompositeTypeManager.Instance.ExtendedTypes[typeof(User)]

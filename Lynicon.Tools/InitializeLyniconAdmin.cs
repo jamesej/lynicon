@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Management.Automation;
-using Lynicon.Utility;
-using Lynicon.Membership;
-using Lynicon.Collation;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
-using EnvDTE;
 using System.Reflection;
+using System.Linq.Expressions;
 
 namespace Lynicon.Tools
 {
@@ -30,6 +27,12 @@ namespace Lynicon.Tools
         }
         private string password;
 
+        private object GetStaticPropVal(Type type, string propName)
+        {
+            var pi = type.GetProperty("Instance", BindingFlags.GetProperty | BindingFlags.Static);
+            return pi.GetValue(null);
+        }
+
         protected override void ProcessRecord()
         {
             ProjectContextLoader.InitialiseDataApi(this);
@@ -38,23 +41,49 @@ namespace Lynicon.Tools
             {
                 try
                 {
-                    var adminUser = Collator.Instance.Get<User, User>(iq => iq.Where(u => u.UserName == "administrator")).FirstOrDefault();
-                    if (adminUser == null)
-                    {
-                        Guid adminUserId = Guid.NewGuid();
-                        adminUser = Collator.Instance.GetNew<User>(new Address(typeof(User), adminUserId.ToString()));
-                        adminUser.Email = "admin@lynicon-user.com";
-                        adminUser.Id = adminUserId;
-                        adminUser.Roles = "AEU";
-                        adminUser.UserName = "administrator";
-                        Collator.Instance.Set(adminUser, true);
-                    }
+                    // construct 'var adminUser = Collator.Instance.Get<User, User>(iq => iq.Where(u => u.UserName == "administrator").FirstOrDefault()
 
-                    LyniconSecurityManager.Current.SetPassword(adminUser.IdAsString, Password);
+                    //object coll = Activator.CreateInstance("Lynicon", "Lynicon.Collation.Collator").Unwrap();
+                    //object collInst = GetStaticPropVal(coll.GetType(), "Instance");
+                    //MethodInfo getMethod = collInst.GetType().GetMethods()
+                    //    .First(mi => mi.IsGenericMethod
+                    //                 && mi.GetGenericArguments().Length == 2
+                    //                 && mi.GetParameters().Length == 1);
+                    
+                    //Type tUser = coll.GetType().Assembly.GetType("Lynicon.Membership.User");
+                    //PropertyInfo userName = tUser.GetProperty("UserName");
+                    //var uParam = Expression.Parameter(tUser, "u");
+                    //var accessUserName = Expression.MakeMemberAccess(uParam, userName);
+                    //var cmpUserName = Expression.Equal(accessUserName, Expression.Constant("administrator"));
+                    //var lmdWhere = Expression.Lambda(cmpUserName, uParam);
+                    //MethodInfo getUserMethod = getMethod.MakeGenericMethod(tUser, tUser);
+                    //var getAllUsers = getUserMethod.Invoke(collInst, new object[] { lmdWhere });
+                    //var getFirstUser = typeof(Enumerable)
+                    //    .GetMethod("FirstOrDefault", BindingFlags.Public | BindingFlags.Static, null, new Type[] { }, null);
+                    //dynamic adminUser = getFirstUser.Invoke(null, new object[] { getAllUsers });
+
+                    Assembly lynicon = AppDomain.CurrentDomain.GetAssemblies().FirstOrDefault(a => a.GetName().Name.ToLower() == "lynicon");
+                    Type secmType = lynicon.GetType("Lynicon.Membership.LyniconSecurityManager");
+                    MethodInfo ensureAdminUser = secmType.GetMethod("EnsureAdminUser", BindingFlags.Public | BindingFlags.Static);
+                    ensureAdminUser.Invoke(null, new object[] { Password });
+
+                    //var adminUser = Collator.Instance.Get<User, User>(iq => iq.Where(u => u.UserName == "administrator")).FirstOrDefault();
+                    //if (adminUser == null)
+                    //{
+                    //    Guid adminUserId = Guid.NewGuid();
+                    //    adminUser = Collator.Instance.GetNew<User>(new Address(typeof(User), adminUserId.ToString()));
+                    //    adminUser.Email = "admin@lynicon-user.com";
+                    //    adminUser.Id = adminUserId;
+                    //    adminUser.Roles = "AEU";
+                    //    adminUser.UserName = "administrator";
+                    //    Collator.Instance.Set(adminUser, true);
+                    //}
+
+                    //LyniconSecurityManager.Current.SetPassword(adminUser.IdAsString, Password);
                 }
                 catch (Exception ex)
                 {
-                    WriteVerbose(string.Format("Exception was: {0} at: {1}", ex.Message, ex.StackTrace));
+                    ToolsHelper.WriteException(this, ex);
                     ThrowTerminatingError(new ErrorRecord(ex, "USERACTIONSFAIL", ErrorCategory.InvalidOperation, null));
                 }
             }

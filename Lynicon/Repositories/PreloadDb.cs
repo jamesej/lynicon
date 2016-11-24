@@ -73,7 +73,7 @@ namespace Lynicon.Repositories
 	                [UserUpdated] [varchar](40) NULL,
                  CONSTRAINT [PK_ContentItems] PRIMARY KEY CLUSTERED (Id))");
 
-            DbChanges.Add(new DbChange { Change = "LyniconInit 0.0", ChangedWhen = DateTime.Now });
+            DbChanges.Add(new DbChange { Change = "LyniconInit 0.1", ChangedWhen = DateTime.Now });
             SaveChanges();
         }
     }

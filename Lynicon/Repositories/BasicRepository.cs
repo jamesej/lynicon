@@ -94,8 +94,9 @@ namespace Lynicon.Repositories
             {
                 if (CompositeTypeManager.Instance.ExtendedTypes.ContainsKey(createType))
                     createType = CompositeTypeManager.Instance.ExtendedTypes[createType];
-                else
-                    throw new Exception("Type " + createType.FullName + " not registered in coredb");
+                // -- below is unnecessary as the type may not be in CompositeTypeManager
+                //else
+                //    throw new Exception("Type " + createType.FullName + " not registered in coredb");
             }
             object newT = Activator.CreateInstance(createType);
             newT = EventHub.Instance.ProcessEvent("Repository.New", this, newT).Data;

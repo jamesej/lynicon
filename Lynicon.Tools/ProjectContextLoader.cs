@@ -7,7 +7,6 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using EnvDTE;
-using Lynicon.Utility;
 
 namespace Lynicon.Tools
 {
@@ -87,6 +86,7 @@ namespace Lynicon.Tools
                 }
                 catch (Exception ex)
                 {
+                    ToolsHelper.WriteException(caller, ex);
                     caller.ThrowTerminatingError(new ErrorRecord(ex, "NOASSEMBLY", ErrorCategory.ReadError, AssPath));
                 }
 
@@ -139,7 +139,7 @@ namespace Lynicon.Tools
 
                 catch (Exception ex)
                 {
-                    caller.WriteVerbose(string.Format("Exception was: {0} at: {1}", ex.Message, ex.StackTrace));
+                    ToolsHelper.WriteException(caller, ex);
                     caller.ThrowTerminatingError(new ErrorRecord(ex, "INITIALISEDATAAPIFAIL", ErrorCategory.InvalidOperation, lyniconConfig));
                 }
 

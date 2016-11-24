@@ -11,7 +11,8 @@ using Lynicon.Utility;
 namespace Lynicon.DataSources
 {
     /// <summary>
-    /// An empty data source which persists nothing
+    /// An empty data source which persists nothing. Useful for setting up data persistence in memory by
+    /// unbacked cache.
     /// </summary>
     public class NullDataSource : IDataSource
     {

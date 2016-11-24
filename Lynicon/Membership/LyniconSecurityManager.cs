@@ -29,6 +29,25 @@ namespace Lynicon.Membership
             return current as TSecM;
         }
 
+        public static void EnsureAdminUser(string password)
+        {
+            LyniconSecurityManager.Current.EnsureRoles("AEU");
+
+            var adminUser = Collator.Instance.Get<User, User>(iq => iq.Where(u => u.UserName == "administrator")).FirstOrDefault();
+            if (adminUser == null)
+            {
+                Guid adminUserId = Guid.NewGuid();
+                adminUser = Collator.Instance.GetNew<User>(new Address(typeof(User), adminUserId.ToString()));
+                adminUser.Email = "admin@lynicon-user.com";
+                adminUser.Id = adminUserId;
+                adminUser.Roles = "AEU";
+                adminUser.UserName = "administrator";
+                Collator.Instance.Set(adminUser, true);
+            }
+
+            LyniconSecurityManager.Current.SetPassword(adminUser.IdAsString, password);
+        }
+
         static LyniconSecurityManager() { }
 
         /// <summary>
@@ -232,6 +251,11 @@ namespace Lynicon.Membership
         {
             if (Login != null)
                 Login(sender, e);
+        }
+
+        public void EnsureRoles(string roles)
+        {
+            // no action required as there is no table of roles
         }
     }
 }
