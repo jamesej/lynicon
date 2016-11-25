@@ -21,21 +21,28 @@ namespace Lynicon.Tools
     {
         protected override void ProcessRecord()
         {
-            ProjectContextLoader.EnsureLoaded(this);
+            //ProjectContextLoader.EnsureLoaded(this);
 
-            using (AppConfig.Change(ProjectContextLoader.WebConfigPath))
-            {
-                dynamic pdb = Activator.CreateInstance("Lynicon", "Lynicon.Repositories.PreloadDb").Unwrap();
-                try
-                {
-                    pdb.EnsureCoreDb();
-                }
-                catch (Exception ex)
-                {
-                    ToolsHelper.WriteException(this, ex);
-                    ThrowTerminatingError(new ErrorRecord(ex, "DATABASEFAIL", ErrorCategory.ReadError, pdb));
-                }
-            }
+            //using (AppConfig.Change(ProjectContextLoader.WebConfigPath))
+            //{
+            //    dynamic pdb = Activator.CreateInstance("Lynicon", "Lynicon.Repositories.PreloadDb").Unwrap();
+            //    try
+            //    {
+            //        pdb.EnsureCoreDb();
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        ToolsHelper.WriteException(this, ex);
+            //        ThrowTerminatingError(new ErrorRecord(ex, "DATABASEFAIL", ErrorCategory.ReadError, pdb));
+            //    }
+            //}
+
+            AppDomain ad = AppDomain.CreateDomain("InitializeLyniconDatabase");
+            var remote = (RemoteInitializeLyniconDatabase)ad.CreateInstanceFromAndUnwrap(
+                typeof(RemoteInitializeLyniconDatabase).Assembly.Location, typeof(RemoteInitializeLyniconDatabase).FullName);
+
+            remote.Run();
+            AppDomain.Unload(ad);
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using EnvDTE;
 
+
 namespace Lynicon.Tools
 {
     public class ProjectContextLoader
@@ -49,7 +50,8 @@ namespace Lynicon.Tools
             //var mvcProj = dte.Solution.Projects.Cast<Project>().FirstOrDefault(p => p.Kind == Constants.vsProjectKind)
             string startupProjIdx = ((Array)DTE2.Solution.SolutionBuild.StartupProjects).Cast<string>().First();
             var startupProj = DTE2.Solution.Item(startupProjIdx);
-            caller.WriteVerbose("Found startup project: " + startupProj.Name);
+            if (caller != null)
+                caller.WriteVerbose("Found startup project: " + startupProj.Name);
 
             MainProject = startupProj;
             AssName = startupProj.Properties.Item("AssemblyName").Value.ToString();
@@ -67,7 +69,8 @@ namespace Lynicon.Tools
             EnsureDTE(caller);
 
             var progress = new ProgressRecord(0, "Initializing Project Context", "Loading assembly: " + AssPath);
-            caller.WriteProgress(progress);
+            if (caller != null)
+                caller.WriteProgress(progress);
 
             System.AppDomain.CurrentDomain.SetData("APPBASE", RootPath);
             System.AppDomain.CurrentDomain.SetData("PRIVATE_BINPATH", "bin");
@@ -86,8 +89,11 @@ namespace Lynicon.Tools
                 }
                 catch (Exception ex)
                 {
-                    ToolsHelper.WriteException(caller, ex);
-                    caller.ThrowTerminatingError(new ErrorRecord(ex, "NOASSEMBLY", ErrorCategory.ReadError, AssPath));
+                    if (caller != null)
+                    {
+                        ToolsHelper.WriteException(caller, ex);
+                        caller.ThrowTerminatingError(new ErrorRecord(ex, "NOASSEMBLY", ErrorCategory.ReadError, AssPath));
+                    }
                 }
 
                 Assembly efSqlAss = null;
@@ -100,7 +106,8 @@ namespace Lynicon.Tools
                 catch { }
 
                 progress.StatusDescription = "Assembly loaded";
-                caller.WriteProgress(progress);
+                if (caller != null)
+                    caller.WriteProgress(progress);
             }
 
             ContextLoaded = true;
@@ -118,33 +125,40 @@ namespace Lynicon.Tools
                 string lyniconConfigName = DefaultNs + ".LyniconConfig";
                 var progress = new ProgressRecord(0, "Initializing Project Context", "Trying to load type: " + lyniconConfigName);
 
+                if (caller != null)
                 caller.WriteProgress(progress);
                 Type lyniconConfig = StartupAssembly.GetType(lyniconConfigName);
 
                 progress.StatusDescription = "Type loaded";
-                caller.WriteProgress(progress);
+                if (caller != null)
+                    caller.WriteProgress(progress);
 
                 var registerModulesMethod = lyniconConfig.GetMethod("RegisterModules", BindingFlags.Static | BindingFlags.Public);
                 var initialiseDataApiMethod = lyniconConfig.GetMethod("InitialiseDataApi", BindingFlags.Static | BindingFlags.Public);
-                if (registerModulesMethod == null || initialiseDataApiMethod == null)
+                if ((registerModulesMethod == null || initialiseDataApiMethod == null) && caller != null)
                     caller.ThrowTerminatingError(new ErrorRecord(new Exception("Cannot find 'RegisterModules' and 'InitialiseDataApi' methods on LyniconConfig"), "NOMETHODS", ErrorCategory.ReadError, lyniconConfig));
 
                 progress.StatusDescription = "Initializing Data Api";
-                caller.WriteProgress(progress);
+                if (caller != null)
+                    caller.WriteProgress(progress);
                 try
                 {
                     registerModulesMethod.Invoke(null, new object[0]);
                     initialiseDataApiMethod.Invoke(null, new object[0]);
                 }
-
                 catch (Exception ex)
                 {
-                    ToolsHelper.WriteException(caller, ex);
-                    caller.ThrowTerminatingError(new ErrorRecord(ex, "INITIALISEDATAAPIFAIL", ErrorCategory.InvalidOperation, lyniconConfig));
+                    if (caller != null)
+                    {
+                        ToolsHelper.WriteException(caller, ex);
+                        caller.ThrowTerminatingError(new ErrorRecord(ex, "INITIALISEDATAAPIFAIL", ErrorCategory.InvalidOperation, lyniconConfig));
+                    }
+
                 }
 
                 progress.StatusDescription = "Lynicon initialized";
-                caller.WriteProgress(progress);
+                if (caller != null)
+                    caller.WriteProgress(progress);
             }
 
             DataApiInitialised = true;
