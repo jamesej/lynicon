@@ -12,7 +12,6 @@ namespace Lynicon.Site
     {
         protected void Application_Start()
         {
-        
             // Lynicon install inserted these 2 lines
             LyniconConfig.RegisterModules();
             LyniconConfig.InitialiseDataApi();
@@ -21,9 +20,7 @@ namespace Lynicon.Site
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            
-            
-            
+
             // Lynicon install inserted this line
             LyniconConfig.Initialise();
         }

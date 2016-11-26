@@ -1158,18 +1158,20 @@ color: #fff;
 
 #lyn-login-box {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	height: 300px;
-	width: 200px;
-	margin-top: -150px;
-	margin-left: -100px;
-	text-align: center;
+    top: 50%;
+    left: 50%;
+    height: 300px;
+    width: 350px;
+    margin-top: -150px;
+    margin-left: -175px;
+    text-align: center;
 }
 
 #lyn-login-box form {
-background-color: #cbdfdf;
-overflow: auto;
+	background-color: #cbdfdf;
+	overflow: auto;
+	width: 200px;
+    margin: 0 auto;
 }
 
 #lyn-login input {
