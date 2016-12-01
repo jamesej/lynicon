@@ -6,6 +6,7 @@ using Lynicon.Repositories;
 using Lynicon.Test.Models;
 using Lynicon.Extensibility;
 using NUnit.Framework;
+using Lynicon.Models;
 
 // Initialise database with test data
 //  use ef directly, use appropriate schema for modules in use
@@ -112,10 +113,10 @@ namespace Lynicon.AutoTests
         {
             var s1 = Collator.Instance.GetNew<Sub1TContent>(new Address(typeof(Sub1TContent), "s1"));
             s1.Title = "Sub1";
-            s1.SomeStuff = new Models.MinHtml("<b>this</b>");
+            s1.SomeStuff = new MinHtml("<b>this</b>");
             var s2 = Collator.Instance.GetNew<Sub2TContent>(new Address(typeof(Sub2TContent), "s2"));
             s2.Title = "Sub2";
-            s2.Links.Add(new Models.Link { Content = "linky", Url = "/abc" });
+            s2.Links.Add(new Link { Content = "linky", Url = "/abc" });
         }
 
         [Test]

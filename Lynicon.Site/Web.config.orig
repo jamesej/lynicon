@@ -30,7 +30,7 @@
     <basic configSource="Areas\Lynicon\Config\basic.config" />
   </lynicon>
   <connectionStrings>
-    <add name="LyniconContent" connectionString="Data Source=.\;Initial Catalog=LyniconInsTest;User ID=sa;Password=conchigl10ne;MultipleActiveResultSets=True;PersistSecurityInfo=True;" />
+    <add name="LyniconContent" connectionString="..." />
   </connectionStrings>
   <log4net>
     <appender name="RollingFileAppender" type="log4net.Appender.RollingFileAppender">

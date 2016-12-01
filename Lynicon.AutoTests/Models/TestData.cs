@@ -32,4 +32,14 @@ namespace Lynicon.Test.Models
         [Summary]
         public string Value1 { get; set; }
     }
+
+    public class TestDataX : TestData, ITestDataX
+    {
+        public string ExtVal { get; set; }
+    }
+
+    public interface ITestDataX
+    {
+        string ExtVal { get; set; }
+    }
 }

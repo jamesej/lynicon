@@ -144,7 +144,8 @@ namespace Lynicon.Collation
 
         private void LoadPath(string path)
         {
-            var pathParts = path.Split(new char[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
+            var pathParts = (path ?? "")
+                .Split(new char[] { '&' }, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < pathParts.Length; i++)
                 this.Add("_" + i.ToString(), pathParts[i]);
         }
@@ -200,13 +201,30 @@ namespace Lynicon.Collation
             }
             else
             {
-                foreach (string key in this.Keys)
+                foreach (string key in keyProps.Keys)
                 {
                     string propName = keyProps[key];
-                    if (queryBody == null)
-                        queryBody = iq => iq.Where(LinqX.GetPropertyTest<T>(propName, this[key]));
+                    object matchVal;
+                    if (this.ContainsKey(key))
+                        matchVal = this[key];
                     else
-                        queryBody = iq => queryBody(iq).Where(LinqX.GetPropertyTest<T>(propName, this[key]));
+                    {
+                        // this address doesn't have a value for this address component property so use a default value
+                        Type keyType = typeof(T).GetProperty(propName).PropertyType;
+                        if (keyType.IsValueType)
+                            matchVal = Activator.CreateInstance(keyType);
+                        else
+                            matchVal = null;
+                    }
+
+                    if (queryBody == null)
+                        queryBody = iq => iq.Where(LinqX.GetPropertyTest<T>(propName, matchVal));
+                    else
+                    {
+                        var innerQueryBody = queryBody;
+                        queryBody = iq => innerQueryBody(iq).Where(LinqX.GetPropertyTest<T>(propName, matchVal));
+                    }
+                        
                 }
                 if (queryBody == null)
                     queryBody = iq => iq;
@@ -247,9 +265,19 @@ namespace Lynicon.Collation
                 pi.SetValue(item, val);
             }
 
-            if (propMap.ContainsKey("|PATH|"))
+            // Clear properties on item with no matching entry in the Address to default values
+            foreach (var key in propMap.Keys.Except(this.Keys))
             {
-                propMap["|PATH|"].SetValue(item, this.GetAsContentPath());
+                if (key == "|PATH|")
+                    propMap["|PATH|"].SetValue(item, this.GetAsContentPath());
+                else
+                {
+                    Type propType = propMap[key].PropertyType;
+                    if (propType.IsValueType)
+                        propMap[key].SetValue(item, Activator.CreateInstance(propType));
+                    else
+                        propMap[key].SetValue(item, null);
+                }
             }
         }
 

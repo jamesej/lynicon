@@ -112,6 +112,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ItemIdTests.cs" />
+    <Compile Include="AddressTests.cs" />
     <Compile Include="FacadeTest.cs" />
     <Compile Include="GlobalEventTest.cs" />
     <Compile Include="MockController.cs" />
@@ -122,10 +124,12 @@
     <Compile Include="Models\ChefContent.cs" />
     <Compile Include="Models\HeaderContent2.cs" />
     <Compile Include="Models\HeaderContent.cs" />
+    <Compile Include="Models\PathAddressData.cs" />
     <Compile Include="Models\PropertyRedirectContent.cs" />
     <Compile Include="Models\RefContent.cs" />
     <Compile Include="Models\RestaurantContent.cs" />
     <Compile Include="Models\SingleContent.cs" />
+    <Compile Include="Models\SplitAddressData.cs" />
     <Compile Include="Models\TestContent.cs" />
     <Compile Include="Models\TestData.cs" />
     <Compile Include="Setup.cs" />

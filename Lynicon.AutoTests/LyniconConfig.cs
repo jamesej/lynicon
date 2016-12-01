@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Lynicon.AutoTests.Models;
 using Lynicon.Collation;
 using Lynicon.Extensibility;
 using Lynicon.Membership;
@@ -36,6 +37,9 @@ namespace Lynicon.AutoTests
         {
             Collator.Instance.SetupTypeForBasic<TestData>();
             Collator.RegisterExtensionType(typeof(TestData));
+            Collator.RegisterExtensionType(typeof(TestDataX));
+            Collator.Instance.SetupTypeForBasic<PathAddressData>();
+            Collator.Instance.SetupTypeForBasic<SplitAddressData>();
 
             Repository.Instance.Register(null, new ContentRepository(new MockDataSourceFactory()));
             Repository.Instance.Register(typeof(TestData), new BasicRepository(new MockDataSourceFactory()));
@@ -55,6 +59,9 @@ namespace Lynicon.AutoTests
             ContentTypeHierarchy.RegisterType(typeof(Sub2TContent));
             ContentTypeHierarchy.RegisterType(typeof(RefContent));
             ContentTypeHierarchy.RegisterType(typeof(RefTargetContent));
+            ContentTypeHierarchy.RegisterType(typeof(PathAddressData));
+            ContentTypeHierarchy.RegisterType(typeof(SplitAddressData));
+            ContentTypeHierarchy.RegisterType(typeof(RestaurantContent));
 
             LyniconModuleManager.Instance.Initialise();
 
