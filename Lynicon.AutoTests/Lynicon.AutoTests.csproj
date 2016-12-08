@@ -112,6 +112,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="VersionTests.cs" />
     <Compile Include="ItemIdTests.cs" />
     <Compile Include="AddressTests.cs" />
     <Compile Include="FacadeTest.cs" />

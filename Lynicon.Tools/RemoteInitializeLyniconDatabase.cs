@@ -7,25 +7,28 @@ using System.Threading.Tasks;
 
 namespace Lynicon.Tools
 {
-    public class RemoteInitializeLyniconDatabase : MarshalByRefObject
+    [Serializable]
+    public class RemoteInitializeLyniconDatabase : RemoteProjectContextCommand
     {
         public void Run()
         {
-            ProjectContextLoader.EnsureLoaded(null);
+            ProjectContextLoader.EnsureLoaded(Message);
 
+            string actionsList = null;
             using (AppConfig.Change(ProjectContextLoader.WebConfigPath))
             {
                 dynamic pdb = Activator.CreateInstance("Lynicon", "Lynicon.Repositories.PreloadDb").Unwrap();
                 try
                 {
-                    pdb.EnsureCoreDb();
+                    actionsList = (string)pdb.EnsureCoreDb();
                 }
                 catch (Exception ex)
                 {
-                    //ToolsHelper.WriteException(null, ex);
-                    //ThrowTerminatingError(new ErrorRecord(ex, "DATABASEFAIL", ErrorCategory.ReadError, pdb));
+                    Message(new MessageEventArgs(ex));
                 }
             }
+
+            Message(new MessageEventArgs(MessageType.Output, "Initialised Successfully: " + (actionsList ?? "no actions taken")));
         }
     }
 }

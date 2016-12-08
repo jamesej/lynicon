@@ -21,7 +21,7 @@ namespace Lynicon.Tools
     {
         protected override void ProcessRecord()
         {
-            var fileModel = ProjectContextLoader.GetItemFileModel(this, "Global.asax");
+            var fileModel = ProjectContextLoader.GetItemFileModel(SendMessage, "Global.asax");
 
             bool found = fileModel.FindLineContains("Application_Start()")
                          && fileModel.FindLineIs("{");
@@ -45,7 +45,7 @@ namespace Lynicon.Tools
             }
             fileModel.Write();
 
-            var filtersFile = ProjectContextLoader.GetItemFileModel(this, "App_Start/FilterConfig.cs");
+            var filtersFile = ProjectContextLoader.GetItemFileModel(SendMessage, "App_Start/FilterConfig.cs");
 
             found = filtersFile.FindLineContains("using System.Web.Mvc;");
             if (found)
@@ -64,6 +64,11 @@ namespace Lynicon.Tools
             filtersFile.Write();
 
             WriteObject("Updated Global.asax.cs, FilterConfig.cs");
+        }
+
+        public void SendMessage(MessageEventArgs e)
+        {
+            MessageHandler.Handle(this, e);
         }
     }
 }

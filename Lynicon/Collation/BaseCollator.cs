@@ -177,7 +177,7 @@ namespace Lynicon.Collation
         public Type ContainerType(Type contentType)
         {
             // if ct is already extended, must pass it unchanged
-            Type ct = UnextendedContainerType(contentType);
+            Type ct = typeof(IContentContainer).IsAssignableFrom(contentType) ? contentType : UnextendedContainerType(contentType);
             if (CompositeTypeManager.Instance.ExtendedTypes.ContainsKey(ct))
                 ct = CompositeTypeManager.Instance.ExtendedTypes[ct];
             return ct;

@@ -45,6 +45,7 @@ namespace Lynicon.AutoTests
             Repository.Instance.Register(typeof(TestData), new BasicRepository(new MockDataSourceFactory()));
             Repository.Instance.Register(typeof(ContentItem), new ContentRepository(new MockDataSourceFactory()));
             Repository.Instance.Register(typeof(User), new UserRepository(new MockDataSourceFactory()));
+            Repository.Instance.Register(typeof(TestContainer), new BasicRepository(new MockDataSourceFactory()));
 
             Collator.Instance.BuildRepository();
         }
@@ -62,6 +63,7 @@ namespace Lynicon.AutoTests
             ContentTypeHierarchy.RegisterType(typeof(PathAddressData));
             ContentTypeHierarchy.RegisterType(typeof(SplitAddressData));
             ContentTypeHierarchy.RegisterType(typeof(RestaurantContent));
+            ContentTypeHierarchy.RegisterType(typeof(ChefContent));
 
             LyniconModuleManager.Instance.Initialise();
 

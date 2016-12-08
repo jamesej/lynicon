@@ -18,11 +18,11 @@ namespace Lynicon.AutoTests
 
         public IQueryable GetSource(Type type)
         {
-
-            if (!Data.ContainsKey(type))
-                return Array.CreateInstance(type, 0).AsQueryable();
+            Type t = type.ContentType();
+            if (!Data.ContainsKey(t))
+                return Array.CreateInstance(t, 0).AsQueryable();
             else
-                return Data[type].Values.OfTypeRuntime(type).AsQueryable();
+                return Data[t].Values.OfTypeRuntime(t).AsQueryable();
         }
 
         public void Update(object o)
@@ -30,7 +30,7 @@ namespace Lynicon.AutoTests
             if (o == null)
                 return;
 
-            Data[o.GetType()][new ItemId(o)] = o;
+            Data[o.GetType().ContentType()][new ItemId(o)] = o;
         }
 
         public void Create(object o)
@@ -38,10 +38,11 @@ namespace Lynicon.AutoTests
             if (o == null)
                 return;
 
-            if (!Data.ContainsKey(o.GetType()))
-                Data.TryAdd(o.GetType(), new ConcurrentDictionary<ItemId,object>());
+            Type oType = o.GetType().ContentType();
+            if (!Data.ContainsKey(oType))
+                Data.TryAdd(oType, new ConcurrentDictionary<ItemId,object>());
 
-            Data[o.GetType()].TryAdd(new ItemId(o), o);
+            Data[oType].TryAdd(new ItemId(o), o);
         }
 
         public void Delete(object o)
@@ -49,11 +50,11 @@ namespace Lynicon.AutoTests
             if (o == null)
                 return;
 
-            if (!Data.ContainsKey(o.GetType()))
+            if (!Data.ContainsKey(o.GetType().ContentType()))
                 return;
 
             object remd;
-            Data[o.GetType()].TryRemove(new ItemId(o), out remd);
+            Data[o.GetType().ContentType()].TryRemove(new ItemId(o), out remd);
         }
 
         public void SaveChanges()

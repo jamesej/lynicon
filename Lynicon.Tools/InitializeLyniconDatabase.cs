@@ -21,28 +21,34 @@ namespace Lynicon.Tools
     {
         protected override void ProcessRecord()
         {
-            //ProjectContextLoader.EnsureLoaded(this);
+            new InitializeLyniconDatabase(this).LocalRun();
+        }
+    }
 
-            //using (AppConfig.Change(ProjectContextLoader.WebConfigPath))
-            //{
-            //    dynamic pdb = Activator.CreateInstance("Lynicon", "Lynicon.Repositories.PreloadDb").Unwrap();
-            //    try
-            //    {
-            //        pdb.EnsureCoreDb();
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        ToolsHelper.WriteException(this, ex);
-            //        ThrowTerminatingError(new ErrorRecord(ex, "DATABASEFAIL", ErrorCategory.ReadError, pdb));
-            //    }
-            //}
+    [Serializable]
+    public class InitializeLyniconDatabase : LocalProjectContextCommand<RemoteInitializeLyniconDatabase>
+    {
+        public InitializeLyniconDatabase(Cmdlet caller) : base(caller)
+        {
+        }
 
-            AppDomain ad = AppDomain.CreateDomain("InitializeLyniconDatabase");
-            var remote = (RemoteInitializeLyniconDatabase)ad.CreateInstanceFromAndUnwrap(
-                typeof(RemoteInitializeLyniconDatabase).Assembly.Location, typeof(RemoteInitializeLyniconDatabase).FullName);
+        /// <summary>
+        /// Setup, run and unload the remote task
+        /// </summary>
+        public void LocalRun()
+        {
+            try
+            {
+                InitializeNewAppDomain("InitializeLyniconDatabase");
 
-            remote.Run();
-            AppDomain.Unload(ad);
+                remote.Run();
+
+                AppDomain.Unload(base.appDomain);
+            }
+            catch (Exception ex)
+            {
+                MessageHandler.Handle(this.caller, new MessageEventArgs(ex));
+            }
         }
     }
 }

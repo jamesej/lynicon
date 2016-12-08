@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace Lynicon.Tools
 {
-    public class RemoteInitializeLyniconAdmin : MarshalByRefObject
+    [Serializable]
+    public class RemoteInitializeLyniconAdmin : RemoteProjectContextCommand
     {
         public void Run(string password)
         {
-            ProjectContextLoader.InitialiseDataApi(null);
+            ProjectContextLoader.InitialiseDataApi(Message);
 
             using (AppConfig.Change(ProjectContextLoader.WebConfigPath))
             {
@@ -24,10 +25,12 @@ namespace Lynicon.Tools
                 }
                 catch (Exception ex)
                 {
-                    //ToolsHelper.WriteException(this, ex);
-                    //ThrowTerminatingError(new ErrorRecord(ex, "USERACTIONSFAIL", ErrorCategory.InvalidOperation, null));
+                    Message(new MessageEventArgs(ex));
                 }
             }
+
+            Message(new MessageEventArgs(MessageType.Output, "Created admin user, username: administrator, email: admin@lynicon-app.com, with supplied password"));
         }
+
     }
 }

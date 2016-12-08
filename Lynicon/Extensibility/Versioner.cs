@@ -21,7 +21,12 @@ namespace Lynicon.Extensibility
         /// <summary>
         /// The version key used in an ItemVersion for this versioning system
         /// </summary>
-        public string VersionKey { get; set; }
+        public abstract string VersionKey { get; }
+
+        /// <summary>
+        /// List of all possible version values
+        /// </summary>
+        public abstract object[] AllVersionValues { get; }
 
         /// <summary>
         /// The version value which is shown to a public user (null if all version values are shown)
@@ -29,20 +34,25 @@ namespace Lynicon.Extensibility
         public abstract object PublicVersionValue { get; }
 
         /// <summary>
-        /// Create a versioner supplying just the version key
+        /// Whether the different versions are all available on different urls (or else only
+        /// one version is available at once on one url)
+        /// </summary>
+        public abstract bool IsAddressable { get; }
+
+        /// <summary>
+        /// Create a versioner
         /// </summary>
         /// <param name="versionKey">The version key for this versioner</param>
-        public Versioner(string versionKey)
+        public Versioner()
         {
-            this.VersionKey = versionKey;
             this.IsVersionable = null;
         }
         /// <summary>
-        /// Create a versioner supplying the version key and the test for whether a content type has the versioning system applied to it
+        /// Create a versioner supplying the test for whether a content type has the versioning system applied to it
         /// </summary>
         /// <param name="versionKey">The version key for the versioner</param>
         /// <param name="isVersionable">function testing whether a content type is versionable</param>
-        public Versioner(string versionKey, Func<Type, bool> isVersionable) : this(versionKey)
+        public Versioner(Func<Type, bool> isVersionable) : this()
         {
             this.IsVersionable = isVersionable;
         }

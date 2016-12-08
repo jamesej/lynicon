@@ -18,7 +18,7 @@ namespace Lynicon.Extensibility
     /// to have that kind of versioning.  A Null value indicates the that the type of the
     /// versioned item does allow versioning of this kind, but this item is shared across
     /// all versions.  Null values also allow a version to have an abstract form that implies
-    /// a set of specific version, the set gained by all combinations of substituting valid
+    /// a set of specific versions, the set gained by all combinations of substituting valid
     /// specific version values for the null values.
     /// </summary>
     [Serializable]
@@ -163,14 +163,17 @@ namespace Lynicon.Extensibility
             return combined;
         }
 
+        /// <summary>
+        /// Where the other version contains a key, and this version contains a key, set this version's key to the other's value
+        /// </summary>
+        /// <param name="other">The version to overlay on this one</param>
+        /// <returns></returns>
         public ItemVersion Overlay(ItemVersion other)
         {
             var overlaid = new ItemVersion(this);
             other.Do(kvp =>
                 {
-                    if (kvp.Value == null && overlaid.ContainsKey(kvp.Key))
-                        overlaid.Remove(kvp.Key);
-                    else
+                    if (overlaid.ContainsKey(kvp.Key))
                         overlaid[kvp.Key] = kvp.Value;
                 });
             return overlaid;

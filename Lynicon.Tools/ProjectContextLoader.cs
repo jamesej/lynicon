@@ -13,6 +13,8 @@ namespace Lynicon.Tools
 {
     public class ProjectContextLoader
     {
+        public static string ToolsAssemblyPath { get; set; }
+
         public static EnvDTE80.DTE2 DTE2 { get; set; }
         private static string DllPath { get; set; }
 
@@ -41,7 +43,11 @@ namespace Lynicon.Tools
             DataApiInitialised = false;
         }
 
-        public static void EnsureDTE(Cmdlet caller)
+        /// <summary>
+        /// Load up information for the currently running Visual Studio object
+        /// </summary>
+        /// <param name="sendMessage">method to send messages for display</param>
+        public static void EnsureDTE(Action<MessageEventArgs> sendMessage)
         {
             if (DTE2 != null)
                 return;
@@ -50,8 +56,8 @@ namespace Lynicon.Tools
             //var mvcProj = dte.Solution.Projects.Cast<Project>().FirstOrDefault(p => p.Kind == Constants.vsProjectKind)
             string startupProjIdx = ((Array)DTE2.Solution.SolutionBuild.StartupProjects).Cast<string>().First();
             var startupProj = DTE2.Solution.Item(startupProjIdx);
-            if (caller != null)
-                caller.WriteVerbose("Found startup project: " + startupProj.Name);
+            if (sendMessage != null)
+                sendMessage(new MessageEventArgs("Found startup project: " + startupProj.Name));
 
             MainProject = startupProj;
             AssName = startupProj.Properties.Item("AssemblyName").Value.ToString();
@@ -61,22 +67,31 @@ namespace Lynicon.Tools
             WebConfigPath = RootPath + "\\web.config";
         }
 
-        public static void EnsureLoaded(Cmdlet caller)
+        public static void SetupAssemblyResolution()
+        {
+            AppDomain.CurrentDomain.AssemblyResolve += ResolveRuntimeRedirects;
+        }
+
+        /// <summary>
+        /// Set up environment parameters and load assemblies from the output of the currently running
+        /// Visual Studio project
+        /// </summary>
+        /// <param name="sendMessage"></param>
+        public static void EnsureLoaded(Action<MessageEventArgs> sendMessage)
         {
             if (ContextLoaded)
                 return;
 
-            EnsureDTE(caller);
+            EnsureDTE(sendMessage);
 
-            var progress = new ProgressRecord(0, "Initializing Project Context", "Loading assembly: " + AssPath);
-            if (caller != null)
-                caller.WriteProgress(progress);
+            if (sendMessage != null)
+                sendMessage(new MessageEventArgs("Initializing Project Context", "Loading assembly: " + AssPath));
 
             System.AppDomain.CurrentDomain.SetData("APPBASE", RootPath);
             System.AppDomain.CurrentDomain.SetData("PRIVATE_BINPATH", "bin");
+            System.AppDomain.CurrentDomain.SetData("DataDirectory", RootPath + "\\App_Data");
 
             DllPath = RootPath + "\\bin\\";
-            AppDomain.CurrentDomain.AssemblyResolve += ResolveRuntimeRedirects;
 
             // Use the web config of the website project as config for this appdomain
             using (AppConfig.Change(WebConfigPath))
@@ -89,10 +104,9 @@ namespace Lynicon.Tools
                 }
                 catch (Exception ex)
                 {
-                    if (caller != null)
+                    if (sendMessage != null)
                     {
-                        ToolsHelper.WriteException(caller, ex);
-                        caller.ThrowTerminatingError(new ErrorRecord(ex, "NOASSEMBLY", ErrorCategory.ReadError, AssPath));
+                        sendMessage(new MessageEventArgs(ex));
                     }
                 }
 
@@ -105,42 +119,43 @@ namespace Lynicon.Tools
                 }
                 catch { }
 
-                progress.StatusDescription = "Assembly loaded";
-                if (caller != null)
-                    caller.WriteProgress(progress);
+                if (sendMessage != null)
+                    sendMessage(new MessageEventArgs("Initializing Project Context", "Assembly loaded"));
             }
 
             ContextLoaded = true;
         }
 
-        public static void InitialiseDataApi(Cmdlet caller)
+        /// <summary>
+        /// Load up Lynicon modules and initialise the Lynicon data API after having loaded outputs from the current Visual Studio project
+        /// which references Lynicon
+        /// </summary>
+        /// <param name="sendMessage"></param>
+        public static void InitialiseDataApi(Action<MessageEventArgs> sendMessage)
         {
             if (DataApiInitialised)
                 return;
 
-            EnsureLoaded(caller);
+            EnsureLoaded(sendMessage);
 
             using (AppConfig.Change(WebConfigPath))
             {
                 string lyniconConfigName = DefaultNs + ".LyniconConfig";
-                var progress = new ProgressRecord(0, "Initializing Project Context", "Trying to load type: " + lyniconConfigName);
 
-                if (caller != null)
-                caller.WriteProgress(progress);
+                if (sendMessage != null)
+                    sendMessage(new MessageEventArgs("Initializing Project Context", "Trying to load type: " + lyniconConfigName));
                 Type lyniconConfig = StartupAssembly.GetType(lyniconConfigName);
 
-                progress.StatusDescription = "Type loaded";
-                if (caller != null)
-                    caller.WriteProgress(progress);
+                if (sendMessage != null)
+                    sendMessage(new MessageEventArgs("Initializing Project Context", "Type loaded"));
 
                 var registerModulesMethod = lyniconConfig.GetMethod("RegisterModules", BindingFlags.Static | BindingFlags.Public);
                 var initialiseDataApiMethod = lyniconConfig.GetMethod("InitialiseDataApi", BindingFlags.Static | BindingFlags.Public);
-                if ((registerModulesMethod == null || initialiseDataApiMethod == null) && caller != null)
-                    caller.ThrowTerminatingError(new ErrorRecord(new Exception("Cannot find 'RegisterModules' and 'InitialiseDataApi' methods on LyniconConfig"), "NOMETHODS", ErrorCategory.ReadError, lyniconConfig));
+                if ((registerModulesMethod == null || initialiseDataApiMethod == null) && sendMessage != null)
+                    sendMessage(new MessageEventArgs(new Exception("Cannot find 'RegisterModules' and 'InitialiseDataApi' methods on LyniconConfig")));
 
-                progress.StatusDescription = "Initializing Data Api";
-                if (caller != null)
-                    caller.WriteProgress(progress);
+                if (sendMessage != null)
+                    sendMessage(new MessageEventArgs("Initializing Project Context", "Initializing Data Api"));
                 try
                 {
                     registerModulesMethod.Invoke(null, new object[0]);
@@ -148,27 +163,37 @@ namespace Lynicon.Tools
                 }
                 catch (Exception ex)
                 {
-                    if (caller != null)
+                    if (sendMessage != null)
                     {
-                        ToolsHelper.WriteException(caller, ex);
-                        caller.ThrowTerminatingError(new ErrorRecord(ex, "INITIALISEDATAAPIFAIL", ErrorCategory.InvalidOperation, lyniconConfig));
+                        sendMessage(new MessageEventArgs(ex));
                     }
 
                 }
 
-                progress.StatusDescription = "Lynicon initialized";
-                if (caller != null)
-                    caller.WriteProgress(progress);
+                if (sendMessage != null)
+                    sendMessage(new MessageEventArgs("Initializing Project Context", "Lynicon initialized"));
             }
 
             DataApiInitialised = true;
         }
 
+        /// <summary>
+        /// Ensures assemblies being loaded can be resolved
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        /// <returns></returns>
         private static Assembly ResolveRuntimeRedirects(object sender, ResolveEventArgs args)
         {
             try
             {
+                // Ensure we can load the assembly containing this code from wherever it is located (which will be outside
+                // the path used for the VS project)
                 string assName = args.Name.UpTo(",");
+                if (assName == "Lynicon.Tools")
+                    return Assembly.LoadFrom(ToolsAssemblyPath);
+
+                // This will load any available version of a requested dll found in the DllPath.
                 string path = DllPath + assName + ".dll";
                 if (File.Exists(path))
                 {
@@ -186,13 +211,19 @@ namespace Lynicon.Tools
             return null;
         }
 
-        public static FileModel GetItemFileModel(Cmdlet caller, string itemName)
+        /// <summary>
+        /// Gets an object for manipulating the file behind a project item reference
+        /// </summary>
+        /// <param name="sendMessage"></param>
+        /// <param name="itemName"></param>
+        /// <returns></returns>
+        public static FileModel GetItemFileModel(Action<MessageEventArgs> sendMessage, string itemName)
         {
-            EnsureDTE(caller);
+            EnsureDTE(sendMessage);
 
             var global = FindItemByPath(MainProject.ProjectItems, itemName);
             if (global == null)
-                caller.ThrowTerminatingError(new ErrorRecord(new Exception("Can't find " + itemName + " to update"), "MISSINGPROJECTFILE", ErrorCategory.ObjectNotFound, MainProject));
+                sendMessage(new MessageEventArgs(new Exception("Can't find " + itemName + " to update")));
             var globalFileName = global.get_FileNames(1);
             if (!globalFileName.EndsWith(".cs"))
                 globalFileName += ".cs";
@@ -201,6 +232,12 @@ namespace Lynicon.Tools
             return fileModel;
         }
 
+        /// <summary>
+        /// Find a project item using a path-like address in the project folder hierarchy
+        /// </summary>
+        /// <param name="topItems">Top level items in the project</param>
+        /// <param name="itemPath">path to the required project item</param>
+        /// <returns>the project item</returns>
         public static ProjectItem FindItemByPath(ProjectItems topItems, string itemPath)
         {
             ProjectItem item = topItems.OfType<ProjectItem>().FirstOrDefault(pi => pi.Name == itemPath.UpTo("/"));

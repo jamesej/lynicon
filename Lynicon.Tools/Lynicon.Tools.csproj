@@ -67,10 +67,14 @@
     <Compile Include="InitializeLyniconProject.cs" />
     <Compile Include="InitializeLyniconAdmin.cs" />
     <Compile Include="LinqX.cs" />
+    <Compile Include="LocalProjectContextCommand.cs" />
+    <Compile Include="MessageEventArgs.cs" />
+    <Compile Include="MessageHandler.cs" />
     <Compile Include="ProjectContextLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoteInitializeLyniconDatabase.cs" />
     <Compile Include="RemoteInitializeLyniconAdmin.cs" />
+    <Compile Include="RemoteProjectContextCommand.cs" />
     <Compile Include="StringX.cs" />
     <Compile Include="ToolsHelper.cs" />
   </ItemGroup>

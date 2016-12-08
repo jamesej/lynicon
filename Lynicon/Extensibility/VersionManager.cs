@@ -364,17 +364,15 @@ namespace Lynicon.Extensibility
         /// <param name="isAddressable">Whether the versioning system is addressable (different version values can be accessed by changing url)</param>
         /// <param name="versioner">The Versioner for the versioning system</param>
         /// <param name="versions">All the valid version values for the versioning system (null if these are not limited)</param>
-        public void RegisterVersion(string name,
-            bool isAddressable,
-            Versioner versioner,
-            object[] versions)
+        public void RegisterVersion(
+            Versioner versioner)
         {
             Versioners.Add(versioner);
-            if (isAddressable)
-                AddressableVersionKeys.Add(name);
+            if (versioner.IsAddressable)
+                AddressableVersionKeys.Add(versioner.VersionKey);
             else
-                UnaddressableVersionKeys.Add(name);
-            VersionLists.Add(name, versions);
+                UnaddressableVersionKeys.Add(versioner.VersionKey);
+            VersionLists.Add(versioner.VersionKey, versioner.AllVersionValues);
         }
 
         /// <summary>

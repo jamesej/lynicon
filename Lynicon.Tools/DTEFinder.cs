@@ -12,6 +12,10 @@ namespace Lynicon.Tools
 {
     public static class DTEFinder
     {
+        /// <summary>
+        /// Get the object model for the currently running instance of Visual Studio
+        /// </summary>
+        /// <returns>COM object model for Visual Studio</returns>
         public static EnvDTE80.DTE2 GetDTE()
         {
             EnvDTE80.DTE2 dte2;

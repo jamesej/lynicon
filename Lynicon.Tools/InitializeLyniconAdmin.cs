@@ -27,20 +27,35 @@ namespace Lynicon.Tools
         }
         private string password;
 
-        private object GetStaticPropVal(Type type, string propName)
-        {
-            var pi = type.GetProperty("Instance", BindingFlags.GetProperty | BindingFlags.Static);
-            return pi.GetValue(null);
-        }
-
         protected override void ProcessRecord()
         {
-            AppDomain ad = AppDomain.CreateDomain("InitializeLyniconAdmin");
-            var remote = (RemoteInitializeLyniconAdmin)ad.CreateInstanceFromAndUnwrap(
-                typeof(RemoteInitializeLyniconAdmin).Assembly.Location, typeof(RemoteInitializeLyniconAdmin).FullName);
+            new InitializeLyniconAdmin(this).LocalRun(Password);
+        }
+    }
 
-            remote.Run(Password);
-            AppDomain.Unload(ad);
+    [Serializable]
+    public class InitializeLyniconAdmin : LocalProjectContextCommand<RemoteInitializeLyniconAdmin>
+    {
+        public InitializeLyniconAdmin(Cmdlet caller) : base(caller)
+        { }
+
+        /// <summary>
+        /// Setup, run and unload the remote task
+        /// </summary>
+        public void LocalRun(string password)
+        {
+            try
+            {
+                InitializeNewAppDomain("InitializeLyniconAdmin");
+
+                remote.Run(password);
+
+                AppDomain.Unload(appDomain);
+            }
+            catch (Exception ex)
+            {
+                MessageHandler.Handle(this.caller, new MessageEventArgs(ex));
+            }
         }
     }
 }

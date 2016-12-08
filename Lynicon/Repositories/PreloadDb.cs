@@ -38,8 +38,10 @@ namespace Lynicon.Repositories
         /// <summary>
         /// Build a core Lynicon database
         /// </summary>
-        public void EnsureCoreDb()
+        public string EnsureCoreDb()
         {
+            List<string> actions = new List<string>();
+
             bool dbChangesExists = Database
                      .SqlQuery<int?>(@"
                          SELECT 1 FROM sys.tables AS T
@@ -48,14 +50,17 @@ namespace Lynicon.Repositories
                      .SingleOrDefault() != null;
 
             if (!dbChangesExists)
+            {
                 Database.ExecuteSqlCommand(
                     @"CREATE TABLE [dbo].[DbChanges](
 	                    [Id] [int] IDENTITY(1,1) NOT NULL,
 	                    [Change] [nvarchar](100) NOT NULL,
 	                    [ChangedWhen] [datetime] NOT NULL,
                         CONSTRAINT [PK_DbChanges] PRIMARY KEY CLUSTERED (Id))");
+                actions.Add("Created DbChanges table");
+            }
             else if (this.DbChanges.Any(dbc => dbc.Change.StartsWith("LyniconInit ")))
-                return;
+                return null;
 
             Database.ExecuteSqlCommand(
                 @"CREATE TABLE [dbo].[ContentItems](
@@ -72,9 +77,13 @@ namespace Lynicon.Repositories
 	                [Updated] [datetime] NOT NULL,
 	                [UserUpdated] [varchar](40) NULL,
                  CONSTRAINT [PK_ContentItems] PRIMARY KEY CLUSTERED (Id))");
+            actions.Add("Created ContentItems table");
 
             DbChanges.Add(new DbChange { Change = "LyniconInit 0.1", ChangedWhen = DateTime.Now });
+            actions.Add("Insert initial DbChange record");
+
             SaveChanges();
+            return actions.Join(", ");
         }
     }
 }
