@@ -37,17 +37,21 @@ namespace Lynicon.Tools
         /// </summary>
         public void LocalRun()
         {
+            var appDomain = AppDomain.CreateDomain("InitializeLyniconDatabase");
+
             try
             {
-                InitializeNewAppDomain("InitializeLyniconDatabase");
+                InitializeNewAppDomain(appDomain);
 
                 remote.Run();
-
-                AppDomain.Unload(base.appDomain);
             }
             catch (Exception ex)
             {
                 MessageHandler.Handle(this.caller, new MessageEventArgs(ex));
+            }
+            finally
+            {
+                AppDomain.Unload(appDomain);
             }
         }
     }

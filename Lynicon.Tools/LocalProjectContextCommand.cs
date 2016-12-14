@@ -16,7 +16,6 @@ namespace Lynicon.Tools
     public class LocalProjectContextCommand<T> : MarshalByRefObject where T : RemoteProjectContextCommand
     {
         protected Cmdlet caller;
-        protected AppDomain appDomain;
         protected T remote;
 
         public LocalProjectContextCommand(Cmdlet caller)
@@ -28,9 +27,8 @@ namespace Lynicon.Tools
         /// Create the new app domain and create a remote proxy (type T) to do work there
         /// </summary>
         /// <param name="appDomainName"></param>
-        protected void InitializeNewAppDomain(string appDomainName)
+        protected void InitializeNewAppDomain(AppDomain appDomain)
         {
-            appDomain = AppDomain.CreateDomain(appDomainName);
             remote = (T)appDomain.CreateInstanceFromAndUnwrap(typeof(T).Assembly.Location, typeof(T).FullName);
 
             remote.InitializeRemoteAssemblyResolution(this.GetType().Assembly.Location);

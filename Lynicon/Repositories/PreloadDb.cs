@@ -40,6 +40,9 @@ namespace Lynicon.Repositories
         /// </summary>
         public string EnsureCoreDb()
         {
+            if (ConfigurationManager.ConnectionStrings["LyniconContent"].ConnectionString == "...")
+                throw new Exception("Please enter a connection string for the content database in web.config");
+
             List<string> actions = new List<string>();
 
             bool dbChangesExists = Database

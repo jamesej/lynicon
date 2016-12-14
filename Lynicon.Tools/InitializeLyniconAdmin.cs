@@ -44,17 +44,21 @@ namespace Lynicon.Tools
         /// </summary>
         public void LocalRun(string password)
         {
+            var appDomain = AppDomain.CreateDomain("InitializeLyniconAdmin");
+
             try
             {
-                InitializeNewAppDomain("InitializeLyniconAdmin");
+                InitializeNewAppDomain(appDomain);
 
                 remote.Run(password);
-
-                AppDomain.Unload(appDomain);
             }
             catch (Exception ex)
             {
                 MessageHandler.Handle(this.caller, new MessageEventArgs(ex));
+            }
+            finally
+            {
+                AppDomain.Unload(appDomain);
             }
         }
     }

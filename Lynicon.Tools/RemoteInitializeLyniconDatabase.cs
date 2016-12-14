@@ -24,7 +24,10 @@ namespace Lynicon.Tools
                 }
                 catch (Exception ex)
                 {
-                    Message(new MessageEventArgs(ex));
+                    if (ex.Message.Contains("transient failure") || ex.Message.Contains("failed on Open"))
+                        Message(new MessageEventArgs(new Exception("The database may not yet exist: please ensure it is created", ex)));
+                    else
+                        Message(new MessageEventArgs(ex));
                 }
             }
 

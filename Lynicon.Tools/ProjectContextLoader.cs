@@ -106,7 +106,10 @@ namespace Lynicon.Tools
                 {
                     if (sendMessage != null)
                     {
-                        sendMessage(new MessageEventArgs(ex));
+                        if (ex is FileNotFoundException && ex.Message.StartsWith("Could not load"))
+                            sendMessage(new MessageEventArgs(new Exception("Couldn't load the project assembly: you may not have compiled it", ex)));
+                        else
+                            sendMessage(new MessageEventArgs(ex));
                     }
                 }
 
@@ -145,6 +148,9 @@ namespace Lynicon.Tools
                 if (sendMessage != null)
                     sendMessage(new MessageEventArgs("Initializing Project Context", "Trying to load type: " + lyniconConfigName));
                 Type lyniconConfig = StartupAssembly.GetType(lyniconConfigName);
+                if (lyniconConfig == null)
+                    sendMessage(new MessageEventArgs(new Exception("Cannot load type LyniconConfig: you may not have built the solution after installing the Lynicon package")));
+
 
                 if (sendMessage != null)
                     sendMessage(new MessageEventArgs("Initializing Project Context", "Type loaded"));
