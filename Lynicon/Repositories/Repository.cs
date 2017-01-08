@@ -341,7 +341,7 @@ namespace Lynicon.Repositories
 
             ParameterExpression iqParam = Expression.Parameter(iqType, "iq");
             LambdaExpression queryExp = Expression.Lambda(iqParam, iqParam);
-            return (int)ReflectionX.InvokeGenericMethod(this, "GetCount", type, targetType, queryExp.Compile());
+            return (int)ReflectionX.InvokeGenericMethod(this, "GetCount", type, new Type[] { targetType }, queryExp.Compile());
         }
         /// <summary>
         /// Get count of items matching query
