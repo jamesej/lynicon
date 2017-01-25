@@ -567,14 +567,6 @@ namespace Lynicon.Collation
             }
         }
 
-        protected virtual string[] GetPaths(string path)
-        {
-            if (path.Contains(">"))
-                return path.Split('>').Select(s => s.Trim()).ToArray(); // primary path > redirect path
-            else
-                return new string[] { path, path };
-        }
-
         protected ContentItem GetNewRecord<T>(string path)
         {
             return GetNewRecord(typeof(T), path);

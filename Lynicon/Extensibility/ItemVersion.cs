@@ -216,6 +216,18 @@ namespace Lynicon.Extensibility
         }
 
         /// <summary>
+        /// Find the most specific ItemVersion which contains all the ItemVersions in the list
+        /// </summary>
+        /// <param name="versions">list of ItemVersions</param>
+        /// <returns>Most specific ItemVersion containing all in list</returns>
+        public static ItemVersion LeastAbstractCommonVersion(IEnumerable<ItemVersion> versions)
+        {
+            ItemVersion result = null;
+            versions.Do(v => result = (result == null ? v : result.LeastAbstractCommonVersion(v)));
+            return result;
+        }
+
+        /// <summary>
         /// Test that this ItemVersion is in the set of specific ItemVersions covered by the abstract ItemVersion given
         /// as an argument.  In other words, if the argument has a specific key value, this ItemVersion has the same
         /// key with the same value.  Null-valued keys in the argument are ignored.

@@ -11,6 +11,9 @@ using Linq2Rest;
 using System.Web.Routing;
 using System.Collections.Specialized;
 using System.Reflection;
+using Lynicon.Extensibility;
+using Lynicon.Attributes;
+using Lynicon.Utility;
 
 namespace Lynicon.Collation
 {
@@ -20,6 +23,8 @@ namespace Lynicon.Collation
     /// </summary>
     public abstract class BaseCollator : ICollator
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         #region ICollator Members
 
         /// <summary>
@@ -31,6 +36,129 @@ namespace Lynicon.Collation
         /// The container type this repository uses (or null if its just the content type)
         /// </summary>
         public abstract Type AssociatedContainerType { get; }
+
+        /// <summary>
+        /// Starting from a list of addresses and optionally (or only) the containers at those addresses, fetch
+        /// any containers necessary and any other containers required to supply redirected properties for them,
+        /// obtain the contained content items and collate their properties, returning the content items at the
+        /// addresses.
+        /// </summary>
+        /// <typeparam name="T">Type of content items to return</typeparam>
+        /// <param name="startContainers">Initial list of containers if they are available</param>
+        /// <param name="startAddresses">Initial list of addresses, which may be omitted and derived from containers</param>
+        /// <returns>List of content items</returns>
+        public IEnumerable<T> Collate<T>(IEnumerable<object> startContainers, IEnumerable<Address> startAddresses) where T : class
+        {
+            // place to store all the containers we have currently
+            var containers = new Dictionary<VersionedAddress, object>();
+
+            ItemVersion containerCommonVersion = null;
+            // Ensure we have the start addresses
+            if (startContainers != null)
+            {
+                containers = startContainers.ToDictionary(sc => new VersionedAddress(sc), sc => sc);
+                startAddresses = containers.Keys.Select(va => va.Address).Distinct().ToList();
+                containerCommonVersion = ItemVersion.LeastAbstractCommonVersion(containers.Keys.Select(va => va.Version));
+            }
+
+            var fetchAddrs = startAddresses
+                .GroupBy(a => a.Type.GetCustomAttributes<RedirectPropertySourceAttribute>())
+                .SelectMany(ag =>
+                    ag.SelectMany(a => ag.Key
+                        .Select(attr => attr.Redirect(a))
+                        .Concat(a)))
+                .Distinct()
+                .Except(containers.Keys.Select(va => va.Address))
+                .ToList();
+
+            bool pushVersion = (startContainers != null);
+            if (pushVersion) // Get containers in any version that might be relevant to a start container
+                VersionManager.Instance.PushState(VersioningMode.Specific, containerCommonVersion);
+
+            try
+            {
+                // Get all the containers for collation (if current version is not fully specified, may be multiple per address)
+                foreach (var cont in Repository.Instance.Get(typeof(object), fetchAddrs))
+                {
+                    var va = new VersionedAddress(cont);
+                    if (containers.ContainsKey(va))
+                        log.Error("Duplicate versioned address in db: " + va.ToString());
+                    else
+                        containers.Add(new VersionedAddress(cont), cont);
+                }
+            }
+            finally
+            {
+                if (pushVersion)
+                    VersionManager.Instance.PopState();
+            }
+
+            var contLookup = containers.ToLookup(kvp => kvp.Key.Address.ToString(), kvp => kvp.Value);
+
+            if (startContainers == null)
+            {
+                startContainers = startAddresses.SelectMany(a => contLookup[a.ToString()]);
+            }
+
+            // We have the data, now collate it into the content from the startContainers
+            foreach (var addrTypeG in startAddresses.GroupBy(a => a.Type))
+            {
+                // Process all the start addresses of a given type
+
+                Type contentType = addrTypeG.Key;
+                var rpsAttributes = contentType
+                    .GetCustomAttributes(typeof(RedirectPropertySourceAttribute), false)
+                    .Cast<RedirectPropertySourceAttribute>()
+                    .ToList();
+
+                foreach (var addr in addrTypeG)
+                {
+                    var primaryPath = addr.GetAsContentPath();
+                    if (!contLookup.Contains(addr.ToString()))
+                        continue;
+
+                    foreach (var cont in contLookup[addr.ToString()])
+                    {
+                        object primaryContent = cont;
+
+                        if (primaryContent is IContentContainer)
+                            primaryContent = ((IContentContainer)primaryContent).GetContent();
+
+                        foreach (var rpsAttribute in rpsAttributes)
+                        {
+                            var refAddress = new VersionedAddress(
+                                rpsAttribute.ContentType ?? contentType,
+                                PathFunctions.Redirect(primaryPath, rpsAttribute.SourceDescriptor),
+                                new ItemVersion(cont)
+                                );
+                            if (refAddress.Address == addr) // redirected to itself, ignore
+                                continue;
+                            object refItem = containers.ContainsKey(refAddress) ? containers[refAddress] : null;
+                            if (refItem is IContentContainer)
+                                refItem = ((IContentContainer)refItem).GetContent();
+                            if (refItem != null)
+                                foreach (string propertyPath in rpsAttribute.PropertyPaths)
+                                {
+                                    var toFromPaths = GetPaths(propertyPath);
+                                    object val = ReflectionX.GetPropertyValueByPath(refItem, toFromPaths[1]);
+                                    var piSet = ReflectionX.GetPropertyByPath(primaryContent.GetType(), toFromPaths[0]);
+                                    piSet.SetValue(primaryContent, val);
+                                }
+                        }
+
+                        yield return primaryContent as T;
+                    }
+                }
+            }
+        }
+
+        protected virtual string[] GetPaths(string path)
+        {
+            if (path.Contains(">"))
+                return path.Split('>').Select(s => s.Trim()).ToArray(); // primary path > redirect path
+            else
+                return new string[] { path, path };
+        }
 
         /// <summary>
         /// Get data items via a list of data addresses

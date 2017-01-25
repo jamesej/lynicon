@@ -190,7 +190,7 @@ h2 { color: #aaa; padding: 4px; font-size: 20px; background-color: #F1F1F1; marg
     }
 
     function saveTypes() {
-        var types = $('#classFilter').val();
+        var types = $('#classFilter').val() || [''];
         localStorage.setItem(typesStorageKey, types.join(' '));
     }
 

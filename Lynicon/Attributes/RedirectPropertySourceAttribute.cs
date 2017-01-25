@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Reflection;
 using Lynicon.Collation;
 
 namespace Lynicon.Attributes
@@ -53,6 +54,17 @@ namespace Lynicon.Attributes
             ReadOnly = false;
             UniqueId = Guid.NewGuid();
             ContentType = null;
+        }
+
+        public Address Redirect(Address a)
+        {
+            return new Address(ContentType ?? a.Type,
+                            PathFunctions.Redirect(a.GetAsContentPath(), SourceDescriptor));
+        }
+
+        public static IEnumerable<Address> GetRedirects(Type t, Address a)
+        {
+            return t.GetCustomAttributes<RedirectPropertySourceAttribute>().Select(attr => attr.Redirect(a));
         }
 
         public override object TypeId
