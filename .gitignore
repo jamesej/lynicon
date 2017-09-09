@@ -14,5 +14,3 @@ _ReSharper.*
 Ankh.NoLoad
 packages
 TestResults
-app.config
-web.config
