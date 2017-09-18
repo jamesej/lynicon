@@ -488,10 +488,8 @@ namespace Lynicon.Membership
             if (isInitial || EncryptPassword(password) == user.Password)
                 return user;
             string pwd = user.Password;
-            user.Password = null;
             if (AlternateEncrypt != null && AlternateEncrypt(user, password).Contains(pwd))
             {
-                user.Password = pwd;
                 return user;
             }
 
